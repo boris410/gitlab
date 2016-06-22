@@ -1,0 +1,197 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="js/bootstrap.js" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+</head>
+
+<body>
+    <style type="text/css">
+        td#highest {
+            color: red;
+        }
+        
+        table {
+            font-family: Georgia, "Times New Roman"."細明體";
+            padding: 50px;
+            border-color: blue;
+        }
+        
+        p#intro {
+            color: red;
+        }
+        
+        .divider {
+            height: 3px;
+            margin: 20px;
+            background-color:red;
+        }
+        
+    @media (max-width: 600px) {
+        .navbar-inverse{
+            background-color: white;
+        }
+        ul{
+            
+        }
+    }
+    </style>
+
+
+
+    <ul class=" nav navbar-header navbar-fixed-top nav-tabs list-inline navbar-inverse">
+        <li><a href="#table1">段考成績單</a></li>
+        <li><a href="#balance">分數平均單</a></li>
+        <li><a href="#big">趙大</a></li>
+        <li><a href="#money">錢多</a></li>
+        <li><a href="#wang">王偉</a></li>
+
+    </ul>
+    
+
+
+
+    <div>
+        <h1>段考成績單</h1>
+        <p align="center" id="table1">段考成績單</p>
+        <table align="center" border="2px" width="100%">
+
+            <tr align="center">
+                <td rowspan="2"><b>姓名</b></td>
+                <td colspan="3" align="center"><b>各科成績</b></td>
+                <td rowspan="2"><b>名次</b></td>
+            </tr>
+            <tr align="center">
+                <td><b>國文</b></td>
+                <td><b>英文</b></td>
+                <td><b>數學</b></td>
+            </tr>
+            <tr align="center">
+                <td>趙大</td>
+                <td id="highest">86</td>
+                <td id="highest">95</td>
+                <td>90</td>
+                <td>1</td>
+            </tr>
+            <tr align="center">
+                <td>錢多</td>
+                <td>84</td>
+                <td>88</td>
+                <td>92</td>
+                <td>2</td>
+            </tr>
+            <tr align="center">
+                <td>王偉</td>
+                <td>70</td>
+                <td>85</td>
+                <td id="highest">94</td>
+                <td>3</td>
+            </tr>
+        </table>
+
+        <p id="intro">*紅色為該科最高分</p>
+    </div>
+    <hr class="divider">
+
+
+
+    <h2 id="balance"> 分數平均表單</h2>
+    <div>
+        <table align="center" border="2px" width="100%">
+
+            <tr align="center">
+                <td rowspan="2"><b>姓名</b></td>
+                <td colspan="3" align="center"><b>各科平均</b></td>
+
+            </tr>
+            <tr align="center">
+                <td><b>國文</b></td>
+                <td><b>英文</b></td>
+                <td><b>數學</b></td>
+            </tr>
+
+            <tr align="center">
+                <td>平均</td>
+                <td>80</td>
+                <td>89</td>
+                <td id="highest">92</td>
+
+            </tr>
+        </table>
+    </div>
+
+     <hr class="divider">
+
+
+    <h2 id="big">趙大<h2>
+            
+            <table align="center" border="2px" width="100%">
+                <tr>
+                    <td>姓名:趙大</td>
+                    <td rowspan="5"><img src="img/sport.jpg"></td>
+                </tr>
+                <tr>
+                    <td>年型:2.2</td>
+                </tr>
+                 <tr>
+                    <td>身高:73</td>
+                </tr>
+                 <tr>
+                    <td>夢想:當阿諾</td>
+                </tr>
+                
+            </table>
+            
+           <hr class="divider">
+    
+        
+          <h2 id="money">錢多<h2>
+            
+            <table align="center" border="2px" width="100%">
+                <tr>
+                    <td>姓名:錢多</td>
+                    <td rowspan="5"><img src="img/dragon.jpg"></td>
+                </tr>
+                <tr>
+                    <td>年齡:3.2</td>
+                </tr>
+                 <tr>
+                    <td>身高:85</td>
+                </tr>
+                 <tr>
+                    <td>夢想:發出氣功波</td>
+                </tr>
+                
+            </table>
+            
+           
+         <hr class="divider">
+        
+           <h2 id="wang">王偉<h2>
+            
+            <table align="center" border="2px" width="100%">
+                <tr>
+                    <td>姓名:王偉</td>
+                    <td rowspan="5"><img src="img/food.jpg"></td>
+                </tr>
+                <tr>
+                    <td>年齡:1.6</td>
+                </tr>
+                 <tr>
+                    <td>身高:77</td>
+                </tr>
+                 <tr>
+                    <td>夢想:不要被吃掉</td>
+                </tr>
+                
+            </table>
+        
+    
+  
+</body>
+
+
+</html>
