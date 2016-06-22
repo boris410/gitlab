@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1">
+<title>Homepage</title>
+<link rel="icon" href="favicon.png" type="image/png">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/linecons.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="css/responsive.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+
+<link href='http://fonts.googleapis.com/css?family=Lato:400,900,700,700italic,400italic,300italic,300,100italic,100,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Dosis:400,500,700,800,600,300,200' rel='stylesheet' type='text/css'>
+
+<!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
+
+<script type="text/javascript" src="js/jquery.1.8.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.isotope.js"></script>
+<script type="text/javascript" src="js/wow.js"></script>
+<script type="text/javascript" src="js/classie.js"></script>
+
+<!--[if lt IE 9]>
+    <script src="js/respond-1.1.0.min.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/html5element.js"></script>
+<![endif]-->
+
+<script type="text/javascript">
+	$(document).ready(function(e) {
+        $('.res-nav_click').click(function(){
+		$('ul.toggle').slideToggle(600)	
+			});	
+			
+	$(document).ready(function() {
+$(window).bind('scroll', function() {
+         if ($(window).scrollTop() > 0) {
+             $('#header_outer').addClass('fixed');
+         }
+         else {
+             $('#header_outer').removeClass('fixed');
+         }
+    });
+	
+	  });
+	  
+
+		    });	
+function resizeText() {
+	var preferredWidth = 767;
+	var displayWidth = window.innerWidth;
+	var percentage = displayWidth / preferredWidth;
+	var fontsizetitle = 25;
+	var newFontSizeTitle = Math.floor(fontsizetitle * percentage);
+	$(".divclass").css("font-size", newFontSizeTitle)
+}
+</script>
+</head>
+<body>
+
+<!--Header_section-->
+<header id="header_outer">
+  <div class="container">
+    <div class="header_section">
+      <div class="logo"><a href="javascript:void(0)"><img src="img/logob.png" alt=""></a></div>
+      <nav class="nav" id="nav">
+        <ul class="toggle">
+          <li><a href="#top_content">Home</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#work_outer">瘦身觀念</a></li>
+          <li><a href="#contact">Message</a></li>
+        </ul>
+        <ul class="">
+          <li><a href="#top_content">Home</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#work_outer">瘦身觀念</a></li>
+          <li><a href="#contact">Message</a></li>
+        </ul>
+      </nav>
+      <a class="res-nav_click animated wobble wow"  href="javascript:void(0)"><i class="fa-bars"></i></a> </div>
+  </div>
+</header>
+<!--Header_section--> 
+
+<!--Top_content-->
+<section id="top_content" class="top_cont_outer">
+  <div class="top_cont_inner">
+    <div class="container">
+      <div class="top_content">
+        <div class="row">
+          <div class="col-lg-5 col-sm-7">
+            <div class="top_left_cont flipInY wow animated">
+              <h3>健康 &amp; 更加的快樂!</h3>
+              <h2>建立良好的運動習慣 </h2>
+              <p><h1> 建立動習慣，將帶來身體上的健康，也會讓心情更加快樂，還可以促進腦力思考. </h1></p>
+              <a href="#service" class="learn_more2">Learn more</a> </div>
+          </div>
+          <div class="col-lg-7 col-sm-5"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Top_content--> 
+
+<!--Service-->
+<section  id="service">
+  <div class="container">
+    <h2>Services</h2>
+    <div class="service_area">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="service_block">
+            <div class="service_icon delay-03s animated wow  zoomIn"> <span><i class="fa-flash"></i></span> </div>
+            <h3 class="animated fadeInUp wow">有氧運動</h3>
+            <p class="animated fadeInDown wow">幫你住消耗更多脂肪</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="service_block">
+            <div class="service_icon icon2  delay-03s animated wow zoomIn"> <span><i class="fa-comments"></i></span> </div>
+            <h3 class="animated fadeInUp wow">Do your best</h3>
+             <!-- by boris-->
+            <p><img src="img/sport.jpg"></p>
+         
+        </div>
+        <div class="col-lg-4">
+          <div class="service_block">
+            <div class="service_icon icon3  delay-03s animated wow zoomIn"> <span><i class="fa-shield"></i></span> </div>
+            <h3 class="animated fadeInUp wow">無氧運動</h3>
+            <p class="animated fadeInDown wow">讓你的身線更加苗條</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Service-->
+
+<section id="work_outer"><!--main-section-start-->
+<div class="top_cont_latest">
+  <div class="container">
+    <h2>瘦身觀念</h2>
+    <div class="work_section">
+      <div class="row">
+        <div class="col-lg-6 col-sm-6 wow fadeInLeft delay-05s">
+          <div class="service-list">
+            <div class="service-list-col1"> <i class="icon-doc"></i> </div>
+            <div class="service-list-col2">
+              <h3>正常飲食</h3>
+              <p>Proin iaculis purus digni consequat sem digni ssim. Donec entum digni ssim.</p>
+            </div>
+          </div>
+          <div class="service-list">
+            <div class="service-list-col1"> <i class="icon-comment"></i> </div>
+            <div class="service-list-col2">
+              <h3>少吃危險食物</h3>
+              <p>Proin iaculis purus consequat sem digni ssim. Digni ssim porttitora .</p>
+            </div>
+          </div>
+          <div class="service-list">
+            <div class="service-list-col1"> <i class="icon-database"></i> </div>
+            <div class="service-list-col2">
+              <h3>固定運動</h3>
+              <p>Proin iaculis purus consequat digni sem digni ssim. Purus donec porttitora entum.</p>
+            </div>
+          </div>
+          <div class="service-list">
+            <div class="service-list-col1"> <i class="icon-cog"></i> </div>
+            <div class="service-list-col2">
+              <h3>持之以恆</h3>
+              <p>Proin iaculis purus consequat sem digni ssim. Sem porttitora entum.</p>
+            </div>
+          </div>
+          <div class="work_bottom"> <span>還有更多疑惑嗎??</span> <a href="#contact" class="contact_btn">Contact Us</a> </div>
+        </div>
+        <figure class="col-lg-6 col-sm-6  text-right wow fadeInUp delay-02s"> </figure>
+      </div>
+    </div>
+  </div>
+  <!--<div class="work_pic"><img src="img/dashboard_pic.png" alt=""></div>-->
+  </div>
+</section>
+<!--main-section-end--> 
+
+<!--new_portfolio--> 
+
+<!-- Portfolio -->
+        </div>
+      </div>
+      <section id="contact">
+      <div class="row">
+        <div class="col-lg-6 wow fadeInLeft">
+          <h2>Message for us</h2>
+     
+          <ul class="social-link">
+            <li class="twitter animated bounceIn wow delay-02s"><a href="javascript:void(0)"><i class="fa-twitter"></i></a></li>
+            <li class="facebook animated bounceIn wow delay-03s"><a href="javascript:void(0)"><i class="fa-facebook"></i></a></li>
+            <li class="pinterest animated bounceIn wow delay-04s"><a href="javascript:void(0)"><i class="fa-pinterest"></i></a></li>
+            <li class="gplus animated bounceIn wow delay-05s"><a href="javascript:void(0)"><i class="fa-google-plus"></i></a></li>
+            <li class="dribbble animated bounceIn wow delay-06s"><a href="javascript:void(0)"><i class="fa-dribbble"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-6 wow fadeInUp delay-06s">
+          <div class="form">
+            <input class="input-text animated wow flipInY delay-02s" type="text" name="" value="Your Name *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
+            <input class="input-text animated wow flipInY delay-04s" type="text" name="" value="Your E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
+            <textarea class="input-text text-area animated wow flipInY delay-06s" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">Your Message *</textarea>
+            <input class="input-btn animated wow flipInY delay-08s" type="submit" value="send message">
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="container">
+    <div class="footer_bottom"> <span>Copyright © 2015 | <a href="http://bootstraptaste.com/">Bootstrap Themes</a> by BootstrapTaste </span> </div>
+    <!-- 
+        All links in the footer should remain intact. 
+        Licenseing information is available at: http://bootstraptaste.com/license/
+        You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Butterfly
+    -->
+  </div>
+</footer>
+<script type="text/javascript">
+    $(document).ready(function(e) {
+        $('#header_outer').scrollToFixed();
+        $('.res-nav_click').click(function(){
+            $('.main-nav').slideToggle();
+            return false    
+            
+        });
+        
+    });
+</script> 
+<script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100
+      }
+    );
+    wow.init();
+    document.getElementById('').onclick = function() {
+      var section = document.createElement('section');
+      section.className = 'wow fadeInDown';
+	  section.className = 'wow shake';
+	  section.className = 'wow zoomIn';
+	  section.className = 'wow lightSpeedIn';
+      this.parentNode.insertBefore(section, this);
+    };
+  </script> 
+<script type="text/javascript">
+	$(window).load(function(){
+		
+		$('a').bind('click',function(event){
+			var $anchor = $(this);
+			
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top - 91
+			}, 1500,'easeInOutExpo');
+			/*
+			if you don't want to use the easing effects:
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top
+			}, 1000);
+			*/
+			event.preventDefault();
+		});
+	})
+</script> 
+
+<!--<script type="text/javascript">
+
+$(window).load(function(){
+  
+  
+  var $container = $('.portfolioContainer'),
+      $body = $('body'),
+      colW = 350,
+      columns = null;
+
+  
+  $container.isotope({
+    // disable window resizing
+    resizable: true,
+    masonry: {
+      columnWidth: colW
+    }
+  });
+  
+  $(window).smartresize(function(){
+    // check if columns has changed
+    var currentColumns = Math.floor( ( $body.width() -30 ) / colW );
+    if ( currentColumns !== columns ) {
+      // set new column count
+      columns = currentColumns;
+      // apply width to container manually, then trigger relayout
+      $container.width( columns * colW )
+        .isotope('reLayout');
+    }
+    
+  }).smartresize(); // trigger resize to set container width
+  $('.portfolioFilter a').click(function(){
+        $('.portfolioFilter .current').removeClass('current');
+        $(this).addClass('current');
+ 
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+			
+            filter: selector,
+         });
+         return false;
+    });
+  
+});
+
+</script>
+
+
+--> 
+
+<script type="text/javascript">
+
+   
+  jQuery(document).ready(function($){     
+// Portfolio Isotope
+	var container = $('#portfolio-wrap');	
+	
+
+	container.isotope({
+		animationEngine : 'best-available',
+	  	animationOptions: {
+	     	duration: 200,
+	     	queue: false
+	   	},
+		layoutMode: 'fitRows'
+	});	
+
+	$('#filters a').click(function(){
+		$('#filters a').removeClass('active');
+		$(this).addClass('active');
+		var selector = $(this).attr('data-filter');
+	  	container.isotope({ filter: selector });
+        setProjects();		
+	  	return false;
+	});
+		
+		
+		function splitColumns() { 
+			var winWidth = $(window).width(), 
+				columnNumb = 1;
+			
+			
+			if (winWidth > 1024) {
+				columnNumb = 4;
+			} else if (winWidth > 900) {
+				columnNumb = 2;
+			} else if (winWidth > 479) {
+				columnNumb = 2;
+			} else if (winWidth < 479) {
+				columnNumb = 1;
+			}
+			
+			return columnNumb;
+		}		
+		
+		function setColumns() { 
+			var winWidth = $(window).width(), 
+				columnNumb = splitColumns(), 
+				postWidth = Math.floor(winWidth / columnNumb);
+			
+			container.find('.portfolio-item').each(function () { 
+				$(this).css( { 
+					width : postWidth + 'px' 
+				});
+			});
+		}		
+		
+		function setProjects() { 
+			setColumns();
+			container.isotope('reLayout');
+		}		
+		
+		container.imagesLoaded(function () { 
+			setColumns();
+		});
+		
+	
+		$(window).bind('resize', function () { 
+			setProjects();			
+		});
+
+});
+$( window ).load(function() {
+	jQuery('#all').click();
+	return false;
+});
+</script>
+</body>
+</html>
