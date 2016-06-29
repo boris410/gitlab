@@ -18,7 +18,7 @@
             else{
                 for($i=1;$i<=$_POST['number'];$i++){//將input欄內的數字轉成陣列長度當作要吐球的次數
                 $ball=array_rand($lottoarray,1)."\n";//取亂數陣列key
-                /
+                
                 echo  "<input type=text  name=number value= $ball  size=2px/>";//將數字放到input欄內
                  unset($lottoarray[(int)$ball]);//並從陣列中刪除吐到的key
                  }
