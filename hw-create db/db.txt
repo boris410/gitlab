@@ -1,0 +1,19 @@
+-- 建立家庭花費資料庫 字元集utf8
+create database homespend default character set UTF8;
+
+-- 選擇資料庫
+use homespend;
+
+-- 建立表單 menber 及欄位有姓名 年齡 收入 花費 engine=innodb
+create table menbers(
+    name char(10),
+    age  int,
+    income int,
+    spend int
+)engine = INNODB;
+
+-- 輸入資料 爸爸 媽媽 小孩
+insert into menbers(name,age,income,spend) values('Father Bill',40,10000,100);
+insert into menbers(name,age,income,spend) values('Mother Case',37,8000,500);
+insert into menbers(name,age,income,spend) values('Son Bill',21,2000,200);
+
