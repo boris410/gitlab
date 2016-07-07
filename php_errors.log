@@ -1,0 +1,364 @@
+[04-Jul-2016 14:37:12 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 16
+[04-Jul-2016 14:37:12 UTC] PHP Stack trace:
+[04-Jul-2016 14:37:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:37:12 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:37:12 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:16
+[04-Jul-2016 14:37:12 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 17
+[04-Jul-2016 14:37:12 UTC] PHP Stack trace:
+[04-Jul-2016 14:37:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:37:12 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:37:12 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:17
+[04-Jul-2016 14:37:12 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 18
+[04-Jul-2016 14:37:12 UTC] PHP Stack trace:
+[04-Jul-2016 14:37:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:37:12 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:37:12 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/project/require/logphp.php:18
+[04-Jul-2016 14:37:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 16
+[04-Jul-2016 14:37:19 UTC] PHP Stack trace:
+[04-Jul-2016 14:37:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:37:19 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:37:19 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:16
+[04-Jul-2016 14:37:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 17
+[04-Jul-2016 14:37:19 UTC] PHP Stack trace:
+[04-Jul-2016 14:37:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:37:19 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:37:19 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:17
+[04-Jul-2016 14:37:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 18
+[04-Jul-2016 14:37:19 UTC] PHP Stack trace:
+[04-Jul-2016 14:37:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:37:19 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:37:19 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/project/require/logphp.php:18
+[04-Jul-2016 14:42:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 23
+[04-Jul-2016 14:42:22 UTC] PHP Stack trace:
+[04-Jul-2016 14:42:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:42:22 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:42:22 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:23
+[04-Jul-2016 14:42:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 24
+[04-Jul-2016 14:42:22 UTC] PHP Stack trace:
+[04-Jul-2016 14:42:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:42:22 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:42:22 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:24
+[04-Jul-2016 14:42:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 25
+[04-Jul-2016 14:42:22 UTC] PHP Stack trace:
+[04-Jul-2016 14:42:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:42:22 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:42:22 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/project/require/logphp.php:25
+[04-Jul-2016 14:42:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 23
+[04-Jul-2016 14:42:32 UTC] PHP Stack trace:
+[04-Jul-2016 14:42:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:42:32 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:42:32 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:23
+[04-Jul-2016 14:42:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 24
+[04-Jul-2016 14:42:32 UTC] PHP Stack trace:
+[04-Jul-2016 14:42:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:42:32 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:42:32 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:24
+[04-Jul-2016 14:42:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 25
+[04-Jul-2016 14:42:32 UTC] PHP Stack trace:
+[04-Jul-2016 14:42:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:42:32 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:42:32 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/project/require/logphp.php:25
+[04-Jul-2016 14:42:36 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 23
+[04-Jul-2016 14:42:36 UTC] PHP Stack trace:
+[04-Jul-2016 14:42:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:42:36 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:42:36 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:23
+[04-Jul-2016 14:42:36 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 24
+[04-Jul-2016 14:42:36 UTC] PHP Stack trace:
+[04-Jul-2016 14:42:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:42:36 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:42:36 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:24
+[04-Jul-2016 14:42:36 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 25
+[04-Jul-2016 14:42:36 UTC] PHP Stack trace:
+[04-Jul-2016 14:42:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:42:36 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:42:36 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/project/require/logphp.php:25
+[04-Jul-2016 14:42:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 23
+[04-Jul-2016 14:42:47 UTC] PHP Stack trace:
+[04-Jul-2016 14:42:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:42:47 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:42:47 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:23
+[04-Jul-2016 14:42:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 24
+[04-Jul-2016 14:42:47 UTC] PHP Stack trace:
+[04-Jul-2016 14:42:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:42:47 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:42:47 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:24
+[04-Jul-2016 14:42:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 25
+[04-Jul-2016 14:42:47 UTC] PHP Stack trace:
+[04-Jul-2016 14:42:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:42:47 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:42:47 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/project/require/logphp.php:25
+[04-Jul-2016 14:42:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 23
+[04-Jul-2016 14:42:52 UTC] PHP Stack trace:
+[04-Jul-2016 14:42:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:42:52 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:42:52 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:23
+[04-Jul-2016 14:42:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 24
+[04-Jul-2016 14:42:52 UTC] PHP Stack trace:
+[04-Jul-2016 14:42:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:42:52 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:42:52 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:24
+[04-Jul-2016 14:42:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 25
+[04-Jul-2016 14:42:52 UTC] PHP Stack trace:
+[04-Jul-2016 14:42:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:42:52 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:42:52 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/project/require/logphp.php:25
+[04-Jul-2016 14:51:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 23
+[04-Jul-2016 14:51:05 UTC] PHP Stack trace:
+[04-Jul-2016 14:51:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:51:05 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:51:05 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:23
+[04-Jul-2016 14:51:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 24
+[04-Jul-2016 14:51:05 UTC] PHP Stack trace:
+[04-Jul-2016 14:51:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:51:05 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:51:05 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:24
+[04-Jul-2016 14:51:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 25
+[04-Jul-2016 14:51:05 UTC] PHP Stack trace:
+[04-Jul-2016 14:51:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:51:05 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:51:05 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/project/require/logphp.php:25
+[04-Jul-2016 14:51:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 23
+[04-Jul-2016 14:51:19 UTC] PHP Stack trace:
+[04-Jul-2016 14:51:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:51:19 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:51:19 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:23
+[04-Jul-2016 14:51:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 24
+[04-Jul-2016 14:51:19 UTC] PHP Stack trace:
+[04-Jul-2016 14:51:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:51:19 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:51:19 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:24
+[04-Jul-2016 14:51:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 25
+[04-Jul-2016 14:51:19 UTC] PHP Stack trace:
+[04-Jul-2016 14:51:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:51:19 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:51:19 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/project/require/logphp.php:25
+[04-Jul-2016 14:53:15 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 21
+[04-Jul-2016 14:53:15 UTC] PHP Stack trace:
+[04-Jul-2016 14:53:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:53:15 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:53:15 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:21
+[04-Jul-2016 14:53:15 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 22
+[04-Jul-2016 14:53:15 UTC] PHP Stack trace:
+[04-Jul-2016 14:53:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:53:15 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:53:15 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:22
+[04-Jul-2016 14:53:15 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 23
+[04-Jul-2016 14:53:15 UTC] PHP Stack trace:
+[04-Jul-2016 14:53:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:53:15 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:53:15 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/project/require/logphp.php:23
+[04-Jul-2016 14:53:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 21
+[04-Jul-2016 14:53:21 UTC] PHP Stack trace:
+[04-Jul-2016 14:53:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:53:21 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:53:21 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:21
+[04-Jul-2016 14:53:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 22
+[04-Jul-2016 14:53:21 UTC] PHP Stack trace:
+[04-Jul-2016 14:53:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:53:21 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:53:21 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:22
+[04-Jul-2016 14:53:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 23
+[04-Jul-2016 14:53:21 UTC] PHP Stack trace:
+[04-Jul-2016 14:53:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:53:21 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:53:21 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/project/require/logphp.php:23
+[04-Jul-2016 14:55:10 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 21
+[04-Jul-2016 14:55:10 UTC] PHP Stack trace:
+[04-Jul-2016 14:55:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:55:10 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:55:10 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:21
+[04-Jul-2016 14:55:10 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 22
+[04-Jul-2016 14:55:10 UTC] PHP Stack trace:
+[04-Jul-2016 14:55:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:55:10 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:55:10 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:22
+[04-Jul-2016 14:55:10 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 23
+[04-Jul-2016 14:55:10 UTC] PHP Stack trace:
+[04-Jul-2016 14:55:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:55:10 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:55:10 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/project/require/logphp.php:23
+[04-Jul-2016 14:55:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 21
+[04-Jul-2016 14:55:21 UTC] PHP Stack trace:
+[04-Jul-2016 14:55:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:55:21 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:55:21 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:21
+[04-Jul-2016 14:55:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 22
+[04-Jul-2016 14:55:21 UTC] PHP Stack trace:
+[04-Jul-2016 14:55:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:55:21 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:55:21 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:22
+[04-Jul-2016 14:55:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 23
+[04-Jul-2016 14:55:21 UTC] PHP Stack trace:
+[04-Jul-2016 14:55:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 14:55:21 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:3
+[04-Jul-2016 14:55:21 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/project/require/logphp.php:23
+[04-Jul-2016 15:33:12 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 16
+[04-Jul-2016 15:33:12 UTC] PHP Stack trace:
+[04-Jul-2016 15:33:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 15:33:12 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:4
+[04-Jul-2016 15:33:12 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:16
+[04-Jul-2016 15:33:12 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 17
+[04-Jul-2016 15:33:12 UTC] PHP Stack trace:
+[04-Jul-2016 15:33:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 15:33:12 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:4
+[04-Jul-2016 15:33:12 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:17
+[04-Jul-2016 15:33:12 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 18
+[04-Jul-2016 15:33:12 UTC] PHP Stack trace:
+[04-Jul-2016 15:33:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 15:33:12 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:4
+[04-Jul-2016 15:33:12 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/project/require/logphp.php:18
+[04-Jul-2016 15:33:16 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 16
+[04-Jul-2016 15:33:16 UTC] PHP Stack trace:
+[04-Jul-2016 15:33:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 15:33:16 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:4
+[04-Jul-2016 15:33:16 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:16
+[04-Jul-2016 15:33:16 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 17
+[04-Jul-2016 15:33:16 UTC] PHP Stack trace:
+[04-Jul-2016 15:33:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 15:33:16 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:4
+[04-Jul-2016 15:33:16 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:17
+[04-Jul-2016 15:33:16 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 18
+[04-Jul-2016 15:33:16 UTC] PHP Stack trace:
+[04-Jul-2016 15:33:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[04-Jul-2016 15:33:16 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:4
+[04-Jul-2016 15:33:16 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/project/require/logphp.php:18
+[05-Jul-2016 00:49:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 16
+[05-Jul-2016 00:49:28 UTC] PHP Stack trace:
+[05-Jul-2016 00:49:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[05-Jul-2016 00:49:28 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:4
+[05-Jul-2016 00:49:28 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:16
+[05-Jul-2016 00:49:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 17
+[05-Jul-2016 00:49:28 UTC] PHP Stack trace:
+[05-Jul-2016 00:49:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[05-Jul-2016 00:49:28 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:4
+[05-Jul-2016 00:49:28 UTC] PHP   3. setcookie() /home/ubuntu/workspace/gitlab/project/require/logphp.php:17
+[05-Jul-2016 00:49:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/require/logphp.php on line 18
+[05-Jul-2016 00:49:28 UTC] PHP Stack trace:
+[05-Jul-2016 00:49:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[05-Jul-2016 00:49:28 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:4
+[05-Jul-2016 00:49:28 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/project/require/logphp.php:18
+[05-Jul-2016 01:00:57 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/ubuntu/workspace/gitlab/project/person.php on line 7
+[05-Jul-2016 01:02:40 UTC] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in /home/ubuntu/workspace/gitlab/project/require/checkaccount.php on line 5
+[05-Jul-2016 01:02:40 UTC] PHP Stack trace:
+[05-Jul-2016 01:02:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[05-Jul-2016 01:02:40 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:2
+[05-Jul-2016 01:02:40 UTC] PHP   3. require_once() /home/ubuntu/workspace/gitlab/project/require/logphp.php:5
+[05-Jul-2016 01:02:40 UTC] PHP   4. mysql_query() /home/ubuntu/workspace/gitlab/project/require/checkaccount.php:5
+[05-Jul-2016 01:06:16 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/ubuntu/workspace/gitlab/project/person.php on line 7
+[05-Jul-2016 01:06:20 UTC] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in /home/ubuntu/workspace/gitlab/project/require/checkaccount.php on line 5
+[05-Jul-2016 01:06:20 UTC] PHP Stack trace:
+[05-Jul-2016 01:06:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[05-Jul-2016 01:06:20 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:2
+[05-Jul-2016 01:06:20 UTC] PHP   3. require_once() /home/ubuntu/workspace/gitlab/project/require/logphp.php:5
+[05-Jul-2016 01:06:20 UTC] PHP   4. mysql_query() /home/ubuntu/workspace/gitlab/project/require/checkaccount.php:5
+[05-Jul-2016 01:06:51 UTC] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in /home/ubuntu/workspace/gitlab/project/require/checkaccount.php on line 5
+[05-Jul-2016 01:06:51 UTC] PHP Stack trace:
+[05-Jul-2016 01:06:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[05-Jul-2016 01:06:51 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:2
+[05-Jul-2016 01:06:51 UTC] PHP   3. require_once() /home/ubuntu/workspace/gitlab/project/require/logphp.php:5
+[05-Jul-2016 01:06:51 UTC] PHP   4. mysql_query() /home/ubuntu/workspace/gitlab/project/require/checkaccount.php:5
+[05-Jul-2016 01:19:36 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/ubuntu/workspace/gitlab/project/require/checkaccount.php on line 7
+[05-Jul-2016 01:19:36 UTC] PHP Stack trace:
+[05-Jul-2016 01:19:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[05-Jul-2016 01:19:36 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:2
+[05-Jul-2016 01:19:48 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/ubuntu/workspace/gitlab/project/require/checkaccount.php on line 7
+[05-Jul-2016 01:19:48 UTC] PHP Stack trace:
+[05-Jul-2016 01:19:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[05-Jul-2016 01:19:48 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:2
+[05-Jul-2016 01:20:19 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/ubuntu/workspace/gitlab/project/require/checkaccount.php on line 7
+[05-Jul-2016 01:20:19 UTC] PHP Stack trace:
+[05-Jul-2016 01:20:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[05-Jul-2016 01:20:19 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:2
+[05-Jul-2016 01:20:40 UTC] PHP Warning:  setcookie() expects parameter 2 to be string, array given in /home/ubuntu/workspace/gitlab/project/require/checkaccount.php on line 7
+[05-Jul-2016 01:20:40 UTC] PHP Stack trace:
+[05-Jul-2016 01:20:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/login.php:0
+[05-Jul-2016 01:20:40 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/project/login.php:2
+[05-Jul-2016 01:20:40 UTC] PHP   3. require_once() /home/ubuntu/workspace/gitlab/project/require/logphp.php:5
+[05-Jul-2016 01:20:40 UTC] PHP   4. setcookie() /home/ubuntu/workspace/gitlab/project/require/checkaccount.php:7
+[05-Jul-2016 02:42:33 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/ubuntu/workspace/gitlab/project/person.php on line 7
+[05-Jul-2016 04:46:53 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/ubuntu/workspace/gitlab/project/person.php on line 8
+[05-Jul-2016 04:47:21 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/project/person.php on line 10
+[05-Jul-2016 04:47:21 UTC] PHP Stack trace:
+[05-Jul-2016 04:47:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/person.php:0
+[05-Jul-2016 04:47:21 UTC] PHP   2. mysql_fetch_assoc() /home/ubuntu/workspace/gitlab/project/person.php:10
+[05-Jul-2016 04:51:58 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/project/person.php on line 10
+[05-Jul-2016 04:51:58 UTC] PHP Stack trace:
+[05-Jul-2016 04:51:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/person.php:0
+[05-Jul-2016 04:51:58 UTC] PHP   2. mysql_fetch_assoc() /home/ubuntu/workspace/gitlab/project/person.php:10
+[05-Jul-2016 04:52:02 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/project/person.php on line 10
+[05-Jul-2016 04:52:02 UTC] PHP Stack trace:
+[05-Jul-2016 04:52:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/person.php:0
+[05-Jul-2016 04:52:02 UTC] PHP   2. mysql_fetch_assoc() /home/ubuntu/workspace/gitlab/project/person.php:10
+[05-Jul-2016 04:53:20 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/project/person.php on line 10
+[05-Jul-2016 04:53:20 UTC] PHP Stack trace:
+[05-Jul-2016 04:53:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/person.php:0
+[05-Jul-2016 04:53:20 UTC] PHP   2. mysql_fetch_assoc() /home/ubuntu/workspace/gitlab/project/person.php:10
+[05-Jul-2016 04:56:19 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/project/person.php on line 10
+[05-Jul-2016 04:56:19 UTC] PHP Stack trace:
+[05-Jul-2016 04:56:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/person.php:0
+[05-Jul-2016 04:56:19 UTC] PHP   2. mysql_fetch_assoc() /home/ubuntu/workspace/gitlab/project/person.php:10
+[05-Jul-2016 05:38:33 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/project/person.php on line 11
+[05-Jul-2016 05:38:33 UTC] PHP Stack trace:
+[05-Jul-2016 05:38:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/person.php:0
+[05-Jul-2016 05:38:33 UTC] PHP   2. mysql_fetch_assoc() /home/ubuntu/workspace/gitlab/project/person.php:11
+[05-Jul-2016 05:39:25 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/project/person.php on line 11
+[05-Jul-2016 05:39:25 UTC] PHP Stack trace:
+[05-Jul-2016 05:39:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/person.php:0
+[05-Jul-2016 05:39:25 UTC] PHP   2. mysql_fetch_assoc() /home/ubuntu/workspace/gitlab/project/person.php:11
+[05-Jul-2016 05:41:47 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/project/person.php on line 11
+[05-Jul-2016 05:41:47 UTC] PHP Stack trace:
+[05-Jul-2016 05:41:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/person.php:0
+[05-Jul-2016 05:41:47 UTC] PHP   2. mysql_fetch_assoc() /home/ubuntu/workspace/gitlab/project/person.php:11
+[05-Jul-2016 05:42:41 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/ubuntu/workspace/gitlab/project/person.php on line 8
+[05-Jul-2016 05:42:48 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/project/person.php on line 11
+[05-Jul-2016 05:42:48 UTC] PHP Stack trace:
+[05-Jul-2016 05:42:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/person.php:0
+[05-Jul-2016 05:42:48 UTC] PHP   2. mysql_fetch_assoc() /home/ubuntu/workspace/gitlab/project/person.php:11
+[05-Jul-2016 05:43:17 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/ubuntu/workspace/gitlab/project/person.php on line 8
+[05-Jul-2016 05:43:28 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/project/person.php on line 11
+[05-Jul-2016 05:43:28 UTC] PHP Stack trace:
+[05-Jul-2016 05:43:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/person.php:0
+[05-Jul-2016 05:43:28 UTC] PHP   2. mysql_fetch_assoc() /home/ubuntu/workspace/gitlab/project/person.php:11
+[05-Jul-2016 05:47:37 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/ubuntu/workspace/gitlab/project/person.php on line 11
+[05-Jul-2016 05:47:57 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/project/person.php on line 11
+[05-Jul-2016 05:47:57 UTC] PHP Stack trace:
+[05-Jul-2016 05:47:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/person.php:0
+[05-Jul-2016 05:47:57 UTC] PHP   2. mysql_fetch_assoc() /home/ubuntu/workspace/gitlab/project/person.php:11
+[05-Jul-2016 05:52:57 UTC] PHP Parse error:  syntax error, unexpected 'mysql_query' (T_STRING) in /home/ubuntu/workspace/gitlab/project/require/dbconnect.php on line 8
+[05-Jul-2016 05:52:57 UTC] PHP Stack trace:
+[05-Jul-2016 05:52:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/person.php:0
+[05-Jul-2016 05:53:38 UTC] PHP Parse error:  syntax error, unexpected 'mysql_query' (T_STRING) in /home/ubuntu/workspace/gitlab/project/require/dbconnect.php on line 9
+[05-Jul-2016 05:53:38 UTC] PHP Stack trace:
+[05-Jul-2016 05:53:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/person.php:0
+[05-Jul-2016 05:53:56 UTC] PHP Parse error:  syntax error, unexpected 'mysql_query' (T_STRING) in /home/ubuntu/workspace/gitlab/project/require/dbconnect.php on line 9
+[05-Jul-2016 05:53:56 UTC] PHP Stack trace:
+[05-Jul-2016 05:53:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/person.php:0
+[05-Jul-2016 06:21:03 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/applyacount.php on line 8
+[05-Jul-2016 06:21:03 UTC] PHP Stack trace:
+[05-Jul-2016 06:21:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/applyacount.php:0
+[05-Jul-2016 06:21:03 UTC] PHP   2. header() /home/ubuntu/workspace/gitlab/project/applyacount.php:8
+[05-Jul-2016 06:22:58 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/applyacount.php on line 8
+[05-Jul-2016 06:22:58 UTC] PHP Stack trace:
+[05-Jul-2016 06:22:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/applyacount.php:0
+[05-Jul-2016 06:22:58 UTC] PHP   2. header() /home/ubuntu/workspace/gitlab/project/applyacount.php:8
+[05-Jul-2016 06:26:01 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/applyacount.php on line 9
+[05-Jul-2016 06:26:01 UTC] PHP Stack trace:
+[05-Jul-2016 06:26:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/applyacount.php:0
+[05-Jul-2016 06:26:01 UTC] PHP   2. header() /home/ubuntu/workspace/gitlab/project/applyacount.php:9
+[05-Jul-2016 06:26:07 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/applyacount.php on line 9
+[05-Jul-2016 06:26:07 UTC] PHP Stack trace:
+[05-Jul-2016 06:26:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/applyacount.php:0
+[05-Jul-2016 06:26:07 UTC] PHP   2. header() /home/ubuntu/workspace/gitlab/project/applyacount.php:9
+[05-Jul-2016 06:28:24 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/applyacount.php on line 9
+[05-Jul-2016 06:28:24 UTC] PHP Stack trace:
+[05-Jul-2016 06:28:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/applyacount.php:0
+[05-Jul-2016 06:28:24 UTC] PHP   2. header() /home/ubuntu/workspace/gitlab/project/applyacount.php:9
+[05-Jul-2016 06:28:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/applyacount.php on line 9
+[05-Jul-2016 06:28:32 UTC] PHP Stack trace:
+[05-Jul-2016 06:28:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/applyacount.php:0
+[05-Jul-2016 06:28:32 UTC] PHP   2. header() /home/ubuntu/workspace/gitlab/project/applyacount.php:9
+[05-Jul-2016 06:30:04 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/project/require/head.php:129) in /home/ubuntu/workspace/gitlab/project/applyacount.php on line 13
+[05-Jul-2016 06:30:04 UTC] PHP Stack trace:
+[05-Jul-2016 06:30:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/applyacount.php:0
+[05-Jul-2016 06:30:04 UTC] PHP   2. header() /home/ubuntu/workspace/gitlab/project/applyacount.php:13
