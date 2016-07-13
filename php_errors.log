@@ -362,3 +362,13 @@
 [05-Jul-2016 06:30:04 UTC] PHP Stack trace:
 [05-Jul-2016 06:30:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/project/applyacount.php:0
 [05-Jul-2016 06:30:04 UTC] PHP   2. header() /home/ubuntu/workspace/gitlab/project/applyacount.php:13
+[13-Jul-2016 09:04:11 UTC] PHP Warning:  require_once(require/check/php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/projectbackup/cart.php on line 26
+[13-Jul-2016 09:04:11 UTC] PHP Stack trace:
+[13-Jul-2016 09:04:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/projectbackup/cart.php:0
+[13-Jul-2016 09:04:11 UTC] PHP Fatal error:  require_once(): Failed opening required 'require/check/php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/projectbackup/cart.php on line 26
+[13-Jul-2016 09:04:11 UTC] PHP Stack trace:
+[13-Jul-2016 09:04:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/projectbackup/cart.php:0
+[13-Jul-2016 16:15:02 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/projectbackup/single.php on line 53
+[13-Jul-2016 16:15:02 UTC] PHP Stack trace:
+[13-Jul-2016 16:15:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/projectbackup/single.php:0
+[13-Jul-2016 16:15:02 UTC] PHP   2. mysql_fetch_assoc() /home/ubuntu/workspace/gitlab/projectbackup/single.php:53

@@ -23,7 +23,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <?php 
-
+	require_once("require/check.php");
   	if(!isset($_COOKIE['userName']))//到此頁面判斷是否有登入
   		header("location: login.php");
 
@@ -35,7 +35,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		$commdelete="DELETE FROM bill WHERE billid = $_GET[delete]";//刪除帳單內的項目
 		 mysql_query($commdelete,$link);
 		 header("location: cart.php");
-		
 	}
 
 ?>
