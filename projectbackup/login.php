@@ -1,3 +1,8 @@
+<?php 
+require_once("require/check.php");
+require_once("require/logphp.php");
+?>
+
 <!DOCTYPE htlm>
 <html>
 <head>
@@ -22,21 +27,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 
-<?php 
-require_once("require/logphp.php");
-?>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 <div class="wrap">	
 <div class="container">
       <div class="header_top">

@@ -1,3 +1,32 @@
+	
+<?php 
+	//將商品ID傳送到這裡給DB做商品資訊資料擷取
+	require_once("require/check.php");
+	require_once("require/dbconnect.php");
+	$commandg="select * from goods where gId=$_GET[gId]";//到此頁面時透過傳送來的gId抓取商品欄位資料
+	$result=mysql_query($commandg,$link);
+	$row=mysql_fetch_assoc($result);
+
+ 	if(isset($_GET['addc'])){
+  		if(isset($_SESSION['userName'])){//按下商品後檢查有無登入 沒有就跳到登入介面
+  			  require_once("require/car.php");//登入後將require載進來
+  			    
+  		}
+  		else{
+  			header("location: login.php");
+  		}
+  	}
+
+	// if(!isset($_SESSION['car'])){
+	// 	setcookie('car',0);
+	// }
+
+?>
+	
+	
+	
+
+
 <!DOCTYPE htlm>
 <html>
 <head>
@@ -42,36 +71,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 	
 	
-	
-	
-<?php 
-	//將商品ID傳送到這裡給DB做商品資訊資料擷取
-	require_once("require/check.php");
-	require_once("require/dbconnect.php");
-	$commandg="select * from goods where gId=$_GET[gId]";//到此頁面時透過傳送來的gId抓取商品欄位資料
-	$result=mysql_query($commandg,$link);
-	$row=mysql_fetch_assoc($result);
 
- 	if(isset($_GET['buy'])){
-  		if(isset($_COOKIE['userName'])){//按下商品後檢查有無登入 沒有就跳到登入介面
-  			  require_once("require/car.php");//按下商品後加入到購物車
-  		}
-  		else{
-  			header("location: login.php");
-  		}
-  	}
-
-	if(!isset($_COOKIE['car'])){
-		setcookie('car',0);
-	}
-
-?>
-	
-	
-	
-	
-	
-	
 <div class="wrap">	
 <div class="container">
       <div class="header_top">
@@ -208,8 +208,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    			    </div>
    			    <div class="register-info">
 				    <ul>
-							<?php if(isset($_COOKIE['userName'])) {?>
-						<li><a href="personal.php"><?php echo $_COOKIE['userName']; ?></a></li>
+							<?php if(isset($_SESSION['userName'])) {?>
+						<li><a href="personal.php"><?php echo $_SESSION['userName']; ?></a></li>
 						<li><a href="?logout=1"> Logout</a></li>
 						<?php }else{?>
 						<li><a href="index.php">Guest</a></li>
@@ -276,7 +276,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				    <div class="btn_form">
 						 
 						<!--點選Buy時傳送buy及gId到本頁面判斷是否選擇購買-->
-					<a href="?&buy=1&gId=<?php echo $_GET['gId']; ?>"><input type="submit" value="buy" title="" name="buy" id="buy"> </a><!--按鈕後購物車+888-->
+					<a href="?&addc=1&gId=<?php echo $_GET['gId']; ?>"><input type="submit" value="ADD TO CAR" title="" name="buy" id="buy"> </a><!--按鈕後購物車+888-->
 					
 					 </div>
 					 <span class="m_link"><a href="#">login to save in wishlist</a> </span>

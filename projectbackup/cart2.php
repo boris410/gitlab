@@ -1,7 +1,26 @@
+<?php 
+	require_once("require/check.php");
+  	if(!isset($_SESSION['userName']))//到此頁面判斷是否有登入
+  		header("location: login.php");
+
+	require_once("require/dbconnect.php");
+	$command = "select member.mId,bill.* from member join bill on  member.mEmail ='$_SESSION[userName]' and member.mId = bill.gmemberid";
+	$result = mysql_query($command,$link);//透過mEmail載入帳號的帳單資料
+	
+	if(isset($_GET['delete'])){
+		$commdelete="DELETE FROM bill WHERE billid = $_GET[delete]";//刪除帳單內的項目
+		 mysql_query($commdelete,$link);
+		 header("location: cart.php");
+		
+	}
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>Home</title>
+<title>Cart</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Lookz Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
@@ -20,32 +39,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/megamenu.js"></script>
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 </head>
-<?php 
-
-  require_once("require/dbconnect.php");
-  require_once("require/goodslist.php");
-  require_once("require/check.php");
-  setcookie('gid','1',time()-60*60*24);
-  	
-  	if(isset($_GET['gId'])){
-  		if(isset($_COOKIE['userName'])){//按下商品後檢查有無登入 沒有就跳到登入介面
-  			  require_once("require/car.php");//按下商品後加入到購物車
-  			
-  		}
-  		else{
-  			header("location: login.php");
-  		}
-  	}
- 
-
-
-?>
 
 
 <body>
 <div class="wrap">	
-   <div class="container">
-        <div class="header_top">
+<div class="container">
+      <div class="header_top">
 		  <div class="col-sm-9 h_menu4">
 				<ul class="megamenu skyblue">
 					  <li class="active grid"><a class="color8" href="index.php">New</a></li>	
@@ -180,7 +179,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    			    <div class="register-info">
    			    	
    			    	
-				    <ul>
+   			    	
+				   <ul>
 				    	
 				    	<?php if(isset($_COOKIE['userName'])) {?>
 						<li><a href="personal.php"><?php echo $_COOKIE['userName']; ?></a></li>
@@ -192,13 +192,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						
 					</ul>
 					
+					
+					
 			    </div>
 				<div class="clearfix"> </div>
    			 </div>
    			 <div class="clearfix"> </div>
 	</div>
-    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >网页模板</a></div>
-    <div class="header_bootm">
+   <div class="header_bootm">
 		<div class="col-sm-4 span_1">
 		  <div class="logo">
 			<a href="index.php"><img src="images/logo.png" alt=""/></a>
@@ -207,7 +208,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-sm-8 row_2">
 		  <div class="header_bottom_right">
 			<div class="search">
-			  <input type="text" value="Your email address" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Your email address';}">
+			  <input type="text" value="Your email address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your email address';}">
 			  <input type="submit" value="">
 	  		</div>
 	  		<ul class="bag">
@@ -220,103 +221,55 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		 <div class="clearfix"></div>
 	</div>
-	
-	
-	
-	<!--<div class="grid_1">-->
-		
-		
-	<!--	<div class="col-md-3 banner_left">-->
-	<!--		<img src="images/pic1.png" class="img-responsive" alt=""/>-->
-	<!--		<div class="banner_desc">-->
-	<!--			<h1>Slim Fit Men </h1>-->
-	<!--			<h2>Roundcheck T-Shirt</h2>-->
-	<!--			<h5>$125-->
-	<!--				   <small>Only</small>-->
-	<!--				</h5>-->
-	<!--		    <a href="#" class="btn1 btn4 btn-1 btn1-1b">Add To Cart</a>-->
-	<!--		</div>-->
-	<!--	</div>-->
-		
-		
-	<!--	<div class="col-md-9 banner_right">-->
-			 <!-- FlexSlider -->
- <!--             <section class="slider">-->
-	<!--			  <div class="flexslider">-->
-	<!--				<ul class="slides">-->
-	<!--					<li><img src="images/banner.jpg" alt=""/></li>-->
-	<!--					<li><img src="images/banner1.jpg" alt=""/></li>-->
-	<!--				</ul>-->
-	<!--			  </div>-->
-	<!--          </section>-->
-              <!-- FlexSlider -->
-	<!--	</div> -->
-		
-	<!--	<div class="clearfix"></div>-->
-	<!--</div>-->
-	
-	
-	
 <div class="content">
   <div class="content_box">
-  	
-  	
-  		
-	<ul class="grid_2">
-		<!--顯示商品攔goods裡的每一項 點選時傳送商品id到single頁顯示商品資料項目-->
-		<?php while($row = $row = mysql_fetch_assoc($result) ){ ?>
-		<a href="?gId=<?php echo $row['gId']; ?>&gp=<?php  echo $row['gPrice']; ?>&gn=<?php  echo $row['gname']; ?>">
-			<li><img src="<?php echo $row['gpicurl']; ?>" class="img-responsive" alt=""/>
-			<span class="btn5"><?php  echo $row['gPrice']; ?></span>
-			<p><?php echo $row['gname']; ?></p>
-			<p><?php echo $row['gintroduct']; ?></p>
-			</li>
-		</a>
+	<div class="men cart">
+		<table border="1" align="center">
+			<tr>
+		<th>單號</td>	<td>商品名稱</td>	<td>價格</td>	<td>下單日期</td><td></td>
+		</tr>
+		
+			<?php while($row = mysql_fetch_assoc($result)){ ?>
+		<tr>
+		
+		<td align="center"><?php echo $row['billid']; ?></td><td align="center"><?php echo $row['bgoodsname']; ?></td><td align="center"><?php echo $row['bgoodsprice'];  ?></td><td align="center"><?php  echo $row['bbuydate']; ?></td><td align="center" ><a href="?delete=<?php echo  $row['billid']; ?>" style="color:blue;">刪除</a></td>
+		</tr>
 		<?php } ?>
 		
-  
-	
-		<div class="clearfix"> </div>
-	</ul>
+		</table>
 	
 	
-	<div class="grid_3">
 		
 		
-	<!--	<div class="col-md-6 box_2">-->
-	<!--		<div class="section_group"> -->
-	<!--	      	<div class="col_1_of_2 span_1_of_2">-->
-	<!--	      		<img src="images/pic7.jpg" class="img-responsive" alt=""/>-->
-	<!--	        </div>-->
- <!--               <div class="col_1_of_2 span_1_of_2">-->
-	<!--	      		<img src="images/pic8.jpg" class="img-responsive" alt=""/>-->
-	<!--	        </div>-->
- <!--               <div class="clearfix"> </div>-->
- <!--           </div>-->
-	<!--	</div>-->
+		
+		<!--echo $row['bill'];-->
 		
 		
-	<!--	<div class="col-md-6">-->
-	<!--		<div class="box_3">-->
-	<!--		  <div class="col_1_of_2 span_1_of_2 span_3">-->
-	<!--	      		<h3>Paul Slim Fit Men-->
-	<!--					Roundneck-->
-	<!--					T-Shirt</h3>-->
- <!--                 <h4>$156</h4>-->
- <!--                 <p>Offer Available till Sunday 12 Nov 2014.</p>-->
- <!--                 <a href="#" class="btn1 btn6 btn-1 btn1-1b">Add To Cart</a>-->
-	<!--	        </div>-->
- <!--               <div class="col_1_of_2 span_1_of_2 span_4">-->
- <!--                  <div class="span_5">-->
-	<!--	      		 <img src="images/pic9.png" class="img-responsive" alt=""/>-->
-	<!--	      	    </div>-->
-	<!--	        </div>-->
- <!--               <div class="clearfix"> </div>-->
- <!--           </div>-->
-	<!--	</div>-->
-	<!--	<div class="clearfix"> </div>-->
-	<!--</div>-->
-	<!--<div class="footer_top">-->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	    <!--<h1>It appears that your cart is currently empty!</h1>-->
+	    <!--<h2>You can continue browsing <a href="men.php">here</a>.</h2>-->
+    </div>
+	<div class="footer_top">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	<!--  <div class="span_of_4">-->
 	<!--	<div class="col-md-3 box_4">-->
 	<!--		<h4>Shop</h4>-->
@@ -373,31 +326,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--	<div class="clearfix"></div>-->
 	<!--</div>-->
 		<!-- start span_of_2 -->
-	<!--	<div class="span_of_2">-->
-	<!--		<div class="span1_of_2">-->
-	<!--			<h5>need help? <a href="#">contact us <span> &gt;</span> </a> </h5>-->
-	<!--			<p>(or) Call us: +22-34-2458793</p>-->
-	<!--		</div>-->
-	<!--		<div class="span1_of_2">-->
-	<!--			<h5>follow us </h5>-->
-	<!--			<div class="social-icons">-->
-	<!--				     <ul>-->
-	<!--				        <li><a href="#" target="_blank"></a></li>-->
-	<!--				        <li><a href="#" target="_blank"></a></li>-->
-	<!--				        <li><a href="#" target="_blank"></a></li>-->
-	<!--				        <li><a href="#" target="_blank"></a></li>-->
-	<!--				        <li class="last2"><a href="#" target="_blank"></a></li>-->
-	<!--					</ul>-->
-	<!--			</div>-->
-	<!--		</div>-->
-	<!--		<div class="clearfix"></div>-->
-	<!--	</div>-->
-	<!--	<div class="copy">-->
-	<!--	   <p>Copyright &copy; 2015.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>-->
-	<!--	</div>-->
- <!--    </div>---->
- <!--  </div>---->
+		<div class="span_of_2">
+			<div class="span1_of_2">
+				<h5>need help? <a href="#">contact us <span> &gt;</span> </a> </h5>
+				<p>(or) Call us: +22-34-2458793</p>
+			</div>
+			<div class="span1_of_2">
+				<h5>follow us </h5>
+				<div class="social-icons">
+					     <ul>
+					        <li><a href="#" target="_blank"></a></li>
+					        <li><a href="#" target="_blank"></a></li>
+					        <li><a href="#" target="_blank"></a></li>
+					        <li><a href="#" target="_blank"></a></li>
+					        <li class="last2"><a href="#" target="_blank"></a></li>
+						</ul>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="copy">
+		   <p>Copyright &copy; 2015.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+		</div>
+     </div>
+   </div>
 </div>	
-
 </body>
 </html>		

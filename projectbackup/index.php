@@ -1,13 +1,14 @@
 
 <?php 
-require_once("require/check.php");
+session_start();
   require_once("require/dbconnect.php");
   require_once("require/goodslist.php");
-  
+  require_once("require/check.php");
   setcookie('gid','1',time()-60*60*24);
- 
+  
+  
   	if(isset($_GET['gId'])){
-  		if(isset($_COOKIE['userName'])){//按下商品後檢查有無登入 沒有就跳到登入介面
+  		if(isset($_SESSION['userName'])){//按下商品後檢查有無登入 沒有就跳到登入介面
   			  require_once("require/car.php");//按下商品後加入到購物車
   			
   		}
@@ -15,6 +16,8 @@ require_once("require/check.php");
   			header("location: login.php");
   		}
   	}
+  	
+  	
  
 
 
@@ -42,6 +45,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/megamenu.js"></script>
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 </head>
+
+
+
+
 
 
 <body>
@@ -181,8 +188,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    			    </div>
    			    <div class="register-info">
 				    <ul>
-						<?php if(isset($_COOKIE['userName'])) {?>
-						<li><a href="personal.php"><?php echo $_COOKIE['userName']; ?></a></li>
+						<?php if(isset($_SESSION['userName'])) {?>
+						<li><a href="personal.php"><?php echo $_SESSION['userName']; ?></a></li>
 						<li><a href="?logout=1"> Logout</a></li>
 						<?php }else{?>
 						<li><a href="index.php">Guest</a></li>

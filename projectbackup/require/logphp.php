@@ -1,24 +1,29 @@
 <?php
-
+session_start();
 if(isset($_POST["Login"])){
-  if($_POST["txtUserName"] != ""){
+  if($_POST["txtUserName"] != ""){//檢查是否有input
     require_once("checkaccount.php");
       if($data != ""){//連上成功的話才進入 等於0表示沒資料
        
            if(isset($_COOKIE["lastpage"])){
   
-                setcookie("userName" ,$_POST["txtUserName"]);
-                setcookie("userpass" ,$_POST["txtPassword"]);
-                header("location: secret.php");
+                // // setcookie("userName" ,$_POST["txtUserName"]);
+                // // setcookie("userpass" ,$_POST["txtPassword"]);
+                // $_SESSION['userName']=$_POST["txtUserName"];
+                // $_SESSION['userpass']=$_POST["txtPassword"];
+                //header("location: secret.php");
+                echo "lastpage";
+              
                
-                exit();
                }
           else{
-               setcookie("userName" ,$_POST["txtUserName"]);
-              setcookie("userpass" ,$_POST["txtPassword"]);
+              // // setcookie("userName" ,$_POST["txtUserName"]);
+              // // setcookie("userpass" ,$_POST["txtPassword"]);
+               $_SESSION['userName']=$_POST["txtUserName"];
+               $_SESSION['userpass']=$_POST["txtPassword"];
+              
                header("location: index.php");
-           
-                exit();
+                
                }
      
  

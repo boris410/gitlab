@@ -1,3 +1,18 @@
+<?php 
+	require_once("require/check.php");
+  	if(!isset($_SESSION['userName']))//到此頁面判斷是否有登入
+  		header("location: login.php");
+
+	require_once("require/dbconnect.php");
+	$command = "select member.mId,bill.* from member join bill on  member.mEmail ='$_SESSION[userName]' and member.mId = bill.gmemberid";
+	$result = mysql_query($command,$link);//透過mEmail載入帳號的帳單資料
+	
+
+	require_once("require/car.php")
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,37 +35,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/megamenu.js"></script>
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 </head>
-
-
-<?php 
-	require_once("require/check.php");
-  	if(!isset($_COOKIE['userName']))//到此頁面判斷是否有登入
-  		header("location: login.php");
-
-	require_once("require/dbconnect.php");
-	$command = "select member.mId,bill.* from member join bill on  member.mEmail ='$_COOKIE[userName]' and member.mId = bill.gmemberid";
-	$result = mysql_query($command,$link);//透過mEmail載入帳號的帳單資料
-	
-	if(isset($_GET['delete'])){
-		$commdelete="DELETE FROM bill WHERE billid = $_GET[delete]";//刪除帳單內的項目
-		 mysql_query($commdelete,$link);
-		 header("location: cart.php");
-	}
-
-?>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <body>
@@ -194,8 +178,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    			    	
 				   <ul>
 				    	
-				    	<?php if(isset($_COOKIE['userName'])) {?>
-						<li><a href="personal.php"><?php echo $_COOKIE['userName']; ?></a></li>
+				    	<?php if(isset($_SESSION['userName'])) {?>
+						<li><a href="personal.php"><?php echo $_SESSION['userName']; ?></a></li>
 						<li><a href="?logout=1"> Logout</a></li>
 						<?php }else{?>
 						<li><a href="index.php">Guest</a></li>
@@ -236,37 +220,63 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="content">
   <div class="content_box">
 	<div class="men cart">
+		<p align="center">購買歷史</p>
 		<table border="1" align="center">
 			<tr>
-		<th>單號</td>	<td>商品名稱</td>	<td>價格</td>	<td>下單日期</td><td></td>
+		   <th>下單日期</th> <th>商品名稱</th>	<th>價格</th>
 		</tr>
 		
 			<?php while($row = mysql_fetch_assoc($result)){ ?>
 		<tr>
 		
-		<td align="center"><?php echo $row['billid']; ?></td><td align="center"><?php echo $row['bgoodsname']; ?></td><td align="center"><?php echo $row['bgoodsprice'];  ?></td><td align="center"><?php  echo $row['bbuydate']; ?></td><td align="center" ><a href="?delete=<?php echo  $row['billid']; ?>" style="color:blue;">刪除</a></td>
+	 <td align="center"><?php  echo $row['bbuydate']; ?></td> <td align="center"><?php echo $row['bgoodsname']; ?></td><td align="center"><?php echo $row['bgoodsprice'];  ?></td>
 		</tr>
 		<?php } ?>
-		
+	
 		</table>
 		
+		<p align="center">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+		<p align="center">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+		
+		
+		<p align="center">此次購物車內容</p>
+			<?php if(isset($_SESSION[car])){ ?>
+		<table border="1" align="center">
+			<tr>
+		<th>客人編號</th>	<th>產品編號</th>	<th>價格</th>	<th>品名</th> <th>購買時間</th><th></th>
+			</tr>
+			<tr>
+			
+			<?php foreach($_SESSION[car] as $key =>$value ){ ?>
 	
+				<td><?php  printf($_SESSION[car][$key][0]);?></td>
+				<td><?php  printf($_SESSION[car][$key][1]);?></td>
+				<td><?php  printf($_SESSION[car][$key][2]);?></td>
+				<td><?php  printf($_SESSION[car][$key][3]);?></td>
+				<td><?php  printf($_SESSION[car][$key][4]);?></td>
+				<td><a href="?delete=<?php echo $key; ?>" style="color:blue;">刪除</a></td>
+					<?php // ($_SESSION[car][0]); ?>
+		</tr>
+		
+		<?php } ?>
 	
 		
 		
+		
+		<?php }else{ ?>
+		<p align="center">您還未購物!!您可以到<a href="index.php" style="color:blue;">這裡</a>選購喔!</p>
+		<?php } ?>
+	
+		</table>
+			<form action="" method="" border="1" align="center">
+			<tr><td><input type="submit" value="Deal" name="deal"></td></tr><!--這個按鈕的bug如果沒有項目還是會出現deal但是不會有反應 ps應該有個提示號或是不要讓這個按鈕在沒項目時出現-->
+			</form>
+		
+		<div class="clearfix"><hr></div>
+	
+
 		
 		<!--echo $row['bill'];-->
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	    <!--<h1>It appears that your cart is currently empty!</h1>-->
 	    <!--<h2>You can continue browsing <a href="men.php">here</a>.</h2>-->
     </div>

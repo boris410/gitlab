@@ -51,7 +51,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	require_once("require/dbconnect.php");
      $dbname="shopping";
     mysql_select_db($dbname, $link);
-    $command = "select * from member where mEmail = '$_COOKIE[userName]' ";
+    $command = "select * from member where mEmail = '$_SESSION[userName]' ";
     
     
      $result = mysql_query($command,$link);
@@ -202,8 +202,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    			    </div>
    			    <div class="register-info">
 				    <ul>
-						<?php if(isset($_COOKIE['userName'])) {?>
-						<li><a href="personal.php"><?php echo $_COOKIE['userName']; ?></a></li>
+						<?php if(isset($_SESSION['userName'])) {?>
+						<li><a href="personal.php"><?php echo $_SESSION['userName']; ?></a></li>
 						<li><a href="?logout=1"> Logout</a></li>
 						<?php }else{?>
 						<li><a href="index.php">Guest</a></li>
