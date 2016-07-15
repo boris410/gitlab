@@ -1,12 +1,13 @@
 
 <?php 
-
+   session_start();
+  
   //session_start();
   //require_once("require/dbconnect.php");
   //require_once("require/goodslist.php");
   //require_once("require/check.php");
   //setcookie('gid','1',time()-60*60*24);
-  
+
   
   //	if(isset($_GET['gId'])){
   //		if(isset($_SESSION['userName'])){//按下商品後檢查有無登入 沒有就跳到登入介面
@@ -17,11 +18,7 @@
   //			header("location: login.php");
   //		}
   //	}
-  	
-  	
- 
-
-
+  //echo count($data);
 ?>
 
 <!DOCTYPE htlm>
@@ -210,8 +207,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			  <input type="submit" value="">
 	  		</div>
 	  		<ul class="bag">
-	  			<a href="cart.php"><i class="bag_left"> </i></a>
-	  			<a href="cart.php"><li class="bag_right"><p>205.00 $</p> </li></a>
+	  			<a href="cart"><i class="bag_left"> </i></a>
+	  			<a href="cart"><li class="bag_right"><p>205.00 $</p> </li></a>
 	  			<div class="clearfix"> </div>
 	  		</ul>
 	  		<div class="clearfix"> </div>
@@ -359,16 +356,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	     
 <!--products-->	    	     
 	          <div class="span_2">
-	          	<?php //while($row = $row = mysql_fetch_assoc($result) ){ ?>
+	          	<?php for($i=0;$i<=count($data)-1;$i++){ //將物品顯示出來?>
 				    <div class="col_1_of_single1 span_1_of_single1">
-				       <a href="single.php?&gId=<?php //echo $row['gId']; ?>">
-				     <img src="<?php //echo $row['gpicurl']; ?>" class="img-responsive" alt=""/>
-				     <h3><?php //echo $row['gname']; ?></h3>
-				   	 <p><?php //echo $row['gintroduct']; ?></p>
-				   	 <h4>$<?php  //echo $row['gPrice']; ?></h4>
+				       <a href="single?&gId=<?php print_r($data[$i][gId]); ?>">
+				     <img src="<?php print_r($data[$i][gpicurl]); ?>" class="img-responsive" alt=""/>
+				     <h3><?php  	print_r($data[$i][gname]); ?></h3>
+				   	 <p><?php print_r($data[$i][introduct]); ?></p>
+				   	 <h4>$<?php  print_r($data[$i][gPrice]); ?></h4>
 			  	        </a>  
 				    </div>
-				    <?php //} ?>
+				    <?php } ?>
 				     </div>
 	  
 				  <div class="clearfix"></div>

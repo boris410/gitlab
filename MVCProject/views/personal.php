@@ -1,3 +1,28 @@
+<?php
+//var_dump($data);
+ //  session_start();
+ 
+ //   //if(!isset($_COOKIE['userName']))
+ //     header("location: login.php");
+ // 	require_once("require/check.php");
+  	
+  	
+	// require_once("require/dbconnect.php");
+ //    $dbname="shopping";
+ //   mysql_select_db($dbname, $link);
+ //   $command = "select * from member where mEmail = '$_SESSION[userName]' ";
+    
+    
+ //    $result = mysql_query($command,$link);
+ //    // var_dump($command);
+ //    $row = mysql_fetch_assoc($result);
+ //   //var_dump($row);
+ //   // //到此頁面載入個人資料
+   
+?>
+
+
+
 <!DOCTYPE htlm>
 <html>
 <head>
@@ -39,39 +64,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 </head>
 <body>
-	
-	
-	
-	<?php 
-	 //if(!isset($_COOKIE['userName']))
-  //      header("location: login.php");
-  	require_once("require/check.php");
-  	
-  	
-	require_once("require/dbconnect.php");
-     $dbname="shopping";
-    mysql_select_db($dbname, $link);
-    $command = "select * from member where mEmail = '$_SESSION[userName]' ";
-    
-    
-     $result = mysql_query($command,$link);
-     // var_dump($command);
-     $row = mysql_fetch_assoc($result);
-    //var_dump($row);
-    // //到此頁面載入個人資料
-?>
 
-
-	
-	
-	
-	
 <div class="wrap" >	
 <div class="container" >
       <div class="header_top" >
 		  <div class="col-sm-9 h_menu4">
 				<ul class="megamenu skyblue">
-					  <li><a class="color8" href="index.php">New</a></li>	
+					  <li><a class="color8" href="index">New</a></li>	
 				      <li class="active grid"><a class="color1" href="#">Men</a><div class="megapanel">
 						<div class="row">
 							<div class="col1">
@@ -203,11 +202,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    			    <div class="register-info">
 				    <ul>
 						<?php if(isset($_SESSION['userName'])) {?>
-						<li><a href="personal.php"><?php echo $_SESSION['userName']; ?></a></li>
-						<li><a href="?logout=1"> Logout</a></li>
+						<li><a href="personal"><?php echo $_SESSION['userName']; ?></a></li>
+						<li><a href="logout"> Logout</a></li>
 						<?php }else{?>
-						<li><a href="index.php">Guest</a></li>
-						<li><a href="login.php">Login</a></li>
+						<li><a href="index">Guest</a></li>
+						<li><a href="login">Login</a></li>
 						<?php } ?>
 						
 					</ul>
@@ -250,7 +249,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 				<td><h3>Firstname</h3></td>
 			
-				<td><input type="text" value="<?php echo $row['mFirstname'] ?>"></td>
+				<td><input type="text" value="<?php echo $data['mFirstname'] ?>"></td>
 				
 			</tr>
 		
@@ -263,7 +262,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		
 			<tr>
 				<td><h3>Lastname</td>
-				<td><input type="text" value="<?php echo $row['mLastname']; ?>"></td>
+				<td><input type="text" value="<?php echo $data['mLastname']; ?>"></td>
 			
 				
 			</tr>
@@ -277,7 +276,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		
 			<tr>
 				<td><h3>Email</td>
-				<td><input type="text" value="<?php echo $row['mEmail'] ?>"></td>
+				<td><input type="text" value="<?php echo $data['mEmail'] ?>"></td>
 				
 			</tr>
 		
@@ -290,7 +289,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		
 			<tr>
 				<td><h3>Phone</td>
-				<td><input type="text" value="<?php echo $row['mPhone'] ?>"></td>
+				<td><input type="text" value="<?php echo $data['mPhone'] ?>"></td>
 			</tr>
 		</table>
 	</div>

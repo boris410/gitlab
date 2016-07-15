@@ -1,14 +1,26 @@
 <?php 
-	require_once("require/check.php");
-  	if(!isset($_SESSION['userName']))//到此頁面判斷是否有登入
-  		header("location: login.php");
+// session_start();
+// 	require_once("require/check.php");
+//   	if(!isset($_SESSION['userName']))//到此頁面判斷是否有登入
+//   		header("location: login.php");
 
-	require_once("require/dbconnect.php");
-	$command = "select member.mId,bill.* from member join bill on  member.mEmail ='$_SESSION[userName]' and member.mId = bill.gmemberid";
-	$result = mysql_query($command,$link);//透過mEmail載入帳號的帳單資料
+// 	require_once("require/dbconnect.php");
+// 	$command = "select member.mId,bill.* from member join bill on  member.mEmail ='$_SESSION[userName]' and member.mId = bill.gmemberid";
+// 	$result = mysql_query($command,$link);//透過mEmail載入帳號的帳單資料
 	
 
-	require_once("require/car.php")
+// 	require_once("require/car.php")
+//var_dump($data);
+
+
+
+
+
+
+
+
+
+
 
 ?>
 
@@ -43,7 +55,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <div class="header_top">
 		  <div class="col-sm-9 h_menu4">
 				<ul class="megamenu skyblue">
-					  <li class="active grid"><a class="color8" href="index.php">New</a></li>	
+					  <li class="active grid"><a class="color8" href="index">New</a></li>	
 				      <li><a class="color1" href="#">Men</a><div class="megapanel">
 						<div class="row">
 							<div class="col1">
@@ -179,11 +191,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				   <ul>
 				    	
 				    	<?php if(isset($_SESSION['userName'])) {?>
-						<li><a href="personal.php"><?php echo $_SESSION['userName']; ?></a></li>
-						<li><a href="?logout=1"> Logout</a></li>
+						<li><a href="personal"><?php echo $_SESSION['userName']; ?></a></li>
+						<li><a href="logout"> Logout</a></li>
 						<?php }else{?>
-						<li><a href="index.php">Guest</a></li>
-						<li><a href="login.php">Login</a></li>
+						<li><a href="index">Guest</a></li>
+						<li><a href="login">Login</a></li>
 						<?php } ?>
 						
 					</ul>
@@ -208,8 +220,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			  <input type="submit" value="">
 	  		</div>
 	  		<ul class="bag">
-	  			<a href="cart.php"><i class="bag_left"> </i></a>
-	  			<a href="cart.php"><li class="bag_right"><p>205.00 $</p> </li></a>
+	  			<a href="cart"><i class="bag_left"> </i></a>
+	  			<a href="cart"><li class="bag_right"><p>205.00 $</p> </li></a>
 	  			<div class="clearfix"> </div>
 	  		</ul>
 	  		<div class="clearfix"> </div>
@@ -226,10 +238,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		   <th>下單日期</th> <th>商品名稱</th>	<th>價格</th>
 		</tr>
 		
-			<?php while($row = mysql_fetch_assoc($result)){ ?>
+			<?php for($i=0;$i<=count($data)-1;$i++){ ?>
 		<tr>
 		
-	 <td align="center"><?php  echo $row['bbuydate']; ?></td> <td align="center"><?php echo $row['bgoodsname']; ?></td><td align="center"><?php echo $row['bgoodsprice'];  ?></td>
+	 <td align="center"><?php  echo $data[$i]['bbuydate']; ?></td> <td align="center"><?php echo $data[$i]['bgoodsname']; ?></td><td align="center"><?php echo $data[$i]['bgoodsprice'];  ?></td>
 		</tr>
 		<?php } ?>
 	

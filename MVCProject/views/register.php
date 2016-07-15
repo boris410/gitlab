@@ -1,24 +1,27 @@
 <?php 
-if(isset($_POST['submit'])){
-    $link=mysql_connect("localhost","root","");
-    mysql_select_db("shopping",$link);
-    $command = "INSERT INTO member (mFirstname,mLastname,mEmail,mPhone) VALUES ('$_POST[firstname]', '$_POST[lastname]', '$_POST[email]','$_POST[phone]')";     
-   if(mysql_query($command,$link)){
-   	$command ="INSERT INTO account (aPassword,aEmail) VALUES('$_POST[password]','$_POST[email]')";
-   	 mysql_query($command,$link);
-   	 mysql_close($link);
-    	header("location: login.php");
-   }
-   else{
-   	echo mysql_error();
-   }
+// session_start();
+// if(isset($_POST['submit'])){
+//     $link=mysql_connect("localhost","root","");
+//     mysql_select_db("shopping",$link);
+//   $command = "INSERT INTO member (mFirstname,mLastname,mEmail,mPhone) VALUES ('$_POST[firstname]', '$_POST[lastname]', '$_POST[email]','$_POST[phone]')";     
+
+
+//   if(mysql_query($command,$link)){
+//   	$command ="INSERT INTO account (aPassword,aEmail) VALUES('$_POST[password]','$_POST[email]')";
+//   	 mysql_query($command,$link);
+//   	 mysql_close($link);
+//     	header("location: login.php");
+//   }
+//   else{
+//   	echo mysql_error();
+//   }
   
     
-    //header("location: index.php");
-    //創辦帳號並對資料庫新增欄位並導向到index.php
+//     //header("location: index.php");
+//     //創辦帳號並對資料庫新增欄位並導向到index.php
     
     
-}
+// }
 
 
 
@@ -206,8 +209,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			  <input type="submit" value="">
 	  		</div>
 	  		<ul class="bag">
-	  			<a href="cart.php"><i class="bag_left"> </i></a>
-	  			<a href="cart.php"><li class="bag_right"><p>205.00 $</p> </li></a>
+	  			<a href="cart"><i class="bag_left"> </i></a><!--------------------->
+	  			<a href="cart"><li class="bag_right"><p>205.00 $</p> </li></a><!--------------------->
 	  			<div class="clearfix"> </div>
 	  		</ul>
 	  		<div class="clearfix"> </div>
@@ -219,7 +222,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <div class="content_box">
 	<div class="men">
 	 <div class="register">
-		  	  <form action="" method="post"> 
+		  	  <form action="register" method="post"> 
 				 <div class="register-top-grid">
 					<h1>PERSONAL INFORMATION</h1>
 					 <div>
@@ -236,7 +239,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					 </div>
 					 	 <div>
 						 <span>Phone Number<label>*</label></span>
-						 <input type="text" name="phome" value=""> 
+						 <input type="text" name="phone" value=""> 
 					 </div>
 					 <div class="clearfix"> </div>
 					   <a class="news-letter" href="#">
@@ -256,7 +259,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							 <div class="clearfix"> </div>
 					 </div>
 					 <div class="register-but">
-				   <form>
+				   <form action="register" method="post">
 					   <input type="submit" name="submit" value="申請">
 					   <div class="clearfix"> </div>
 				   </form>

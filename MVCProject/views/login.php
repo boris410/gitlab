@@ -1,4 +1,5 @@
 // <?php 
+   session_start();
 // require_once("require/check.php");
 // require_once("require/logphp.php");
 // ?>
@@ -32,7 +33,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <div class="header_top">
 		  <div class="col-sm-9 h_menu4">
 				<ul class="megamenu skyblue">
-					  <li class="active grid"><a class="color8" href="index.php">New</a></li>	
+					  <li class="active grid"><a class="color8" href="index">New</a></li>	
 				      <li><a class="color1" href="#">Men</a><div class="megapanel">
 						<div class="row">
 							<div class="col1">
@@ -183,8 +184,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			  <input type="submit" value="">
 	  		</div>
 	  		<ul class="bag">
-	  			<a href="cart.php"><i class="bag_left"> </i></a>
-	  			<a href="cart.php"><li class="bag_right"><p>205.00 $</p> </li></a>
+	  			<a href="cart"><i class="bag_left"> </i></a>
+	  			<a href="cart"><li class="bag_right"><p>205.00 $</p> </li></a>
 	  			<div class="clearfix"> </div>
 	  		</ul>
 	  		<div class="clearfix"> </div>
@@ -215,7 +216,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="five-in">
 								<h1>25% </h1><span>discount</span>
 								</div>
-								<a href="register.php" class="create">Create an account</a>
+								<a href="register" class="create">Create an account</a>
 								<div class="clearfix"> </div>
 							</div>
 						<div class="clearfix"> </div>

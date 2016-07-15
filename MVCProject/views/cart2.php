@@ -1,4 +1,5 @@
 <?php 
+session_start();
 	require_once("require/check.php");
   	if(!isset($_SESSION['userName']))//到此頁面判斷是否有登入
   		header("location: login.php");
