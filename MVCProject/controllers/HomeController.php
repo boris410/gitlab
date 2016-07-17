@@ -48,7 +48,11 @@ class HomeController extends Controller {
                 $billdata = $car->showbill();
                
                 if($_GET['delete']){
-                        echo "delete";
+                       $car->delegoods();
+                        
+                }
+                elseif($_GET['deal']){
+                       $car->deal();
                         
                 }
                 
@@ -67,6 +71,7 @@ class HomeController extends Controller {
                         $this->view("register");  
                         
                 }
+                
                
         }
         function single(){

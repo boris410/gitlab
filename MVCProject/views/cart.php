@@ -255,7 +255,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<?php if(isset($_SESSION[car])){ ?>
 		<table border="1" align="center">
 			<tr>
-		<th>客人編號</th>	<th>產品編號</th>	<th>價格</th>	<th>品名</th> <th>購買時間</th><th></th>
+		<th>客人編號</th>	<th>產品編號</th>	<th>價格</th>	<th>品名</th> <th>購買時間</th><th>&nbsp</th><th>&nbsp</th>
 			</tr>
 			<tr>
 			
@@ -266,24 +266,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<td><?php  printf($_SESSION[car][$key][2]);?></td>
 				<td><?php  printf($_SESSION[car][$key][3]);?></td>
 				<td><?php  printf($_SESSION[car][$key][4]);?></td>
+				<td><a href="?deal=<?php echo $key; ?>" style="color:blue;">結帳</a></td>
 				<td><a href="?delete=<?php echo $key; ?>" style="color:blue;">刪除</a></td>
 					<?php // ($_SESSION[car][0]); ?>
 		</tr>
 		
 		<?php } ?>
-	
-		
-		
-		
+
 		<?php }else{ ?>
-		<p align="center">您還未購物!!您可以到<a href="index.php" style="color:blue;">這裡</a>選購喔!</p>
+		<p align="center">您還未購物!!您可以到<a href="index" style="color:blue;">這裡</a>選購喔!</p>
 		<?php } ?>
 	
 		</table>
-			<form action="" method="" border="1" align="center">
-			<tr><td><input type="submit" value="Deal" name="deal"></td></tr><!--這個按鈕的bug如果沒有項目還是會出現deal但是不會有反應 ps應該有個提示號或是不要讓這個按鈕在沒項目時出現-->
-			</form>
-		
 		<div class="clearfix"><hr></div>
 	
 

@@ -37,11 +37,8 @@ class car extends Controller{
        $this->model("logphp");
        $logphp = new logphp();
        $dblink = $logphp->dbconnect();
-       $checkresult = $logphp->checkstatus();
-      
-     
-      
-             if( $checkresult!=""){
+       $checkresult = $logphp->checkstatus();//檢查是否有登入 傳回查詢帳號的結果 沒有結果導向到登入
+       if( $checkresult!=""){
               $commandm = "select mId from member where mEmail='$_SESSION[userName]'";
               $meresult = mysql_query($commandm,$dblink);
               $row2=mysql_fetch_assoc($meresult);
@@ -69,10 +66,36 @@ class car extends Controller{
        
       }
       function delegoods(){
+            	          $del="$_GET[delete]";//依照丟過來的mid購買編號將此次的購物車內容單項刪除
+            	          unset($_SESSION[car][$del]);
+                   
        
       }
       function deal(){
-       
+                     $deal="$_GET[deal]";
+                     if(isset($_SESSION[car][$deal])){
+                      echo "yes";
+                             $this->model("logphp");
+                             $logphp = new logphp();
+                             $dblink = $logphp->dbconnect();
+                           
+                             foreach($_SESSION[car][$deal] as $value  ){//將商品分割成一為陣列中的四筆資料
+                              $d0=$_SESSION[car][$deal][0];
+                              $d1=$_SESSION[car][$deal][1];
+                              $d2=$_SESSION[car][$deal][2];
+                              $d3=$_SESSION[car][$deal][3];
+                              $commandi = "insert into bill(gmemberid,bgoodsid,bgoodsprice,bgoodsname,bbuydate) values($d0,$d1,$d2,'$d3',current_timestamp())";//分別儲存到指定欄位
+                             }
+                             mysql_query($commandi,$dblink);
+                             unset($_SESSION[car][$deal]);
+                             header("location: cart");
+                      
+                      
+                     }
+                     else{
+                      echo "no item";
+                     
+                     }
       }
 
 }
