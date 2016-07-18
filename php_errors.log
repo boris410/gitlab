@@ -372,3 +372,17 @@
 [13-Jul-2016 16:15:02 UTC] PHP Stack trace:
 [13-Jul-2016 16:15:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/projectbackup/single.php:0
 [13-Jul-2016 16:15:02 UTC] PHP   2. mysql_fetch_assoc() /home/ubuntu/workspace/gitlab/projectbackup/single.php:53
+[18-Jul-2016 00:51:29 UTC] PHP Warning:  require_once(../EasyMVC/models/goodslist.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/MVCProject/core/Controller.php on line 5
+[18-Jul-2016 00:51:29 UTC] PHP Stack trace:
+[18-Jul-2016 00:51:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/MVCProject/index.php:0
+[18-Jul-2016 00:51:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/MVCProject/index.php:24
+[18-Jul-2016 00:51:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/MVCProject/core/App.php:17}() /home/ubuntu/workspace/gitlab/MVCProject/core/App.php:17
+[18-Jul-2016 00:51:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/MVCProject/core/App.php:17
+[18-Jul-2016 00:51:29 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/MVCProject/controllers/HomeController.php:6
+[18-Jul-2016 00:51:29 UTC] PHP Fatal error:  require_once(): Failed opening required '../EasyMVC/models/goodslist.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/MVCProject/core/Controller.php on line 5
+[18-Jul-2016 00:51:29 UTC] PHP Stack trace:
+[18-Jul-2016 00:51:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/MVCProject/index.php:0
+[18-Jul-2016 00:51:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/MVCProject/index.php:24
+[18-Jul-2016 00:51:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/MVCProject/core/App.php:17}() /home/ubuntu/workspace/gitlab/MVCProject/core/App.php:17
+[18-Jul-2016 00:51:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/MVCProject/core/App.php:17
+[18-Jul-2016 00:51:29 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/MVCProject/controllers/HomeController.php:6
