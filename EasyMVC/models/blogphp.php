@@ -1,6 +1,6 @@
  <?php
 
-class logphp{
+class blogphp{
             function dbconnect(){
                   $dblocalhost="localhost";
                   $dbname="shopping";
@@ -13,7 +13,7 @@ class logphp{
             }
             function checkaccount($link){
                   //$link輸入參數為db的連線結果
-                  $command = "select aEmail,aPassword from account where aEmail= '$_POST[txtUserName]' and aPassword='$_POST[txtPassword]'";
+                  $command = "select mguser,mgpass from management where mguser= '$_POST[txtUserName]' and mgpass='$_POST[txtPassword]'";
                  
                   //檢查帳號密碼在db中是否有資料
                   $result=mysql_query($command,$link);
@@ -33,52 +33,32 @@ class logphp{
             
                   
             }
-             function register(){
-                $dblink = $this->dbconnect();
-                //新增member欄位資料
-                $command="INSERT INTO member (mFirstname,mLastname,mEmail,mPhone) VALUES ('$_POST[firstname]', '$_POST[lastname]','$_POST[email]','$_POST[phone]')";
-                mysql_query($command,$dblink);
-                //新增account欄位資料
-                $command2="INSERT INTO account (aPassword,aEmail) VALUES ('$_POST[password]','$_POST[email]')";
-                mysql_query($command2,$dblink);
-                //檢查是否新增成功
-                $command3 = "select member.*,account.* from member join account on member.mEmail=$_POST[email] and account.aEmail=$_POST[email] ";
-                $result = mysql_query($command3,$dblink);
-                $row = mysql_fetch_assoc($result);
-                if($row!="")
-                {
-                    echo "申請成功";
-                    //帳號申請成功後刪除POST資料
-                    unset($_POST['firstname'],$_POST['lastname'],$_POST['email'],$_POST['phone'],$_POST['password'],$_POST['checkpassword']);
-                    header("location: login");
-                }else{
-                    echo "申請失敗";
-                }
-                
-            }
+             
            
             function checkstatus(){//檢查session是否有userName變數代表有操作登入介面
                 session_start();
                 if(isset($_SESSION['userName']))
                 {
                     $link = $this->dbconnect();
-                    $command= "select * from account where aEmail='$_SESSION[userName]' and aPassword='$_SESSION[userpass]'";
-                    
+                    $command= "select mguser,mgpass from management where mguser= '$_SESSION[userName]' and mgpass='$_SESSION[userpass]'";
                     $result = mysql_query($command,$link);
                     $row = mysql_fetch_assoc($result);//若是有資料代表輸入的帳號密碼正確  登入成功
+                   
                     return $row;
                 }else{
                     
-                     header("location: login");
+                     header("location: bloglogin");
                 }
             }
             
-             function personnalshow(){
+             function personnalshow($user){
                  //抓出個人資料的內容
                  $dblink = $this->dbconnect();
-                 $command = "select * from member where mEmail='$_SESSION[userName]'";
+                 $command = "select * from member where mEmail='$user'";
+                 
                  $result = mysql_query($command,$dblink);
                  $row = mysql_fetch_assoc($result);
+                 
                  return $row;
             }
             function login(){

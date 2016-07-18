@@ -31,7 +31,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		  <div class="col-sm-9 h_menu4">
 				<ul class="megamenu skyblue">
 					  <li><a class="color8" href="index">Home</a></li>	
-				      <li class="active grid"><a class="color1" href="index">Main</a>
+				      <li class="active grid"><a class="color1" href="addProduct">addProduct</a>
 				 
 					</li>
 				 

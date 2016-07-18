@@ -1,14 +1,4 @@
 
-
-
-<!--<div class="block block-list block-compare">-->
-<!--    <div class="block-title">-->
-<!--        <strong><span>Compare Products                    </span></strong>-->
-<!--    </div>-->
-<!--    <div class="block-content">-->
-<!--            <p class="empty">You have no items to compare.</p>-->
-<!--        </div>-->
-<!--</div>-->
 </div>
 
 <div class="col-md-9">
@@ -31,13 +21,12 @@
 <!--products-->	    	     
 	          <div class="span_2">
 	          	<?php for($i=0;$i<=count($data)-1;$i++){ //將物品顯示出來?>
-				    <div class="col_1_of_single1 span_1_of_single1">
-				       <a href="single?&gId=<?php print_r($data[$i][gId]); ?>">
-				     <img src="<?php print_r($data[$i][gpicurl]); ?>" class="img-responsive" alt=""/>
-				     <h3><?php  	print_r($data[$i][gname]); ?></h3>
-				   	 <p><?php print_r($data[$i][introduct]); ?></p>
-				   	 <h4>$<?php  print_r($data[$i][gPrice]); ?></h4>
-			  	        </a>  
+				    <!--<div class="col_1_of_single1 span_1_of_single1">-->
+				    <div class="col_sm_6" style="border-color:#aaaaee;border-width:3px;border-style:solid;padding:5px;">
+				    	    <ui><a href="userpersonal?user=<?php print_r($data[$i][aEmail]); ?>">
+				    		使用者:&nbsp;&nbsp;<?php print_r($data[$i][aEmail]); ?>
+				    	</ui></a>
+				    
 				    </div>
 				    <?php } ?>
 				     </div>

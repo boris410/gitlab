@@ -1,6 +1,4 @@
-
-	</div>
-
+</div>
 <div class="col-md-9">
 	<div class="mens-toolbar">
 <!--sort bar-->          
@@ -12,7 +10,7 @@
 		   		<div class="clearfix"></div>
 	    	</div>
 	    	
-	    	
+	    
 	    
      	    <div class="clearfix"></div>
 	     </div>

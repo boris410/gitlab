@@ -386,3 +386,837 @@
 [18-Jul-2016 00:51:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/MVCProject/core/App.php:17}() /home/ubuntu/workspace/gitlab/MVCProject/core/App.php:17
 [18-Jul-2016 00:51:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/MVCProject/core/App.php:17
 [18-Jul-2016 00:51:29 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/MVCProject/controllers/HomeController.php:6
+[18-Jul-2016 01:32:25 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php on line 82
+[18-Jul-2016 01:32:25 UTC] PHP Stack trace:
+[18-Jul-2016 01:32:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 01:32:25 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 01:32:25 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 01:32:25 UTC] PHP   4. HomeController->personal() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 01:32:25 UTC] PHP   5. logphp->personnalshow() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:41
+[18-Jul-2016 01:32:25 UTC] PHP   6. mysql_fetch_assoc() /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php:82
+[18-Jul-2016 01:55:39 UTC] PHP Fatal error:  Call to undefined method HomeController::views() in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php on line 28
+[18-Jul-2016 01:55:39 UTC] PHP Stack trace:
+[18-Jul-2016 01:55:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 01:55:39 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 01:55:39 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 01:55:39 UTC] PHP   4. HomeController->login() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 02:16:04 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/EasyMVC/views/head.php:164) in /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php on line 71
+[18-Jul-2016 02:16:04 UTC] PHP Stack trace:
+[18-Jul-2016 02:16:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 02:16:04 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 02:16:04 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 02:16:04 UTC] PHP   4. HomeController->single() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 02:16:04 UTC] PHP   5. car->addgoods() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:100
+[18-Jul-2016 02:16:04 UTC] PHP   6. logphp->checkstatus() /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php:40
+[18-Jul-2016 02:16:04 UTC] PHP   7. header() /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php:71
+[18-Jul-2016 02:16:04 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/EasyMVC/views/head.php:164) in /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php on line 63
+[18-Jul-2016 02:16:04 UTC] PHP Stack trace:
+[18-Jul-2016 02:16:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 02:16:04 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 02:16:04 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 02:16:04 UTC] PHP   4. HomeController->single() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 02:16:04 UTC] PHP   5. car->addgoods() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:100
+[18-Jul-2016 02:16:04 UTC] PHP   6. header() /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php:63
+[18-Jul-2016 02:16:45 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/EasyMVC/views/head.php:164) in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php on line 27
+[18-Jul-2016 02:16:45 UTC] PHP Stack trace:
+[18-Jul-2016 02:16:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 02:16:45 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 02:16:45 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 02:16:45 UTC] PHP   4. HomeController->login() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 02:16:45 UTC] PHP   5. header() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:27
+[18-Jul-2016 02:26:16 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php:142) in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php on line 28
+[18-Jul-2016 02:26:16 UTC] PHP Stack trace:
+[18-Jul-2016 02:26:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 02:26:16 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 02:26:16 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 02:26:16 UTC] PHP   4. HomeController->login() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 02:26:16 UTC] PHP   5. header() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:28
+[18-Jul-2016 02:27:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/EasyMVC/views/head.php:164) in /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php on line 71
+[18-Jul-2016 02:27:56 UTC] PHP Stack trace:
+[18-Jul-2016 02:27:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 02:27:56 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 02:27:56 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 02:27:56 UTC] PHP   4. HomeController->personal() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 02:27:56 UTC] PHP   5. logphp->checkstatus() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:45
+[18-Jul-2016 02:27:56 UTC] PHP   6. header() /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php:71
+[18-Jul-2016 02:27:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/EasyMVC/views/head.php:164) in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php on line 49
+[18-Jul-2016 02:27:56 UTC] PHP Stack trace:
+[18-Jul-2016 02:27:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 02:27:56 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 02:27:56 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 02:27:56 UTC] PHP   4. HomeController->personal() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 02:27:56 UTC] PHP   5. header() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:49
+[18-Jul-2016 02:28:33 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/EasyMVC/views/head.php:164) in /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php on line 71
+[18-Jul-2016 02:28:33 UTC] PHP Stack trace:
+[18-Jul-2016 02:28:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 02:28:33 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 02:28:33 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 02:28:33 UTC] PHP   4. HomeController->personal() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 02:28:33 UTC] PHP   5. logphp->checkstatus() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:46
+[18-Jul-2016 02:28:33 UTC] PHP   6. header() /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php:71
+[18-Jul-2016 02:28:33 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/EasyMVC/views/head.php:164) in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php on line 50
+[18-Jul-2016 02:28:33 UTC] PHP Stack trace:
+[18-Jul-2016 02:28:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 02:28:33 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 02:28:33 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 02:28:33 UTC] PHP   4. HomeController->personal() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 02:28:33 UTC] PHP   5. header() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:50
+[18-Jul-2016 02:55:37 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/EasyMVC/views/head.php:257) in /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php on line 71
+[18-Jul-2016 02:55:37 UTC] PHP Stack trace:
+[18-Jul-2016 02:55:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 02:55:37 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 02:55:37 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 02:55:37 UTC] PHP   4. HomeController->cart() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 02:55:37 UTC] PHP   5. car->showbill() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:63
+[18-Jul-2016 02:55:37 UTC] PHP   6. logphp->checkstatus() /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php:6
+[18-Jul-2016 02:55:37 UTC] PHP   7. header() /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php:71
+[18-Jul-2016 03:20:43 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/ubuntu/workspace/gitlab/EasyMVC/views/single.php on line 28
+[18-Jul-2016 03:20:43 UTC] PHP Stack trace:
+[18-Jul-2016 03:20:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 03:20:43 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 03:20:43 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 03:20:43 UTC] PHP   4. HomeController->single() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 03:20:43 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:110
+[18-Jul-2016 03:21:58 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/ubuntu/workspace/gitlab/EasyMVC/views/single.php on line 100
+[18-Jul-2016 03:21:58 UTC] PHP Stack trace:
+[18-Jul-2016 03:21:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 03:21:58 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 03:21:58 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 03:21:58 UTC] PHP   4. HomeController->single() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 03:21:58 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:110
+[18-Jul-2016 03:22:02 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/ubuntu/workspace/gitlab/EasyMVC/views/single.php on line 100
+[18-Jul-2016 03:22:02 UTC] PHP Stack trace:
+[18-Jul-2016 03:22:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 03:22:02 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 03:22:02 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 03:22:02 UTC] PHP   4. HomeController->single() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 03:22:02 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:110
+[18-Jul-2016 03:23:11 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/ubuntu/workspace/gitlab/EasyMVC/views/single.php on line 100
+[18-Jul-2016 03:23:11 UTC] PHP Stack trace:
+[18-Jul-2016 03:23:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 03:23:11 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 03:23:11 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 03:23:11 UTC] PHP   4. HomeController->single() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 03:23:11 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:110
+[18-Jul-2016 03:28:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/EasyMVC/views/head.php:295) in /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php on line 99
+[18-Jul-2016 03:28:32 UTC] PHP Stack trace:
+[18-Jul-2016 03:28:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 03:28:32 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 03:28:32 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 03:28:32 UTC] PHP   4. HomeController->cart() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 03:28:32 UTC] PHP   5. car->deal() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:71
+[18-Jul-2016 03:28:32 UTC] PHP   6. header() /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php:99
+[18-Jul-2016 03:29:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/EasyMVC/views/head.php:295) in /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php on line 99
+[18-Jul-2016 03:29:26 UTC] PHP Stack trace:
+[18-Jul-2016 03:29:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 03:29:26 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 03:29:26 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 03:29:26 UTC] PHP   4. HomeController->cart() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 03:29:26 UTC] PHP   5. car->deal() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:71
+[18-Jul-2016 03:29:26 UTC] PHP   6. header() /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php:99
+[18-Jul-2016 03:33:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/EasyMVC/views/head.php:295) in /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php on line 104
+[18-Jul-2016 03:33:26 UTC] PHP Stack trace:
+[18-Jul-2016 03:33:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 03:33:26 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 03:33:26 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 03:33:26 UTC] PHP   4. HomeController->cart() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 03:33:26 UTC] PHP   5. car->deal() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:71
+[18-Jul-2016 03:33:26 UTC] PHP   6. header() /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php:104
+[18-Jul-2016 03:37:01 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/EasyMVC/views/head.php:295) in /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php on line 53
+[18-Jul-2016 03:37:01 UTC] PHP Stack trace:
+[18-Jul-2016 03:37:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 03:37:01 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 03:37:01 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 03:37:01 UTC] PHP   4. HomeController->register() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 03:37:01 UTC] PHP   5. logphp->register() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:84
+[18-Jul-2016 03:37:01 UTC] PHP   6. header() /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php:53
+[18-Jul-2016 03:40:33 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home/ubuntu/workspace/gitlab/EasyMVC/views/head.php on line 76
+[18-Jul-2016 03:40:33 UTC] PHP Stack trace:
+[18-Jul-2016 03:40:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 03:40:33 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 03:40:33 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 03:40:33 UTC] PHP   4. HomeController->login() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 03:40:33 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:31
+[18-Jul-2016 03:40:33 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home/ubuntu/workspace/gitlab/EasyMVC/views/head.php on line 76
+[18-Jul-2016 03:40:33 UTC] PHP Stack trace:
+[18-Jul-2016 03:40:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 03:40:33 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 03:40:33 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 03:40:33 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 03:40:33 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:6
+[18-Jul-2016 04:23:12 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE), expecting '(' in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 5
+[18-Jul-2016 04:23:12 UTC] PHP Stack trace:
+[18-Jul-2016 04:23:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 04:23:12 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 04:24:27 UTC] PHP Parse error:  syntax error, unexpected '{', expecting '(' in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 3
+[18-Jul-2016 04:24:27 UTC] PHP Stack trace:
+[18-Jul-2016 04:24:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 04:24:27 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 04:29:51 UTC] PHP Warning:  require_once(../EasyMVC/views/blogindex.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 14
+[18-Jul-2016 04:29:51 UTC] PHP Stack trace:
+[18-Jul-2016 04:29:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 04:29:51 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 04:29:51 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 04:29:51 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 04:29:51 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:8
+[18-Jul-2016 04:29:51 UTC] PHP Fatal error:  require_once(): Failed opening required '../EasyMVC/views/blogindex.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 14
+[18-Jul-2016 04:29:51 UTC] PHP Stack trace:
+[18-Jul-2016 04:29:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 04:29:51 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 04:29:51 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 04:29:51 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 04:29:51 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:8
+[18-Jul-2016 04:30:17 UTC] PHP Warning:  require_once(../EasyMVC/views/blogindex.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 14
+[18-Jul-2016 04:30:17 UTC] PHP Stack trace:
+[18-Jul-2016 04:30:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 04:30:17 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 04:30:17 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 04:30:17 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 04:30:17 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:8
+[18-Jul-2016 04:30:17 UTC] PHP Fatal error:  require_once(): Failed opening required '../EasyMVC/views/blogindex.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 14
+[18-Jul-2016 04:30:17 UTC] PHP Stack trace:
+[18-Jul-2016 04:30:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 04:30:17 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 04:30:17 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 04:30:17 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 04:30:17 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:8
+[18-Jul-2016 05:37:16 UTC] PHP Parse error:  syntax error, unexpected '?>', expecting function (T_FUNCTION) in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 29
+[18-Jul-2016 05:37:16 UTC] PHP Stack trace:
+[18-Jul-2016 05:37:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 05:37:16 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 05:37:48 UTC] PHP Warning:  require_once(../EasyMVC/views/Blog/head.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 14
+[18-Jul-2016 05:37:48 UTC] PHP Stack trace:
+[18-Jul-2016 05:37:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 05:37:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 05:37:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:37:48 UTC] PHP   4. BlogController->login() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:37:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:22
+[18-Jul-2016 05:37:48 UTC] PHP Fatal error:  require_once(): Failed opening required '../EasyMVC/views/Blog/head.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 14
+[18-Jul-2016 05:37:48 UTC] PHP Stack trace:
+[18-Jul-2016 05:37:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 05:37:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 05:37:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:37:48 UTC] PHP   4. BlogController->login() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:37:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:22
+[18-Jul-2016 05:38:33 UTC] PHP Warning:  require_once(../EasyMVC/views/Blog/head.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 14
+[18-Jul-2016 05:38:33 UTC] PHP Stack trace:
+[18-Jul-2016 05:38:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 05:38:33 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 05:38:33 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:38:33 UTC] PHP   4. BlogController->login() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:38:33 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:22
+[18-Jul-2016 05:38:33 UTC] PHP Fatal error:  require_once(): Failed opening required '../EasyMVC/views/Blog/head.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 14
+[18-Jul-2016 05:38:33 UTC] PHP Stack trace:
+[18-Jul-2016 05:38:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 05:38:33 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 05:38:33 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:38:33 UTC] PHP   4. BlogController->login() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:38:33 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:22
+[18-Jul-2016 05:39:19 UTC] PHP Warning:  require_once(../EasyMVC/views/Blog/head.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 14
+[18-Jul-2016 05:39:19 UTC] PHP Stack trace:
+[18-Jul-2016 05:39:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 05:39:19 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 05:39:19 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:39:19 UTC] PHP   4. BlogController->login() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:39:19 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:22
+[18-Jul-2016 05:39:19 UTC] PHP Fatal error:  require_once(): Failed opening required '../EasyMVC/views/Blog/head.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 14
+[18-Jul-2016 05:39:19 UTC] PHP Stack trace:
+[18-Jul-2016 05:39:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 05:39:19 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 05:39:19 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:39:19 UTC] PHP   4. BlogController->login() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:39:19 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:22
+[18-Jul-2016 05:48:34 UTC] PHP Fatal error:  Class 'Blog/logphp' not found in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 7
+[18-Jul-2016 05:48:34 UTC] PHP Stack trace:
+[18-Jul-2016 05:48:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 05:48:34 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 05:48:34 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:48:34 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:48:34 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:5
+[18-Jul-2016 05:50:15 UTC] PHP Warning:  require_once(../EasyMVC/models/Blogphp.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 5
+[18-Jul-2016 05:50:15 UTC] PHP Stack trace:
+[18-Jul-2016 05:50:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 05:50:15 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 05:50:15 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:50:15 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:50:15 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:5
+[18-Jul-2016 05:50:15 UTC] PHP Fatal error:  require_once(): Failed opening required '../EasyMVC/models/Blogphp.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 5
+[18-Jul-2016 05:50:15 UTC] PHP Stack trace:
+[18-Jul-2016 05:50:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 05:50:15 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 05:50:15 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:50:15 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:50:15 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:5
+[18-Jul-2016 05:51:49 UTC] PHP Warning:  require_once(../EasyMVC/models/Blogphp.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 5
+[18-Jul-2016 05:51:49 UTC] PHP Stack trace:
+[18-Jul-2016 05:51:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 05:51:49 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 05:51:49 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:51:49 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:51:49 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:5
+[18-Jul-2016 05:51:49 UTC] PHP Fatal error:  require_once(): Failed opening required '../EasyMVC/models/Blogphp.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 5
+[18-Jul-2016 05:51:49 UTC] PHP Stack trace:
+[18-Jul-2016 05:51:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 05:51:49 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 05:51:49 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:51:49 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:51:49 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:5
+[18-Jul-2016 05:52:39 UTC] PHP Warning:  require_once(../EasyMVC/models/Blogphp.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 5
+[18-Jul-2016 05:52:39 UTC] PHP Stack trace:
+[18-Jul-2016 05:52:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 05:52:39 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 05:52:39 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:52:39 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:52:39 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:5
+[18-Jul-2016 05:52:39 UTC] PHP Fatal error:  require_once(): Failed opening required '../EasyMVC/models/Blogphp.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 5
+[18-Jul-2016 05:52:39 UTC] PHP Stack trace:
+[18-Jul-2016 05:52:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 05:52:39 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 05:52:39 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:52:39 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:52:39 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:5
+[18-Jul-2016 05:53:21 UTC] PHP Warning:  require_once(../EasyMVC/models/Blogphp.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 5
+[18-Jul-2016 05:53:21 UTC] PHP Stack trace:
+[18-Jul-2016 05:53:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 05:53:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 05:53:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:53:21 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:53:21 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:5
+[18-Jul-2016 05:53:21 UTC] PHP Fatal error:  require_once(): Failed opening required '../EasyMVC/models/Blogphp.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 5
+[18-Jul-2016 05:53:21 UTC] PHP Stack trace:
+[18-Jul-2016 05:53:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 05:53:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 05:53:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:53:21 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:53:21 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:5
+[18-Jul-2016 05:53:48 UTC] PHP Fatal error:  Class 'blogphp' not found in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 7
+[18-Jul-2016 05:53:48 UTC] PHP Stack trace:
+[18-Jul-2016 05:53:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 05:53:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 05:53:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:53:48 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 05:53:48 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:5
+[18-Jul-2016 05:55:53 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 12
+[18-Jul-2016 05:55:53 UTC] PHP Stack trace:
+[18-Jul-2016 05:55:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 05:55:53 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 06:16:32 UTC] PHP Fatal error:  Class 'bloguserlistt' not found in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 22
+[18-Jul-2016 06:16:32 UTC] PHP Stack trace:
+[18-Jul-2016 06:16:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 06:16:32 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 06:16:32 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 06:16:32 UTC] PHP   4. BlogController->manage() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 06:24:07 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ')' in /home/ubuntu/workspace/gitlab/EasyMVC/models/bloguserlist.php on line 17
+[18-Jul-2016 06:24:07 UTC] PHP Stack trace:
+[18-Jul-2016 06:24:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 06:24:07 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 06:24:07 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 06:24:07 UTC] PHP   4. BlogController->manage() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 06:24:07 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:21
+[18-Jul-2016 06:52:58 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 8
+[18-Jul-2016 06:52:58 UTC] PHP Stack trace:
+[18-Jul-2016 06:52:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 06:52:58 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 07:19:24 UTC] PHP Warning:  require_once(../EasyMVC/models/Blog/blogphp.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 5
+[18-Jul-2016 07:19:24 UTC] PHP Stack trace:
+[18-Jul-2016 07:19:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 07:19:24 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 07:19:24 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 07:19:24 UTC] PHP   4. BlogController->userpersonal() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 07:19:24 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:35
+[18-Jul-2016 07:19:24 UTC] PHP Fatal error:  require_once(): Failed opening required '../EasyMVC/models/Blog/blogphp.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 5
+[18-Jul-2016 07:19:24 UTC] PHP Stack trace:
+[18-Jul-2016 07:19:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 07:19:24 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 07:19:24 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 07:19:24 UTC] PHP   4. BlogController->userpersonal() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 07:19:24 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:35
+[18-Jul-2016 07:34:34 UTC] PHP Warning:  require_once(../EasyMVC/views/blog/blodhead.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 14
+[18-Jul-2016 07:34:34 UTC] PHP Stack trace:
+[18-Jul-2016 07:34:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 07:34:34 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 07:34:34 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 07:34:34 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 07:34:34 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:54
+[18-Jul-2016 07:34:34 UTC] PHP Fatal error:  require_once(): Failed opening required '../EasyMVC/views/blog/blodhead.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 14
+[18-Jul-2016 07:34:34 UTC] PHP Stack trace:
+[18-Jul-2016 07:34:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 07:34:34 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 07:34:34 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 07:34:34 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 07:34:34 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:54
+[18-Jul-2016 07:35:03 UTC] PHP Warning:  require_once(../EasyMVC/views/blog/blodhead.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 14
+[18-Jul-2016 07:35:03 UTC] PHP Stack trace:
+[18-Jul-2016 07:35:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 07:35:03 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 07:35:03 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 07:35:03 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 07:35:03 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:54
+[18-Jul-2016 07:35:03 UTC] PHP Fatal error:  require_once(): Failed opening required '../EasyMVC/views/blog/blodhead.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 14
+[18-Jul-2016 07:35:03 UTC] PHP Stack trace:
+[18-Jul-2016 07:35:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 07:35:03 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 07:35:03 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 07:35:03 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 07:35:03 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:54
+[18-Jul-2016 07:35:17 UTC] PHP Warning:  require_once(../EasyMVC/views/blog/bloghead.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 14
+[18-Jul-2016 07:35:17 UTC] PHP Stack trace:
+[18-Jul-2016 07:35:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 07:35:17 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 07:35:17 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 07:35:17 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 07:35:17 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:54
+[18-Jul-2016 07:35:17 UTC] PHP Fatal error:  require_once(): Failed opening required '../EasyMVC/views/blog/bloghead.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 14
+[18-Jul-2016 07:35:17 UTC] PHP Stack trace:
+[18-Jul-2016 07:35:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 07:35:17 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 07:35:17 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 07:35:17 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 07:35:17 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:54
+[18-Jul-2016 08:37:45 UTC] PHP Parse error:  syntax error, unexpected '"Error: "' (T_CONSTANT_ENCAPSED_STRING) in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 7
+[18-Jul-2016 08:37:45 UTC] PHP Stack trace:
+[18-Jul-2016 08:37:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:37:45 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:37:45 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:37:45 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:37:45 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:55
+[18-Jul-2016 08:38:41 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 13
+[18-Jul-2016 08:38:41 UTC] PHP Stack trace:
+[18-Jul-2016 08:38:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:38:41 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:38:41 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:38:41 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:38:41 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:55
+[18-Jul-2016 08:38:50 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 13
+[18-Jul-2016 08:38:50 UTC] PHP Stack trace:
+[18-Jul-2016 08:38:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:38:50 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:38:50 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:38:50 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:38:50 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:55
+[18-Jul-2016 08:46:02 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 11
+[18-Jul-2016 08:46:02 UTC] PHP Stack trace:
+[18-Jul-2016 08:46:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:46:02 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:46:02 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:46:02 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:46:02 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:55
+[18-Jul-2016 08:46:24 UTC] PHP Warning:  move_uploaded_file(/tmp/tmp/phptxEsBX): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:46:24 UTC] PHP Stack trace:
+[18-Jul-2016 08:46:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:46:24 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:46:24 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:46:24 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:46:24 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:46:24 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:46:24 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phptxEsBX' to '/tmp/tmp/phptxEsBX' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:46:24 UTC] PHP Stack trace:
+[18-Jul-2016 08:46:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:46:24 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:46:24 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:46:24 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:46:24 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:46:24 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:46:41 UTC] PHP Warning:  move_uploaded_file(/tmp/tmp/phpo337P3): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:46:41 UTC] PHP Stack trace:
+[18-Jul-2016 08:46:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:46:41 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:46:41 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:46:41 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:46:41 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:46:41 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:46:41 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpo337P3' to '/tmp/tmp/phpo337P3' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:46:41 UTC] PHP Stack trace:
+[18-Jul-2016 08:46:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:46:41 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:46:41 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:46:41 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:46:41 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:46:41 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:48:55 UTC] PHP Warning:  move_uploaded_file(upload//tmp/phpPKWeUf): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:48:55 UTC] PHP Stack trace:
+[18-Jul-2016 08:48:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:48:55 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:48:55 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:48:55 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:48:55 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:48:55 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:48:55 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpPKWeUf' to 'upload//tmp/phpPKWeUf' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:48:55 UTC] PHP Stack trace:
+[18-Jul-2016 08:48:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:48:55 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:48:55 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:48:55 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:48:55 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:48:55 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:49:02 UTC] PHP Warning:  move_uploaded_file(upload//tmp/phpS0i4QP): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:49:02 UTC] PHP Stack trace:
+[18-Jul-2016 08:49:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:49:02 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:49:02 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:49:02 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:49:02 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:49:02 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:49:02 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpS0i4QP' to 'upload//tmp/phpS0i4QP' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:49:02 UTC] PHP Stack trace:
+[18-Jul-2016 08:49:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:49:02 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:49:02 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:49:02 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:49:02 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:49:02 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:49:14 UTC] PHP Warning:  move_uploaded_file(upload//tmp/phpGTgYnF): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:49:14 UTC] PHP Stack trace:
+[18-Jul-2016 08:49:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:49:14 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:49:14 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:49:14 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:49:14 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:49:14 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:49:14 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpGTgYnF' to 'upload//tmp/phpGTgYnF' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:49:14 UTC] PHP Stack trace:
+[18-Jul-2016 08:49:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:49:14 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:49:14 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:49:14 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:49:14 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:49:14 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:51:49 UTC] PHP Warning:  move_uploaded_file(gitlab/EasyMVC/upload//tmp/php1k22PA): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:51:49 UTC] PHP Stack trace:
+[18-Jul-2016 08:51:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:51:49 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:51:49 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:51:49 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:51:49 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:51:49 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:51:49 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php1k22PA' to 'gitlab/EasyMVC/upload//tmp/php1k22PA' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:51:49 UTC] PHP Stack trace:
+[18-Jul-2016 08:51:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:51:49 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:51:49 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:51:49 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:51:49 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:51:49 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:52:05 UTC] PHP Warning:  move_uploaded_file(gitlab/EasyMVC/upload/tmp/phpMC2Prv): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:52:05 UTC] PHP Stack trace:
+[18-Jul-2016 08:52:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:52:05 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:52:05 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:52:05 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:52:05 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:52:05 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:52:05 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpMC2Prv' to 'gitlab/EasyMVC/upload/tmp/phpMC2Prv' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:52:05 UTC] PHP Stack trace:
+[18-Jul-2016 08:52:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:52:05 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:52:05 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:52:05 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:52:05 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:52:05 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:54:38 UTC] PHP Warning:  move_uploaded_file(/upload/tmp/phpcBIHeO): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:54:38 UTC] PHP Stack trace:
+[18-Jul-2016 08:54:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:54:38 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:54:38 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:54:38 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:54:38 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:54:38 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:54:38 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpcBIHeO' to '/upload/tmp/phpcBIHeO' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:54:38 UTC] PHP Stack trace:
+[18-Jul-2016 08:54:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:54:38 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:54:38 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:54:38 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:54:38 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:54:38 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:54:57 UTC] PHP Warning:  move_uploaded_file(//upload/tmp/phpp4bXXi): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:54:57 UTC] PHP Stack trace:
+[18-Jul-2016 08:54:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:54:57 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:54:57 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:54:57 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:54:57 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:54:57 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:54:57 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpp4bXXi' to '//upload/tmp/phpp4bXXi' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:54:57 UTC] PHP Stack trace:
+[18-Jul-2016 08:54:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:54:57 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:54:57 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:54:57 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:54:57 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:54:57 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:55:14 UTC] PHP Warning:  move_uploaded_file(./upload/tmp/php9HYYY9): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:55:14 UTC] PHP Stack trace:
+[18-Jul-2016 08:55:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:55:14 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:55:14 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:55:14 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:55:14 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:55:14 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:55:14 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php9HYYY9' to './upload/tmp/php9HYYY9' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:55:14 UTC] PHP Stack trace:
+[18-Jul-2016 08:55:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:55:14 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:55:14 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:55:14 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:55:14 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:55:14 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:55:21 UTC] PHP Warning:  move_uploaded_file(../upload/tmp/phpv3kKpe): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:55:21 UTC] PHP Stack trace:
+[18-Jul-2016 08:55:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:55:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:55:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:55:21 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:55:21 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:55:21 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:55:21 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpv3kKpe' to '../upload/tmp/phpv3kKpe' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:55:21 UTC] PHP Stack trace:
+[18-Jul-2016 08:55:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:55:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:55:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:55:21 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:55:21 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:55:21 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:58:32 UTC] PHP Warning:  move_uploaded_file(/public/tmp/phpwbMyTT): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:58:32 UTC] PHP Stack trace:
+[18-Jul-2016 08:58:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:58:32 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:58:32 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:58:32 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:58:32 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:58:32 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:58:32 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpwbMyTT' to '/public/tmp/phpwbMyTT' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:58:32 UTC] PHP Stack trace:
+[18-Jul-2016 08:58:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:58:32 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:58:32 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:58:32 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:58:32 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:58:32 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:59:08 UTC] PHP Warning:  move_uploaded_file(../public/tmp/phpwtp5Jo): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:59:08 UTC] PHP Stack trace:
+[18-Jul-2016 08:59:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:59:08 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:59:08 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:59:08 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:59:08 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:59:08 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:59:08 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpwtp5Jo' to '../public/tmp/phpwtp5Jo' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:59:08 UTC] PHP Stack trace:
+[18-Jul-2016 08:59:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:59:08 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:59:08 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:59:08 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:59:08 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:59:08 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:59:15 UTC] PHP Warning:  move_uploaded_file(../public/tmp/phpr4Wd5s): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:59:15 UTC] PHP Stack trace:
+[18-Jul-2016 08:59:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:59:15 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:59:15 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:59:15 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:59:15 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:59:15 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 08:59:15 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpr4Wd5s' to '../public/tmp/phpr4Wd5s' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 08:59:15 UTC] PHP Stack trace:
+[18-Jul-2016 08:59:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 08:59:15 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 08:59:15 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:59:15 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 08:59:15 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 08:59:15 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 09:00:07 UTC] PHP Warning:  move_uploaded_file(public//tmp/phpvOwsJN): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 09:00:07 UTC] PHP Stack trace:
+[18-Jul-2016 09:00:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 09:00:07 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 09:00:07 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:00:07 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:00:07 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 09:00:07 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 09:00:07 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpvOwsJN' to 'public//tmp/phpvOwsJN' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 09:00:07 UTC] PHP Stack trace:
+[18-Jul-2016 09:00:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 09:00:07 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 09:00:07 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:00:07 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:00:07 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 09:00:07 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 09:00:20 UTC] PHP Warning:  move_uploaded_file(../public//tmp/phpMbd2ub): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 09:00:20 UTC] PHP Stack trace:
+[18-Jul-2016 09:00:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 09:00:20 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 09:00:20 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:00:20 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:00:20 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 09:00:20 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 09:00:20 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpMbd2ub' to '../public//tmp/phpMbd2ub' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 09:00:20 UTC] PHP Stack trace:
+[18-Jul-2016 09:00:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 09:00:20 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 09:00:20 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:00:20 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:00:20 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 09:00:20 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 09:00:27 UTC] PHP Warning:  move_uploaded_file(../public//tmp/phpzwEIAy): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 09:00:27 UTC] PHP Stack trace:
+[18-Jul-2016 09:00:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 09:00:27 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 09:00:27 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:00:27 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:00:27 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 09:00:27 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 09:00:27 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpzwEIAy' to '../public//tmp/phpzwEIAy' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 09:00:27 UTC] PHP Stack trace:
+[18-Jul-2016 09:00:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 09:00:27 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 09:00:27 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:00:27 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:00:27 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 09:00:27 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 09:01:01 UTC] PHP Warning:  move_uploaded_file(./public//tmp/phpVB02X0): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 09:01:01 UTC] PHP Stack trace:
+[18-Jul-2016 09:01:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 09:01:01 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 09:01:01 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:01:01 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:01:01 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 09:01:01 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 09:01:01 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpVB02X0' to './public//tmp/phpVB02X0' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 9
+[18-Jul-2016 09:01:01 UTC] PHP Stack trace:
+[18-Jul-2016 09:01:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 09:01:01 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 09:01:01 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:01:01 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:01:01 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 09:01:01 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:9
+[18-Jul-2016 09:02:11 UTC] PHP Warning:  move_uploaded_file(./public//tmp/phpwPM0QO): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 10
+[18-Jul-2016 09:02:11 UTC] PHP Stack trace:
+[18-Jul-2016 09:02:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 09:02:11 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 09:02:11 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:02:11 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:02:11 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 09:02:11 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:10
+[18-Jul-2016 09:02:11 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpwPM0QO' to './public//tmp/phpwPM0QO' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 10
+[18-Jul-2016 09:02:11 UTC] PHP Stack trace:
+[18-Jul-2016 09:02:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 09:02:11 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 09:02:11 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:02:11 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:02:11 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 09:02:11 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:10
+[18-Jul-2016 09:19:24 UTC] PHP Warning:  Collator::__construct() expects exactly 1 parameter, 0 given in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 7
+[18-Jul-2016 09:19:24 UTC] PHP Stack trace:
+[18-Jul-2016 09:19:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 09:19:24 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 09:19:24 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:19:24 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:19:24 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:55
+[18-Jul-2016 09:19:24 UTC] PHP   6. Collator->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:7
+[18-Jul-2016 09:19:24 UTC] PHP Warning:  Collator::__construct() expects exactly 1 parameter, 0 given in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 56
+[18-Jul-2016 09:19:24 UTC] PHP Stack trace:
+[18-Jul-2016 09:19:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 09:19:24 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 09:19:24 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:19:24 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:19:24 UTC] PHP   5. Collator->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:56
+[18-Jul-2016 09:19:24 UTC] PHP Fatal error:  Call to a member function addp() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 57
+[18-Jul-2016 09:19:24 UTC] PHP Stack trace:
+[18-Jul-2016 09:19:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 09:19:24 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 09:19:24 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:19:24 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:21:25 UTC] PHP Warning:  Collator::__construct() expects exactly 1 parameter, 0 given in /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php on line 7
+[18-Jul-2016 09:21:25 UTC] PHP Stack trace:
+[18-Jul-2016 09:21:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 09:21:25 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 09:21:25 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:21:25 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:21:25 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:55
+[18-Jul-2016 09:21:25 UTC] PHP   6. Collator->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:7
+[18-Jul-2016 09:21:25 UTC] PHP Warning:  Collator::__construct() expects exactly 1 parameter, 0 given in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 56
+[18-Jul-2016 09:21:25 UTC] PHP Stack trace:
+[18-Jul-2016 09:21:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 09:21:25 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 09:21:25 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:21:25 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:21:25 UTC] PHP   5. Collator->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:56
+[18-Jul-2016 09:21:25 UTC] PHP Fatal error:  Call to a member function addp() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 57
+[18-Jul-2016 09:21:25 UTC] PHP Stack trace:
+[18-Jul-2016 09:21:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 09:21:25 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 09:21:25 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:21:25 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:53:10 UTC] PHP Fatal error:  Class 'blogphp' not found in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 8
+[18-Jul-2016 09:53:10 UTC] PHP Stack trace:
+[18-Jul-2016 09:53:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 09:53:10 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 09:53:10 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:53:10 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 09:53:10 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:57
+[18-Jul-2016 12:16:57 UTC] PHP Warning:  move_uploaded_file(images/228562_404015182980516_1411284375_n.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 12
+[18-Jul-2016 12:16:57 UTC] PHP Stack trace:
+[18-Jul-2016 12:16:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 12:16:57 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 12:16:57 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 12:16:57 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 12:16:57 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:53
+[18-Jul-2016 12:16:57 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:12
+[18-Jul-2016 12:16:57 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpv4CCm9' to 'images/228562_404015182980516_1411284375_n.jpg' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 12
+[18-Jul-2016 12:16:57 UTC] PHP Stack trace:
+[18-Jul-2016 12:16:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 12:16:57 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 12:16:57 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 12:16:57 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 12:16:57 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:53
+[18-Jul-2016 12:16:57 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:12
+[18-Jul-2016 13:09:50 UTC] PHP Fatal error:  Call to a member function showgoods() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 51
+[18-Jul-2016 13:09:50 UTC] PHP Stack trace:
+[18-Jul-2016 13:09:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 13:09:50 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 13:09:50 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 13:09:50 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 13:11:02 UTC] PHP Catchable fatal error:  Object of class goodslist could not be converted to string in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 51
+[18-Jul-2016 13:11:02 UTC] PHP Stack trace:
+[18-Jul-2016 13:11:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 13:11:02 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 13:11:02 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 13:11:02 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 13:11:06 UTC] PHP Catchable fatal error:  Object of class goodslist could not be converted to string in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 51
+[18-Jul-2016 13:11:06 UTC] PHP Stack trace:
+[18-Jul-2016 13:11:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 13:11:06 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 13:11:06 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 13:11:06 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 13:24:50 UTC] PHP Warning:  move_uploaded_file(images/IMG_0953.JPG): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 5
+[18-Jul-2016 13:24:50 UTC] PHP Stack trace:
+[18-Jul-2016 13:24:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 13:24:50 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 13:24:50 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 13:24:50 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 13:24:50 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:55
+[18-Jul-2016 13:24:50 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:5
+[18-Jul-2016 13:24:50 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpsvUKXC' to 'images/IMG_0953.JPG' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 5
+[18-Jul-2016 13:24:50 UTC] PHP Stack trace:
+[18-Jul-2016 13:24:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 13:24:50 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 13:24:50 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 13:24:50 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 13:24:50 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:55
+[18-Jul-2016 13:24:50 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:5
+[18-Jul-2016 13:25:02 UTC] PHP Warning:  move_uploaded_file(/images/IMG_0953.JPG): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 5
+[18-Jul-2016 13:25:02 UTC] PHP Stack trace:
+[18-Jul-2016 13:25:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 13:25:02 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 13:25:02 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 13:25:02 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 13:25:02 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:55
+[18-Jul-2016 13:25:02 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:5
+[18-Jul-2016 13:25:02 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpP1XhPG' to '/images/IMG_0953.JPG' in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 5
+[18-Jul-2016 13:25:02 UTC] PHP Stack trace:
+[18-Jul-2016 13:25:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[18-Jul-2016 13:25:02 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[18-Jul-2016 13:25:02 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 13:25:02 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[18-Jul-2016 13:25:02 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:55
+[18-Jul-2016 13:25:02 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:5
