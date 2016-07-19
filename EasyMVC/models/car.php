@@ -17,7 +17,11 @@ class car extends Controller{
                                          'bbuydate' => $billdata['bbuydate'],
                                          'gmemberid' => $billdata['gmemberid'],
                                          'bgoodsprice' => $billdata['bgoodsprice'],
-                                         'bgoodsname' => $billdata['bgoodsname']
+                                         'bgoodsname' => $billdata['bgoodsname'],
+                                         'address'   => $billdata['address'],
+                                         'addressee'   => $billdata['addressee'],
+                                         'paytype'   => $billdata['paytype'],
+                                         'deal'   => $billdata['deal']
                                            );
                     }
                 
@@ -76,8 +80,9 @@ class car extends Controller{
        
       }
       function deal(){
-            
-                     $deal="$_GET[deal]";
+                     echo "123";
+                    $deal="$_GET[deal]";
+                  
                      if(isset($_SESSION[car][$deal])){
                              $this->model("logphp");
                              $logphp = new logphp();
@@ -88,8 +93,11 @@ class car extends Controller{
                               $d1=$_SESSION[car][$deal][1];
                               $d2=$_SESSION[car][$deal][2];
                               $d3=$_SESSION[car][$deal][3];
-                              $commandi = "insert into bill(gmemberid,bgoodsid,bgoodsprice,bgoodsname,bbuydate) values($d0,$d1,$d2,'$d3',current_timestamp())";//分別儲存到指定欄位
+                             
                              }
+                             echo $_POST['addressee'];
+                             $commandi = "insert into bill(gmemberid,bgoodsid,bgoodsprice,bgoodsname,address,paytype,addressee,bbuydate) values($d0,$d1,$d2,'$d3','$_POST[address]','$_POST[paytype]','$_POST[addressee]',current_timestamp())";//分別儲存到指定欄位
+                             echo $commandi;
                              mysql_query($commandi,$dblink);
                              unset($_SESSION[car][$deal]);//成功後刪除點擊的那一單項
                              
@@ -106,6 +114,7 @@ class car extends Controller{
                      }
                 
       }
+     
 
 }
 

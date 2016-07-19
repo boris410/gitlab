@@ -56,6 +56,53 @@ class blogphp{
                  
                  return $row;
             }
+            function changesdeal(){//抓出個人資料的內容
+                 $dblink = $this->dbconnect();
+                 if($_POST['gender'] == "done" ){
+                     $command = "update bill set deal ='1' ";
+                 }
+                 
+                 else{
+                     $command = "update bill set deal =null ";
+                 }
+                 mysql_query($command,$dblink);
+                
+            }
+            
+             function showdeals($who){ 
+                    
+                      $status = $this->checkstatus();
+                       if($status!=""){
+                            $dblink = $this->dbconnect();
+                            $command = "select member.mId,bill.* from member join bill on  member.mEmail $who and member.mId = bill.gmemberid";
+                            //echo $command;
+                             $billresult = mysql_query($command,$dblink);
+                            
+                                while($billdata = mysql_fetch_assoc($billresult)){
+                                         $billarray[]=array(
+                                                     'mId' => $billdata['mId'],
+                                                     'billid' => $billdata['billid'],
+                                                     'bgoodsid' => $billdata['bgoodsid'],
+                                                     'bbuydate' => $billdata['bbuydate'],
+                                                     'gmemberid' => $billdata['gmemberid'],
+                                                     'bgoodsprice' => $billdata['bgoodsprice'],
+                                                     'bgoodsname' => $billdata['bgoodsname'],
+                                                     'address'   => $billdata['address'],
+                                                     'addressee'   => $billdata['addressee'],
+                                                     'paytype'   => $billdata['paytype'],
+                                                     'deal'   => $billdata['deal']
+                                                      );
+                                }
+                            
+                            return $billarray;
+                        
+                       }else
+                       {
+                        echo "no";
+                       }
+          // $status = $logphp->checkstatus();
+           //echo $status;
+            }
             function login(){
               session_start();
               if(isset($_POST["Login"])){

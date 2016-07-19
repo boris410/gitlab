@@ -1,16 +1,4 @@
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     </div>
 
 <div class="col-md-9">
@@ -37,25 +25,11 @@
   <div class="content_box">
 	<div class="men cart">
 		<p align="center">購買歷史</p>
-		<table border="1" align="center">
-			<tr>
-		   <th>下單日期</th> <th>商品名稱</th>	<th>價格</th>
-		</tr>
-		
-			<?php for($i=0;$i<=count($data)-1;$i++){ ?>
-		<tr>
-		
-	 <td align="center"><?php  echo $data[$i]['bbuydate']; ?></td> <td align="center"><?php echo $data[$i]['bgoodsname']; ?></td><td align="center"><?php echo $data[$i]['bgoodsprice'];  ?></td>
-		</tr>
-		<?php } ?>
-	
-		</table>
-		
-		<p align="center">--------------------------------------------------------------------------------------------------------------</p>
-		<p align="center">--------------------------------------------------------------------------------------------------------------</p>
 		
 		
-		<p align="center">此次購物車內容</p>
+		
+		
+			<p align="center">此次購物車內容</p>
 			<?php if(isset($_SESSION[car])){ ?>
 		<table border="1" align="center">
 			<tr>
@@ -70,7 +44,7 @@
 				<td><?php  printf($_SESSION[car][$key][2]);?></td>
 				<td><?php  printf($_SESSION[car][$key][3]);?></td>
 				<td><?php  printf($_SESSION[car][$key][4]);?></td>
-				<td><a href="?deal=<?php echo $key; ?>" style="color:blue;">結帳</a></td>
+				<td><a href="pay?pay=<?php echo $key; ?>" style="color:blue;">結帳</a></td>
 				<td><a href="?delete=<?php echo $key; ?>" style="color:blue;">刪除</a></td>
 					<?php // ($_SESSION[car][0]); ?>
 		</tr>
@@ -82,6 +56,40 @@
 		<?php } ?>
 	
 		</table>
+		
+		
+		
+		<p align="center">--------------------------------------------------------------------------------------------------------------</p>
+		<p align="center">--------------------------------------------------------------------------------------------------------------</p>
+		
+			
+		<table border="1" align="center">
+			<tr>
+		   <th>下單日期</th> <th>商品名稱</th>	<th>價格</th> <th>地址</th> <th>收件人</th> <th>付費方式</th> <th>處理情況</th>
+		</tr>
+		
+			<?php for($i=0;$i<=count($data)-1;$i++){ ?>
+		<tr>
+		
+	 <td align="center"><?php  echo $data[$i]['bbuydate']; ?></td> 
+	 <td align="center"><?php echo $data[$i]['bgoodsname']; ?></td>
+	 <td align="center"><?php echo $data[$i]['bgoodsprice'];  ?></td>
+	 <td align="center"><?php echo $data[$i]['address'];  ?></td>
+	 <td align="center"><?php echo $data[$i]['addressee'];  ?></td>
+	 <td align="center"><?php echo $data[$i]['paytype'];  ?></td>
+	 <?php if($data[$i]['deal']==null){?>
+	 <td align="center"><?php echo "準備中";  ?></td>
+	 <?php }else { ?>
+	 <td align="center"><?php echo "已出貨";  ?></td>
+	 <?php } ?>
+		</tr>
+		<?php } ?>
+	
+		</table>
+		
+		
+	
+		
 		<div class="clearfix"><hr></div>
 	
 

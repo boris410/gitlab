@@ -61,12 +61,21 @@ class HomeController extends Controller {
                 }
                 elseif($_GET['deal']){
                        $car->deal();
-                        
                 }
                 
                 
                 $this->view("head");
                 $this->view("cart",$billdata);
+                $this->view("foot");
+        }
+        function pay(){//顯示物品付費方式頁面
+                session_start();
+                $_GET['gId'] = $_SESSION[car][$_GET['pay']][1];//將會員的特定項目編號值給到一個參數並丟掉fumction中撈出資料庫資料
+                $this->model("goodslist");
+                $goodslist = new goodslist();
+                $result = $goodslist->showgoodsingle();//秀出圖片及價格
+                $this->view("head");
+                $this->view("pay",$result);
                 $this->view("foot");
         }
          function register(){

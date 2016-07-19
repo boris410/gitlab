@@ -111,6 +111,24 @@ class BlogController extends Controller{
                  }
                 
             }
+            
+            function deal(){//秀出所有的deal
+                session_start();
+                //echo "deal";
+                $this->model("blogphp");
+                $blogphp = new blogphp();
+                $result = $blogphp->showdeals("like '%@%'");//將這個字串變成mysql語法丟到函示的who中  "select member.mId,bill.* from member join bill on  member.mEmail $who and member.mId = bill.gmemberid";
+                if(isset($_POST['gender'])){
+                    $blogphp->changesdeal();
+                    header("location: deal");
+                }
+      
+                $this->view("Blog/bloghead");
+                $this->view("Blog/blogdeal",$result);
+                $this->view("Blog/blogfoot");
+                
+                
+            }
 }
 
 
