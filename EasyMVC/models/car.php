@@ -6,7 +6,7 @@ class car extends Controller{
           $status = $logphp->checkstatus();
            if($status!=""){
                 $dblink = $logphp->dbconnect();
-                $command = "select member.mId,bill.* from member join bill on  member.mEmail ='$_SESSION[userName]' and member.mId = bill.gmemberid";
+                $command = "select member.mId,bill.* from member join bill on  member.mEmail ='$_SESSION[userEmail]' and member.mId = bill.gmemberid";
                 $billresult = mysql_query($command,$dblink);
                 
                     while($billdata = mysql_fetch_assoc($billresult)){
@@ -39,7 +39,7 @@ class car extends Controller{
        $dblink = $logphp->dbconnect();
        $checkresult = $logphp->checkstatus();//檢查是否有登入 傳回查詢帳號的結果 沒有結果導向到登入
        if( $checkresult!=""){
-              $commandm = "select mId from member where mEmail='$_SESSION[userName]'";
+              $commandm = "select mId from member where mEmail='$_SESSION[userEmail]'";
               $meresult = mysql_query($commandm,$dblink);
               $row2=mysql_fetch_assoc($meresult);
                

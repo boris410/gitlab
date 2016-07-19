@@ -1238,3 +1238,43 @@
 [19-Jul-2016 02:03:42 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
 [19-Jul-2016 02:03:42 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
 [19-Jul-2016 02:03:42 UTC] PHP   4. BlogController->bloglogout() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[19-Jul-2016 06:43:47 UTC] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php on line 45
+[19-Jul-2016 06:43:47 UTC] PHP Stack trace:
+[19-Jul-2016 06:43:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[19-Jul-2016 06:43:47 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[19-Jul-2016 06:43:47 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[19-Jul-2016 06:43:47 UTC] PHP   4. HomeController->register() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[19-Jul-2016 06:43:47 UTC] PHP   5. logphp->register() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:77
+[19-Jul-2016 06:43:47 UTC] PHP   6. mysql_query() /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php:45
+[19-Jul-2016 06:43:47 UTC] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php on line 48
+[19-Jul-2016 06:43:47 UTC] PHP Stack trace:
+[19-Jul-2016 06:43:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[19-Jul-2016 06:43:47 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[19-Jul-2016 06:43:47 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[19-Jul-2016 06:43:47 UTC] PHP   4. HomeController->register() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[19-Jul-2016 06:43:47 UTC] PHP   5. logphp->register() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:77
+[19-Jul-2016 06:43:47 UTC] PHP   6. mysql_query() /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php:48
+[19-Jul-2016 06:43:47 UTC] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php on line 51
+[19-Jul-2016 06:43:47 UTC] PHP Stack trace:
+[19-Jul-2016 06:43:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[19-Jul-2016 06:43:47 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[19-Jul-2016 06:43:47 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[19-Jul-2016 06:43:47 UTC] PHP   4. HomeController->register() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[19-Jul-2016 06:43:47 UTC] PHP   5. logphp->register() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:77
+[19-Jul-2016 06:43:47 UTC] PHP   6. mysql_query() /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php:51
+[19-Jul-2016 06:43:47 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php on line 52
+[19-Jul-2016 06:43:47 UTC] PHP Stack trace:
+[19-Jul-2016 06:43:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[19-Jul-2016 06:43:47 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[19-Jul-2016 06:43:47 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[19-Jul-2016 06:43:47 UTC] PHP   4. HomeController->register() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[19-Jul-2016 06:43:47 UTC] PHP   5. logphp->register() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:77
+[19-Jul-2016 06:43:47 UTC] PHP   6. mysql_fetch_assoc() /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php:52
+[19-Jul-2016 06:45:31 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php on line 52
+[19-Jul-2016 06:45:31 UTC] PHP Stack trace:
+[19-Jul-2016 06:45:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[19-Jul-2016 06:45:31 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[19-Jul-2016 06:45:31 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[19-Jul-2016 06:45:31 UTC] PHP   4. HomeController->register() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[19-Jul-2016 06:45:31 UTC] PHP   5. logphp->register() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:77
+[19-Jul-2016 06:45:31 UTC] PHP   6. mysql_fetch_assoc() /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php:52

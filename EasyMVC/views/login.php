@@ -1,5 +1,4 @@
-
-	</div>
+</div>
 
 <div class="col-md-9">
 	<div class="mens-toolbar">
@@ -30,7 +29,7 @@
 							  <form action="" method="post">
 								<div> 	
 									<span>Account*</span>
-									<input type="text" name="txtUserName"> 
+									<input type="text" name="txtUserEmail"> 
 								</div>
 								<div> 
 									<span class="pass">Password*</span>
