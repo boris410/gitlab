@@ -21,21 +21,18 @@ class blogphp{
                   return $data;
               
             }
-            function logout(){
-                    session_start();//session start開啟session
-                     session_unset();//刪除session
+            function logout(){//按登出後刪除session資料
+                     session_start();
+                     session_unset();
                     if(count($_SESSION)==0){
                          header("location: index");
                     }else{
                       echo "登出失敗";
                     }
-                    
-            
-                  
             }
              
            
-            function checkstatus(){//檢查session是否有userName變數代表有操作登入介面
+            function checkstatus(){//檢查session到mysql是否有資料 代表是否有登入
                 session_start();
                 if(isset($_SESSION['userName']))
                 {
@@ -51,11 +48,9 @@ class blogphp{
                 }
             }
             
-             function personnalshow($user){
-                 //抓出個人資料的內容
+             function personnalshow($user){//抓出個人資料的內容
                  $dblink = $this->dbconnect();
                  $command = "select * from member where mEmail='$user'";
-                 
                  $result = mysql_query($command,$dblink);
                  $row = mysql_fetch_assoc($result);
                  
@@ -76,8 +71,8 @@ class blogphp{
                                                   else{
                                                       $_SESSION['userName']=$_POST["txtUserName"];
                                                       $_SESSION['userpass']=$_POST["txtPassword"];
-                                                     //header("location: index");//設定帳號密碼到session導向到index
-                                                     return true;
+                                                       header("location: index");//設定帳號密碼到session導向到index
+                                                     
                                                       }
                                     }
                                     else{

@@ -1220,3 +1220,21 @@
 [18-Jul-2016 13:25:02 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
 [18-Jul-2016 13:25:02 UTC] PHP   5. blogaddp->addp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:55
 [18-Jul-2016 13:25:02 UTC] PHP   6. move_uploaded_file() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:5
+[19-Jul-2016 01:53:50 UTC] PHP Fatal error:  Call to a member function login() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 7
+[19-Jul-2016 01:53:50 UTC] PHP Stack trace:
+[19-Jul-2016 01:53:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[19-Jul-2016 01:53:50 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[19-Jul-2016 01:53:50 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[19-Jul-2016 01:53:50 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[19-Jul-2016 01:58:56 UTC] PHP Fatal error:  Call to undefined method BlogController::blogphp() in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 6
+[19-Jul-2016 01:58:56 UTC] PHP Stack trace:
+[19-Jul-2016 01:58:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[19-Jul-2016 01:58:56 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[19-Jul-2016 01:58:56 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[19-Jul-2016 01:58:56 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[19-Jul-2016 02:03:42 UTC] PHP Fatal error:  Call to undefined method blogphp::blogout() in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 41
+[19-Jul-2016 02:03:42 UTC] PHP Stack trace:
+[19-Jul-2016 02:03:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[19-Jul-2016 02:03:42 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[19-Jul-2016 02:03:42 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[19-Jul-2016 02:03:42 UTC] PHP   4. BlogController->bloglogout() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17

@@ -29,11 +29,19 @@ class blogaddp extends Controller{
             // var_dump($_FILES["fileToUpload"]["type"]);
             // var_dump($_FILES["fileToUpload"]["sizee"]);
             
-            //move_uploaded_file($_FILES["fileToUpload"]["tmp_name"],"images/".$_FILES["fileToUpload"]["name"]);
+            
             
                 }
-    function deladdp(){
-            /*******************************************/
+    function deladdp(){//刪除gId對應在mysql中的圖片unset這個post 再重新整理導回同一頁 
+                            $this->model("blogphp");
+                            $blogphp = new blogphp();
+                            $dblink = $blogphp->dbconnect();
+                            
+                            $command = "delete from goods where gID=$_POST[delete]";
+                            mysql_query($command,$dblink);
+                            echo $command;
+                            unset($_POST['delete']);
+                            header("location: addProduct");
             
                 }
 

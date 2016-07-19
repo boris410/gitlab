@@ -34,8 +34,10 @@ class logphp{
                   
             }
              function register(){
+                
                 $dblink = $this->dbconnect();
                 //新增member欄位資料
+                
                 $command="INSERT INTO member (mFirstname,mLastname,mEmail,mPhone) VALUES ('$_POST[firstname]', '$_POST[lastname]','$_POST[email]','$_POST[phone]')";
                 mysql_query($command,$dblink);
                 //新增account欄位資料
