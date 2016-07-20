@@ -24,11 +24,6 @@
 <div class="content">
   <div class="content_box">
 	<div class="men cart">
-		<p align="center">購買歷史</p>
-		
-		
-		
-		
 			<p align="center">此次購物車內容</p>
 			<?php if(isset($_SESSION[car])){ ?>
 		<table border="1" align="center">
@@ -62,15 +57,14 @@
 		<p align="center">--------------------------------------------------------------------------------------------------------------</p>
 		<p align="center">--------------------------------------------------------------------------------------------------------------</p>
 		
-			
+		<p align="center">購買歷史</p>	
+		<?php if(count($data)!=0){ ?>
 		<table border="1" align="center">
 			<tr>
 		   <th>下單日期</th> <th>商品名稱</th>	<th>價格</th> <th>地址</th> <th>收件人</th> <th>付費方式</th> <th>處理情況</th>
 		</tr>
-		
 			<?php for($i=0;$i<=count($data)-1;$i++){ ?>
 		<tr>
-		
 	 <td align="center"><?php  echo $data[$i]['bbuydate']; ?></td> 
 	 <td align="center"><?php echo $data[$i]['bgoodsname']; ?></td>
 	 <td align="center"><?php echo $data[$i]['bgoodsprice'];  ?></td>
@@ -83,7 +77,10 @@
 	 <td align="center"><?php echo "已出貨";  ?></td>
 	 <?php } ?>
 		</tr>
-		<?php } ?>
+	<?php } ?>
+		<?php }else{ ?>
+		<p align="center">目前您還未有任何購買紀錄!!!</p>	
+			<?php } ?>
 	
 		</table>
 		

@@ -1,7 +1,7 @@
 <?php
 
 class bloguserlist extends Controller{
-                function showuser (){
+                function showuser (){//秀出後台index的使用者帳號
                     $this->model("blogphp");
                     $db = new blogphp();
                     $link = $db->dbconnect();//回傳連線結果
@@ -19,7 +19,7 @@ class bloguserlist extends Controller{
                     
                     
                 }
-                function showgoodsingle(){
+                function showgoodsingle(){//秀出後台使用者的帳號內容
                     $this->model("logphp");
                     $db = new logphp();
                     $link = $db->dbconnect();//回傳連線結果

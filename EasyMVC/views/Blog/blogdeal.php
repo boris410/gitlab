@@ -1,12 +1,4 @@
-
-    
-    
-    
-    
-    
-    
-    
-    </div>
+     </div>
 
 <div class="col-md-9">
 	<div class="mens-toolbar">
@@ -85,20 +77,23 @@
 	 <td align="center"><?php echo $data[$i]['address'];  ?></td>
 	 <td align="center"><?php echo $data[$i]['addressee'];  ?></td>
 	 <td align="center"><?php echo $data[$i]['paytype'];  ?></td>
+	 
 	 <?php if($data[$i]['deal']==null){?>
 	 <!--<td align="center"><?php //echo "準備中";  ?></td>-->
 	 <td align="center">
-	     
+	     	
 	              <label for="male">已出貨</label>
                   <input type="radio" name="gender" id="male" value="done"><br>
                   <label for="female">準備中</label>
                   <input type="radio" name="gender" id="female" value="yet" checked><br>
                   <input type="submit" value="Submit"/>
-        
+                  
+                  
+        s
 	 </td>
 	 <?php }else { ?>
 	 <td align="center">
-	      
+	     
 	              <label for="male">已出貨</label>
                   <input type="radio" name="gender" id="male" value="done"checked><br>
                   <label for="female">準備中</label>
@@ -107,6 +102,7 @@
           
 	 </td>
 	 <?php } ?>
+	 	
 		</tr>
 		<?php } ?>
 		</table>
@@ -136,6 +132,16 @@
       
           <div class="clearfix"> </div>
     </div>
+    
 
 
+<script>
+	function gender_submit(){
+		
+		
+		
+	}
 	
+	
+	
+</script>	

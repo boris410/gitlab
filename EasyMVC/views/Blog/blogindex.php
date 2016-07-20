@@ -8,14 +8,15 @@
    	     
 	          		<div class="span_2">
 	          		<?php for($i=0;$i<=count($data)-1;$i++){ //將物品顯示出來?>
-				    
-						    <div class="col_sm_6" style="border-color:#aaaaee;border-width:3px;border-style:solid;padding:5px;">
-						    	<a href="userpersonal?user=<?php print_r($data[$i][aEmail]); ?>">
-						    	    	<ui>
-						    			使用者:&nbsp;&nbsp;<?php print_r($data[$i][aEmail]); ?>
-						    			</ui>
-						    	</a>
-						    </div>
+				    		<form action="userpersonal" method="post">
+				    			<table>
+				    				<tr>
+				    					<td><button type="submit ">使用者:&nbsp;&nbsp;<?php print_r($data[$i][aEmail]); ?></button></td>
+				    					<input type="hidden" name="user" value="<?php print_r($data[$i][aEmail]); ?>">
+				    				</tr>
+				    			</table>
+				    		</form>
+						    
 				    <?php } ?>
 				     </div>
 				  <div class="clearfix"></div>

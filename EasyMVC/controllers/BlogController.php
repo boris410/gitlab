@@ -61,13 +61,13 @@ class BlogController extends Controller{
                 $this->model("blogphp");
                 $person = new blogphp();
                 $check = $person->checkstatus();
-                
-                
+         
                 if($check !=""){
-                        $persondata = $person->personnalshow($_GET['user']);
-                         $this->view("Blog/bloghead");
-                $this->view("Blog/blogpersonal",$persondata);
-                $this->view("Blog/blogfoot");
+                    
+                    $persondata = $person->personnalshow($_POST['user']);
+                    $this->view("Blog/bloghead");
+                    $this->view("Blog/blogpersonal",$persondata);
+                    $this->view("Blog/blogfoot");
                 }else{
                         header("location: bloglogin");
                 }
@@ -119,6 +119,8 @@ class BlogController extends Controller{
                 $blogphp = new blogphp();
                 $result = $blogphp->showdeals("like '%@%'");//將這個字串變成mysql語法丟到函示的who中  "select member.mId,bill.* from member join bill on  member.mEmail $who and member.mId = bill.gmemberid";
                 if(isset($_POST['gender'])){
+                    
+                   // var_dump($_POST['gender']);
                     $blogphp->changesdeal();
                     header("location: deal");
                 }

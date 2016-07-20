@@ -19,10 +19,10 @@
 <!--products-->	    	     
 	          <div class="span_2">
 	          	
-<div class="content">
+<div  class="content">
   <div class="content_box">
 	<div class="men">
-	 <div class="account-in">
+	 <div  class="account-in">
 							<h2>Account</h2>
 							<div class="col-md-7 account-top">
 							  <form action="" method="post">
@@ -37,14 +37,7 @@
 									<input type="submit" value="Login" name="Login"><!--按按鈕後 送出Login=Login到此頁面-->
 							   </form>
 							</div>
-							<div class="col-md-5 left-account ">
-								<a href="single.php"><img class="img-responsive " src="images/s4.jpg" alt=""></a>
-								<div class="five-in">
-								<h1>25% </h1><span>discount</span>
-								</div>
-								<a href="register" class="create">Create an account</a>
-								<div class="clearfix"> </div>
-							</div>
+							
 						<div class="clearfix"> </div>
 					</div>
     </div>

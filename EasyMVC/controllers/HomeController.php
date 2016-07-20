@@ -37,7 +37,7 @@ class HomeController extends Controller {
                 $this->model("logphp");
                 $person = new logphp();
                 $check = $person->checkstatus();
-                if($check!=""){
+                if($check!=null){
                         $persondata = $person->personnalshow();
                 }else{
                         header("location: login");
@@ -79,7 +79,6 @@ class HomeController extends Controller {
                 $this->view("foot");
         }
          function register(){
-              
                 if(isset($_POST['submit'])){
                         $this->model("logphp");
                         $registerdata=new logphp();

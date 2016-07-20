@@ -11,11 +11,9 @@ class logphp{
                     mysql_select_db($dbname);
                     return $link;
             }
-            function checkaccount(){//登入時檢查是否有input 裡面的帳號密碼
-                    //$link輸入參數為db的連線結果
+            function checkaccount(){//登入時檢查是否有input 裡面的帳號密碼//$link輸入參數為db的連線結果
                     $link = $this->dbconnect();
-                    $command = "select aEmail,aPassword from account where aEmail= '$_POST[txtUserEmail]' and aPassword='$_POST[txtPassword]'";
-                    //  echo $command;
+                    $command = "select aEmail,aPassword from account where aEmail= '$_POST[txtUserEmail]' ";
                     //檢查帳號密碼在db中是否有資料
                     $result=mysql_query($command,$link);
                     $data=mysql_fetch_assoc($result);//檢查變數查看是否有資料
@@ -34,11 +32,12 @@ class logphp{
 
             }
              function register(){
-                    
-                   $checkaccount =$this->checkaccount();
-                   $dblink = $this->dbconnect();
-                   if($checkaccount ==""){//如果有資料代表重複帳號 無法創辦
-                       
+                   
+                  
+                  $checkaccount =$this->checkaccount();
+                  $dblink = $this->dbconnect();
+                  if($checkaccount ==""){//如果有資料代表重複帳號 無法創辦
+
                             //新增member欄位資料
                             $command="INSERT INTO member (mFirstname,mLastname,mEmail,mPhone) VALUES ('$_POST[firstname]', '$_POST[lastname]','$_POST[txtUserEmail]','$_POST[phone]')";
                             mysql_query($command,$dblink);
@@ -59,9 +58,10 @@ class logphp{
                             }else{
                                     echo "申請失敗";
                             }
-                   }else{
-                       echo "帳號重複";
-                   }
+                  }else{
+                      unset($_POST['firstname'],$_POST['lastname'],$_POST['txtUserEmail'],$_POST['phone'],$_POST['txtPassword']);
+                      echo "帳號重複";
+                  }
 
             }
            

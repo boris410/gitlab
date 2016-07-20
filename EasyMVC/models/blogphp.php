@@ -1,7 +1,7 @@
  <?php
 
 class blogphp{
-            function dbconnect(){
+            function dbconnect(){//***same****//
                   $dblocalhost="localhost";
                   $dbname="shopping";
                   $dbuser="root";
@@ -11,17 +11,16 @@ class blogphp{
                   mysql_select_db($dbname);
                   return $link;
             }
-            function checkaccount($link){
-                  //$link輸入參數為db的連線結果
+            function checkaccount(){
+                  $link = $this->dbconnect();
                   $command = "select mguser,mgpass from management where mguser= '$_POST[txtUserName]' and mgpass='$_POST[txtPassword]'";
-                 
                   //檢查帳號密碼在db中是否有資料
                   $result=mysql_query($command,$link);
                   $data=mysql_fetch_assoc($result);//檢查變數查看是否有資料
                   return $data;
               
             }
-            function logout(){//按登出後刪除session資料
+            function logout(){//***same****//
                      session_start();
                      session_unset();
                     if(count($_SESSION)==0){
@@ -50,13 +49,44 @@ class blogphp{
             
              function personnalshow($user){//抓出個人資料的內容
                  $dblink = $this->dbconnect();
-                 $command = "select * from member where mEmail='$user'";
+                  $command = "select member.*,account.aPassword,bill.*
+                                from member
+                                join account 
+                                on mEmail='$user' and account.aEmail=member.mEmail
+                                join bill
+                                on member.mId = bill.gmemberid";
+                //  $command2 = "select aPassword from account where aEmail='$user'";
                  $result = mysql_query($command,$dblink);
-                 $row = mysql_fetch_assoc($result);
+                 //$row = mysql_fetch_assoc($result);
                  
-                 return $row;
+                  while($billdata = mysql_fetch_assoc($result)){
+                             $billarray[]=array(
+                                         'mId' => $billdata['mId'],
+                                         'billid' => $billdata['billid'],
+                                         'bgoodsid' => $billdata['bgoodsid'],
+                                         'bbuydate' => $billdata['bbuydate'],
+                                         'gmemberid' => $billdata['gmemberid'],
+                                         'bgoodsprice' => $billdata['bgoodsprice'],
+                                         'bgoodsname' => $billdata['bgoodsname'],
+                                         'address'   => $billdata['address'],
+                                         'addressee'   => $billdata['addressee'],
+                                         'paytype'   => $billdata['paytype'],
+                                         'deal'   => $billdata['deal'],
+                                         'mFirstname'   => $billdata['mFirstname'],
+                                         'mLastname'   => $billdata['mLastname'],
+                                         'mEmail'   => $billdata['mEmail'],
+                                         'mPhone'   => $billdata['mPhone'],
+                                         'aPassword'   => $billdata['aPassword']
+                                         
+                                           );}
+                
+                 
+                 
+                  return  $billarray;
             }
             function changesdeal(){//抓出個人資料的內容
+            
+           
                  $dblink = $this->dbconnect();
                  if($_POST['gender'] == "done" ){
                      $command = "update bill set deal ='1' ";

@@ -65,6 +65,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="col-sm-8 row_2">
 		  <div class="header_bottom_right">
+		  	
 			<div class="search">
 			  <input type="text" value="Your email address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your email address';}">
 			  <input type="submit" value="">

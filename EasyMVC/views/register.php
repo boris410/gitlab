@@ -1,76 +1,65 @@
 </div>
 
-<div class="col-md-9">
-	<div class="mens-toolbar">
 
-          <div class="sort">
-		        
-    		</div>
-	        <div class="pager">   
-	    
-		   		<div class="clearfix"></div>
-	    	</div>
-	    	
-	    	
-	    
-     	    <div class="clearfix"></div>
-	     </div>
 
-	          <div class="span_2">
-	          
-<div class="content" style="background-color:gray;">
-  <div class="content_box">
-	<div class="men">
-	 <div class="register">
-		  	  <form action="" method="post"> 
-		  	  
-				 <div class="register-top-grid">
-					<h1>PERSONAL INFORMATION</h1>
-					 <div>
-					 	<span>Email Address<label>*</label></span>
-						<input type="text" name="txtUserEmail" value="" style="border-color:blue; border-width:3px;"> 
-						<span>Password<label>*</label></span>
-						<input type="text" name="txtPassword" value="" style="border-color:blue; border-width:3px;">
-						<span>Confirm Password<label>*</label></span>
-						<input type="text" name="checkpassword" value="" style="border-color:blue; border-width:3px;">
-					</div>
-					 <div>
-					 	<span>First Name<label>*</label></span>
-						<input type="text" name="firstname" value="" style="border-color:blue; border-width:3px;"> 
-						<span>Last Name<label>*</label></span>
-						<input type="text" name="lastname" value="" style="border-color:blue; border-width:3px;"> 
-					 </div>
-					 	 <div>
-						 <span>Phone Number<label>*</label></span>
-						 <input type="text" name="phone" value="" style="border-color:blue; border-width:3px;"> 
-					 </div>
-					 <div class="clearfix"> </div>
-					   
-					 </div>
-				    
-					 
-					 <div class="register-but">
-				   <form action="" method="post">
-					   <input type="submit" name="submit" value="申請">
-					   <div class="clearfix"> </div>
-				   </form>
-				</div>
-				
-				</form>
-				<div class="clearfix"> </div>
-			
-		   </div>
-    </div>
+<form  action="" method="post" class="form-horizontal">
+<fieldset>
 
-				     </div>
-	  
-				  <div class="clearfix"></div>
-			  </div>
-			  
-			  
+<!-- Form Name -->
+<legend>Register New Account</legend>
 
-            </div>
-      
-          <div class="clearfix"> </div>
-    </div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="name">Email Address</label>  
+  <div class="col-md-4">
+   <input  type="text" id="txtUserEmail" name="txtUserEmail" value="" class="form-control input-md" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="***@*****.com.tw" required> 
+  </div>
+</div>
 
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="email">Password</label>  
+  <div class="col-md-4">
+  <input type="text" name="txtPassword" value="" class="form-control input-md" pattern="[a-z0-9]{6,12}" placeholder="Password-6至12得英文小寫數字"   required>
+    
+  </div>
+</div>
+
+<!-- Password input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="password">First Name</label>
+  <div class="col-md-4">
+    <input  type="text" name="firstname" value="" class="form-control input-md" pattern="[a-z0-9]{1,10}" placeholder="First Name"required>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="contact">Last Name</label>  
+  <div class="col-md-4">
+  <input  type="text" name="lastname" value="" class="form-control input-md"  placeholder="Last Name" required>
+  </div>
+</div>
+
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="area">Phone Number</label>  
+  <div class="col-md-4">
+  <input  type="text" name="phone" value="" class="form-control input-md" pattern="[0-9]{10,10}" placeholder="09XXXXXXXX" required>
+  </div>
+</div>
+
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="signup"></label>
+  <div class="col-md-4">
+    <!--<button id="signup" name="submit" class="btn btn-success">submit</button>-->
+    <input type="submit" name="submit" value="submit">
+  </div>
+</div>
+
+</fieldset>
+</form>

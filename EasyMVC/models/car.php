@@ -1,6 +1,6 @@
 <?php 
 class car extends Controller{
-       function showbill(){
+       function showbill(){//購物車內 個人帳號的所有歷史帳單
           $this->model("logphp");
           $logphp = new logphp();
           $status = $logphp->checkstatus();
@@ -36,7 +36,7 @@ class car extends Controller{
       
        
       }
-      function addgoods($data){
+      function addgoods($data){//增加商品到購物車
        
        $this->model("logphp");
        $logphp = new logphp();
@@ -69,7 +69,7 @@ class car extends Controller{
                  
        
       }
-      function delegoods(){
+      function delegoods(){//刪除購物車內商品
             	          $del="$_GET[delete]";//依照丟過來的mid購買編號將此次的購物車內容單項刪除
             	          unset($_SESSION[car][$del]);//成功後刪除點擊的那一單項
             	          if($_SESSION[car]==null){//如果最後都沒有項目了就把session中car的陣列刪除views就會顯示前往index的連結
@@ -79,8 +79,8 @@ class car extends Controller{
                    
        
       }
-      function deal(){
-                     echo "123";
+      function deal(){//交易單筆商品
+                   
                     $deal="$_GET[deal]";
                   
                      if(isset($_SESSION[car][$deal])){
