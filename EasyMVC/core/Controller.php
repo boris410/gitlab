@@ -9,7 +9,7 @@ class Controller {
     
     
     
-      public function view($view, $data = Array(),$data2 = Array()) {
+      public function view($view, $data = Array()) {
         
         require_once "../EasyMVC/views/$view.php";
     }

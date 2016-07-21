@@ -53,7 +53,7 @@ class blogphp{
                                 from member
                                 join account 
                                 on mEmail='$user' and account.aEmail=member.mEmail
-                                join bill
+                                left join bill
                                 on member.mId = bill.gmemberid";
                 //  $command2 = "select aPassword from account where aEmail='$user'";
                  $result = mysql_query($command,$dblink);

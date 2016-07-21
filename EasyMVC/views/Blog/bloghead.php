@@ -34,13 +34,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<ul class="megamenu skyblue">
 				<li><a class="color8" href="index">Home</a></li>	
 				<li class="active grid"><a class="color1" href="addProduct">addProduct</a>
-				<li class="active grid"><a class="color1" href="deal">deal</a>
+			
 				</li>
 
 			  </ul> 
 			</div>
 			<div class="col-sm-3 header-top-right">
-			    
+
    			    <div class="register-info">
 				 
 						<?php if(isset($_SESSION['userName'])) {?>

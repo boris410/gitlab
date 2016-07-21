@@ -61,7 +61,7 @@
 		<?php if(count($data)!=0){ ?>
 		<table border="1" align="center">
 			<tr>
-		   <th>下單日期</th> <th>商品名稱</th>	<th>價格</th> <th>地址</th> <th>收件人</th> <th>付費方式</th> <th>處理情況</th>
+		   <th>下單日期</th> <th>商品名稱</th>	<th>價格</th> <th>地址</th> <th>收件人</th> <th>付費方式</th> 
 		</tr>
 			<?php for($i=0;$i<=count($data)-1;$i++){ ?>
 		<tr>
@@ -71,11 +71,7 @@
 	 <td align="center"><?php echo $data[$i]['address'];  ?></td>
 	 <td align="center"><?php echo $data[$i]['addressee'];  ?></td>
 	 <td align="center"><?php echo $data[$i]['paytype'];  ?></td>
-	 <?php if($data[$i]['deal']==null){?>
-	 <td align="center"><?php echo "準備中";  ?></td>
-	 <?php }else { ?>
-	 <td align="center"><?php echo "已出貨";  ?></td>
-	 <?php } ?>
+	
 		</tr>
 	<?php } ?>
 		<?php }else{ ?>

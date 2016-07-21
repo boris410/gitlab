@@ -60,7 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="header_bootm">
 		<div class="col-sm-4 span_1">
 		  <div class="logo">
-			<a href="index"><img src="images/logo.png" alt=""/></a>
+			<a href=""><img src="images/logo.png" alt=""/></a>
 		  </div>
 		</div>
 		<div class="col-sm-8 row_2">
@@ -80,14 +80,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		 <div class="clearfix"></div>
 	</div>
+
 	<div class="content">
   <div class="content_box">
 	<div class="men">
 	  <div class="col-md-3 sidebar">
 	  	
-	  	<div class="block block-layered-nav">
-		    
-</div>
 
 
 
