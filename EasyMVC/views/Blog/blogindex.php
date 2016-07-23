@@ -1,5 +1,10 @@
+<?php $i = $_GET['pagestart'];
+	  $e = $_GET['pageend'];
 
+?>
 <div class="col-md-9">
+	
+
 	<div class="mens-toolbar">
 	        <div class="pager">   
 		   		<div class="clearfix"></div>
@@ -7,7 +12,8 @@
 	</div>
    	     
 	          		<div class="span_2">
-	          		<?php for($i=0;$i<=count($data)-1;$i++){ //將物品顯示出來?>
+	          	<?php for($i;$i<=$e;$i++){ //將物品顯示出來?>
+					<?php if (isset($data[$i])){?>
 				    		<form action="userpersonal" method="post">
 				    			<table>
 				    				<tr>
@@ -16,7 +22,7 @@
 				    				</tr>
 				    			</table>
 				    		</form>
-						    
+					 <?php } ?>	    
 				    <?php } ?>
 				     </div>
 				  <div class="clearfix"></div>

@@ -34,6 +34,14 @@
   </div>
 </div>
 
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Password</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="<?php echo $data['aPassword'] ?>" class="form-control input-md">
+    
+  </div>
+</div>
+
 
 <!-- Text input-->
 <div class="form-group">

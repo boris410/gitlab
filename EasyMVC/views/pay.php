@@ -12,7 +12,7 @@
 <div class="panel panel-info">
 	
 	      	<div class="grid images_3_of_2">
-						<ul id="etalage">
+						<ul id="etalage" style="list-style:none;">
 							<li>
 								<a href="optionallink.php">
 									<img class="etalage_source_image" src="<?php echo $data['gpicurl']; ?>" class="img-responsive" title="" />
@@ -28,7 +28,7 @@
 				  <div class="desc1 span_3_of_2">
 				    <h1><?php echo $data['gname']; ?></h1>
 				  
-				    <p class="m_5"  id="price"><?php echo $data['gPrice']; ?> </p>
+				    <p class="m_5"  id="price">$<?php echo $data['gPrice']; ?> </p>
 				    
 				    <div class="btn_form">
 						 
@@ -36,30 +36,30 @@
 					<a href="?&addc=1&gId=<?php echo $_GET['gId']; ?>"><input type="submit" value="ADD TO CAR" title="" name="buy" id="buy"> </a><!--按鈕後購物車+888-->
 					
 					 </div>
-					 <span class="m_link"><a href="#">login to save in wishlist</a> </span>
+					
 					 <p class="m_text2"><?php echo $data['gintroduct'];?></p>
 				  </div>
 	
 	
 	
 	 		<form  method="post" action="cart?deal=<?php echo $_GET['pay'] ?>">
-                        <div class="panel-heading">Address</div>
+                       
                         <div class="panel-body">
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <h4>Shipping Address</h4>
+                                  
                                 </div>
                             </div>
                              <div class="form-group">
                                 <div class="col-md-12"><strong>收件地址:</strong></div>
                                 <div class="col-md-12">
-                                    <input type="text" name="address" class="form-control" value="" />
+                                    <input type="text" name="address" class="form-control" value="" required/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-6 col-xs-12">
                                     <strong>收件人:</strong>
-                                    <input type="text" name="addressee" class="form-control" value="" />
+                                    <input type="text" name="addressee" class="form-control" value="" required/>
                                 </div>
                                 <div class="span1"></div>
                                 <div class="col-md-6 col-xs-12">
@@ -71,9 +71,9 @@
                             	<div class="col-md-12"><strong>付費方式</strong></div>
                                 <div class="col-md-12">
 									<label for="male">ATM</label>
-									<input type="radio" name="paytype" id="male" value="ATM"><br>
+									<input type="radio" name="paytype" id="male" value="ATM" required><br>
 									<label for="female">Creadit-card</label>
-									<input type="radio" name="paytype" id="female" value="creadit_car"><br>
+									<input type="radio" name="paytype" id="female" value="creadit_car" required><br>
   								</div>
   								</div>
                             </div>

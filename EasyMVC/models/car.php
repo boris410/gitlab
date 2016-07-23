@@ -4,10 +4,11 @@ class car extends Controller{
           $this->model("logphp");
           $logphp = new logphp();
           $status = $logphp->checkstatus();
+          $link = $this->DB();
            if($status!=""){
-                $dblink = $logphp->dbconnect();
+               
                 $command = "select member.mId,bill.* from member join bill on  member.mEmail ='$_SESSION[userEmail]' and member.mId = bill.gmemberid";
-                $billresult = mysql_query($command,$dblink);
+                $billresult = mysql_query($command,$link);
                 
                     while($billdata = mysql_fetch_assoc($billresult)){
                              $billarray[]=array(
@@ -24,7 +25,7 @@ class car extends Controller{
                                          'deal'   => $billdata['deal']
                                            );
                     }
-                
+                mysql_close($link);
                 return $billarray;
             
            }else
@@ -36,15 +37,16 @@ class car extends Controller{
       
        
       }
+      
       function addgoods($data){//增加商品到購物車
        
        $this->model("logphp");
        $logphp = new logphp();
-       $dblink = $logphp->dbconnect();
+       $link = $this->DB();
        $checkresult = $logphp->checkstatus();//檢查是否有登入 傳回查詢帳號的結果 沒有結果導向到登入
        if( $checkresult!=""){
               $commandm = "select mId from member where mEmail='$_SESSION[userEmail]'";
-              $meresult = mysql_query($commandm,$dblink);
+              $meresult = mysql_query($commandm,$link);
               $row2=mysql_fetch_assoc($meresult);
                
                if(isset($_SESSION['buytime'])){//設定購買變數為購買項目的根據 目的:刪除項目時用
@@ -61,6 +63,7 @@ class car extends Controller{
                                      date("Y:m:d h:i:s"));    
                          $num="mID"."$_SESSION[buytime]";
                          $_SESSION[car][$num]=$car;//將商品陣列丟到seesion的[car][購買次數]
+                         mysql_close($link);
                          header("location: index");
                         
              }else{
@@ -84,9 +87,7 @@ class car extends Controller{
                     $deal="$_GET[deal]";
                   
                      if(isset($_SESSION[car][$deal])){
-                             $this->model("logphp");
-                             $logphp = new logphp();
-                             $dblink = $logphp->dbconnect();
+                             $link = $this->DB();
                            
                              foreach($_SESSION[car][$deal] as $value  ){//將商品分割成一為陣列中的四筆資料
                               $d0=$_SESSION[car][$deal][0];
@@ -95,15 +96,15 @@ class car extends Controller{
                               $d3=$_SESSION[car][$deal][3];
                              
                              }
-                             echo $_POST['addressee'];
                              $commandi = "insert into bill(gmemberid,bgoodsid,bgoodsprice,bgoodsname,address,paytype,addressee,bbuydate) values($d0,$d1,$d2,'$d3','$_POST[address]','$_POST[paytype]','$_POST[addressee]',current_timestamp())";//分別儲存到指定欄位
-                             echo $commandi;
-                             mysql_query($commandi,$dblink);
+                             mysql_query($commandi,$link);
                              unset($_SESSION[car][$deal]);//成功後刪除點擊的那一單項
                              
                              if($_SESSION[car]==null){//如果最後都沒有項目了就把session中car的陣列刪除views就會顯示前往index的連結
                               unset($_SESSION[car]);
+                              
                              }
+                             mysql_close($link);
                              header("location: cart");
                       
                       

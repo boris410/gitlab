@@ -1,18 +1,28 @@
 <?php 
 class BlogController extends Controller{
             function index(){
-                session_start();
+                
                 $this->model("blogphp");
                 $blogphp = new blogphp();
                 $check = $blogphp->checkstatus();//檢查登入狀況
                 if($check != ""){
                     
-                        $this->view("Blog/bloghead");  
+                        $this->view("Blog/bloghead");/**載入head**/
+                        
+                        /*載入model*/
+                        $this->model("pagetabsdata");
+                        $pagetabsdata = new pagetabsdata();
+                        $pagetabsdata= $pagetabsdata->indexpage();
                         $this->model("bloguserlist");
                         $user= new bloguserlist();
                         $userdata = $user->showuser();//回傳的資料陣列
+                        /*載入model*/
+                        
+                        /****顯示內容****/
                         $this->view("Blog/blogindex",$userdata);
+                        $this->view("pagetabs",$pagetabsdata);
                         $this->view("Blog/blogfoot");
+                         /****顯示內容****/
                 }else{
                         
                         header("location: bloglogin");
@@ -20,21 +30,22 @@ class BlogController extends Controller{
                 }
             }
             function bloglogin(){
-                session_start();
+               
                 $this->model("blogphp");//載入
                 $blogphp = new blogphp();
                 $blogphp->login();
+                
                 $this->view("Blog/bloghead");
                 $this->view("Blog/bloglogin");
                 $this->view("Blog/blogfoot");
                 
             }
             function bloglogout(){
-                session_start();
+              
                 $this->model("blogphp");
                 $blogphp = new blogphp();
                 $blogphp->logout();
-                header("location: index");
+                header("location: bloglogin");
                
             }
             
@@ -58,7 +69,7 @@ class BlogController extends Controller{
                
             }
             function userpersonal(){
-                session_start();
+               
                 $this->model("blogphp");
                 $person = new blogphp();
                 $check = $person->checkstatus();
@@ -79,7 +90,7 @@ class BlogController extends Controller{
              
               
               function addProduct(){//判斷是否有操做 新增項目或是 刪除項目  或是什麼都沒做
-                session_start();
+                
                 $this->model("blogphp");
                 $person = new blogphp();
                 $check = $person->checkstatus();
@@ -106,8 +117,18 @@ class BlogController extends Controller{
                                 
                             }else{
                                     $this->view("Blog/bloghead");
+                                    
+                                    /*載入model*/
+                                    $this->model("pagetabsdata");
+                                    $pagetabsdata = new pagetabsdata();
+                                    $pagetabsdata= $pagetabsdata->indexpage();
+                                    /*載入model*/
+                                    
+                                    /***載入網頁內容view***/
                                     $this->view("Blog/blogaddproduct",$goods);
+                                    $this->view("pagetabs",$pagetabsdata);
                                     $this->view("Blog/blogfoot");
+                                    /***載入網頁內容***/
                                 
                             }
                  }

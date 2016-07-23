@@ -770,7 +770,7 @@ pre code {
   padding-right: 15px;
   padding-left: 15px;
 }
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
 }
 .col-xs-12 {
@@ -796,6 +796,8 @@ pre code {
 }
 .col-xs-5 {
   width: 41.66666667%;
+  float: right;
+  margin: 20px -16em 10px;
 }
 .col-xs-4 {
   width: 33.33333333%;
@@ -5782,4 +5784,8 @@ button.close {
     display: none !important;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
+#div img { 
+max-width:600px; 
+myimg:expression(onload=function(){ 
+this.style.width=(this.offsetWidth > 600)?"600px":"auto"});
+} 

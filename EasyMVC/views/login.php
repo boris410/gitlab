@@ -28,12 +28,12 @@
 							<div class="col-md-7 account-top">
 							  <form action="" method="post">
 								<div> 	
-									<span>Account*</span>
-									<input type="text" name="txtUserEmail"> 
+									<span>Account</span>
+									<input type="text" name="txtUserEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="***@*****.com.tw"> 
 								</div>
 								<div> 
-									<span class="pass">Password*</span>
-									<input type="password" name="txtPassword">
+									<span class="pass">Password</span>
+									<input type="password" name="txtPassword" pattern="[a-z0-9]{6,12}" placeholder="Password">
 								</div>				
 									<input type="submit" value="Login" name="Login"><!--按按鈕後 送出Login=Login到此頁面-->
 							   </form>

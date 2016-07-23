@@ -1509,3 +1509,10 @@
 [19-Jul-2016 14:25:34 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
 [19-Jul-2016 14:25:34 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
 [19-Jul-2016 14:25:34 UTC] PHP   4. BlogController->deal() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[23-Jul-2016 12:48:06 UTC] PHP Fatal error:  Call to undefined method goodslist::DB() in /home/ubuntu/workspace/gitlab/EasyMVC/models/goodslist.php on line 6
+[23-Jul-2016 12:48:06 UTC] PHP Stack trace:
+[23-Jul-2016 12:48:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[23-Jul-2016 12:48:06 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[23-Jul-2016 12:48:06 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[23-Jul-2016 12:48:06 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
+[23-Jul-2016 12:48:06 UTC] PHP   5. goodslist->showgoods() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:12

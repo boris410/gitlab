@@ -70,10 +70,13 @@
 
 /* Description area (optional) */
 #etalage .etalage_description{
+	
 	background: white;
 	font-style: italic;
 	margin: 10px;
 	padding: 6px 10px;
+	list-style:circle;
+	
 }
 
 /*

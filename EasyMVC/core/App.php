@@ -3,18 +3,17 @@
 class App {
     
         public function __construct() {
-        $url = $this->parseUrl();//取得擷取的陣列內容
-        $controllerName = "{$url[0]}Controller";
+        $url = $this->parseUrl();
         
+        $controllerName = "{$url[0]}Controller";
         if (!file_exists("controllers/$controllerName.php"))
             return;
-            
-        require_once "controllers/$controllerName.php";//將指到的controller載入
+         require_once "controllers/$controllerName.php";
         $controller = new $controllerName;
-        $methodName = isset($url[1]) ? $url[1] : "index";//將方法預設為index如果沒有就是index
+        $methodName = isset($url[1]) ? $url[1] : "index";
+        
         if (!method_exists($controller, $methodName))
             return;
-            
         unset($url[0]); unset($url[1]);
         $params = $url ? array_values($url) : Array();
         call_user_func_array(Array($controller, $methodName), $params);
@@ -25,6 +24,8 @@ class App {
             $url = rtrim($_GET["url"], "/");
             $url = explode("/", $url);
             return $url;
+        }else{
+           header("location: Home/index");//如果網址列什麼都沒有就導向Home/index
         }
     }
     
