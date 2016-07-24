@@ -31,3 +31,4 @@
 
 7/21 MVC架構購物網站專案----debug 後臺帳單頁面顯示錯誤修正
 7/22 MVC架構購物網站專案----新增index分頁及上下頁 、session_start放到 controller __construct 
+7/24 MVC架構購物網站專案----完整版
