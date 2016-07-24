@@ -25,7 +25,7 @@ class car extends Controller{
                                          'deal'   => $billdata['deal']
                                            );
                     }
-                mysql_close($link);
+                
                 return $billarray;
             
            }else
@@ -42,8 +42,10 @@ class car extends Controller{
        
        $this->model("logphp");
        $logphp = new logphp();
+       $checkresult = $logphp->checkstatus();
        $link = $this->DB();
-       $checkresult = $logphp->checkstatus();//檢查是否有登入 傳回查詢帳號的結果 沒有結果導向到登入
+       
+       //檢查是否有登入 傳回查詢帳號的結果 沒有結果導向到登入
        if( $checkresult!=""){
               $commandm = "select mId from member where mEmail='$_SESSION[userEmail]'";
               $meresult = mysql_query($commandm,$link);
@@ -60,9 +62,11 @@ class car extends Controller{
                                      $data['gId'],  //將商品資訊丟到陣列裡面
                                      $data['gPrice'],
                                      $data['gname'],
-                                     date("Y:m:d h:i:s"));    
+                                     date("Y:m:d h:i:s"));  
+                                     
                          $num="mID"."$_SESSION[buytime]";
                          $_SESSION[car][$num]=$car;//將商品陣列丟到seesion的[car][購買次數]
+                        
                          mysql_close($link);
                          header("location: index");
                         
@@ -96,7 +100,9 @@ class car extends Controller{
                               $d3=$_SESSION[car][$deal][3];
                              
                              }
+                             
                              $commandi = "insert into bill(gmemberid,bgoodsid,bgoodsprice,bgoodsname,address,paytype,addressee,bbuydate) values($d0,$d1,$d2,'$d3','$_POST[address]','$_POST[paytype]','$_POST[addressee]',current_timestamp())";//分別儲存到指定欄位
+                          
                              mysql_query($commandi,$link);
                              unset($_SESSION[car][$deal]);//成功後刪除點擊的那一單項
                              

@@ -16,7 +16,7 @@
 								<form action="" method="POST">
 										
 											    <div  class="col_1_of_single1 span_1_of_single1">
-												     <img src="<?php echo "/EasyMVC/Home/";print_r($data[$i][gpicurl]); ?>" class="img-responsive" alt=""/>
+												     <img src="<?php echo "/EasyMVC/bootstrap/";print_r($data[$i][gpicurl]); ?>" class="img-responsive" alt=""/>
 												   	 <p><?php print_r($data[$i][introduct]); ?></p>
 												   	 <h4>$<?php  print_r($data[$i][gPrice]); ?></h4>
 												   	 <button name="delete" type="submit" value="<?php print_r($data[$i][gpicurl]); ?>">Delete</button>
@@ -39,7 +39,7 @@
 		
 		
 		<!--add from--->
-		<div  class="col-md-3 "> 
+		<div  class="col-md-12 "> 
 					<form action="" method="post" enctype="multipart/form-data">
 						    Select image to upload:
 						    <input type="file" name="fileToUpload" id="fileToUpload">

@@ -20,7 +20,7 @@ class HomeController extends Controller {
                
                 $this->model("logphp");//載入
                 $logphp = new logphp();
-                if($logphp->login($this->DB())){//判斷是否有連線
+                if($logphp->login()){//判斷是否有連線
                 
                       //$this->view("index");//有則載入到index
                       //$this->view("index");
@@ -38,14 +38,15 @@ class HomeController extends Controller {
                 $this->view("index");/*************************************************************************/
         }
         function personal(){
-                session_start();
+               
                 $this->model("goodslist");
                 $goodslist = new goodslist();
                 $this->model("logphp");
                 $logphp = new logphp();
-                $check = $logphp->checkstatus($this->DB());
+                
+                $check = $logphp->checkstatus();
                 if( $check!=null){
-                        $persondata = $goodslist->personnalshow($this->DB());
+                        $persondata = $goodslist->personnalshow();
                 }else{
                         header("location: login");
                 }
@@ -56,7 +57,7 @@ class HomeController extends Controller {
                 
         }
          function cart(){
-                session_start();
+                
                 
                 $this->model("car");
                 $car= new car();
@@ -107,7 +108,7 @@ class HomeController extends Controller {
                 $this->model("goodslist");
                 $goods= new goodslist();
                 $goodsdata = $goods->showgoodsingle();//回傳的資料陣列
-                //var_dump($goodsdata);
+                
             if($_GET['addc']){
                         $this->model("car");
                         $car= new car();

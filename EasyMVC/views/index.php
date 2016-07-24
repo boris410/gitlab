@@ -12,7 +12,7 @@
 		<div class="col_1_of_single1 span_1_of_single1">
 			<a href="single?&gId=<?php print_r($data[$i][gId]); ?>">
 		
-				<img src="<?php print_r($data[$i][gpicurl]); ?>" class="img-responsive" alt="" />
+				<img src="/EasyMVC/bootstrap/<?php print_r($data[$i][gpicurl]); ?>" class="img-responsive" alt="" />
 				<p style="font-size:20px;color:#6363FF;">
 					§--<?php print_r($data[$i][introduct]); ?>
 				</p>

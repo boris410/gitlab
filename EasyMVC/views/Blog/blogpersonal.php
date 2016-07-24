@@ -5,7 +5,7 @@
 <fieldset>
 
 
-    <li style="list-style-type:none;"><a href="">User:<?php print_r($data[0]['mFirstname']);echo $data[0]['mLastname']; ?></a> </li>
+    <li style="list-style-type:none;">User:<?php print_r($data[0]['mFirstname']);echo $data[0]['mLastname']; ?> </li>
 
 
 
@@ -68,7 +68,7 @@
 		</tr>
 			<?php for($i=0;$i<=count($data)-1;$i++){ ?>
 		<tr>
-	 <td align="center"><a href="singledeal?bill="<?php echo $data[$i]['billid']; ?>""><?php  echo $data[$i]['bbuydate']; ?></a></td> 
+	 <td align="center"><?php  echo $data[$i]['bbuydate']; ?></td> 
 	 <td align="center"><?php echo $data[$i]['bgoodsname']; ?></td>
 	 <td align="center"><?php echo $data[$i]['bgoodsprice'];  ?></td>
 	 <td align="center"><?php echo $data[$i]['address'];  ?></td>

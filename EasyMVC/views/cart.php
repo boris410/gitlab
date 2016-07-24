@@ -25,7 +25,7 @@
   <div class="content_box">
 	<div class="men cart">
 			<p align="center">此次購物車內容</p>
-			<?php if(isset($_SESSION[car])){ ?>
+				<?php if(isset($_SESSION[car])){ ?>
 		<table border="1" align="center">
 			<tr>
 		<th>客人編號</th>	<th>產品編號</th>	<th>價格</th>	<th>品名</th> <th>購買時間</th><th>&nbsp</th><th>&nbsp</th>
@@ -41,7 +41,7 @@
 				<td><?php  printf($_SESSION[car][$key][4]);?></td>
 				<td><a href="pay?pay=<?php echo $key; ?>" style="color:blue;">結帳</a></td>
 				<td><a href="?delete=<?php echo $key; ?>" style="color:blue;">刪除</a></td>
-					<?php // ($_SESSION[car][0]); ?>
+					
 		</tr>
 		
 		<?php } ?>

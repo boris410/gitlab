@@ -19,17 +19,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					window.scrollTo(0, 1);
 				}
 			</script>
-			<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+			<link href="/EasyMVC/bootstrap/css/bootstrap.css" rel='stylesheet' type='text/css' />
 			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 			<!-- Custom Theme files -->
-			<link href="css/style.css" rel='stylesheet' type='text/css' />
+			<link href="/EasyMVC/bootstrap/css/style.css" rel='stylesheet' type='text/css' />
 			<!-- Custom Theme files -->
 			<!--webfont-->
 			<link href='http://fonts.useso.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
-			<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+			<script type="text/javascript" src="/EasyMVC/bootstrap/js/jquery-1.11.1.min.js"></script>
 			<!-- start menu -->
-			<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
-			<script type="text/javascript" src="js/megamenu.js"></script>
+			<link href="/EasyMVC/bootstrap/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+			<script type="text/javascript" src="/EasyMVC/bootstrap/js/megamenu.js"></script>
 			<script>
 				$(document).ready(function() {
 					$(".megamenu").megamenu();
@@ -78,7 +78,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="header_bootm">
 						<div class="col-sm-12 span_1">
 							<div class="logo">
-								<a href=""><img src="images/logo.png" alt="" /></a>
+								<a href=""><img src="/EasyMVC/bootstrap/images/logo.png" alt="" /></a>
 							</div>
 						</div>
 					<div class="clearfix"></div>
