@@ -20,7 +20,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="email">Password</label>  
   <div class="col-md-4">
-  <input type="text" name="txtPassword" value="" class="form-control input-md" pattern="[a-z0-9]{6,12}" placeholder="Password-6至12得英文小寫數字"   required>
+  <input type="password" name="txtPassword" value="" class="form-control input-md" pattern="[a-z0-9]{6,12}" placeholder="Password-6至12得英文小寫數字"   required>
     
   </div>
 </div>
@@ -58,6 +58,7 @@
   <div class="col-md-4">
     <!--<button id="signup" name="submit" class="btn btn-success">submit</button>-->
     <input type="submit" name="submit" value="submit">
+    <a href="login"><input type="button" name="back" value="back"></a>
   </div>
 </div>
 

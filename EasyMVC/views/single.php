@@ -10,7 +10,7 @@
 				<li style="list-style-type: none;">
 					<a href="optionallink.php">
 								
-									<img class="etalage_source_image" src="<?php echo $data['gpicurl']; ?>" class="img-responsive" title="" />
+									<img class="etalage_source_image" src="/gitlab/EasyMVC/bootstrap/<?php echo $data['gpicurl']; ?>" class="img-responsive" title="" />
 								</a>
 				</li>
 			</ul>
