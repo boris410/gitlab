@@ -17,11 +17,13 @@ class blogaddp extends Controller{
                             header("location: addProduct");
                     }else{
                         echo "沒有檔案";
+                        header("location: addProduct");
                     }
            
             }else{
                 
                 echo "檔案名稱重複";
+                header("location: addProduct");
                
                 
             }
