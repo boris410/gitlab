@@ -79,27 +79,26 @@ class logphp extends Controller{
                       if(isset($_POST["Login"])){
                         if($_POST["txtUserEmail"] != ""){//檢查是否有input
                                          $data=$this->checkaccount();//將db的連線結果mysq_connect帶入function並帶回query的會員資料檢查是否有此帳號
-                                        // $data = $this->checkstatus();
                                           if($data != ""){//有資料的話才進入 等於0表示沒資料
                                           
                                                           if(isset($_COOKIE["lastpage"])){
                                                             echo "lastpage";//設定如果一開始不是由login來觸發login的話********************************
-                                                        }
-                                                          else{
+                                                        } else{
                                                               $_SESSION['userEmail']=$_POST["txtUserEmail"];
                                                               $_SESSION['userpass']=$_POST["txtPassword"];
-                                                              //var_dump( $_SESSION);
-                                                              header("location: index");//設定帳號密碼到session導向到index
-                                                             //return true;
+                                                            
+                                                             return true;
                                                               }
                                             }
                                             else{
                                                 echo "帳號or密碼錯誤2";
+                                                return false;
                                                 
                                                 }
                                       }
                                         else{
                                           echo "請輸入帳號密碼1";
+                                          return false;
                                           }
                       }
             }

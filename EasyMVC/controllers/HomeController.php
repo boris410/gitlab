@@ -22,13 +22,11 @@ class HomeController extends Controller {
                 $logphp = new logphp();
                 if($logphp->login()){//判斷是否有連線
                 
-                      //$this->view("index");//有則載入到index
-                      //$this->view("index");
                       header("location: index");
-              }
-              $this->view("head");
-              $this->view("login");
-              $this->view("foot");
+                  }
+                $this->view("head");
+                $this->view("login");
+                $this->view("foot");
         }
         function logout(){
                

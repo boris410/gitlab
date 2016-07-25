@@ -41,17 +41,17 @@ class goodslist extends Controller{
                     
                     
                 }
-                 function personnalshow(){
+                function personnalshow(){
                      //抓出個人資料的內容
                      $link = $this->DB();
                      $command =  "select member.*,account.aPassword from member join account 
-                                    on  member.mEmail='$_SESSION[userEmail]' and account.aPassword='$_SESSION[userpass]'";
+                                  on  member.mEmail='$_SESSION[userEmail]' and account.aPassword='$_SESSION[userpass]'";
                                  
                      $result = mysql_query($command,$link);
                      $row = mysql_fetch_assoc($result);
                      mysql_close($link);
                      return $row;
-            }
+                }
         
     
     

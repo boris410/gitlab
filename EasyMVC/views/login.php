@@ -39,7 +39,7 @@
 							   </form>
 							</div>
 							<div class="col-md-5 left-account ">
-								<a href="register"><img class="img-responsive " src="/gitlab/EasyMVC/bootstrap/images/s4.jpg" alt=""></a>
+								<a href="register"><img class="img-responsive " src="/gitlab/EasyMVC/bootstrap/images/s2.jpg" alt=""></a>
 								<div class="five-in">
 								<h1>25% </h1><span>discount</span>
 								</div>

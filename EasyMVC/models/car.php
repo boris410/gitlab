@@ -88,9 +88,9 @@ class car extends Controller{
       }
       function deal(){//交易單筆商品
                    
-                    $deal="$_GET[deal]";
+                    $deal="$_GET[deal]";//將帳單 特定項的單號到變數內
                   
-                     if(isset($_SESSION[car][$deal])){
+                     if(isset($_SESSION[car][$deal])){//加強判斷如果有session裡有這一筆資料
                              $link = $this->DB();
                            
                              foreach($_SESSION[car][$deal] as $value  ){//將商品分割成一為陣列中的四筆資料
@@ -101,7 +101,8 @@ class car extends Controller{
                              
                              }
                              
-                             $commandi = "insert into bill(gmemberid,bgoodsid,bgoodsprice,bgoodsname,address,paytype,addressee,bbuydate) values($d0,$d1,$d2,'$d3','$_POST[address]','$_POST[paytype]','$_POST[addressee]',current_timestamp())";//分別儲存到指定欄位
+                             $commandi = "insert into bill(gmemberid,bgoodsid,bgoodsprice,bgoodsname,address,paytype,addressee,bbuydate) 
+                             values($d0,$d1,$d2,'$d3','$_POST[address]','$_POST[paytype]','$_POST[addressee]',current_timestamp())";//分別儲存到指定欄位
                           
                              mysql_query($commandi,$link);
                              unset($_SESSION[car][$deal]);//成功後刪除點擊的那一單項

@@ -33,7 +33,7 @@
 				    <div class="btn_form">
 						 
 						<!--點選Buy時傳送buy及gId到本頁面判斷是否選擇購買-->
-					<a href="?&addc=1&gId=<?php echo $_GET['gId']; ?>"><input type="submit" value="ADD TO CAR" title="" name="buy" id="buy"> </a><!--按鈕後購物車+888-->
+				
 					
 					 </div>
 					
