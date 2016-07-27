@@ -30,6 +30,11 @@
 7/20 MVC架構購物網站專案----新增前端 使用者付費方式頁面、後台帳單頁面
 
 7/21 MVC架構購物網站專案----debug 後臺帳單頁面顯示錯誤修正
+
 7/22 MVC架構購物網站專案----新增index分頁及上下頁 、session_start放到 controller __construct 
+
 7/24 MVC架構購物網站專案----完整版
+
 7/25 MVC架構購物網站專案----完整版--調整BOOTSTRAP路徑修正
+
+7/27 MVC架構購物網站專案----debug-將header 從model抽出 優化程式碼1.0版
