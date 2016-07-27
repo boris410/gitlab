@@ -14,19 +14,14 @@ class blogaddp extends Controller{
                             mysql_query($command,$link);
                             unset($_POST);
                             mysql_close($link);
-                            header("location: addProduct");
+                            return true;
                     }else{
                         echo "沒有檔案";
-                        header("location: addProduct");
+                        return false;
+                        
                     }
            
-            }else{
-                
-                echo "檔案名稱重複";
-                header("location: addProduct");
-               
-                
-            }
+            }else return false;
            
             
             
@@ -39,10 +34,12 @@ class blogaddp extends Controller{
                             mysql_query($command, $link);
                             $file = "bootstrap/".$_POST['delete']; //加入資料夾名稱
                             unlink($file);//從資料夾目錄刪除這個圖檔
-                            unset($_POST['delete']);
-                            mysql_close($link);
-                            header("location: addProduct");
-            
+                                if(!file_exists($file)){
+                                    unset($_POST['delete']);
+                                    mysql_close($link);
+                                    return true;
+                                }else return false;
+
                 }
 
         

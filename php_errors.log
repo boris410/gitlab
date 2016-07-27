@@ -1516,3 +1516,53 @@
 [23-Jul-2016 12:48:06 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
 [23-Jul-2016 12:48:06 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:17
 [23-Jul-2016 12:48:06 UTC] PHP   5. goodslist->showgoods() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:12
+[25-Jul-2016 15:25:04 UTC] PHP Warning:  unlink(bootstrap/images/616303_404015942980440_): No such file or directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 41
+[25-Jul-2016 15:25:04 UTC] PHP Stack trace:
+[25-Jul-2016 15:25:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[25-Jul-2016 15:25:04 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[25-Jul-2016 15:25:04 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[25-Jul-2016 15:25:04 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[25-Jul-2016 15:25:04 UTC] PHP   5. blogaddp->deladdp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:112
+[25-Jul-2016 15:25:04 UTC] PHP   6. unlink() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:41
+[27-Jul-2016 00:55:53 UTC] PHP Parse error:  syntax error, unexpected '?>', expecting function (T_FUNCTION) in /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php on line 108
+[27-Jul-2016 00:55:53 UTC] PHP Stack trace:
+[27-Jul-2016 00:55:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[27-Jul-2016 00:55:53 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[27-Jul-2016 00:55:53 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[27-Jul-2016 00:55:53 UTC] PHP   4. HomeController->login() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[27-Jul-2016 00:55:53 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:21
+[27-Jul-2016 03:13:15 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 150
+[27-Jul-2016 03:13:15 UTC] PHP Stack trace:
+[27-Jul-2016 03:13:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[27-Jul-2016 03:13:15 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[27-Jul-2016 03:55:09 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 37
+[27-Jul-2016 03:55:09 UTC] PHP Stack trace:
+[27-Jul-2016 03:55:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[27-Jul-2016 03:55:09 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[27-Jul-2016 04:11:00 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php on line 7
+[27-Jul-2016 04:11:00 UTC] PHP Stack trace:
+[27-Jul-2016 04:11:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[27-Jul-2016 04:11:00 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[27-Jul-2016 04:11:00 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[27-Jul-2016 04:11:00 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[27-Jul-2016 04:11:00 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:23
+[27-Jul-2016 04:11:00 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:31
+[27-Jul-2016 04:11:00 UTC] PHP   7. mysql_fetch_array() /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php:7
+[27-Jul-2016 04:19:42 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php on line 7
+[27-Jul-2016 04:19:42 UTC] PHP Stack trace:
+[27-Jul-2016 04:19:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[27-Jul-2016 04:19:42 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[27-Jul-2016 04:19:42 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[27-Jul-2016 04:19:42 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[27-Jul-2016 04:19:42 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:25
+[27-Jul-2016 04:19:42 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:31
+[27-Jul-2016 04:19:42 UTC] PHP   7. mysql_fetch_array() /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php:7
+[27-Jul-2016 04:19:46 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php on line 7
+[27-Jul-2016 04:19:46 UTC] PHP Stack trace:
+[27-Jul-2016 04:19:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[27-Jul-2016 04:19:46 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[27-Jul-2016 04:19:46 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[27-Jul-2016 04:19:46 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[27-Jul-2016 04:19:46 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:25
+[27-Jul-2016 04:19:46 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:31
+[27-Jul-2016 04:19:46 UTC] PHP   7. mysql_fetch_array() /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php:7

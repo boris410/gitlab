@@ -8,19 +8,23 @@ class logphp extends Controller{
                     $command = "select aEmail,aPassword from account where aEmail= '$_POST[txtUserEmail]' and aPassword='$_POST[txtPassword]'";
                     //檢查帳號密碼在db中是否有資料
                     $result=mysql_query($command,$link);
-                    $data=mysql_fetch_assoc($result);//檢查變數查看是否有資料
+                    $data=mysql_fetch_assoc($result);
                     mysql_close($link);
-                    return $data;
+                    
+                    if($data!=null){
+                        return true;
+                    }
               
             }
             function logout(){
                    
                     session_unset();//刪除session
                     if(count($_SESSION)==0){
-                         header("location: index");
-                    }else{
-                      echo "登出失敗";
+                        return true;
                     }
+                        else{
+                            echo "session沒刪除";
+                        }
             }
              function register(){
                   $checkaccount =$this->checkaccount();
@@ -41,18 +45,16 @@ class logphp extends Controller{
                             if($row!="")
                             {
                                     echo "申請成功";
-                                    //帳號申請成功後刪除POST資料
-                                    unset($_POST['firstname'],$_POST['lastname'],$_POST['txtUserEmail'],$_POST['phone'],$_POST['txtPassword'],$_POST['checkpassword']);
-                                     mysql_close($link);
-                                    header("location: login");
-                            }else{
                                     mysql_close($link);
-                                    echo "申請失敗";
+                                    return true;
+                            }else{
+                                
+                                    mysql_close($link);
+                                    return false;
                             }
                   }else{
-                       mysql_close($link);
-                      unset($_POST['firstname'],$_POST['lastname'],$_POST['txtUserEmail'],$_POST['phone'],$_POST['txtPassword']);
-                      echo "帳號重複";
+                        mysql_close($link);
+                        echo "帳號重複";
                   }
 
             }
@@ -66,10 +68,12 @@ class logphp extends Controller{
                         $result = mysql_query($command,$link);
                         $row = mysql_fetch_assoc($result);//若是有資料代表輸入的帳號密碼正確  登入成功
                         mysql_close($link);
-                        return $row;
-                    }else{
+                        if($row != null){
+                            return true;
+                        }
                         
-                         header("location: login");
+                    }else{
+                         return false;
                     }
             }
             

@@ -12,8 +12,8 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="name">Email Address</label>  
   <div class="col-md-4">
-   <input  type="text" id="txtUserEmail" name="txtUserEmail" value="" class="form-control input-md" pattern="[a-z0-9_%+-]+@[a-z0-9-]+\.[a-z]{2,3}$" placeholder="***@*****.com.tw" required> 
-  </div>
+   <input  type="text" id="txtUserEmail" name="txtUserEmail" value="" class="form-control input-md" pattern="^w [- .]w )*@w ([-.]w )*.w ([-.]w )*$" placeholder="***@*****.com.tw" required> 
+  </div>                                                                                              
 </div>
 
 <!-- Text input-->

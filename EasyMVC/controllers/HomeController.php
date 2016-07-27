@@ -7,9 +7,11 @@ class HomeController extends Controller {
                 $this->model("pagetabsdata");
                 $pagetabsdata = new pagetabsdata();
                 $pagetabsdata= $pagetabsdata->indexpage();
+                
                 $this->model("goodslist");
                 $goods= new goodslist();
                 $goodsdata = $goods->showgoods();//回傳的資料陣列
+                
                 $this->view("index",$goodsdata);
                 $this->view("pagetabs",$pagetabsdata);
                 $this->view("foot");
@@ -32,8 +34,11 @@ class HomeController extends Controller {
                
                 $this->model("logphp");
                 $lougout = new logphp();
-                $lougout->logout();//執行logout刪除session
-                $this->view("index");/*************************************************************************/
+                
+                
+                if($lougout->logout())//執行logout刪除session 還傳true or fales
+                header("location: index");
+              
         }
         function personal(){
                
@@ -62,11 +67,16 @@ class HomeController extends Controller {
                 $billdata = $car->showbill();
                
                 if($_GET['delete']){
-                       $car->delegoods();
+                        if($car->delegoods()){
+                         echo "刪除成功";
+                        }
+                       
                         
                 }
                 elseif($_GET['deal']){
-                       $car->deal();
+                       if($car->deal()){
+                        header("location: cart");       
+                       }
                 }
                 
                 
@@ -80,6 +90,7 @@ class HomeController extends Controller {
                 $this->model("goodslist");
                 $goodslist = new goodslist();
                 $result = $goodslist->showgoodsingle();//秀出圖片及價格
+                
                 $this->view("head");
                 $this->view("pay",$result);
                 $this->view("foot");
@@ -87,17 +98,24 @@ class HomeController extends Controller {
          function register(){
                 if(isset($_POST['submit'])){
                         $this->model("logphp");
-                        $registerdata=new logphp();
-                        $registerdata->register($this->DB());
-                        $this->view("head");
-                        $this->view("register");
-                        $this->view("foot");
-                }else{
-                        $this->view("head");
-                        $this->view("register"); 
-                        $this->view("foot");
+                        $logphp=new logphp();
                         
+                       
+                        if($logphp->register()){
+                                header("location: login");     
+                        }else{
+                                $this->view("head");
+                                $this->view("register");
+                                $this->view("foot");
+                                echo "申請失敗";   
+                        }
                 }
+                
+                $this->view("head");
+                $this->view("register"); 
+                $this->view("foot");
+                        
+                
                 
                
         }
@@ -108,9 +126,15 @@ class HomeController extends Controller {
                 $goodsdata = $goods->showgoodsingle();//回傳的資料陣列
                 
             if($_GET['addc']){
-                        $this->model("car");
-                        $car= new car();
-                        $car->addgoods($goodsdata);
+                $this->model("car");
+                $car= new car();
+                    if($car->addgoods($goodsdata)){//檢查是否有登入 有登入 新增到購物車
+                            echo "新增成功";
+                    }else{//沒有登入則不會新增到購物車 且導向到登入
+                            header("location: login");
+                    }
+                       
+                       
                 }
             
                 $this->view("head");
