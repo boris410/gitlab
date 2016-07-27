@@ -5,7 +5,7 @@ class BlogController extends Controller{
                 $this->model("blogphp");
                 $blogphp = new blogphp();
                
-                if($blogphp->checkstatus()){//後臺首頁就檢查是否登入
+                if($blogphp->checkstatus($_SESSION['userName'],$_SESSION['userpass'])){//後臺首頁就檢查是否登入
                     
                         
                         $this->model("pagetabsdata");
@@ -29,10 +29,16 @@ class BlogController extends Controller{
                
                 $this->model("blogphp");
                 $blogphp = new blogphp();
-                if($blogphp->login()){
+                if(isset($_POST["Login"])){
+                    
+                    if($blogphp->login($_POST["txtUserName"],$_POST["txtPassword"])){
                     header("location: index");//登入成功導向到index做判斷
+                    }else{
+                        echo "帳號 or 密碼錯誤";
+                    }
+                    
                 }
-                
+  
                 $this->view("Blog/bloghead");
                 $this->view("Blog/bloglogin");
                 $this->view("Blog/blogfoot");
@@ -58,7 +64,7 @@ class BlogController extends Controller{
                 $this->model("blogphp");
                 $person = new blogphp();
                
-                    if($person->checkstatus()){
+                    if($person->checkstatus($_SESSION['userName'],$_SESSION['userpass'])){
                         $persondata = $person->personnalshow($_POST['user']);
                     }else{
                             header("location: bloglogin");
@@ -78,7 +84,7 @@ class BlogController extends Controller{
                 $this->model("blogphp");
                 $person = new blogphp();
                 
-                if($person->checkstatus()){
+                if($person->checkstatus($_SESSION['userName'],$_SESSION['userpass'])){
                     
                             $this->model("goodslist");
                             $goodslist = new goodslist();
@@ -87,15 +93,16 @@ class BlogController extends Controller{
                             if(isset($_POST['add'])){//操作到新增商品
                                     $this->model("blogaddp");
                                     $blogaddp = new blogaddp();
-                                    if($blogaddp->addp()){
+
+                                    if($blogaddp->addp($_POST['gname'],$_POST['gPrice'],$_POST['gintroduce'])){
                                         header("location: addProduct");
                                     }else{
-                                        echo "檔案名稱重複";
+                                        echo "檔案名稱重複 or 沒有檔案";
                                     }
                             }elseif(isset($_POST['delete'])){//操作到刪除商品
                                     $this->model("blogaddp");
                                     $blogaddp = new blogaddp();
-                                   if($blogaddp->deladdp()){
+                                   if($blogaddp->deladdp($_POST['delete'])){
                                         header("location: addProduct");
                                    }else{
                                         echo "刪除失敗，請正常操作或是檢查資料夾路徑";
@@ -103,11 +110,11 @@ class BlogController extends Controller{
                             }
                     $this->model("pagetabsdata");
                     $pagetabsdata = new pagetabsdata();
-                    $pagetabsdata= $pagetabsdata->indexpage();
+                    $pagetabsdata= $pagetabsdata->indexpage();//載入分頁籤DATA
                                     
                     $this->view("Blog/bloghead");
                     $this->view("Blog/blogaddproduct",$goods);
-                    $this->view("pagetabs",$pagetabsdata);//載入分頁籤
+                    $this->view("pagetabs",$pagetabsdata);
                     $this->view("Blog/blogfoot");
                 }else{
                     header("location: bloglogin");

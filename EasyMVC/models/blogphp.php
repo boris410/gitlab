@@ -1,10 +1,23 @@
  <?php
 
 class blogphp extends Controller{
+            function login($username,$userpass){
             
-            function checkaccount(){//後台登入的帳號檢查
+                    if($username != "" & $userpass !=""){//檢查是否有input
+                        if($this->checkaccount($username,$userpass)){//判斷帳號是否存在
+                            $_SESSION['userName']=$username;
+                            $_SESSION['userpass']=$userpass;
+                            return true;
+                        }else{
+                         
+                              return false;
+                        }
+                    }
+            }
+            
+            function checkaccount($username,$userpass){//後台登入的帳號檢查
                   $link = $this->DB();
-                  $command = "select mguser,mgpass from management where mguser= '$_POST[txtUserName]' and mgpass='$_POST[txtPassword]'";
+                  $command = "select mguser,mgpass from management where mguser= '$username' and mgpass='$userpass'";
                   //檢查帳號密碼在db中是否有資料
                   $result=mysql_query($command,$link);
                   $data=mysql_fetch_assoc($result);//檢查變數查看是否有資料
@@ -13,29 +26,16 @@ class blogphp extends Controller{
                   if($data!=null){
                       return true;
                   }else{
+                    
                       return false;
                   }
-                  
-                 
-              
             }
-            function logout(){//***same****//
-                    session_start();
-                    session_unset();
-                    if(count($_SESSION)==0){
-                        return true;
-                    }else{
-                        return false;
-                    }
-            }
-             
-           
-            function checkstatus(){//後台檢查登入狀況
-                
+    
+            function checkstatus($username,$userpass){//後台檢查登入狀況
                 if(isset($_SESSION['userName']))
                 {
                     $link = $this->DB();
-                    $command= "select mguser,mgpass from management where mguser= '$_SESSION[userName]' and mgpass='$_SESSION[userpass]'";
+                    $command= "select mguser,mgpass from management where mguser= '$username' and mgpass='$userpass'";
                     $result = mysql_query($command,$link);
                     $row = mysql_fetch_assoc($result);//若是有資料代表輸入的帳號密碼正確  登入成功
                     mysql_close($link);
@@ -48,6 +48,16 @@ class blogphp extends Controller{
 
                 }
             }
+            function logout(){
+                    session_start();
+                    session_unset();
+                    if(count($_SESSION)==0){
+                        return true;
+                    }else{
+                        return false;
+                    }
+            }
+            
             
             function personnalshow($user){//抓出個人資料的內容
                 $link = $this->DB();
@@ -120,27 +130,6 @@ class blogphp extends Controller{
           // $status = $logphp->checkstatus();
            //echo $status;
             }
-            
-            function login(){
-                if(isset($_POST["Login"])){
-                    if($_POST["txtUserName"] != ""){//檢查是否有input
-                        if($this->checkaccount()){//判斷帳號是否存在
-                            $_SESSION['userName']=$_POST["txtUserName"];
-                            $_SESSION['userpass']=$_POST["txtPassword"];
-                            return true;
-                        }else{
-                              echo "帳號or密碼錯誤2";
-                              return false;
-                                            
-                        }
-                    }else{
-                         echo "請輸入帳號密碼1";
-                         return false;
-                    }
-                }
-            }
-           
-           
-            
+     
 }
 ?>

@@ -1,17 +1,13 @@
 <?php 
 class car extends Controller{
-       function showbill(){//購物車內 個人帳號的所有歷史帳單
-          $this->model("logphp");
-          $logphp = new logphp();
-          $status = $logphp->checkstatus();
-          $link = $this->DB();
-           if($status!=""){
-               
-                $command = "select member.mId,bill.* from member join bill on  member.mEmail ='$_SESSION[userEmail]' and member.mId = bill.gmemberid";
-                $billresult = mysql_query($command,$link);
-                
-                    while($billdata = mysql_fetch_assoc($billresult)){
-                             $billarray[]=array(
+       function showbill($userEmail){//購物車內 個人帳號的所有歷史帳單
+            $this->model("logphp");
+            $logphp = new logphp();
+            $link = $this->DB();
+            $command = "select member.mId,bill.* from member join bill on  member.mEmail ='$userEmail' and member.mId = bill.gmemberid";
+            $billresult = mysql_query($command,$link);
+            while($billdata = mysql_fetch_assoc($billresult)){
+                        $billarray[]=array(
                                          'mId' => $billdata['mId'],
                                          'billid' => $billdata['billid'],
                                          'bgoodsid' => $billdata['bgoodsid'],
@@ -23,49 +19,35 @@ class car extends Controller{
                                          'addressee'   => $billdata['addressee'],
                                          'paytype'   => $billdata['paytype'],
                                          'deal'   => $billdata['deal']
-                                           );
-                    }
-                
+                        );
+            }
                 return $billarray;
-            
-           }else
-           {
-            echo "no";
-           }
 
-      
-       
       }
       
-      function addgoods($data){//增加商品到購物車
+      function addgoods($userEmail,$userpass,$data,$buytime){//增加商品到購物車
        
        $this->model("logphp");
        $logphp = new logphp();
-       $checkresult = $logphp->checkstatus();
-       $link = $this->DB();
-       
        //檢查是否有登入 傳回查詢帳號的結果 沒有結果導向到登入
-       if($checkresult){
-              $commandm = "select mId from member where mEmail='$_SESSION[userEmail]'";
-              $meresult = mysql_query($commandm,$link);
-              $row2=mysql_fetch_assoc($meresult);
-               
-               if(isset($_SESSION['buytime'])){//設定購買變數為購買項目的根據 目的:刪除項目時用
-                            $_SESSION['buytime'] +=1;//查看購買次數 如果不是就設置初始直0 
-                        }else{
-                             $_SESSION['buytime'] =1;
-                        }
+       if($logphp->checkaccount($userEmail,$userpass)){
+                $link = $this->DB();
+                $commandm = "select mId from member where mEmail='$userEmail'";
+                $meresult = mysql_query($commandm,$link);
+                $row2=mysql_fetch_assoc($meresult);
                 $car = array(
                                      
                                      $row2['mId'],
                                      $data['gId'],  //將商品資訊丟到陣列裡面
                                      $data['gPrice'],
                                      $data['gname'],
-                                     date("Y:m:d h:i:s"));  
+                                     date("Y:m:d h:i:s")
+                            );  
                                      
-                         $num="mID"."$_SESSION[buytime]";
+                         $num="mID".$buytime;
                          $_SESSION[car][$num]=$car;//將商品陣列丟到seesion的[car][購買次數]
                          mysql_close($link);
+
                          return true;
                          
                         
@@ -93,7 +75,7 @@ class car extends Controller{
                    
        
       }
-      function deal(){//交易單筆商品
+      function deal(){//交易單筆商品----這裡
                    
                     $deal="$_GET[deal]";//將帳單 特定項的單號到變數內
                   

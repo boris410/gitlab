@@ -20,10 +20,8 @@ class goodslist extends Controller{
                     
                     
                 }
-                function showgoodsingle(){
-                 
-                    
-                    $command="select * from goods where gId=$_GET[gId]";//到此頁面時透過傳送來的gId抓取商品欄位資料
+                function showgoodsingle($gId){
+                    $command="select * from goods where gId=$gId";//到此頁面時透過傳送來的gId抓取商品欄位資料
                     $link = $this->DB();
                     $result = mysql_query($command,$link);
                     

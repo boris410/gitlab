@@ -18,6 +18,7 @@ class Controller {
                     mysql_select_db($dbname);
                     return $link;
     }
+    
     public function model($model) {
         require_once "../EasyMVC/models/$model.php";
     
