@@ -29,7 +29,7 @@ class logphp extends Controller{
              function register(){
                   $checkaccount =$this->checkaccount();
                   $link = $this->DB();
-                  if($checkaccount ==""){//如果有資料代表重複帳號 無法創辦
+                  if(!$checkaccount){//如果有資料代表重複帳號 無法創辦
 
                             //新增member欄位資料
                             $command="INSERT INTO member (mFirstname,mLastname,mEmail,mPhone) VALUES ('$_POST[firstname]', '$_POST[lastname]','$_POST[txtUserEmail]','$_POST[phone]')";

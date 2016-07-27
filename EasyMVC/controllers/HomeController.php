@@ -129,7 +129,8 @@ class HomeController extends Controller {
                 $this->model("car");
                 $car= new car();
                     if($car->addgoods($goodsdata)){//檢查是否有登入 有登入 新增到購物車
-                            echo "新增成功";
+                     
+                            header("location: index");
                     }else{//沒有登入則不會新增到購物車 且導向到登入
                             header("location: login");
                     }
