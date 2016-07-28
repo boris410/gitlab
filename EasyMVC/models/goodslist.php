@@ -2,11 +2,11 @@
 
 class goodslist extends Controller{
                 function showgoods (){
-                    $command  = "select * from goods";
-                    $link=$this->DB();
-                    $result = mysql_query($command,$link);
-                    
-                    while($row = mysql_fetch_assoc($result)){//將接收到的資料一筆一筆放到陣列中形成2維陣列  array(0,array)第一件商品的資料陣列
+                    $link = $this->getConnect();
+                    $select = $link->query("SELECT * FROM goods");
+                    $select->execute();
+
+                    while($row = $select->fetch()){//將接收到的資料一筆一筆放到陣列中形成2維陣列  array(0,array)第一件商品的資料陣列
                           $rowarray[] =array(                                                             //array(1,array)第二件商品的資料陣列
                                         'gId'      =>$row['gId'],                                        //array(0,array(gId=>1))
                                         'gname'    => $row['gname'],
@@ -15,17 +15,17 @@ class goodslist extends Controller{
                                         'gpicurl'  =>$row['gpicurl']
                                         ); 
                     }
-                    mysql_close($link);
+                    $link = null;
                     return $rowarray;
                     
                     
                 }
                 function showgoodsingle($dealnumber){
-                    $command="select * from goods where gId=$dealnumber";//到此頁面時透過傳送來的gId抓取商品欄位資料
-                    $link = $this->DB();
-                    $result = mysql_query($command,$link);
-                    
-                    while($row = mysql_fetch_assoc($result)){//將接收到的資料一筆一筆放到陣列中形成2維陣列  array(0,array)第一件商品的資料陣列
+                    $link = $this->getConnect();
+                    $select = $link->query("SELECT * FROM goods WHERE gId=?");
+                    $select->bindValue(1,$dealnumber);
+                    $select->execute();
+                    while($row = $select->fetch()){//將接收到的資料一筆一筆放到陣列中形成2維陣列  array(0,array)第一件商品的資料陣列
                           $rowarray =array(                                                             //array(1,array)第二件商品的資料陣列
                                         'gId'      =>$row['gId'],                                        //array(0,array(gId=>1))
                                         'gname'    => $row['gname'],
@@ -34,21 +34,22 @@ class goodslist extends Controller{
                                         'gpicurl'  =>$row['gpicurl']
                                         ); 
                     }
-                    mysql_close($link);
+                    $link = null;
                     return $rowarray;
                     
                     
                 }
                 function personnalshow($userEmail,$userpass){
                      //抓出個人資料的內容
-                     $link = $this->DB();
-                     $command =  "select member.*,account.aPassword from member join account 
-                                  on  member.mEmail='$userEmail' and account.aPassword='$userpass'";
-                                 
-                     $result = mysql_query($command,$link);
-                     $row = mysql_fetch_assoc($result);
-                     mysql_close($link);
-                     return $row;
+                    $link = $this->getConnect();
+                    $select = $link->query("select member.*,account.aPassword from member join account 
+                                           on  member.mEmail= ? and account.aPassword= ? ");
+                    $select->bindValue(1,$userEmail);
+                    $select->bindValue(1,$userpass);   
+                    $select->execute();       
+                    $row = $select->fetch;
+                    $link = null;
+                    return $row;
                 }
         
     

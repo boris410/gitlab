@@ -16,40 +16,42 @@ class blogphp extends Controller{
             }
             
             function checkaccount($username,$userpass){//後台登入的帳號檢查
-                  $link = $this->DB();
-                  $command = "select mguser,mgpass from management where mguser= '$username' and mgpass='$userpass'";
-                  //檢查帳號密碼在db中是否有資料
-                  $result=mysql_query($command,$link);
-                  $data=mysql_fetch_assoc($result);//檢查變數查看是否有資料
-                  mysql_close($link);
-                  
-                  if($data!=null){
+                $link = $this->getConnect();
+                $select = $link->prepare("SELECT mguser,mgpass FROM management WHERE mguser= ? AND mgpass= ? ");
+                $select->bindValue(1,$username);
+                $select->bindValue(2,$userpass);
+                $select->execute();
+                $link = null;
+                if($select->rowCount()>0){
                       return true;
-                  }else{
+                }else{
                     
                       return false;
-                  }
+                }
             }
     
             function checkstatus($username,$userpass){//後台檢查登入狀況
-                if(isset($_SESSION['userName']))
+                if($username != "")
                 {
-                    $link = $this->DB();
-                    $command= "select mguser,mgpass from management where mguser= '$username' and mgpass='$userpass'";
-                    $result = mysql_query($command,$link);
-                    $row = mysql_fetch_assoc($result);//若是有資料代表輸入的帳號密碼正確  登入成功
-                    mysql_close($link);
-                     
-                    if($row!=null){
+                    $link = $this->getConnect();
+                    $select = $link->prepare("SELECT mguser,mgpass FROM management WHERE mguser= ? AND mgpass= ? ");
+                    $select->bindValue(1,$username);
+                    $select->bindValue(2,$userpass);
+                    $select->execute();
+                    $select->rowCount();
+                    $link = null;
+                    if($select->rowCount()>0){
                         return true;
                     }else{
                         return false;
                     }
 
+                }else{
+                    return false;
                 }
             }
             function logout(){
-                    session_start();
+    
                     session_unset();
                     if(count($_SESSION)==0){
                         return true;
@@ -60,18 +62,19 @@ class blogphp extends Controller{
             
             
             function personnalshow($user){//抓出個人資料的內容
-                $link = $this->DB();
-                 //join 三個個表單member account 撈出個人資料，再left join bill不管有沒有都撈
-                  $command = "select member.*,account.aPassword,bill.*
-                                from member
-                                join account 
-                                on mEmail='$user' and account.aEmail=member.mEmail
-                                left join bill
-                                on member.mId = bill.gmemberid";
-                                
-                 $result = mysql_query($command,$link);
+                $link = $this->getConnect();
+                $select = $link->prepare("SELECT member.*,account.aPassword,bill.*
+                                FROM member
+                                JOIN account 
+                                ON mEmail= ? AND account.aEmail=member.mEmail
+                                LEFT JOIN bill
+                                ON member.mId = bill.gmemberid");//將有使用者的帳號資訊及密碼撈出 LEFT JOIN bill 不管有沒有都撈
+                $select->bindValue(1,$user);
+                $select->execute();
+                
+                
                  
-                  while($billdata = mysql_fetch_assoc($result)){
+                  while($billdata = $select->fetch()){
                              $billarray[]=array(//將撈出來的資料丟到陣列並回傳 將取得的key設為這個陣列的key
                                          'mId' => $billdata['mId'],
                                          'billid' => $billdata['billid'],
@@ -93,43 +96,43 @@ class blogphp extends Controller{
                                            );}
                 
                  
-                  mysql_close($link);
+                  $link->null;
                   return  $billarray;
             }
-            function showdeals($who){ 
-                    //秀出個人的帳單傳入點擊到的使用者email來做撈資料的依據
-                      $status = $this->checkstatus();
-                       if($status!=""){
-                            $link = $this->DB();
-                            $command = "select member.mId,bill.* from member join bill on  member.mEmail $who and member.mId = bill.gmemberid";
-                            //echo $command;
-                             $billresult = mysql_query($command,$link);
+        //     function showdeals($who){ 
+        //             //秀出個人的帳單傳入點擊到的使用者email來做撈資料的依據
+        //               $status = $this->checkstatus();
+        //               if($status!=""){
+        //                     $link = $this->DB();
+        //                     $command = "select member.mId,bill.* from member join bill on  member.mEmail $who and member.mId = bill.gmemberid";
+        //                     //echo $command;
+        //                      $billresult = mysql_query($command,$link);
                             
-                                while($billdata = mysql_fetch_assoc($billresult)){
-                                         $billarray[]=array(
-                                                     'mId' => $billdata['mId'],
-                                                     'billid' => $billdata['billid'],
-                                                     'bgoodsid' => $billdata['bgoodsid'],
-                                                     'bbuydate' => $billdata['bbuydate'],
-                                                     'gmemberid' => $billdata['gmemberid'],
-                                                     'bgoodsprice' => $billdata['bgoodsprice'],
-                                                     'bgoodsname' => $billdata['bgoodsname'],
-                                                     'address'   => $billdata['address'],
-                                                     'addressee'   => $billdata['addressee'],
-                                                     'paytype'   => $billdata['paytype'],
-                                                     'deal'   => $billdata['deal']
-                                                      );
-                                }
-                            mysql_close($link);
-                            return $billarray;
+        //                         while($billdata = mysql_fetch_assoc($billresult)){
+        //                                  $billarray[]=array(
+        //                                              'mId' => $billdata['mId'],
+        //                                              'billid' => $billdata['billid'],
+        //                                              'bgoodsid' => $billdata['bgoodsid'],
+        //                                              'bbuydate' => $billdata['bbuydate'],
+        //                                              'gmemberid' => $billdata['gmemberid'],
+        //                                              'bgoodsprice' => $billdata['bgoodsprice'],
+        //                                              'bgoodsname' => $billdata['bgoodsname'],
+        //                                              'address'   => $billdata['address'],
+        //                                              'addressee'   => $billdata['addressee'],
+        //                                              'paytype'   => $billdata['paytype'],
+        //                                              'deal'   => $billdata['deal']
+        //                                               );
+        //                         }
+        //                     mysql_close($link);
+        //                     return $billarray;
                         
-                       }else
-                       {
-                        echo "no";
-                       }
-          // $status = $logphp->checkstatus();
-           //echo $status;
-            }
+        //               }else
+        //               {
+        //                 echo "no";
+        //               }
+        //   // $status = $logphp->checkstatus();
+        //   //echo $status;
+        //     }
      
 }
 ?>

@@ -3,10 +3,13 @@ class car extends Controller{
        function showbill($userEmail){//購物車內 個人帳號的所有歷史帳單
             $this->model("logphp");
             $logphp = new logphp();
-            $link = $this->DB();
-            $command = "select member.mId,bill.* from member join bill on  member.mEmail ='$userEmail' and member.mId = bill.gmemberid";
-            $billresult = mysql_query($command,$link);
-            while($billdata = mysql_fetch_assoc($billresult)){
+            $link2 = $this->getConnect();
+            $select = $link2->prepare("SELECT member.mId,bill.* FROM member JOIN bill ON  member.mEmail = ?  AND member.mId = bill.gmemberid");
+            $select->bindValue(1,$userEmail);
+            $select->execute();
+            
+        
+            while($billdata = $select->fetch()){
                         $billarray[]=array(
                                          'mId' => $billdata['mId'],
                                          'billid' => $billdata['billid'],
@@ -31,22 +34,23 @@ class car extends Controller{
        $logphp = new logphp();
        //檢查是否有登入 傳回查詢帳號的結果 沒有結果導向到登入
        if($logphp->checkaccount($userEmail,$userpass)){
-                $link = $this->DB();
-                $commandm = "select mId from member where mEmail='$userEmail'";
-                $meresult = mysql_query($commandm,$link);
-                $row2=mysql_fetch_assoc($meresult);
+                $link = $this->getConnect();
+                $select = $link->prepare("SELECT mId FROM member WHERE mEmail= ? ");
+                $select->bindValue(1,$userEmail);
+               
+                $row=$select->execute();
                 $car = array(
                                      
-                                     $row2['mId'],
+                                     $row['mId'],
                                      $data['gId'],  //將商品資訊丟到陣列裡面
                                      $data['gPrice'],
                                      $data['gname'],
                                      date("Y:m:d h:i:s")
                             );  
                                      
-                         $num="mID".$buytime;
-                         $_SESSION[car][$num]=$car;//將商品陣列丟到seesion的[car][購買次數]
-                         mysql_close($link);
+                        $num="mID".$buytime;
+                        $_SESSION[car][$num]=$car;//將商品陣列丟到seesion的[car][購買次數]
+                        $link = null;
 
                          return true;
                          
@@ -77,18 +81,26 @@ class car extends Controller{
       function deal($pay,$address,$addressee,$paytype){//將輸入帳單資訊帶入 特定項目 收件地址、收件人、付款方式
 
                     if(isset($_SESSION[car][$pay])){//加強判斷如果session裡有這一筆資料
-                             $link = $this->DB();
-                             foreach($_SESSION[car][$pay] as $value  ){//將商品分割成一為陣列中的四筆資料
-                             $d0=$_SESSION[car][$pay][0];
-                             $d1=$_SESSION[car][$pay][1];
-                             $d2=$_SESSION[car][$pay][2];
-                             $d3=$_SESSION[car][$pay][3];
-                             }
-                             
-                             $commandi = "insert into bill(gmemberid,bgoodsid,bgoodsprice,bgoodsname,address,paytype,addressee,bbuydate) 
-                             values($d0,$d1,$d2,'$d3','$address','$paytype','$addressee',current_timestamp())";//分別儲存到指定欄位
-                             mysql_query($commandi,$link);
-                             mysql_close($link);
+                            foreach($_SESSION[car][$pay] as $value  ){//將商品分割成一為陣列中的四筆資料
+                                $d0=$_SESSION[car][$pay][0];
+                                $d1=$_SESSION[car][$pay][1];
+                                $d2=$_SESSION[car][$pay][2];
+                                $d3=$_SESSION[car][$pay][3];
+                            }
+                            
+                            $link = $this->getConnect();
+                            $insert = $link->prepare("INSERT INTO bill(gmemberid,bgoodsid,bgoodsprice,bgoodsname,address,paytype,addressee,bbuydate) 
+                            VALUES(?,?,?,?,?,?,?,current_timestamp())");
+                            $insert->bindValue(1,$d0);
+                            $insert->bindValue(2,$d1);
+                            $insert->bindValue(3,$d2);
+                            $insert->bindValue(4,$d3);
+                            $insert->bindValue(5,$address);
+                            $insert->bindValue(6,$paytype);
+                            $insert->bindValue(7,$addressee);
+                            $insert->execute();
+                            $link = null;
+                            
                              unset($_SESSION[car][$pay]);//寫入mysql後刪除點擊的那一單項
                               if(!isset($_SESSION[car][$pay])){//判斷是否有這一項商品 沒有就是刪除成功
                                
@@ -99,7 +111,7 @@ class car extends Controller{
                                 
                               }else{
                                 echo "沒有刪除成功";
-                               return false;//代表這項商品沒有刪除掉
+                              return false;//代表這項商品沒有刪除掉
                               
                               }
 

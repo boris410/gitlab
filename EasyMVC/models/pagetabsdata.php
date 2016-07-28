@@ -2,11 +2,11 @@
 class pagetabsdata extends Controller{
     //資料庫連結
     function indexpage($clickpage){
-    $link = $this->DB();
-    $sql = "SELECT * FROM goods ORDER BY gId"; //修改成你要的 SQL 語法
-    $result = mysql_query($sql,$link) or die("Error");
-    $data_nums = mysql_num_rows($result); //統計總比數
-    //echo $data_nums;
+    $link = $this->getConnect();
+    $select = $link->query("SELECT * FROM goods ORDER BY gId");   
+    $select->execute();
+    $data_nums = $select->rowCount(); //統計總比數
+    
     $per = 6; //每頁顯示項目數量
     $pages = ceil($data_nums/$per); //取得不小於值的下一個整數//得到的結果為總頁數
     
@@ -18,7 +18,12 @@ class pagetabsdata extends Controller{
     
     
     $start = ($page)*$per; //每一頁開始的資料序號
-    $result = mysql_query($sql.' LIMIT '.$start.', '.$per,$link) or die("Error");
+    $select = $link->prepare("SELECT * FROM goods ORDER BY gId  LIMIT ? , ?");   
+    $select->bindValue(1,$start);
+    $select->bindValue(2,$per);
+    $select->execute();
+    
+    //$result = mysql_query($sql.' LIMIT '.$start.', '.$per,$link) or die("Error");
     
    	if($page==0){
 			$page=1;
@@ -40,7 +45,7 @@ class pagetabsdata extends Controller{
 		     'pageend'  =>$pageebd,
              'data'     =>$result   
 		     );
-		     mysql_close($link);
+		     //mysql_close($link);
 		     return $array;
     }
 		 

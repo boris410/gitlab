@@ -4,9 +4,6 @@
 <?php
 //輸出資料內容
 
-while ($row = mysql_fetch_array($data['data']))//將model丟過來的$data陣列內的data resouce 透過fetch取出資料
-{
-    
     $id=$row['id'];
     $name=$row['name'];
     ?>
@@ -17,7 +14,7 @@ while ($row = mysql_fetch_array($data['data']))//將model丟過來的$data陣列
     </tr>
 
 <?php 
-    }
+
      //分頁頁碼
     // echo '共 '.$data['data_nums'].' 筆-在 '.$data['page'].' 頁-共 '.$data['pages'].' 頁';
     echo '在第 '.$data['page'].' 頁';

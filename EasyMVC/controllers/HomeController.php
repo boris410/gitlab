@@ -160,6 +160,25 @@ class HomeController extends Controller {
                 $this->view("single",$goodsdata);
                 $this->view("foot");
         }
+        function test(){
+               
+                    $link2 = $this->getConnect();
+                //     $check = $link2->query("select aEmail,aPassword from account where aEmail= :Email and aPassword= :pass ");
+                //     $check->bindParam("Email", $userEmail,PDO::PARAM_STR, 50);
+                //     $check->bindParam("pass", $userpass, PDO::PARAM_STR, 50);
+                    $check = $link2->query("select * from account ");
+                //     $check = $link2->query("select aEmail,aPassword from account where aEmail= :Email and aPassword= :pass ");
+                //     $check =$link2->bindParam("Email", $userEmail,PDO::PARAM_STR, 50);
+                //     $check =$link2->bindParam("pass", $userpass, PDO::PARAM_STR, 50);
+                    $check->execute();
+                    var_dump($check->fetch());
+                    while($row = $check->fetch())
+                    {
+                     var_dump($row);
+                    }
+                    exit;
+                
+        }
 }
 
 ?>

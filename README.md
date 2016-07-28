@@ -44,3 +44,5 @@
 7/27 MVC架構購物網站專案----程式重構-修改直接由model接post或是session 改成由controller接到變數傳給model 優化程式碼1.2版
 
 7/28 MVC架構購物網站專案----程式重構-修改直接由model接post或是session 改成由controller接到變數傳給model--完成 優化程式碼1.3版
+
+7/29 MVC架構購物網站專案----程式重構-修改PDO 優化程式碼2.0版

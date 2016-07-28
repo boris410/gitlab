@@ -10,7 +10,7 @@ class BlogController extends Controller{
                         
                         $this->model("pagetabsdata");
                         $pagetabsdata = new pagetabsdata();
-                        $pagetabsdata= $pagetabsdata->indexpage();//載入頁籤資料
+                        $pagetabsdata= $pagetabsdata->indexpage($_GET['clickpage']);//載入頁籤資料
                         
                         $this->model("bloguserlist");
                         $user= new bloguserlist();
@@ -63,7 +63,6 @@ class BlogController extends Controller{
                
                 $this->model("blogphp");
                 $person = new blogphp();
-               
                     if($person->checkstatus($_SESSION['userName'],$_SESSION['userpass'])){
                         $persondata = $person->personnalshow($_POST['user']);
                     }else{
@@ -110,7 +109,7 @@ class BlogController extends Controller{
                             }
                     $this->model("pagetabsdata");
                     $pagetabsdata = new pagetabsdata();
-                    $pagetabsdata= $pagetabsdata->indexpage();//載入分頁籤DATA
+                    $pagetabsdata= $pagetabsdata->indexpage($_GET['clickpage']);//載入分頁籤DATA
                                     
                     $this->view("Blog/bloghead");
                     $this->view("Blog/blogaddproduct",$goods);
