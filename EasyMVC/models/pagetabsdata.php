@@ -23,16 +23,12 @@ class pagetabsdata extends Controller{
     $select->bindValue(2,$per);
     $select->execute();
     
-    //$result = mysql_query($sql.' LIMIT '.$start.', '.$per,$link) or die("Error");
+   
     
    	if($page==0){
 			$page=1;
 		}
-	    //echo "start:".($page-1)*$per."<br>";
-		
-		//$i=($page-1)*$per;
-// 		 $pagestart=($page-1)*$per;
-// 		 $pageend=(($page*$per)-1);
+
 		 $_GET['pagestart']=($page-1)*$per;//計算商品起始
 		 $_GET['pageend']=(($page*$per)-1);//計算商品最後一項
 		 

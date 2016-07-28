@@ -37,8 +37,8 @@ class car extends Controller{
                 $link = $this->getConnect();
                 $select = $link->prepare("SELECT mId FROM member WHERE mEmail= ? ");
                 $select->bindValue(1,$userEmail);
-               
-                $row=$select->execute();
+                $select->execute();
+                $row=$select->fetch();
                 $car = array(
                                      
                                      $row['mId'],
@@ -50,6 +50,7 @@ class car extends Controller{
                                      
                         $num="mID".$buytime;
                         $_SESSION[car][$num]=$car;//將商品陣列丟到seesion的[car][購買次數]
+                        
                         $link = null;
 
                          return true;

@@ -99,40 +99,7 @@ class blogphp extends Controller{
                   $link->null;
                   return  $billarray;
             }
-        //     function showdeals($who){ 
-        //             //秀出個人的帳單傳入點擊到的使用者email來做撈資料的依據
-        //               $status = $this->checkstatus();
-        //               if($status!=""){
-        //                     $link = $this->DB();
-        //                     $command = "select member.mId,bill.* from member join bill on  member.mEmail $who and member.mId = bill.gmemberid";
-        //                     //echo $command;
-        //                      $billresult = mysql_query($command,$link);
-                            
-        //                         while($billdata = mysql_fetch_assoc($billresult)){
-        //                                  $billarray[]=array(
-        //                                              'mId' => $billdata['mId'],
-        //                                              'billid' => $billdata['billid'],
-        //                                              'bgoodsid' => $billdata['bgoodsid'],
-        //                                              'bbuydate' => $billdata['bbuydate'],
-        //                                              'gmemberid' => $billdata['gmemberid'],
-        //                                              'bgoodsprice' => $billdata['bgoodsprice'],
-        //                                              'bgoodsname' => $billdata['bgoodsname'],
-        //                                              'address'   => $billdata['address'],
-        //                                              'addressee'   => $billdata['addressee'],
-        //                                              'paytype'   => $billdata['paytype'],
-        //                                              'deal'   => $billdata['deal']
-        //                                               );
-        //                         }
-        //                     mysql_close($link);
-        //                     return $billarray;
-                        
-        //               }else
-        //               {
-        //                 echo "no";
-        //               }
-        //   // $status = $logphp->checkstatus();
-        //   //echo $status;
-        //     }
+       
      
 }
 ?>

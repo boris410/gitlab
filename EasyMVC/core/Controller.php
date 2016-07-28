@@ -24,7 +24,7 @@ class Controller {
     
     
     
-        public function DB2(){
+    public function DB2(){
                 header("content-type:text/html; charset=utf-8");
                 $db = new PDO("mysql:host=localhost;dbname=shopping;port=3306", "root", "");
                 $db->exec("set names utf8");

@@ -2832,3 +2832,18 @@
 [28-Jul-2016 09:54:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
 [28-Jul-2016 09:54:29 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
 [28-Jul-2016 09:54:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:25
+[28-Jul-2016 11:33:13 UTC] PHP Fatal error:  Call to a member function bindValue() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/goodslist.php on line 26
+[28-Jul-2016 11:33:13 UTC] PHP Stack trace:
+[28-Jul-2016 11:33:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[28-Jul-2016 11:33:13 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[28-Jul-2016 11:33:13 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[28-Jul-2016 11:33:13 UTC] PHP   4. HomeController->single() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[28-Jul-2016 11:33:13 UTC] PHP   5. goodslist->showgoodsingle() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:141
+[28-Jul-2016 11:46:22 UTC] PHP Warning:  mysql_close() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 33
+[28-Jul-2016 11:46:22 UTC] PHP Stack trace:
+[28-Jul-2016 11:46:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[28-Jul-2016 11:46:22 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[28-Jul-2016 11:46:22 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[28-Jul-2016 11:46:22 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[28-Jul-2016 11:46:22 UTC] PHP   5. blogaddp->deladdp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:104
+[28-Jul-2016 11:46:22 UTC] PHP   6. mysql_close() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:33
