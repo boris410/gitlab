@@ -40,3 +40,7 @@
 7/27 MVC架構購物網站專案----debug-將header 從model抽出 優化程式碼1.0版
 
 7/27 MVC架構購物網站專案----debug-single頁導向錯誤&申請帳號重複 優化程式碼1.1版
+
+7/27 MVC架構購物網站專案----程式重構-修改直接由model接post或是session 改成由controller接到變數傳給model 優化程式碼1.2版
+
+7/28 MVC架構購物網站專案----程式重構-修改直接由model接post或是session 改成由controller接到變數傳給model--完成 優化程式碼1.3版

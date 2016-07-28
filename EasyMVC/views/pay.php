@@ -42,7 +42,7 @@
 	
 	
 	
-	 		<form  method="post" action="cart?deal=<?php echo $_GET['pay'] ?>">
+	 		<form  method="post" action="">
                        
                         <div class="panel-body">
                             <div class="form-group">
@@ -80,7 +80,7 @@
                         </div>
                         
                         
-                        <button type="submit" value="" name=paysubmit>確定</button>
+                        <button type="submit" value="1" name=paysubmit>確定</button>
                         <a href="cart"><button type="button" value="" name=paysubmit>取消</button></a>
                 </form>
                     </div>

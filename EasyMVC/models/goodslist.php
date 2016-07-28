@@ -20,8 +20,8 @@ class goodslist extends Controller{
                     
                     
                 }
-                function showgoodsingle($gId){
-                    $command="select * from goods where gId=$gId";//到此頁面時透過傳送來的gId抓取商品欄位資料
+                function showgoodsingle($dealnumber){
+                    $command="select * from goods where gId=$dealnumber";//到此頁面時透過傳送來的gId抓取商品欄位資料
                     $link = $this->DB();
                     $result = mysql_query($command,$link);
                     
@@ -39,11 +39,11 @@ class goodslist extends Controller{
                     
                     
                 }
-                function personnalshow(){
+                function personnalshow($userEmail,$userpass){
                      //抓出個人資料的內容
                      $link = $this->DB();
                      $command =  "select member.*,account.aPassword from member join account 
-                                  on  member.mEmail='$_SESSION[userEmail]' and account.aPassword='$_SESSION[userpass]'";
+                                  on  member.mEmail='$userEmail' and account.aPassword='$userpass'";
                                  
                      $result = mysql_query($command,$link);
                      $row = mysql_fetch_assoc($result);

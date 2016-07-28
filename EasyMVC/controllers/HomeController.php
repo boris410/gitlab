@@ -6,14 +6,14 @@ class HomeController extends Controller {
                 $this->view("head"); 
                 $this->model("pagetabsdata");
                 $pagetabsdata = new pagetabsdata();
-                $pagetabsdata= $pagetabsdata->indexpage();
+                $page= $pagetabsdata->indexpage($_GET['clickpage']);
                 
                 $this->model("goodslist");
                 $goods= new goodslist();
                 $goodsdata = $goods->showgoods();//回傳的資料陣列
                 
                 $this->view("index",$goodsdata);
-                $this->view("pagetabs",$pagetabsdata);
+                $this->view("pagetabs",$page);
                 $this->view("foot");
                
                 
@@ -50,9 +50,9 @@ class HomeController extends Controller {
                 $this->model("logphp");
                 $logphp = new logphp();
                 
-                $check = $logphp->checkstatus();
-                if( $check!=null){
-                        $persondata = $goodslist->personnalshow();
+                
+                if( $logphp->checkstatus($_SESSION['userEmail'],$_SESSION['userpass'])){
+                        $persondata = $goodslist->personnalshow($_SESSION['userEmail'],$_SESSION['userpass']);
                 }else{
                         header("location: login");
                 }
@@ -69,16 +69,17 @@ class HomeController extends Controller {
                         $this->model("car");
                         $car= new car();
                         $billdata = $car->showbill($_SESSION['userEmail'],$_SESSION['userpass']);
-                        if($_GET['delete']){
-                                if($car->delegoods()){
+                        
+                        if($_GET['cancel']){
+                                if($car->delegoods($_GET['cancel'])){
                                  echo "刪除成功";
                                 }
                         }
-                        elseif($_GET['deal']){
-                               if($car->deal()){
-                                header("location: cart");       
-                               }
+                        elseif($_GET['pay']){
+                                $_SESSION['pay'] = $_GET['pay'];
+                                header("location: pay");       
                         }
+                        
                 }else{
                         header("location: login");
                 }
@@ -92,10 +93,21 @@ class HomeController extends Controller {
         }
         function pay(){//顯示物品付費方式頁面
                 
-                $_GET['gId'] = $_SESSION[car][$_GET['pay']][1];//將會員的特定項目編號值給到一個參數並丟掉fumction中撈出資料庫資料
+                $dealnumber = $_SESSION[car][$_SESSION['pay']][1];//將會員的特定項目編號值給到一個參數並丟掉fumction中撈出資料庫資料
                 $this->model("goodslist");
                 $goodslist = new goodslist();
-                $result = $goodslist->showgoodsingle();//秀出圖片及價格
+                $result = $goodslist->showgoodsingle($dealnumber);//秀出圖片及價格
+                if(isset($_POST['paysubmit'])){
+                        $this->model("car");
+                        $car = new car();
+                        if($car->deal($_SESSION['pay'],$_POST['address'],$_POST['addressee'],$_POST['paytype'])){
+                                header("location: cart");
+                        }else{
+                                echo "結帳失敗";
+                        } 
+                }
+              
+                
                 
                 $this->view("head");
                 $this->view("pay",$result);

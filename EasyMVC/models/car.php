@@ -57,46 +57,40 @@ class car extends Controller{
                  
        
       }
-      function delegoods(){//刪除購物車內商品
-            	          $del="$_GET[delete]";//依照丟過來的mid購買編號將此次的購物車內容單項刪除
-            	          unset($_SESSION[car][$del]);//成功後刪除點擊的那一單項
-             	     if(!isset($_SESSION[car][$del])){
-             	              if($_SESSION[car]==null){//如果最後都沒有項目了就把session中car的陣列刪除views就會顯示前往index的連結
+      function delegoods($cancel){//刪除購物車內商品
+            	   unset($_SESSION[car][$cancel]);//成功後刪除點擊的那一單項
+             	   if(!isset($_SESSION[car][$cancel])){
+             	      if($_SESSION[car]==null){//如果最後都沒有項目了就把session中car的陣列刪除views就會顯示前往index的連結
              	              unset($_SESSION[car]);
              	              return true;
-             	               }
-            	       }else{
+             	      }
+            	   }else{
             	        echo "刪除失敗，請正常操作";
             	        return false;
-            	       }
+            	   }
             	          
             	       
             	        
                    
        
       }
-      function deal(){//交易單筆商品----這裡
-                   
-                    $deal="$_GET[deal]";//將帳單 特定項的單號到變數內
-                  
-                    if(isset($_SESSION[car][$deal])){//加強判斷如果session裡有這一筆資料
+      function deal($pay,$address,$addressee,$paytype){//將輸入帳單資訊帶入 特定項目 收件地址、收件人、付款方式
+
+                    if(isset($_SESSION[car][$pay])){//加強判斷如果session裡有這一筆資料
                              $link = $this->DB();
-                             foreach($_SESSION[car][$deal] as $value  ){//將商品分割成一為陣列中的四筆資料
-                             $d0=$_SESSION[car][$deal][0];
-                             $d1=$_SESSION[car][$deal][1];
-                             $d2=$_SESSION[car][$deal][2];
-                             $d3=$_SESSION[car][$deal][3];
-                             
+                             foreach($_SESSION[car][$pay] as $value  ){//將商品分割成一為陣列中的四筆資料
+                             $d0=$_SESSION[car][$pay][0];
+                             $d1=$_SESSION[car][$pay][1];
+                             $d2=$_SESSION[car][$pay][2];
+                             $d3=$_SESSION[car][$pay][3];
                              }
                              
                              $commandi = "insert into bill(gmemberid,bgoodsid,bgoodsprice,bgoodsname,address,paytype,addressee,bbuydate) 
-                             values($d0,$d1,$d2,'$d3','$_POST[address]','$_POST[paytype]','$_POST[addressee]',current_timestamp())";//分別儲存到指定欄位
+                             values($d0,$d1,$d2,'$d3','$address','$paytype','$addressee',current_timestamp())";//分別儲存到指定欄位
                              mysql_query($commandi,$link);
                              mysql_close($link);
-                             unset($_SESSION[car][$deal]);//寫入mysql後刪除點擊的那一單項
-                             
-                             
-                              if(!isset($_SESSION[car][$deal])){//判斷是否有這一項商品 沒有就是刪除成功
+                             unset($_SESSION[car][$pay]);//寫入mysql後刪除點擊的那一單項
+                              if(!isset($_SESSION[car][$pay])){//判斷是否有這一項商品 沒有就是刪除成功
                                
                                   if($_SESSION[car]==null){//如果最後都沒有項目了就把session中car的陣列刪除views就會顯示前往index的連結
                                       unset($_SESSION[car]);

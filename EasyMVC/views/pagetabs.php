@@ -25,7 +25,7 @@ while ($row = mysql_fetch_array($data['data']))//將model丟過來的$data陣列
     echo "第 ";
     for( $i=1 ; $i<=$data['pages'] ; $i++ ) {
         if ( $data['page']-3 < $i && $i < $data['page']+3 ) {
-            echo "<a href=?page=".$i.">".$i."</a> ";
+            echo "<a href=?clickpage=".$i.">".$i."</a> ";
         }
     } 
     echo " 頁 <a href=?page=".$data['pages'].">末頁</a><br /><br />";
