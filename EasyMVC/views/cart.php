@@ -39,8 +39,8 @@
 				<td><?php  printf($_SESSION[car][$key][2]);?></td>
 				<td><?php  printf($_SESSION[car][$key][3]);?></td>
 				<td><?php  printf($_SESSION[car][$key][4]);?></td>
-				<td><a href="?pay=<?php echo $key; ?>" style="color:blue;">結帳</a></td>
-				<td><a href="?cancel=<?php echo $key; ?>" style="color:blue;">刪除</a></td>
+				<td><a href="pay?pay=<?php echo $key; ?>" style="color:blue;">結帳</a></td>
+				<td><a href="?delete=<?php echo $key; ?>" style="color:blue;">刪除</a></td>
 					
 		</tr>
 		

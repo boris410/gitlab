@@ -4,6 +4,9 @@
 <?php
 //輸出資料內容
 
+while ($row = mysql_fetch_array($data['data']))//將model丟過來的$data陣列內的data resouce 透過fetch取出資料
+{
+    
     $id=$row['id'];
     $name=$row['name'];
     ?>
@@ -14,7 +17,7 @@
     </tr>
 
 <?php 
-
+    }
      //分頁頁碼
     // echo '共 '.$data['data_nums'].' 筆-在 '.$data['page'].' 頁-共 '.$data['pages'].' 頁';
     echo '在第 '.$data['page'].' 頁';
@@ -22,7 +25,7 @@
     echo "第 ";
     for( $i=1 ; $i<=$data['pages'] ; $i++ ) {
         if ( $data['page']-3 < $i && $i < $data['page']+3 ) {
-            echo "<a href=?clickpage=".$i.">".$i."</a> ";
+            echo "<a href=?page=".$i.">".$i."</a> ";
         }
     } 
     echo " 頁 <a href=?page=".$data['pages'].">末頁</a><br /><br />";

@@ -14,7 +14,7 @@
 		
 				<img src="/gitlab/EasyMVC/bootstrap/<?php print_r($data[$i][gpicurl]); ?>" class="img-responsive" alt="" />
 				<p style="font-size:20px;color:#6363FF;">
-					§--<?php print_r($data[$i][introduct]); ?>
+					§--<?php print_r($data[$i][gintroduct]); ?>
 				</p>
 				<h4 style="color:red;">$<?php  print_r($data[$i][gPrice]); ?></h4>
 			</a>

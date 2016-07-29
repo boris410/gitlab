@@ -18,22 +18,22 @@
 		</div>
 
 		<div class="btn_form">
-			<h1><?php echo $data['gname']; ?></h1>
+			<h1><?php echo $data[gname]; ?></h1>
 
 			<p class="m_5" id="price"> </p>
 			<p class="m_5">$
-				<?php echo $data['gPrice']; ?>
+				<?php echo $data[gPrice]; ?>
 				</span>
 			</p>
 
 
 			<!--點選Buy時傳送buy及gId到本頁面判斷是否選擇購買-->
-			<a href="?&addc=1&gId=<?php echo $_GET['gId']; ?>"><input type="submit" value="ADD TO CAR" title="" name="buy" id="buy"> </a>
+			<a href="?&addc=1&gId=<?php echo $_GET[gId]; ?>"><input type="submit" value="ADD TO CAR" title="" name="buy" id="buy"> </a>
 			<!--按鈕後購物車+888-->
 
 
 			<p class="m_text2">
-				<?php echo $data['introduct'];?>
+				<?php echo $data[gintroduct];?>
 			</p>
 		</div>
 

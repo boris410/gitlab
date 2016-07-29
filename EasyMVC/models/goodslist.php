@@ -1,55 +1,34 @@
 <?php
 
 class goodslist extends Controller{
-                function showgoods (){
+                function showgoods (){//首頁商品項目欄
                     $link = $this->getConnect();
                     $select = $link->query("SELECT * FROM goods");
                     $select->execute();
-
-                    while($row = $select->fetch()){//將接收到的資料一筆一筆放到陣列中形成2維陣列  array(0,array)第一件商品的資料陣列
-                          $rowarray[] =array(                                                             //array(1,array)第二件商品的資料陣列
-                                        'gId'      =>$row['gId'],                                        //array(0,array(gId=>1))
-                                        'gname'    => $row['gname'],
-                                        'gPrice'   => $row['gPrice'],
-                                        'introduct'=>$row['gintroduct'],
-                                        'gpicurl'  =>$row['gpicurl']
-                                        ); 
-                    }
-                    $link = null;
-                    return $rowarray;
-                    
-                    
+                    $link = null ; 
+                    return $row=$select->fetchAll();
                 }
-                function showgoodsingle($dealnumber){
+                
+                function showgoodsingle(){//商品單樣的說明網頁
                     $link = $this->getConnect();
-                    $select = $link->prepare("SELECT * FROM goods WHERE gId= ? ");
-                    $select->bindValue(1,$dealnumber);
+                    $select = $link->prepare("SELECT * 
+                                              FROM goods 
+                                              WHERE gId= ? ");
+                    $select->bindParam(1,$_GET['gId']);
                     $select->execute();
-                    while($row = $select->fetch()){//將接收到的資料一筆一筆放到陣列中形成2維陣列  array(0,array)第一件商品的資料陣列
-                          $rowarray =array(                                                             //array(1,array)第二件商品的資料陣列
-                                        'gId'      =>$row['gId'],                                        //array(0,array(gId=>1))
-                                        'gname'    => $row['gname'],
-                                        'gPrice'   => $row['gPrice'],
-                                        'introduct'=>$row['gintroduct'],
-                                        'gpicurl'  =>$row['gpicurl']
-                                        ); 
-                    }
-                    $link = null;
-                    return $rowarray;
-                    
-                    
+                    $link=null;
+                    return $select->fetch();
                 }
-                function personnalshow($userEmail,$userpass){
-                     //抓出個人資料的內容
+                function personnalshow(){//抓出個人資料的內容
                     $link = $this->getConnect();
-                    $select = $link->query("select member.*,account.aPassword from member join account 
-                                           on  member.mEmail= ? and account.aPassword= ? ");
-                    $select->bindValue(1,$userEmail);
-                    $select->bindValue(1,$userpass);   
-                    $select->execute();       
-                    $row = $select->fetch;
-                    $link = null;
-                    return $row;
+                    $select = $link->prepare("SELECT member.*,account.aPassword 
+                                              FROM member 
+                                              JOIN account 
+                                              ON  member.mEmail=? AND account.aPassword= ? ");
+                    $select->bindParam(1,$_SESSION['userEmail']);
+                    $select->bindParam(2,$_SESSION['userpass']);
+                    $select->execute();
+                    return $row=$select->fetch();
                 }
         
     

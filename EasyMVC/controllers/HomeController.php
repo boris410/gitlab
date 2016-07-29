@@ -6,29 +6,23 @@ class HomeController extends Controller {
                 $this->view("head"); 
                 $this->model("pagetabsdata");
                 $pagetabsdata = new pagetabsdata();
-                $page= $pagetabsdata->indexpage($_GET['clickpage']);
+                $pagetabsdata= $pagetabsdata->indexpage();
                 
                 $this->model("goodslist");
                 $goods= new goodslist();
                 $goodsdata = $goods->showgoods();//回傳的資料陣列
                 
                 $this->view("index",$goodsdata);
-                $this->view("pagetabs",$page);
+                $this->view("pagetabs",$pagetabsdata);
                 $this->view("foot");
-               
-                
         }
         function login(){
                
                 $this->model("logphp");//載入
                 $logphp = new logphp();
-                if(isset($_POST['Login'])){//判斷是否有連線
-                   if($logphp->login($_POST['txtUserEmail'],$_POST['txtPassword'])){
-                        header("location: index");
-                   }
-                  }else{
-                         echo "帳號 or 密碼錯誤";
-                    }
+                if($logphp->login()){//判斷是否有連線
+                      header("location: index");
+                  }
                 $this->view("head");
                 $this->view("login");
                 $this->view("foot");
@@ -37,10 +31,10 @@ class HomeController extends Controller {
                
                 $this->model("logphp");
                 $lougout = new logphp();
-                if($lougout->logout()){
-                    header("location: index");  
-                }//執行logout刪除session 還傳true or fales
                 
+                
+                if($lougout->logout())//執行logout刪除session 還傳true or fales
+                header("location: index");
               
         }
         function personal(){
@@ -50,9 +44,9 @@ class HomeController extends Controller {
                 $this->model("logphp");
                 $logphp = new logphp();
                 
-                
-                if( $logphp->checkstatus($_SESSION['userEmail'],$_SESSION['userpass'])){
-                        $persondata = $goodslist->personnalshow($_SESSION['userEmail'],$_SESSION['userpass']);
+                $check = $logphp->checkstatus();
+                if( $check!=null){
+                        $persondata = $goodslist->personnalshow();
                 }else{
                         header("location: login");
                 }
@@ -63,51 +57,36 @@ class HomeController extends Controller {
                 
         }
          function cart(){
-                $this->model("logphp");
-                $logphp = new logphp();
-                if($logphp->checkaccount($_SESSION['userEmail'],$_SESSION['userpass'])){
-                        $this->model("car");
-                        $car= new car();
-                        $billdata = $car->showbill($_SESSION['userEmail'],$_SESSION['userpass']);
-                        
-                        if($_GET['cancel']){
-                                if($car->delegoods($_GET['cancel'])){
-                                 echo "刪除成功";
-                                }
+                
+                
+                $this->model("car");
+                $car= new car();
+                $billdata = $car->showbill();
+               
+                if($_GET['delete']){
+                        if($car->delegoods()){
+                         echo "刪除成功";
                         }
-                        elseif($_GET['pay']){
-                                $_SESSION['pay'] = $_GET['pay'];
-                                header("location: pay");       
-                        }
+                       
                         
-                }else{
-                        header("location: login");
                 }
+                elseif($_GET['deal']){
+                       if($car->deal()){
+                        header("location: cart");       
+                       }
+                }
+                
                 
                 $this->view("head");
                 $this->view("cart",$billdata);
                 $this->view("foot");
-                
-                
-               
         }
         function pay(){//顯示物品付費方式頁面
                 
-                $dealnumber = $_SESSION[car][$_SESSION['pay']][1];//將會員的特定項目編號值給到一個參數並丟掉fumction中撈出資料庫資料
+                $_GET['gId'] = $_SESSION[car][$_GET['pay']][1];//將會員的特定項目編號值給到一個參數並丟掉fumction中撈出資料庫資料
                 $this->model("goodslist");
                 $goodslist = new goodslist();
-                $result = $goodslist->showgoodsingle($dealnumber);//秀出圖片及價格
-                if(isset($_POST['paysubmit'])){
-                        $this->model("car");
-                        $car = new car();
-                        if($car->deal($_SESSION['pay'],$_POST['address'],$_POST['addressee'],$_POST['paytype'])){
-                                header("location: cart");
-                        }else{
-                                echo "結帳失敗";
-                        } 
-                }
-              
-                
+                $result = $goodslist->showgoodsingle();//秀出圖片及價格
                 
                 $this->view("head");
                 $this->view("pay",$result);
@@ -117,12 +96,15 @@ class HomeController extends Controller {
                 if(isset($_POST['submit'])){
                         $this->model("logphp");
                         $logphp=new logphp();
-                        if($logphp->register($_POST['firstname'], $_POST['lastname'],$_POST['txtUserEmail'],$_POST['phone'],$_POST['txtPassword'])){
+                        
+                       
+                        if($logphp->register()){
                                 header("location: login");     
                         }else{
-                                
-                                echo "，申請失敗";    
-                                
+                                $this->view("head");
+                                $this->view("register");
+                                $this->view("foot");
+                                echo "申請失敗";   
                         }
                 }
                 
@@ -138,45 +120,30 @@ class HomeController extends Controller {
                 
                 $this->model("goodslist");
                 $goods= new goodslist();
-                $goodsdata = $goods->showgoodsingle($_GET['gId']);//回傳的資料陣列
+                $goodsdata = $goods->showgoodsingle();//回傳的資料陣列
                 
-        if($_GET['addc']){
+            if($_GET['addc']){
                 $this->model("car");
                 $car= new car();
-                        if(isset($_SESSION['buytime'])){
-                                $_SESSION['buytime']+=1;
-                        }else{
-                                $_SESSION['buytime']=1;
-                        }
-                if($car->addgoods($_SESSION['userEmail'],$_SESSION['userpass'],$goodsdata,$_SESSION['buytime'])){//檢查是否有登入 有登入 新增到購物車
-                        header("location: index");
-                }else{//沒有登入則不會新增到購物車 且導向到登入
-                        header("location: login");
-                        
+                    if($car->addgoods($goodsdata)){//檢查是否有登入 有登入 新增到購物車
+                     
+                            header("location: index");
+                    }else{//沒有登入則不會新增到購物車 且導向到登入
+                            header("location: login");
+                    }
+                       
+                       
                 }
-        }
             
                 $this->view("head");
                 $this->view("single",$goodsdata);
                 $this->view("foot");
         }
-        function test(){
-               
-                    $link2 = $this->getConnect();
-                //     $check = $link2->query("select aEmail,aPassword from account where aEmail= :Email and aPassword= :pass ");
-                //     $check->bindParam("Email", $userEmail,PDO::PARAM_STR, 50);
-                //     $check->bindParam("pass", $userpass, PDO::PARAM_STR, 50);
-                    $check = $link2->query("select * from account ");
-                //     $check = $link2->query("select aEmail,aPassword from account where aEmail= :Email and aPassword= :pass ");
-                //     $check =$link2->bindParam("Email", $userEmail,PDO::PARAM_STR, 50);
-                //     $check =$link2->bindParam("pass", $userpass, PDO::PARAM_STR, 50);
-                    $check->execute();
-                    var_dump($check->fetch());
-                    while($row = $check->fetch())
-                    {
-                     var_dump($row);
-                    }
-                    exit;
+        function get(){
+                $a = $this->model("database");
+                $command = "select * from member";
+                $b = $a->select($command);
+                var_dump($b);
                 
         }
 }
