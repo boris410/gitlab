@@ -19,7 +19,8 @@
 												     <img src="<?php echo "/gitlab/EasyMVC/bootstrap/";print_r($data[$i][gpicurl]); ?>" class="img-responsive" alt=""/>
 												   	 <p><?php print_r($data[$i][introduct]); ?></p>
 												   	 <h4>$<?php  print_r($data[$i][gPrice]); ?></h4>
-												   	 <button name="delete" type="submit" value="<?php print_r($data[$i][gpicurl]); ?>">Delete</button>
+												   	 <input name="prod" type="hidden" value="<?php print_r($data[$i][gpicurl]); ?>"></input>
+												   	 <button name="delete" type="submit" value="1">Delete</button>
 											    </div>
 											
 								</form>

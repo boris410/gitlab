@@ -46,4 +46,9 @@
 7/28 MVC架構購物網站專案----程式重構-修改直接由model接post或是session 改成由controller接到變數傳給model--完成 優化程式碼1.3版
 
 7/29 MVC架構購物網站專案----程式重構-修改PDO 優化程式碼2.0版
+
 7/29 MVC架構購物網站專案----debug-single頁沒有傳送特定單號-修改完成 優化程式碼2.1版
+
+7/30 MVC架構購物網站專案----程式重購--session 放到model and use PDO
+
+7/31 MVC架構購物網站專案----程式重購--session 放到model and use PDO 優化程式碼2.2版-修改結帳controller $_GET +  挑戰題1(顯示陣列最大區塊:challenge)

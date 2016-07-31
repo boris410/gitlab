@@ -1,5 +1,6 @@
 <?php 
 class car extends Controller{
+       
        function showbill(){//購物車內 個人帳號的所有歷史帳單
           $this->model("logphp");
           $logphp = new logphp();
@@ -50,6 +51,7 @@ class car extends Controller{
                          $num="mID"."$_SESSION[buytime]";
                          $_SESSION[car][$num]=$car;//將商品陣列丟到seesion的[car][購買次數]
                          $link = null;
+                         unset($_GET['addc']);
                          return true;
                          
                         

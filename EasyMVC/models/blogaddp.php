@@ -31,13 +31,12 @@ class blogaddp extends Controller{
     function deladdp(){//刪除gId對應在mysql中的圖片unset這個post 再重新整理導回同一頁
                             $link = $this->getConnect();
                             $action= $link->prepare("DELETE FROM goods WHERE gpicurl= ? ");
-                            $action->bindParam(1,$_POST['delete']);
+                            $action->bindParam(1,$_POST['prod']);
                             $action->execute();
-                           
-                            $file = "bootstrap/".$_POST['delete']; //加入資料夾名稱
+                            $file = "bootstrap/".$_POST['prod']; //加入資料夾名稱
                             unlink($file);//從資料夾目錄刪除這個圖檔
                                 if(!file_exists($file)){
-                                    unset($_POST['delete']);
+                                    unset($_POST['prod']);
                                     $link = null;
                                     return true;
                                 }else return false;

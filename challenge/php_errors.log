@@ -1,0 +1,43 @@
+[28-Jul-2016 12:03:55 UTC] PHP Fatal error:  Cannot use [] for reading in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 18
+[28-Jul-2016 14:14:35 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 35
+[28-Jul-2016 14:15:36 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 26
+[28-Jul-2016 14:17:44 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 27
+[28-Jul-2016 16:07:19 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 84
+[29-Jul-2016 02:00:44 UTC] PHP Parse error:  syntax error, unexpected '>' in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 89
+[29-Jul-2016 03:18:08 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 94
+[29-Jul-2016 03:27:09 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 97
+[30-Jul-2016 14:59:35 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 98
+[31-Jul-2016 02:04:03 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 185
+[31-Jul-2016 05:18:32 UTC] PHP Warning:  explode(): Empty delimiter in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 201
+[31-Jul-2016 05:18:32 UTC] PHP Stack trace:
+[31-Jul-2016 05:18:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:0
+[31-Jul-2016 05:18:32 UTC] PHP   2. explode() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:201
+[31-Jul-2016 05:18:32 UTC] PHP Warning:  explode(): Empty delimiter in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 201
+[31-Jul-2016 05:18:32 UTC] PHP Stack trace:
+[31-Jul-2016 05:18:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:0
+[31-Jul-2016 05:18:32 UTC] PHP   2. explode() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:201
+[31-Jul-2016 05:18:32 UTC] PHP Warning:  explode(): Empty delimiter in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 201
+[31-Jul-2016 05:18:32 UTC] PHP Stack trace:
+[31-Jul-2016 05:18:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:0
+[31-Jul-2016 05:18:32 UTC] PHP   2. explode() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:201
+[31-Jul-2016 05:18:32 UTC] PHP Warning:  explode(): Empty delimiter in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 201
+[31-Jul-2016 05:18:32 UTC] PHP Stack trace:
+[31-Jul-2016 05:18:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:0
+[31-Jul-2016 05:18:32 UTC] PHP   2. explode() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:201
+[31-Jul-2016 05:18:32 UTC] PHP Warning:  explode(): Empty delimiter in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 201
+[31-Jul-2016 05:18:32 UTC] PHP Stack trace:
+[31-Jul-2016 05:18:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:0
+[31-Jul-2016 05:18:32 UTC] PHP   2. explode() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:201
+[31-Jul-2016 05:18:32 UTC] PHP Warning:  explode(): Empty delimiter in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 201
+[31-Jul-2016 05:18:32 UTC] PHP Stack trace:
+[31-Jul-2016 05:18:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:0
+[31-Jul-2016 05:18:32 UTC] PHP   2. explode() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:201
+[31-Jul-2016 05:18:32 UTC] PHP Warning:  explode(): Empty delimiter in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 201
+[31-Jul-2016 05:18:32 UTC] PHP Stack trace:
+[31-Jul-2016 05:18:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:0
+[31-Jul-2016 05:18:32 UTC] PHP   2. explode() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:201
+[31-Jul-2016 05:18:32 UTC] PHP Warning:  explode(): Empty delimiter in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 201
+[31-Jul-2016 05:18:32 UTC] PHP Stack trace:
+[31-Jul-2016 05:18:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:0
+[31-Jul-2016 05:18:32 UTC] PHP   2. explode() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:201
+[31-Jul-2016 05:28:14 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 190

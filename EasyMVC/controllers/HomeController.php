@@ -59,35 +59,31 @@ class HomeController extends Controller {
          function cart(){
                 
                 
-                $this->model("car");
-                $car= new car();
+                $car = $this->model("car");
                 $billdata = $car->showbill();
-               
+               if($billdata){
                 if($_GET['delete']){
                         if($car->delegoods()){
                          echo "刪除成功";
                         }
-                       
-                        
                 }
                 elseif($_GET['deal']){
                        if($car->deal()){
                         header("location: cart");       
                        }
                 }
-                
-                
+               }else{
+                       header("location: login");
+               }
                 $this->view("head");
                 $this->view("cart",$billdata);
                 $this->view("foot");
         }
         function pay(){//顯示物品付費方式頁面
-                
-                $_GET['gId'] = $_SESSION[car][$_GET['pay']][1];//將會員的特定項目編號值給到一個參數並丟掉fumction中撈出資料庫資料
+
                 $this->model("goodslist");
                 $goodslist = new goodslist();
                 $result = $goodslist->showgoodsingle();//秀出圖片及價格
-                
                 $this->view("head");
                 $this->view("pay",$result);
                 $this->view("foot");
@@ -104,7 +100,7 @@ class HomeController extends Controller {
                                 $this->view("head");
                                 $this->view("register");
                                 $this->view("foot");
-                                echo "申請失敗";   
+                                
                         }
                 }
                 
@@ -117,7 +113,6 @@ class HomeController extends Controller {
                
         }
         function single(){
-                
                 $this->model("goodslist");
                 $goods= new goodslist();
                 $goodsdata = $goods->showgoodsingle();//回傳的資料陣列
@@ -126,15 +121,11 @@ class HomeController extends Controller {
                 $this->model("car");
                 $car= new car();
                     if($car->addgoods($goodsdata)){//檢查是否有登入 有登入 新增到購物車
-                     
                             header("location: index");
                     }else{//沒有登入則不會新增到購物車 且導向到登入
                             header("location: login");
                     }
-                       
-                       
                 }
-            
                 $this->view("head");
                 $this->view("single",$goodsdata);
                 $this->view("foot");

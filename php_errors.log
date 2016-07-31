@@ -2847,3 +2847,340 @@
 [28-Jul-2016 11:46:22 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
 [28-Jul-2016 11:46:22 UTC] PHP   5. blogaddp->deladdp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:104
 [28-Jul-2016 11:46:22 UTC] PHP   6. mysql_close() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:33
+[29-Jul-2016 08:16:53 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /home/ubuntu/workspace/gitlab/EasyMVC/models/database.php:10
+Stack trace:
+#0 /home/ubuntu/workspace/gitlab/EasyMVC/models/database.php(10): PDO->__construct('mysql:host=shop...', 'root', '')
+#1 /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php(24): database->__construct()
+#2 /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php(146): Controller->model('database')
+#3 [internal function]: HomeController->get()
+#4 /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php(19): call_user_func_array(Array, Array)
+#5 /home/ubuntu/workspace/gitlab/EasyMVC/index.php(24): App->__construct()
+#6 {main}
+  thrown in /home/ubuntu/workspace/gitlab/EasyMVC/models/database.php on line 10
+[29-Jul-2016 08:45:32 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /home/ubuntu/workspace/gitlab/EasyMVC/models/database.php:9
+Stack trace:
+#0 /home/ubuntu/workspace/gitlab/EasyMVC/models/database.php(9): PDO->__construct('mysql:host=shop...', 'root', '')
+#1 /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php(24): database->__construct()
+#2 /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php(146): Controller->model('database')
+#3 [internal function]: HomeController->get()
+#4 /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php(19): call_user_func_array(Array, Array)
+#5 /home/ubuntu/workspace/gitlab/EasyMVC/index.php(24): App->__construct()
+#6 {main}
+  thrown in /home/ubuntu/workspace/gitlab/EasyMVC/models/database.php on line 9
+[29-Jul-2016 08:45:44 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /home/ubuntu/workspace/gitlab/EasyMVC/models/database.php:10
+Stack trace:
+#0 /home/ubuntu/workspace/gitlab/EasyMVC/models/database.php(10): PDO->__construct('mysql:host=shop...', 'root', '')
+#1 /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php(24): database->__construct()
+#2 /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php(146): Controller->model('database')
+#3 [internal function]: HomeController->get()
+#4 /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php(19): call_user_func_array(Array, Array)
+#5 /home/ubuntu/workspace/gitlab/EasyMVC/index.php(24): App->__construct()
+#6 {main}
+  thrown in /home/ubuntu/workspace/gitlab/EasyMVC/models/database.php on line 10
+[29-Jul-2016 08:47:19 UTC] PHP Warning:  PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/ubuntu/workspace/gitlab/EasyMVC/models/database.php on line 10
+[29-Jul-2016 08:47:19 UTC] PHP Stack trace:
+[29-Jul-2016 08:47:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 08:47:19 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 08:47:19 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 08:47:19 UTC] PHP   4. HomeController->get() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 08:47:19 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:146
+[29-Jul-2016 08:47:19 UTC] PHP   6. database->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:24
+[29-Jul-2016 08:47:19 UTC] PHP   7. PDO->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/models/database.php:10
+[29-Jul-2016 08:47:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known' in /home/ubuntu/workspace/gitlab/EasyMVC/models/database.php:10
+Stack trace:
+#0 /home/ubuntu/workspace/gitlab/EasyMVC/models/database.php(10): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php(24): database->__construct()
+#2 /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php(146): Controller->model('database')
+#3 [internal function]: HomeController->get()
+#4 /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php(19): call_user_func_array(Array, Array)
+#5 /home/ubuntu/workspace/gitlab/EasyMVC/index.php(24): App->__construct()
+#6 {main}
+  thrown in /home/ubuntu/workspace/gitlab/EasyMVC/models/database.php on line 10
+[29-Jul-2016 08:47:40 UTC] PHP Fatal error:  Call to undefined method HomeController::select() in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php on line 148
+[29-Jul-2016 08:47:40 UTC] PHP Stack trace:
+[29-Jul-2016 08:47:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 08:47:40 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 08:47:40 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 08:47:40 UTC] PHP   4. HomeController->get() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 09:12:25 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php on line 7
+[29-Jul-2016 09:12:25 UTC] PHP Stack trace:
+[29-Jul-2016 09:12:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 09:12:25 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 09:12:25 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 09:12:25 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 09:12:25 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:25
+[29-Jul-2016 09:12:25 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[29-Jul-2016 09:12:25 UTC] PHP   7. mysql_fetch_array() /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php:7
+[29-Jul-2016 09:53:01 UTC] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogphp.php on line 9
+[29-Jul-2016 09:53:01 UTC] PHP Stack trace:
+[29-Jul-2016 09:53:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 09:53:01 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 09:53:01 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 09:53:01 UTC] PHP   4. BlogController->bloglogin() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 09:53:01 UTC] PHP   5. blogphp->login() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:32
+[29-Jul-2016 09:53:01 UTC] PHP   6. blogphp->checkaccount() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogphp.php:127
+[29-Jul-2016 09:53:24 UTC] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogphp.php on line 11
+[29-Jul-2016 09:53:24 UTC] PHP Stack trace:
+[29-Jul-2016 09:53:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 09:53:24 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 09:53:24 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 09:53:24 UTC] PHP   4. BlogController->bloglogin() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 09:53:24 UTC] PHP   5. blogphp->login() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:32
+[29-Jul-2016 09:53:24 UTC] PHP   6. blogphp->checkaccount() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogphp.php:127
+[29-Jul-2016 09:54:18 UTC] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogphp.php on line 9
+[29-Jul-2016 09:54:18 UTC] PHP Stack trace:
+[29-Jul-2016 09:54:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 09:54:18 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 09:54:18 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 09:54:18 UTC] PHP   4. BlogController->bloglogin() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 09:54:18 UTC] PHP   5. blogphp->login() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:32
+[29-Jul-2016 09:54:18 UTC] PHP   6. blogphp->checkaccount() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogphp.php:125
+[29-Jul-2016 09:55:40 UTC] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogphp.php on line 9
+[29-Jul-2016 09:55:40 UTC] PHP Stack trace:
+[29-Jul-2016 09:55:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 09:55:40 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 09:55:40 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 09:55:40 UTC] PHP   4. BlogController->bloglogin() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 09:55:40 UTC] PHP   5. blogphp->login() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:32
+[29-Jul-2016 09:55:40 UTC] PHP   6. blogphp->checkaccount() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogphp.php:127
+[29-Jul-2016 09:56:57 UTC] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogphp.php on line 9
+[29-Jul-2016 09:56:57 UTC] PHP Stack trace:
+[29-Jul-2016 09:56:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 09:56:57 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 09:56:57 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 09:56:57 UTC] PHP   4. BlogController->bloglogin() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 09:56:57 UTC] PHP   5. blogphp->login() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:32
+[29-Jul-2016 09:56:57 UTC] PHP   6. blogphp->checkaccount() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogphp.php:127
+[29-Jul-2016 09:58:21 UTC] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogphp.php on line 11
+[29-Jul-2016 09:58:21 UTC] PHP Stack trace:
+[29-Jul-2016 09:58:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 09:58:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 09:58:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 09:58:21 UTC] PHP   4. BlogController->bloglogin() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 09:58:21 UTC] PHP   5. blogphp->login() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:32
+[29-Jul-2016 09:58:21 UTC] PHP   6. blogphp->checkaccount() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogphp.php:127
+[29-Jul-2016 12:59:35 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php on line 7
+[29-Jul-2016 12:59:35 UTC] PHP Stack trace:
+[29-Jul-2016 12:59:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 12:59:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 12:59:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 12:59:35 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 12:59:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:25
+[29-Jul-2016 12:59:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[29-Jul-2016 12:59:35 UTC] PHP   7. mysql_fetch_array() /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php:7
+[29-Jul-2016 12:59:39 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php on line 7
+[29-Jul-2016 12:59:39 UTC] PHP Stack trace:
+[29-Jul-2016 12:59:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 12:59:39 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 12:59:39 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 12:59:39 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 12:59:39 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:25
+[29-Jul-2016 12:59:39 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[29-Jul-2016 12:59:39 UTC] PHP   7. mysql_fetch_array() /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php:7
+[29-Jul-2016 13:05:38 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php on line 7
+[29-Jul-2016 13:05:38 UTC] PHP Stack trace:
+[29-Jul-2016 13:05:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 13:05:38 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 13:05:38 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:05:38 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:05:38 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:25
+[29-Jul-2016 13:05:38 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[29-Jul-2016 13:05:38 UTC] PHP   7. mysql_fetch_array() /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php:7
+[29-Jul-2016 13:08:04 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php on line 7
+[29-Jul-2016 13:08:04 UTC] PHP Stack trace:
+[29-Jul-2016 13:08:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 13:08:04 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 13:08:04 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:08:04 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:08:04 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:25
+[29-Jul-2016 13:08:04 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[29-Jul-2016 13:08:04 UTC] PHP   7. mysql_fetch_array() /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php:7
+[29-Jul-2016 13:08:36 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php on line 7
+[29-Jul-2016 13:08:36 UTC] PHP Stack trace:
+[29-Jul-2016 13:08:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 13:08:36 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 13:08:36 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:08:36 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:08:36 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:25
+[29-Jul-2016 13:08:36 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[29-Jul-2016 13:08:36 UTC] PHP   7. mysql_fetch_array() /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php:7
+[29-Jul-2016 13:09:09 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php on line 7
+[29-Jul-2016 13:09:09 UTC] PHP Stack trace:
+[29-Jul-2016 13:09:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 13:09:09 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 13:09:09 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:09:09 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:09:09 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:25
+[29-Jul-2016 13:09:09 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[29-Jul-2016 13:09:09 UTC] PHP   7. mysql_fetch_array() /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php:7
+[29-Jul-2016 13:09:44 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php on line 7
+[29-Jul-2016 13:09:44 UTC] PHP Stack trace:
+[29-Jul-2016 13:09:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 13:09:44 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 13:09:44 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:09:44 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:09:44 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:25
+[29-Jul-2016 13:09:44 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[29-Jul-2016 13:09:44 UTC] PHP   7. mysql_fetch_array() /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php:7
+[29-Jul-2016 13:15:14 UTC] PHP Fatal error:  Call to undefined method blogphp::prepare() in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogphp.php on line 70
+[29-Jul-2016 13:15:14 UTC] PHP Stack trace:
+[29-Jul-2016 13:15:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 13:15:14 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 13:15:14 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:15:14 UTC] PHP   4. BlogController->userpersonal() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:15:14 UTC] PHP   5. blogphp->personnalshow() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:64
+[29-Jul-2016 13:17:22 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogphp.php on line 78
+[29-Jul-2016 13:17:22 UTC] PHP Stack trace:
+[29-Jul-2016 13:17:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 13:17:22 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 13:17:22 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:17:22 UTC] PHP   4. BlogController->userpersonal() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:17:22 UTC] PHP   5. blogphp->personnalshow() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:64
+[29-Jul-2016 13:18:26 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogphp.php on line 78
+[29-Jul-2016 13:18:26 UTC] PHP Stack trace:
+[29-Jul-2016 13:18:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 13:18:26 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 13:18:26 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:18:26 UTC] PHP   4. BlogController->userpersonal() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:18:26 UTC] PHP   5. blogphp->personnalshow() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:64
+[29-Jul-2016 13:19:19 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogphp.php on line 78
+[29-Jul-2016 13:19:19 UTC] PHP Stack trace:
+[29-Jul-2016 13:19:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 13:19:19 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 13:19:19 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:19:19 UTC] PHP   4. BlogController->userpersonal() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:19:19 UTC] PHP   5. blogphp->personnalshow() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:64
+[29-Jul-2016 13:23:54 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogphp.php on line 80
+[29-Jul-2016 13:23:54 UTC] PHP Stack trace:
+[29-Jul-2016 13:23:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 13:23:54 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 13:23:54 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:23:54 UTC] PHP   4. BlogController->userpersonal() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:23:54 UTC] PHP   5. blogphp->personnalshow() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:64
+[29-Jul-2016 13:23:59 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogphp.php on line 80
+[29-Jul-2016 13:23:59 UTC] PHP Stack trace:
+[29-Jul-2016 13:23:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 13:23:59 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 13:23:59 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:23:59 UTC] PHP   4. BlogController->userpersonal() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:23:59 UTC] PHP   5. blogphp->personnalshow() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:64
+[29-Jul-2016 13:41:57 UTC] PHP Warning:  mysql_close() expects parameter 1 to be resource, object given in /home/ubuntu/workspace/gitlab/EasyMVC/models/bloguserlist.php on line 16
+[29-Jul-2016 13:41:57 UTC] PHP Stack trace:
+[29-Jul-2016 13:41:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 13:41:57 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 13:41:57 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:41:57 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 13:41:57 UTC] PHP   5. bloguserlist->showuser() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:17
+[29-Jul-2016 13:41:57 UTC] PHP   6. mysql_close() /home/ubuntu/workspace/gitlab/EasyMVC/models/bloguserlist.php:16
+[29-Jul-2016 14:17:39 UTC] PHP Warning:  mysql_query() expects parameter 2 to be resource, object given in /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php on line 19
+[29-Jul-2016 14:17:39 UTC] PHP Stack trace:
+[29-Jul-2016 14:17:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 14:17:39 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 14:17:39 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 14:17:39 UTC] PHP   4. HomeController->cart() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 14:17:39 UTC] PHP   5. car->showbill() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:67
+[29-Jul-2016 14:17:39 UTC] PHP   6. mysql_query() /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php:19
+[29-Jul-2016 14:17:39 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php on line 21
+[29-Jul-2016 14:17:39 UTC] PHP Stack trace:
+[29-Jul-2016 14:17:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 14:17:39 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 14:17:39 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 14:17:39 UTC] PHP   4. HomeController->cart() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 14:17:39 UTC] PHP   5. car->showbill() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:67
+[29-Jul-2016 14:17:39 UTC] PHP   6. mysql_fetch_assoc() /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php:21
+[29-Jul-2016 14:18:34 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php on line 21
+[29-Jul-2016 14:18:34 UTC] PHP Stack trace:
+[29-Jul-2016 14:18:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 14:18:34 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 14:18:34 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 14:18:34 UTC] PHP   4. HomeController->cart() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 14:18:34 UTC] PHP   5. car->showbill() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:67
+[29-Jul-2016 14:18:34 UTC] PHP   6. mysql_fetch_assoc() /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php:21
+[29-Jul-2016 15:39:21 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/single.php on line 13
+[29-Jul-2016 15:39:21 UTC] PHP Stack trace:
+[29-Jul-2016 15:39:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 15:39:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 15:39:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 15:39:21 UTC] PHP   4. HomeController->single() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 15:39:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:139
+[29-Jul-2016 15:39:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[29-Jul-2016 15:39:21 UTC] PHP Warning:  Illegal string offset 'gname' in /home/ubuntu/workspace/gitlab/EasyMVC/views/single.php on line 21
+[29-Jul-2016 15:39:21 UTC] PHP Stack trace:
+[29-Jul-2016 15:39:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 15:39:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 15:39:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 15:39:21 UTC] PHP   4. HomeController->single() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 15:39:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:139
+[29-Jul-2016 15:39:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[29-Jul-2016 15:39:21 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/single.php on line 25
+[29-Jul-2016 15:39:21 UTC] PHP Stack trace:
+[29-Jul-2016 15:39:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 15:39:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 15:39:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 15:39:21 UTC] PHP   4. HomeController->single() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 15:39:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:139
+[29-Jul-2016 15:39:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[29-Jul-2016 15:39:21 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/single.php on line 36
+[29-Jul-2016 15:39:21 UTC] PHP Stack trace:
+[29-Jul-2016 15:39:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 15:39:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 15:39:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 15:39:21 UTC] PHP   4. HomeController->single() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 15:39:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:139
+[29-Jul-2016 15:39:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[29-Jul-2016 15:39:37 UTC] PHP Warning:  Illegal string offset 'gname' in /home/ubuntu/workspace/gitlab/EasyMVC/views/single.php on line 21
+[29-Jul-2016 15:39:37 UTC] PHP Stack trace:
+[29-Jul-2016 15:39:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 15:39:37 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 15:39:37 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 15:39:37 UTC] PHP   4. HomeController->single() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 15:39:37 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:139
+[29-Jul-2016 15:39:37 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[29-Jul-2016 15:39:37 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/single.php on line 25
+[29-Jul-2016 15:39:37 UTC] PHP Stack trace:
+[29-Jul-2016 15:39:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 15:39:37 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 15:39:37 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 15:39:37 UTC] PHP   4. HomeController->single() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 15:39:37 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:139
+[29-Jul-2016 15:39:37 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[29-Jul-2016 15:39:37 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/single.php on line 36
+[29-Jul-2016 15:39:37 UTC] PHP Stack trace:
+[29-Jul-2016 15:39:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[29-Jul-2016 15:39:37 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[29-Jul-2016 15:39:37 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 15:39:37 UTC] PHP   4. HomeController->single() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[29-Jul-2016 15:39:37 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:139
+[29-Jul-2016 15:39:37 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[31-Jul-2016 10:39:00 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php on line 7
+[31-Jul-2016 10:39:00 UTC] PHP Stack trace:
+[31-Jul-2016 10:39:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[31-Jul-2016 10:39:00 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[31-Jul-2016 10:39:00 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[31-Jul-2016 10:39:00 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[31-Jul-2016 10:39:00 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:18
+[31-Jul-2016 10:39:00 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[31-Jul-2016 10:39:00 UTC] PHP   7. mysql_fetch_array() /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php:7
+[31-Jul-2016 10:39:44 UTC] PHP Warning:  unlink(bootstrap/): Is a directory in /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php on line 38
+[31-Jul-2016 10:39:44 UTC] PHP Stack trace:
+[31-Jul-2016 10:39:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[31-Jul-2016 10:39:44 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[31-Jul-2016 10:39:44 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[31-Jul-2016 10:39:44 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[31-Jul-2016 10:39:44 UTC] PHP   5. blogaddp->deladdp() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:73
+[31-Jul-2016 10:39:44 UTC] PHP   6. unlink() /home/ubuntu/workspace/gitlab/EasyMVC/models/blogaddp.php:38
+[31-Jul-2016 12:41:15 UTC] PHP Catchable fatal error:  Object of class car could not be converted to string in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php on line 64
+[31-Jul-2016 12:41:15 UTC] PHP Stack trace:
+[31-Jul-2016 12:41:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[31-Jul-2016 12:41:15 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[31-Jul-2016 12:41:15 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[31-Jul-2016 12:41:15 UTC] PHP   4. HomeController->cart() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[31-Jul-2016 12:50:50 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php on line 12
+[31-Jul-2016 12:50:50 UTC] PHP Stack trace:
+[31-Jul-2016 12:50:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[31-Jul-2016 12:50:50 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[31-Jul-2016 12:50:50 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[31-Jul-2016 12:50:50 UTC] PHP   4. HomeController->cart() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[31-Jul-2016 12:50:50 UTC] PHP   5. Controller->model() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:62
+[31-Jul-2016 12:50:50 UTC] PHP   6. car->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:47
+[31-Jul-2016 12:50:50 UTC] PHP   7. car->showbill() /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php:4

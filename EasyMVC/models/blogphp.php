@@ -65,7 +65,7 @@ class blogphp extends Controller{
                 }
             }
             
-            function personnalshow($user){//抓出個人資料的內容
+            function personnalshow(){//抓出個人資料的內容
                 $link = $this->getConnect();
                 $select = $link->prepare("SELECT member.*,account.aPassword,bill.*
                                           FROM member
@@ -73,7 +73,7 @@ class blogphp extends Controller{
                                           ON mEmail= ? AND account.aEmail=member.mEmail
                                           LEFT JOIN bill
                                           ON member.mId = bill.gmemberid");
-                $select->bindParam(1,$user);    
+                $select->bindParam(1,$_POST['user']);    
                 $select->execute();
                 $billdata = $select->fetchAll();
                 $link = null ;
