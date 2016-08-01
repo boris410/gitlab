@@ -16,6 +16,7 @@ class HomeController extends Controller {
                 $this->view("pagetabs",$pagetabsdata);
                 $this->view("foot");
         }
+        
         function login(){
                
                 $this->model("logphp");//載入
@@ -27,48 +28,44 @@ class HomeController extends Controller {
                 $this->view("login");
                 $this->view("foot");
         }
+        
         function logout(){
                
                 $this->model("logphp");
                 $lougout = new logphp();
-                
-                
                 if($lougout->logout())//執行logout刪除session 還傳true or fales
                 header("location: index");
               
         }
+        
         function personal(){
-               
                 $this->model("goodslist");
                 $goodslist = new goodslist();
                 $this->model("logphp");
                 $logphp = new logphp();
-                
                 $check = $logphp->checkstatus();
                 if( $check!=null){
                         $persondata = $goodslist->personnalshow();
                 }else{
                         header("location: login");
                 }
-                
                 $this->view("head");
                 $this->view("personal",$persondata);
                 $this->view("foot");
                 
         }
+        
          function cart(){
-                
-                
                 $car = $this->model("car");
                 $billdata = $car->showbill();
+                
                if($billdata){
                 if($_GET['delete']){
-                        if($car->delegoods()){
-                         echo "刪除成功";
-                        }
+                        $car->delegoods());
+                        header("location: cart");       
                 }
-                elseif($_GET['deal']){
-                       if($car->deal()){
+                elseif($_POST['paysubmit']){
+                        if($car->deal()){
                         header("location: cart");       
                        }
                 }
@@ -79,8 +76,9 @@ class HomeController extends Controller {
                 $this->view("cart",$billdata);
                 $this->view("foot");
         }
+        
         function pay(){//顯示物品付費方式頁面
-
+                
                 $this->model("goodslist");
                 $goodslist = new goodslist();
                 $result = $goodslist->showgoodsingle();//秀出圖片及價格
@@ -88,6 +86,7 @@ class HomeController extends Controller {
                 $this->view("pay",$result);
                 $this->view("foot");
         }
+        
          function register(){
                 if(isset($_POST['submit'])){
                         $this->model("logphp");
@@ -100,23 +99,18 @@ class HomeController extends Controller {
                                 $this->view("head");
                                 $this->view("register");
                                 $this->view("foot");
-                                
                         }
                 }
-                
                 $this->view("head");
                 $this->view("register"); 
                 $this->view("foot");
-                        
-                
-                
-               
         }
+        
         function single(){
+                
                 $this->model("goodslist");
                 $goods= new goodslist();
                 $goodsdata = $goods->showgoodsingle();//回傳的資料陣列
-                
             if($_GET['addc']){
                 $this->model("car");
                 $car= new car();
@@ -130,6 +124,7 @@ class HomeController extends Controller {
                 $this->view("single",$goodsdata);
                 $this->view("foot");
         }
+        
         function get(){
                 $a = $this->model("database");
                 $command = "select * from member";

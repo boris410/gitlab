@@ -1,23 +1,23 @@
 <?php
 
  $origin = array(
-        array(1, 1, 0, 0, 0, 0, 0, 0, 0, 0),
+        array(1, 1, 0, 0, 0, 1, 1, 1, 1, 1),
         array(1, 1, 0, 1, 1, 0, 0, 0, 0, 0),
         array(0, 0, 0, 1, 1, 0, 0, 0, 0, 0),
         array(0, 0, 0, 0, 0, 1, 1, 1, 0, 0),
         array(1, 1, 1, 1, 1, 0, 0, 0, 0, 0),
         array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-        array(1, 1, 1, 0, 1, 0, 1, 1, 0, 0),
-        array(1, 0, 0, 0, 1, 0, 1, 1, 0, 0),
-        array(1, 0, 0, 0, 1, 0, 1, 0, 0, 0),
-        array(1, 1, 0, 1, 1, 0, 0, 0, 0, 0)
+        array(1, 1, 1, 0, 1, 1, 0, 1, 1, 1),
+        array(1, 1, 0, 0, 1, 0, 0, 1, 1, 1),
+        array(1, 0, 0, 0, 1, 0, 0, 1, 1, 1),
+        array(1, 1, 0, 1, 1, 0, 0, 0, 0, 1)
     );
     
 
  
  /*-------------------------------------------------------*/
  
- //被設置
+ 
   $num=0;
    while($num<count($origin)){
     $num2=0;
@@ -31,12 +31,55 @@
       echo "<br>";
     $num+=1;
    }
-   
+
   /*-------------------------------------------------------*/  
-  
+  /*1.找到四周的點後往下延伸while 並設為null*/
+  /*先設定未被設定的check*/
   
 
- echo "<br>";
+//  echo "<br>";
+// echo "//找出上下左右相鄰的陣列並計算區塊<br>";
+// for($i=0;$i<=count($origin);$i++){
+//  $num2=0;
+//     while(isset($origin[$i][$num2])){//找出二維陣列
+//           if($origin[$i][$num2]==1 && $check[$i][$num2]==null){//如果陣列是1且在check陣列裡記錄不還沒有紀錄為一個區塊 
+//           $expend=$i;$expend2=$num2;
+//           $origin[$i][$num2]=null;
+//              while($origin[$expend+1][$num2]==1 && $check[$expend+1][$num2]==null){//下
+//                   $check[$expend+1][$num]=1;
+//                   $origin[$expend+1][$num]=null;
+//                   $expend+=1;
+//              }
+//              while($origin[$expend][$expend2+1]==1 && $check[$expend][$expend2+1]==null){//右
+//                   $check[$expend][$expend2+1]=1;
+//                   $origin[$expend][$expend2+1]=null;
+//                   $expend2+=1;
+//              }
+//              while($origin[$expend-1][$expend2]==1 && $check[$expend-1][$expend2]==null){//上
+//                   $check[$expend-1][$expend2]=1;
+//                   $origin[$expend-1][$expend2]=null;
+//                   $expend-=1;
+//              }
+//              while($origin[$expend][$expend2-1]==1 && $check[$expend][$expend2-1]==null){//左
+//                   $check[$expend][$expend2-1]=1;
+//                   $origin[$expend][$expend2-1]=null;
+//                   $expend2-=1;
+//              }
+//              echo $check[$i][$num2]." ";
+//           }else{
+//            echo "0 ";
+//           }
+//            $num2+=1;
+//     }
+//      echo "<br>";
+   
+// }
+// var_dump($check);
+// echo "<br>";
+// var_dump($origin);
+
+ 
+ 
  
 echo "//找出上下左右相鄰的陣列並計算區塊<br>";
 for($i=0;$i<=count($origin);$i++){
@@ -80,6 +123,10 @@ for($i=0;$i<=count($origin);$i++){
     echo "<br>";
     
 }
+
+
+
+
 
 
 //var_dump($loadblock);

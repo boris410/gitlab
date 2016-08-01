@@ -11,6 +11,7 @@ class goodslist extends Controller{
                 
                 function showgoodsingle(){//商品單樣的說明網頁
                 
+                
                     $link = $this->getConnect();
                     $select = $link->prepare("SELECT * 
                                               FROM goods 

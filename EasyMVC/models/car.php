@@ -21,13 +21,12 @@ class car extends Controller{
            return false;
            }
       }
-      function addgoods($data){//增加商品到購物車
-       $this->model("logphp");
-       $logphp = new logphp();
-       
-       
-       //檢查是否有登入 傳回查詢帳號的結果 沒有結果導向到登入
-       if($logphp->checkstatus()){
+      
+        function addgoods($data){//增加商品到購物車
+            $this->model("logphp");
+            $logphp = new logphp();
+            //檢查是否有登入 傳回查詢帳號的結果 沒有結果導向到登入
+            if($logphp->checkstatus()){
             $link = $this->getConnect();
             $select = $link->prepare("SELECT mId 
                                       FROM member 
@@ -35,59 +34,48 @@ class car extends Controller{
             $select->bindParam(1,$_SESSION['userEmail']);
             $select->execute();
             $row2=$select->fetch();
-             
-               if(isset($_SESSION['buytime'])){//設定購買變數為購買項目的根據 目的:刪除項目時用
-                            $_SESSION['buytime'] +=1;//查看購買次數 如果不是就設置初始直0 
-                        }else{
-                             $_SESSION['buytime'] =1;
-                        }
+            if(isset($_SESSION['buytime'])){//設定購買變數為購買項目的根據 目的:刪除項目時用
+                $_SESSION['buytime'] +=1;//查看購買次數 如果不是就設置初始直0 
+            }else{
+                $_SESSION['buytime'] =1;
+            }
                 $car = array(
-                                     $row2['mId'],
-                                     $data['gId'],  //將商品資訊丟到陣列裡面
-                                     $data['gPrice'],
-                                     $data['gname'],
-                                     date("Y:m:d h:i:s")
+                                $row2['mId'],
+                                $data['gId'],  //將商品資訊丟到陣列裡面
+                                $data['gPrice'],
+                                $data['gname'],
+                                date("Y:m:d h:i:s")
                             );  
                          $num="mID"."$_SESSION[buytime]";
                          $_SESSION[car][$num]=$car;//將商品陣列丟到seesion的[car][購買次數]
                          $link = null;
                          unset($_GET['addc']);
                          return true;
-                         
-                        
              }else{
               $link = null;
               return false;
              }
-                 
-       
       }
-      function delegoods(){//刪除購物車內商品
-            	          $del="$_GET[delete]";//依照丟過來的mid購買編號將此次的購物車內容單項刪除
-            	          unset($_SESSION[car][$del]);//成功後刪除點擊的那一單項
-             	     if(!isset($_SESSION[car][$del])){
-             	              if($_SESSION[car]==null){//如果最後都沒有項目了就把session中car的陣列刪除views就會顯示前往index的連結
-             	              unset($_SESSION[car]);
-             	              return true;
-             	               }
-            	       }else{
-            	        
-            	        return false;
-            	       }
-            	          
-            	       
-            	        
-                   
-       
+      
+        function delegoods(){//刪除購物車內商品
+            unset($_SESSION[car][$_GET['delete']]);
+            if(!isset($_SESSION[car][$del])){
+                if($_SESSION[car]==null){//如果最後都沒有項目了就把session中car的陣列刪除views就會顯示前往index的連結
+                    unset($_SESSION[car]);
+                    return true;
+             	}
+            }else{
+                return false;
+            }
       }
-      function deal(){//交易單筆商品
-                    $deal="$_GET[deal]";//將帳單 特定項的單號到變數內
-                    if(isset($_SESSION[car][$deal])){//加強判斷如果session裡有這一筆資料
-                             foreach($_SESSION[car][$deal] as $value  ){//將商品分割成一為陣列中的四筆資料
-                             $d0=$_SESSION[car][$deal][0];
-                             $d1=$_SESSION[car][$deal][1];
-                             $d2=$_SESSION[car][$deal][2];
-                             $d3=$_SESSION[car][$deal][3];
+      
+        function deal(){//交易單筆商品
+                    if(isset($_SESSION[car][$_POST['deal']])){//加強判斷如果session裡有這一筆資料
+                             foreach($_SESSION[car][$_POST['deal']] as $value  ){//將商品分割成一為陣列中的四筆資料
+                             $d0=$_SESSION[car][$_POST['deal']][0];
+                             $d1=$_SESSION[car][$_POST['deal']][1];
+                             $d2=$_SESSION[car][$_POST['deal']][2];
+                             $d3=$_SESSION[car][$_POST['deal']][3];
                              
                              }
                              $link = $this->getConnect();
@@ -103,8 +91,8 @@ class car extends Controller{
                              $insert->execute();
 
 
-                             unset($_SESSION[car][$deal]);//寫入mysql後刪除點擊的那一單項
-                             if(!isset($_SESSION[car][$deal])){//判斷是否有這一項商品 沒有就是刪除成功
+                             unset($_SESSION[car][$_POST['deal']]);//寫入mysql後刪除點擊的那一單項
+                             if(!isset($_SESSION[car][$_POST['deal']])){//判斷是否有這一項商品 沒有就是刪除成功
                                 if($_SESSION[car]==null){//如果最後都沒有項目了就把session中car的陣列刪除views就會顯示前往index的連結
                                     unset($_SESSION[car]);
                                   }

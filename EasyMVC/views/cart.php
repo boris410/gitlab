@@ -11,9 +11,6 @@
 	    
 		   		<div class="clearfix"></div>
 	    	</div>
-	    	
-	    	
-	    
      	    <div class="clearfix"></div>
 	     </div>
 	     <!--sort bar--> 
@@ -39,8 +36,8 @@
 				<td><?php  printf($_SESSION[car][$key][2]);?></td>
 				<td><?php  printf($_SESSION[car][$key][3]);?></td>
 				<td><?php  printf($_SESSION[car][$key][4]);?></td>
-				<td><a href="pay?gId=<?php print_r($_SESSION[car][$key][1]); ?>" style="color:blue;">結帳</a></td>
-				<td><a href="?delete=<?php echo $key; ?>" style="color:blue;">刪除</a></td>
+				<td><a href="pay?gId=<?php print_r($_SESSION[car][$key][1]); ?>&mId=<?php print_r($key);?>" style="color:blue;">結帳</a></td>
+				<td><a href="?delete=<?php print_r($key); ?>" style="color:blue;">刪除</a></td>
 					
 		</tr>
 		

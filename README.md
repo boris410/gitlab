@@ -52,3 +52,6 @@
 7/30 MVC架構購物網站專案----程式重購--session 放到model and use PDO
 
 7/31 MVC架構購物網站專案----程式重購--session 放到model and use PDO 優化程式碼2.2版-修改結帳controller $_GET +  挑戰題1(顯示陣列最大區塊:challenge)
+
+8/1 MVC架構購物網站專案----程式重購--session 放到model and use PDO 優化程式碼2.3版-修改single.php 和 pay.php互搶controller 顯示錯誤
+

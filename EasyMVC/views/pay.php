@@ -1,6 +1,5 @@
 
 </div>
-
 <div class="col-md-9">
 	
 <div class="mens-toolbar">
@@ -42,7 +41,7 @@
 	
 	
 	
-	 		<form  method="post" action="cart?deal=<?php echo $_GET['pay'] ?>">
+	 		<form  method="post" action="cart">
                        
                         <div class="panel-body">
                             <div class="form-group">
@@ -80,7 +79,8 @@
                         </div>
                         
                         
-                        <button type="submit" value="" name=paysubmit>確定</button>
+                        <button type="submit" value="1" name=paysubmit>確定</button>
+                         <input type="hidden" value="<?php print_r($_GET['mId']);?>" name=deal>確定</input>
                         <a href="cart"><button type="button" value="" name=paysubmit>取消</button></a>
                 </form>
                     </div>
