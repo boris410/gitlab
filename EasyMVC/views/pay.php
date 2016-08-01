@@ -14,7 +14,7 @@
 						<ul id="etalage" style="list-style:none;">
 							<li>
 								<a href="optionallink.php">
-									<img class="etalage_source_image" src="/gitlab/EasyMVC/bootstrap/<?php echo $data['gpicurl']; ?>" class="img-responsive" title="" />
+									<img class="etalage_source_image" src="/gitlab/EasyMVC/bootstrap/<?php echo $data[0]['gpicurl']; ?>" class="img-responsive" title="" />
 								</a>
 							</li>
 						</ul>
@@ -25,9 +25,9 @@
 				  
 				  
 				  <div class="desc1 span_3_of_2">
-				    <h1><?php echo $data['gname']; ?></h1>
+				    <h1><?php echo $data[0]['gname']; ?></h1>
 				  
-				    <p class="m_5"  id="price">$<?php echo $data['gPrice']; ?> </p>
+				    <p class="m_5"  id="price">$<?php echo $data[0]['gPrice']; ?> </p>
 				    
 				    <div class="btn_form">
 						 
@@ -36,7 +36,7 @@
 					
 					 </div>
 					
-					 <p class="m_text2"><?php echo $data['gintroduct'];?></p>
+					 <p class="m_text2"><?php echo $data[0]['gintroduct'];?></p>
 				  </div>
 	
 	

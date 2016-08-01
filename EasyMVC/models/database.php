@@ -15,15 +15,19 @@ class database{
        
       $action =  $this->connection->query($sql);
       return $list = $action->fetchAll(); //取得所有陣列
-      
-        
     }
      public function insert($sql){
-       $action = $this->connection->prepare($sql);
-       
-      
-        
+     
+       $action = $this->connection->query($sql);
+       var_dump($sql);
+       return true;
     }
+     public function delet($sql){
+       $action = $this->connection->query($sql);
+       return true;
+    }
+   
+    
     
     
 }

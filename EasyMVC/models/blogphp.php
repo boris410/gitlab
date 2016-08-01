@@ -8,32 +8,17 @@ class blogphp extends Controller{
                             $_SESSION['userName']=$_POST["txtUserName"];
                             $_SESSION['userpass']=$_POST["txtPassword"];
                             return true;
-                        }else{
-                              echo "1";
-                              return false;
-                              
                         }
-                    }else{
-                         echo "2";
-                         return false;
-                          
                     }
-                }else{
-                    echo "4";
                 }
             }
             
             function checkaccount(){//後台登入的帳號檢查
-                $link = $this->getConnect();
-                $select = $link->prepare("SELECT mguser,mgpass FROM management WHERE mguser= ? AND mgpass= ? ");
-                $select->bindParam(1,$_POST['txtUserName']);
-                $select->bindParam(2,$_POST['txtPassword']);
-                $select->execute();
+                $db = $this->model("database");
+                $resutle = $db->select("SELECT mguser,mgpass FROM management WHERE mguser= '$_POST[txtUserName]' AND mgpass= '$_POST[txtPassword]' ");
                 $link = null;
-                if($select->rowCount()>0){
+                if($resutle){
                     return true;
-                }else{
-                      return false;
                 }
             }
             
@@ -41,43 +26,29 @@ class blogphp extends Controller{
                     session_unset();
                     if(count($_SESSION)==0){
                         return true;
-                    }else{
-                        return false;
                     }
             }
              
             function checkstatus(){//後台檢查登入狀況
-                if(isset($_SESSION['userName']))
-                {
-                    $link = $this->getConnect();
-                    $select = $link->prepare("SELECT mguser,mgpass FROM management WHERE mguser= ? AND mgpass= ?");
-                    $select->bindParam(1,$_SESSION['userName']);
-                    $select->bindParam(2,$_SESSION['userpass']);
-                    $select->execute();
-                    $select->rowCount();
-                    if($select->rowCount()>0){
-                        $link = null;
+                if(isset($_SESSION['userName'])){
+                    $db = $this->model("database");
+                    $resutle = $db->select("SELECT mguser,mgpass FROM management WHERE mguser= '$_SESSION[userName]' AND mgpass= '$_SESSION[userpass]' ");
+                    if($resutle){
                         return true;
-                    }else{
-                        $link = null;
-                        return false;
                     }
                 }
             }
             
             function personnalshow(){//抓出個人資料的內容
-                $link = $this->getConnect();
-                $select = $link->prepare("SELECT member.*,account.aPassword,bill.*
+                $db = $this->model("database");
+                $resutle = $db->select("SELECT member.*,account.aPassword,bill.*
                                           FROM member
                                           JOIN account 
-                                          ON mEmail= ? AND account.aEmail=member.mEmail
+                                          ON mEmail= '$_POST[user]' AND account.aEmail=member.mEmail
                                           LEFT JOIN bill
                                           ON member.mId = bill.gmemberid");
-                $select->bindParam(1,$_POST['user']);    
-                $select->execute();
-                $billdata = $select->fetchAll();
-                $link = null ;
-                return  $billdata;
+                $db=null;
+                return  $resutle;
             }
 
             

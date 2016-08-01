@@ -5,16 +5,13 @@ class car extends Controller{
           $this->model("logphp");
           $logphp = new logphp();
           if($logphp->checkstatus()){
-                $link = $this->getConnect();
-                $select = $link->prepare("SELECT member.mId,bill.* 
+                $db = $this->model("database");
+                $result = $db->select("SELECT member.mId,bill.* 
                                           FROM member 
                                           JOIN bill 
-                                          ON  member.mEmail =? AND member.mId = bill.gmemberid");
-                $select->bindParam(1,$_SESSION['userEmail']);
-                $select->execute();
-                $billarray = $select->fetchAll();
-                $link = null;
-                return $billarray;
+                                          ON  member.mEmail ='$_SESSION[userEmail]' AND member.mId = bill.gmemberid");
+               $db=null;
+                return $result;
            }else
            {
            $link = null;
@@ -26,24 +23,24 @@ class car extends Controller{
             $this->model("logphp");
             $logphp = new logphp();
             //檢查是否有登入 傳回查詢帳號的結果 沒有結果導向到登入
+            
             if($logphp->checkstatus()){
-            $link = $this->getConnect();
-            $select = $link->prepare("SELECT mId 
-                                      FROM member 
-                                      WHERE mEmail= ? ");
-            $select->bindParam(1,$_SESSION['userEmail']);
-            $select->execute();
-            $row2=$select->fetch();
+            $db = $this->model("database");
+            $result = $db->select("SELECT mId 
+                                   FROM member 
+                                   WHERE mEmail= '$_SESSION[userEmail]' ");
+                                   
+            
             if(isset($_SESSION['buytime'])){//設定購買變數為購買項目的根據 目的:刪除項目時用
                 $_SESSION['buytime'] +=1;//查看購買次數 如果不是就設置初始直0 
             }else{
                 $_SESSION['buytime'] =1;
             }
                 $car = array(
-                                $row2['mId'],
-                                $data['gId'],  //將商品資訊丟到陣列裡面
-                                $data['gPrice'],
-                                $data['gname'],
+                                $result[0]['mId'],
+                                $data[0]['gId'],  //將商品資訊丟到陣列裡面
+                                $data[0]['gPrice'],
+                                $data[0]['gname'],
                                 date("Y:m:d h:i:s")
                             );  
                          $num="mID"."$_SESSION[buytime]";
@@ -78,18 +75,11 @@ class car extends Controller{
                              $d3=$_SESSION[car][$_POST['deal']][3];
                              
                              }
-                             $link = $this->getConnect();
-                             $insert = $link->prepare("INSERT INTO bill(gmemberid,bgoodsid,bgoodsprice,bgoodsname,address,paytype,addressee,bbuydate) 
-                                                                   VALUE(?,?,?,?,?,?,?,current_timestamp())");
-                             $insert->bindParam(1,$d0);
-                             $insert->bindParam(2,$d1);
-                             $insert->bindParam(3,$d2);
-                             $insert->bindParam(4,$d3);
-                             $insert->bindParam(5,$_POST['address']);
-                             $insert->bindParam(6,$_POST['paytype']);
-                             $insert->bindParam(7,$_POST['addressee']);
-                             $insert->execute();
-
+                             $db=$this->model("database");
+                             $db->insert("INSERT INTO bill(gmemberid,bgoodsid,bgoodsprice,bgoodsname,address,paytype,addressee,bbuydate) 
+                                                      VALUE('$d0','$d1','$d2','$d3','$_POST[address]','$_POST[paytype]','$_POST[addressee]',current_timestamp())");
+                             
+                             
 
                              unset($_SESSION[car][$_POST['deal']]);//寫入mysql後刪除點擊的那一單項
                              if(!isset($_SESSION[car][$_POST['deal']])){//判斷是否有這一項商品 沒有就是刪除成功

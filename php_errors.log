@@ -3225,3 +3225,718 @@ Stack trace:
 [01-Aug-2016 03:52:53 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:18
 [01-Aug-2016 03:52:53 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
 [01-Aug-2016 03:52:53 UTC] PHP   7. mysql_fetch_array() /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php:7
+[01-Aug-2016 07:10:32 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/database.php on line 16
+[01-Aug-2016 07:10:32 UTC] PHP Stack trace:
+[01-Aug-2016 07:10:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:10:32 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:10:32 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:10:32 UTC] PHP   4. HomeController->single() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:10:32 UTC] PHP   5. goodslist->showgoodsingle() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:113
+[01-Aug-2016 07:10:32 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/EasyMVC/models/goodslist.php:25
+[01-Aug-2016 07:12:21 UTC] PHP Warning:  Illegal string offset 'gId' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 13
+[01-Aug-2016 07:12:21 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:21 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 15
+[01-Aug-2016 07:12:21 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:21 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 17
+[01-Aug-2016 07:12:21 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:21 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 19
+[01-Aug-2016 07:12:21 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:21 UTC] PHP Warning:  Illegal string offset 'gId' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 13
+[01-Aug-2016 07:12:21 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:21 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 15
+[01-Aug-2016 07:12:21 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:21 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 17
+[01-Aug-2016 07:12:21 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:21 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 19
+[01-Aug-2016 07:12:21 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:21 UTC] PHP Warning:  Illegal string offset 'gId' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 13
+[01-Aug-2016 07:12:21 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:21 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 15
+[01-Aug-2016 07:12:21 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:21 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 17
+[01-Aug-2016 07:12:21 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:21 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 19
+[01-Aug-2016 07:12:21 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:21 UTC] PHP Warning:  Illegal string offset 'gId' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 13
+[01-Aug-2016 07:12:21 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:21 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 15
+[01-Aug-2016 07:12:21 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:21 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 17
+[01-Aug-2016 07:12:21 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:21 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 19
+[01-Aug-2016 07:12:21 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:21 UTC] PHP Warning:  Illegal string offset 'gId' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 13
+[01-Aug-2016 07:12:21 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:21 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 15
+[01-Aug-2016 07:12:21 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:21 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 17
+[01-Aug-2016 07:12:21 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:21 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 19
+[01-Aug-2016 07:12:21 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:21 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:25 UTC] PHP Fatal error:  Call to a member function fetch() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/database.php on line 18
+[01-Aug-2016 07:12:25 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:25 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:25 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:25 UTC] PHP   4. HomeController->single() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:25 UTC] PHP   5. goodslist->showgoodsingle() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:113
+[01-Aug-2016 07:12:25 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/EasyMVC/models/goodslist.php:14
+[01-Aug-2016 07:12:28 UTC] PHP Warning:  Illegal string offset 'gId' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 13
+[01-Aug-2016 07:12:29 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:29 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 15
+[01-Aug-2016 07:12:29 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:29 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 17
+[01-Aug-2016 07:12:29 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:29 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 19
+[01-Aug-2016 07:12:29 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:29 UTC] PHP Warning:  Illegal string offset 'gId' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 13
+[01-Aug-2016 07:12:29 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:29 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 15
+[01-Aug-2016 07:12:29 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:29 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 17
+[01-Aug-2016 07:12:29 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:29 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 19
+[01-Aug-2016 07:12:29 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:29 UTC] PHP Warning:  Illegal string offset 'gId' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 13
+[01-Aug-2016 07:12:29 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:29 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 15
+[01-Aug-2016 07:12:29 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:29 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 17
+[01-Aug-2016 07:12:29 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:29 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 19
+[01-Aug-2016 07:12:29 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:29 UTC] PHP Warning:  Illegal string offset 'gId' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 13
+[01-Aug-2016 07:12:29 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:29 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 15
+[01-Aug-2016 07:12:29 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:29 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 17
+[01-Aug-2016 07:12:29 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:29 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 19
+[01-Aug-2016 07:12:29 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:29 UTC] PHP Warning:  Illegal string offset 'gId' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 13
+[01-Aug-2016 07:12:29 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:29 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 15
+[01-Aug-2016 07:12:29 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:29 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 17
+[01-Aug-2016 07:12:29 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:12:29 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 19
+[01-Aug-2016 07:12:29 UTC] PHP Stack trace:
+[01-Aug-2016 07:12:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:12:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:12:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:12:29 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:12:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:35 UTC] PHP Warning:  Illegal string offset 'gId' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 13
+[01-Aug-2016 07:14:35 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:35 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 15
+[01-Aug-2016 07:14:35 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:35 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 17
+[01-Aug-2016 07:14:35 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:35 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 19
+[01-Aug-2016 07:14:35 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:35 UTC] PHP Warning:  Illegal string offset 'gId' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 13
+[01-Aug-2016 07:14:35 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:35 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 15
+[01-Aug-2016 07:14:35 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:35 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 17
+[01-Aug-2016 07:14:35 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:35 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 19
+[01-Aug-2016 07:14:35 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:35 UTC] PHP Warning:  Illegal string offset 'gId' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 13
+[01-Aug-2016 07:14:35 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:35 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 15
+[01-Aug-2016 07:14:35 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:35 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 17
+[01-Aug-2016 07:14:35 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:35 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 19
+[01-Aug-2016 07:14:35 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:35 UTC] PHP Warning:  Illegal string offset 'gId' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 13
+[01-Aug-2016 07:14:35 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:35 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 15
+[01-Aug-2016 07:14:35 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:35 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 17
+[01-Aug-2016 07:14:35 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:35 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 19
+[01-Aug-2016 07:14:35 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:35 UTC] PHP Warning:  Illegal string offset 'gId' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 13
+[01-Aug-2016 07:14:35 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:35 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 15
+[01-Aug-2016 07:14:35 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:35 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 17
+[01-Aug-2016 07:14:35 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:35 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 19
+[01-Aug-2016 07:14:35 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:35 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:48 UTC] PHP Warning:  Illegal string offset 'gId' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 13
+[01-Aug-2016 07:14:48 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:48 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 15
+[01-Aug-2016 07:14:48 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:48 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 17
+[01-Aug-2016 07:14:48 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:48 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 19
+[01-Aug-2016 07:14:48 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:48 UTC] PHP Warning:  Illegal string offset 'gId' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 13
+[01-Aug-2016 07:14:48 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:48 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 15
+[01-Aug-2016 07:14:48 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:48 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 17
+[01-Aug-2016 07:14:48 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:48 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 19
+[01-Aug-2016 07:14:48 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:48 UTC] PHP Warning:  Illegal string offset 'gId' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 13
+[01-Aug-2016 07:14:48 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:48 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 15
+[01-Aug-2016 07:14:48 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:48 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 17
+[01-Aug-2016 07:14:48 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:48 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 19
+[01-Aug-2016 07:14:48 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:48 UTC] PHP Warning:  Illegal string offset 'gId' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 13
+[01-Aug-2016 07:14:48 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:48 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 15
+[01-Aug-2016 07:14:48 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:48 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 17
+[01-Aug-2016 07:14:48 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:48 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 19
+[01-Aug-2016 07:14:48 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:48 UTC] PHP Warning:  Illegal string offset 'gId' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 13
+[01-Aug-2016 07:14:48 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:48 UTC] PHP Warning:  Illegal string offset 'gpicurl' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 15
+[01-Aug-2016 07:14:48 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:48 UTC] PHP Warning:  Illegal string offset 'gintroduct' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 17
+[01-Aug-2016 07:14:48 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 07:14:48 UTC] PHP Warning:  Illegal string offset 'gPrice' in /home/ubuntu/workspace/gitlab/EasyMVC/views/index.php on line 19
+[01-Aug-2016 07:14:48 UTC] PHP Stack trace:
+[01-Aug-2016 07:14:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 07:14:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 07:14:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 07:14:48 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:15
+[01-Aug-2016 07:14:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 08:47:09 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/database.php on line 22
+[01-Aug-2016 08:47:09 UTC] PHP Stack trace:
+[01-Aug-2016 08:47:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 08:47:09 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 08:47:09 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 08:47:09 UTC] PHP   4. HomeController->register() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 08:47:09 UTC] PHP   5. logphp->register() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:96
+[01-Aug-2016 08:47:09 UTC] PHP   6. database->insert() /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php:61
+[01-Aug-2016 08:50:13 UTC] PHP Fatal error:  Call to a member function select() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/logphp.php on line 69
+[01-Aug-2016 08:50:13 UTC] PHP Stack trace:
+[01-Aug-2016 08:50:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 08:50:13 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 08:50:13 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 08:50:13 UTC] PHP   4. HomeController->register() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 08:50:13 UTC] PHP   5. logphp->register() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:96
+[01-Aug-2016 09:04:00 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php on line 15
+[01-Aug-2016 09:04:00 UTC] PHP Stack trace:
+[01-Aug-2016 09:04:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 09:04:00 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 09:04:00 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 09:04:00 UTC] PHP   4. HomeController->cart() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 09:04:00 UTC] PHP   5. car->showbill() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:60
+[01-Aug-2016 09:07:37 UTC] PHP Fatal error:  Call to a member function select() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/goodslist.php on line 7
+[01-Aug-2016 09:07:37 UTC] PHP Stack trace:
+[01-Aug-2016 09:07:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 09:07:37 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 09:07:37 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 09:07:37 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 09:07:37 UTC] PHP   5. goodslist->showgoods() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:13
+[01-Aug-2016 09:46:59 UTC] PHP Fatal error:  Call to a member function mode() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php on line 78
+[01-Aug-2016 09:46:59 UTC] PHP Stack trace:
+[01-Aug-2016 09:46:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 09:46:59 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 09:46:59 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 09:46:59 UTC] PHP   4. HomeController->cart() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 09:46:59 UTC] PHP   5. car->deal() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:68
+[01-Aug-2016 09:47:39 UTC] PHP Fatal error:  Call to a member function model() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php on line 78
+[01-Aug-2016 09:47:39 UTC] PHP Stack trace:
+[01-Aug-2016 09:47:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 09:47:39 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 09:47:39 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 09:47:39 UTC] PHP   4. HomeController->cart() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 09:47:39 UTC] PHP   5. car->deal() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:68
+[01-Aug-2016 09:53:15 UTC] PHP Fatal error:  Call to undefined method car::mode() in /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php on line 78
+[01-Aug-2016 09:53:15 UTC] PHP Stack trace:
+[01-Aug-2016 09:53:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 09:53:15 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 09:53:15 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 09:53:15 UTC] PHP   4. HomeController->cart() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 09:53:15 UTC] PHP   5. car->deal() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:68
+[01-Aug-2016 12:33:53 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php on line 7
+[01-Aug-2016 12:33:53 UTC] PHP Stack trace:
+[01-Aug-2016 12:33:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[01-Aug-2016 12:33:53 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[01-Aug-2016 12:33:53 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 12:33:53 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[01-Aug-2016 12:33:53 UTC] PHP   5. Controller->view() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:18
+[01-Aug-2016 12:33:53 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/EasyMVC/core/Controller.php:51
+[01-Aug-2016 12:33:53 UTC] PHP   7. mysql_fetch_array() /home/ubuntu/workspace/gitlab/EasyMVC/views/pagetabs.php:7

@@ -10,7 +10,7 @@
 				<li style="list-style-type: none;">
 					<a href="optionallink.php">
 								
-									<img class="etalage_source_image" src="/gitlab/EasyMVC/bootstrap/<?php echo $data['gpicurl']; ?>" class="img-responsive" title="" />
+									<img class="etalage_source_image" src="/gitlab/EasyMVC/bootstrap/<?php echo $data[0]['gpicurl']; ?>" class="img-responsive" title="" />
 								</a>
 				</li>
 			</ul>
@@ -18,11 +18,11 @@
 		</div>
 
 		<div class="btn_form">
-			<h1><?php echo $data[gname]; ?></h1>
+			<h1><?php echo $data[0][gname]; ?></h1>
 
 			<p class="m_5" id="price"> </p>
 			<p class="m_5">$
-				<?php echo $data[gPrice]; ?>
+				<?php echo $data[0][gPrice]; ?>
 				</span>
 			</p>
 
@@ -33,7 +33,7 @@
 
 
 			<p class="m_text2">
-				<?php echo $data[gintroduct];?>
+				<?php echo $data[0][gintroduct];?>
 			</p>
 		</div>
 

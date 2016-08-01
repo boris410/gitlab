@@ -41,3 +41,4 @@
 [31-Jul-2016 05:18:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:0
 [31-Jul-2016 05:18:32 UTC] PHP   2. explode() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:201
 [31-Jul-2016 05:28:14 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 190
+[01-Aug-2016 06:17:03 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 197

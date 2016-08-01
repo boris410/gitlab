@@ -1,6 +1,6 @@
 <?php $i = $_GET['pagestart'];
 	  $e = $_GET['pageend'];
-
+		//var_dump($data)
 ?>
 <div class="col-md-12">
 

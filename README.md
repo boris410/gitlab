@@ -55,3 +55,5 @@
 
 8/1 MVC架構購物網站專案----程式重購--session 放到model and use PDO 優化程式碼2.3版-修改single.php 和 pay.php互搶controller 顯示錯誤
 
+8/1 MVC架構購物網站專案----程式重購--DB 寫成 CLASS 並有 SELECT INSERT DELETE function  優化程式碼3.0版
+

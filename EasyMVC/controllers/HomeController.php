@@ -58,10 +58,10 @@ class HomeController extends Controller {
          function cart(){
                 $car = $this->model("car");
                 $billdata = $car->showbill();
-                
+              
                if($billdata){
                 if($_GET['delete']){
-                        $car->delegoods());
+                        $car->delegoods();
                         header("location: cart");       
                 }
                 elseif($_POST['paysubmit']){
