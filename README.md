@@ -57,5 +57,9 @@
 
 8/1 MVC架構購物網站專案----程式重購--DB 寫成 CLASS 並有 SELECT INSERT DELETE function  優化程式碼3.0版
 
-8/2 MVC架構購物網站專案----challenge 1 顯示陣列最大區塊 
+8/2 challenge 1 顯示陣列最大區塊完成
+
+8/2 challenge 2 新增view端--前台參加活動views & 後台申請活動views & DB TABLE 欄位
+
+
 
