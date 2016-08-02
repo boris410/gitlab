@@ -57,3 +57,5 @@
 
 8/1 MVC架構購物網站專案----程式重購--DB 寫成 CLASS 並有 SELECT INSERT DELETE function  優化程式碼3.0版
 
+8/2 MVC架構購物網站專案----challenge 1 顯示陣列最大區塊 
+
