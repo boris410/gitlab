@@ -42,3 +42,47 @@
 [31-Jul-2016 05:18:32 UTC] PHP   2. explode() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:201
 [31-Jul-2016 05:28:14 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 190
 [01-Aug-2016 06:17:03 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 197
+[01-Aug-2016 14:23:24 UTC] PHP Fatal error:  Using $this when not in object context in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 51
+[01-Aug-2016 14:23:24 UTC] PHP Stack trace:
+[01-Aug-2016 14:23:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:0
+[02-Aug-2016 01:54:51 UTC] PHP Fatal error:  Using $this when not in object context in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 78
+[02-Aug-2016 01:54:51 UTC] PHP Stack trace:
+[02-Aug-2016 01:54:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:0
+[02-Aug-2016 01:54:51 UTC] PHP   2. four($x = *uninitialized*, $y = *uninitialized*, $origin = *uninitialized*) /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:53
+[02-Aug-2016 01:54:51 UTC] PHP Fatal error:  Using $this when not in object context in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 78
+[02-Aug-2016 01:54:51 UTC] PHP Stack trace:
+[02-Aug-2016 01:54:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:0
+[02-Aug-2016 01:54:51 UTC] PHP   2. four($x = *uninitialized*, $y = *uninitialized*, $origin = *uninitialized*) /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:53
+[02-Aug-2016 01:56:02 UTC] PHP Fatal error:  Using $this when not in object context in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 78
+[02-Aug-2016 01:56:02 UTC] PHP Stack trace:
+[02-Aug-2016 01:56:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:0
+[02-Aug-2016 01:56:02 UTC] PHP   2. four($x = *uninitialized*, $y = *uninitialized*, $origin = *uninitialized*) /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:53
+[02-Aug-2016 01:56:02 UTC] PHP Fatal error:  Using $this when not in object context in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 78
+[02-Aug-2016 01:56:02 UTC] PHP Stack trace:
+[02-Aug-2016 01:56:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:0
+[02-Aug-2016 01:56:02 UTC] PHP   2. four($x = *uninitialized*, $y = *uninitialized*, $origin = *uninitialized*) /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:53
+[02-Aug-2016 01:57:13 UTC] PHP Fatal error:  Using $this when not in object context in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 78
+[02-Aug-2016 01:57:13 UTC] PHP Stack trace:
+[02-Aug-2016 01:57:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:0
+[02-Aug-2016 01:57:13 UTC] PHP   2. four($x = *uninitialized*, $y = *uninitialized*, $origin = *uninitialized*) /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:53
+[02-Aug-2016 01:57:13 UTC] PHP Fatal error:  Using $this when not in object context in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 78
+[02-Aug-2016 01:57:13 UTC] PHP Stack trace:
+[02-Aug-2016 01:57:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:0
+[02-Aug-2016 01:57:13 UTC] PHP   2. four($x = *uninitialized*, $y = *uninitialized*, $origin = *uninitialized*) /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:53
+[02-Aug-2016 02:00:34 UTC] PHP Warning:  Missing argument 3 for four(), called in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 53 and defined in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 67
+[02-Aug-2016 02:00:34 UTC] PHP Stack trace:
+[02-Aug-2016 02:00:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:0
+[02-Aug-2016 02:00:34 UTC] PHP   2. four($x = *uninitialized*, $y = *uninitialized*, $origin = *uninitialized*) /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:53
+[02-Aug-2016 02:00:34 UTC] PHP Warning:  Missing argument 3 for four(), called in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 53 and defined in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 67
+[02-Aug-2016 02:00:34 UTC] PHP Stack trace:
+[02-Aug-2016 02:00:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:0
+[02-Aug-2016 02:00:34 UTC] PHP   2. four($x = *uninitialized*, $y = *uninitialized*, $origin = *uninitialized*) /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:53
+[02-Aug-2016 02:21:49 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 67
+[02-Aug-2016 02:39:50 UTC] PHP Warning:  Missing argument 3 for four(), called in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 52 and defined in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 67
+[02-Aug-2016 02:39:50 UTC] PHP Stack trace:
+[02-Aug-2016 02:39:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:0
+[02-Aug-2016 02:39:50 UTC] PHP   2. four() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:52
+[02-Aug-2016 03:21:04 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 192
+[02-Aug-2016 03:37:08 UTC] PHP Fatal error:  Call to undefined function issset() in /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php on line 186
+[02-Aug-2016 03:37:08 UTC] PHP Stack trace:
+[02-Aug-2016 03:37:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge/challenge1/challenge1.php:0
