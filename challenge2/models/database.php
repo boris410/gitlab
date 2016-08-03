@@ -13,27 +13,29 @@ class database{
         $dsn = sprintf('mysql:dbname=%s;host=%s', static::DATABASE_NAME, static::DATABASE_HOST);
         try {
             $this->connection = new PDO($dsn, static::DATABASE_USERNAME, static::DATABASE_PASSWORD);
+            $this->connection->exec("set names utf8");
         } catch (PDOException $e) {
             echo 'Connection failed: '.$e->getMessage();
         }
     }
     
-     public function select($sql){
+    public function select($sql){
       $action =  $this->connection->query($sql);
-      return $list = $action->fetchAll(); //取得所有陣列
+      return  $action->fetchAll(PDO::FETCH_ASSOC); //取得所有陣列
     }
     
-     public function insert($sql){
+    public function insert($sql){
      
        $action = $this->connection->query($sql);
        var_dump($sql);
        return true;
     }
     
-     public function delet($sql){
+    public function delet($sql){
        $action = $this->connection->query($sql);
        return true;
     }
+    
    
     
     

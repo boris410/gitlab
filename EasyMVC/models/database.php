@@ -12,19 +12,22 @@ class database{
         
     }
      public function select($sql){
-       
       $action =  $this->connection->query($sql);
-      return $list = $action->fetchAll(); //取得所有陣列
+      return $action->fetchAll(PDO::FETCH_ASSOC); //取得所有陣列
     }
      public function insert($sql){
-     
-       $action = $this->connection->query($sql);
-       var_dump($sql);
+       $action = $this->connection->query($sql);;
        return true;
     }
      public function delet($sql){
        $action = $this->connection->query($sql);
        return true;
+    }
+    public function checklogin($userEmail,$userpass){
+        $select = $this->connection->prepare("SELECT * FROM account WHERE aEmail = ? and aPassword = ?");
+        $select->execute(array($userEmail, $userpass));
+        $select->fetch();
+        return  $select->fetch();
     }
    
     

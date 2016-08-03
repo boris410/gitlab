@@ -61,5 +61,7 @@
 
 8/2 challenge 2 新增view端--前台參加活動views & 後台申請活動views & DB TABLE 欄位
 
+8/3 MVC架構購物網站專案----程式重購--優化程式碼2.2版-改 session 寫成 model 完成前台部分
+
 
 

@@ -1,14 +1,18 @@
 <?php 
-    class door{
+    class door extends Controller{
+        
         function login(){
-            $db=$this->connection;
-            $result = $db->select("SELECT action_account,action_pass FROM account WHERE action_account='$_POST[useraccount]' AND action_pass='$_POST[userpass]'");
-            var_dump($result);
+            $db = $this->model("database");
+            $result = $db->select("SELECT account_account,account_pass FROM account WHERE account_account='$_POST[useraccount]' AND account_pass='$_POST[userpassword]'");
+            if($result){
+               $_SESSION['username']=$_POST['useraccount'];
+               $_SESSION['userpass']=$_POST['userpassword'];
+               var_dump($result);
+               return $result;
+            }
         }
         
         function logout(){
-            
-            
         }
     }
 

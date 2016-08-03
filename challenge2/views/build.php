@@ -3,8 +3,8 @@
         <h3>活動名稱 :<input type="text" name="employee"></h3>
         <h3>活動人數 :<input type="text" name="employee"></h3>
         是否攜伴:
-        <input type="radio" name="partner" value="no"required="required"> 否
-        <input type="radio" name="partner" value="yes"required="required"> 是
+        <input type="radio" name="partner" value="0"required="required"> 否
+        <input type="radio" name="partner" value="1"required="required"> 是
         <h3>報名日期:<input type="text" name="employee">~ 截止日期時間數:<input type="text" name="employee"></h3>~
        
         參加方式:
