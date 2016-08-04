@@ -1,32 +1,27 @@
 <?PHP 
     class SESSION{
-        function set_user_POST($txtUserEmail,$txtPassword){//從變數來設定session 抓post丟到session
-            $_SESSION['userEmail'] = $txtUserEmail;
+        function set_user_SESSION($txtUserEmail,$txtPassword){//登入確定後設定SESSION
+            $_SESSION['username'] = $txtUserEmail;
             $_SESSION['userpass']  = $txtPassword;
         }
         
         function clear_all_user_SESSION(){//清除session
             session_unset();
         }
-        function get_SESSION($session_key){//取得session陣列內 key為$session_key變數的session值/*****/可精簡
+        
+        function get_SESSION($session_key1){//取得session陣列內 key為$session_key變數的session值/*****/可精簡
             $result = $_SESSION[$session_key];
             return $result;
         }
         
-        function check_user_SESSION(){//檢查是否有設置userEmail的session 檢查是否有登入/*****/可精簡
-            if(isset($_SESSION['userEmail'])){
-                return true;
-            }
-        }
-        
         function get_user_SESSION_all_array(){//取得session的內的使用者帳號密碼 用來查詢個人的資料用
-            $userEmail = $_SESSION['userEmail'];
+            $username = $_SESSION['username'];
             $userpass  = $_SESSION['userpass'];
-            return array('userEmail' => $userEmail,'userpass' => $userpass);
+            return array('username' => $username,'userpass' => $userpass);
         }
         
         function get_user_SESSION_account(){//取得session 使用者帳號/*****/可精簡
-            $userEmail = $_SESSION['userEmail'];
+            $userEmail = $_SESSION['username'];
             return $userEmail;
         }
         
@@ -59,6 +54,17 @@
         function set_car_SESSION($resultarray){//設置購物車中特定的session值
             $_SESSION[car][$resultarray['addid']]=$resultarray['car'];
             $_SESSION['buytime']=$resultarray['buytime'];
+        }
+        function get_SESSION2($str1,$value,$str2){//取得session陣列內 key為$session_key變數的session值/*****/可精簡
+            if($str2==""){
+                $_SESSION[$str1]=$value; 
+            }else{
+                $_SESSION[$str1]=array($str2 =>$value);
+            }
+            
+            return $result;
+            
+
         }
     }
     

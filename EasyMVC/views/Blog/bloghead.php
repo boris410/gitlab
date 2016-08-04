@@ -54,9 +54,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						<div class="col-xs-5 register-info">
 
-							<?php if(isset($_SESSION['userName'])) {?>
+							<?php if(isset($_SESSION['userEmail'])) {?>
 							<ul>
-								<li><a href="index">Hello!! <?php echo $_SESSION['userName']; ?></a></li>
+								<li><a href="index">Hello!! <?php echo $_SESSION['userEmail']; ?></a></li>
 								<li><a href="bloglogout"> Logout</a></li>
 
 							</ul>

@@ -1,6 +1,6 @@
 <?php
 
-    class goodslist extends Controller{
+    class goodslist extends load{
         function showgoods (){//首頁商品項目欄
             $db=$this->model("database");
             return $db->select("SELECT * FROM goods");
@@ -18,10 +18,10 @@
             $result = $db->select(" SELECT member.*,account.aPassword 
                                     FROM member 
                                     JOIN account 
-                                    ON  member.mEmail='$SESSIONarray[userEmail]' AND account.aPassword= '$SESSIONarray[userpass]' ");
+                                    ON  member.mEmail='$SESSIONarray[username]' AND account.aPassword= '$SESSIONarray[userpass]' LIMIT 1 ");
             $db=null;
-           
             return $result;
+            
         }
     }
 ?>
