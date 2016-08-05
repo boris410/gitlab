@@ -1,5 +1,5 @@
-<?php
-    class show_action extends controller{
+<?php 
+    class applyaction extends load{
         function show_action(){
             $db = $this->model("database");
             $result =  $db->select("SELECT action_name,action_id FROM applyaction");

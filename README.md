@@ -65,6 +65,8 @@
 
 8/4 MVC架構購物網站專案----程式重購--優化程式碼2.3版-改  前後台完成 & 簡化session model
 
+8/5 MVC架構購物網站專案----程式重購--優化程式碼2.4版-改  model construct db 移除在每個model中多餘的 new db
+
 
 
 

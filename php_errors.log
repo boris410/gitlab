@@ -6683,3 +6683,99 @@ Stack trace:
 [04-Aug-2016 15:08:20 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
 [04-Aug-2016 15:08:20 UTC] PHP   4. HomeController->test() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
 [04-Aug-2016 15:08:20 UTC] PHP   5. SESSION->get_SESSION2() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:133
+[05-Aug-2016 02:24:48 UTC] PHP Warning:  require_once(/home/ubuntu/workspace/gitlab/challenge2/core/Controller.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/challenge2/index.php on line 6
+[05-Aug-2016 02:24:48 UTC] PHP Stack trace:
+[05-Aug-2016 02:24:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 02:24:48 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/ubuntu/workspace/gitlab/challenge2/core/Controller.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/challenge2/index.php on line 6
+[05-Aug-2016 02:24:48 UTC] PHP Stack trace:
+[05-Aug-2016 02:24:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 02:36:30 UTC] PHP Warning:  require_once(core/Controller.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/challenge2/index.php on line 6
+[05-Aug-2016 02:36:30 UTC] PHP Stack trace:
+[05-Aug-2016 02:36:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 02:36:30 UTC] PHP Fatal error:  require_once(): Failed opening required 'core/Controller.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/challenge2/index.php on line 6
+[05-Aug-2016 02:36:30 UTC] PHP Stack trace:
+[05-Aug-2016 02:36:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 02:36:52 UTC] PHP Fatal error:  Class 'Controller' not found in /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php on line 3
+[05-Aug-2016 02:36:52 UTC] PHP Stack trace:
+[05-Aug-2016 02:36:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 02:36:52 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 02:36:52 UTC] PHP   3. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:11
+[05-Aug-2016 02:37:08 UTC] PHP Warning:  require_once(/home/ubuntu/workspace/gitlab/challenge2/models/show_action.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/challenge2/core/load.php on line 11
+[05-Aug-2016 02:37:08 UTC] PHP Stack trace:
+[05-Aug-2016 02:37:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 02:37:08 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 02:37:08 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 02:37:08 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 02:37:08 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:32
+[05-Aug-2016 02:37:08 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/ubuntu/workspace/gitlab/challenge2/models/show_action.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/challenge2/core/load.php on line 11
+[05-Aug-2016 02:37:08 UTC] PHP Stack trace:
+[05-Aug-2016 02:37:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 02:37:08 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 02:37:08 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 02:37:08 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 02:37:08 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:32
+[05-Aug-2016 02:57:31 UTC] PHP Fatal error:  Call to a member function select() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php on line 11
+[05-Aug-2016 02:57:31 UTC] PHP Stack trace:
+[05-Aug-2016 02:57:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[05-Aug-2016 02:57:31 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[05-Aug-2016 02:57:31 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[05-Aug-2016 02:57:31 UTC] PHP   4. HomeController->cart() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[05-Aug-2016 02:57:31 UTC] PHP   5. car->showbill() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:60
+[05-Aug-2016 02:57:56 UTC] PHP Fatal error:  Call to a member function select() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php on line 11
+[05-Aug-2016 02:57:56 UTC] PHP Stack trace:
+[05-Aug-2016 02:57:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[05-Aug-2016 02:57:56 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[05-Aug-2016 02:57:56 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[05-Aug-2016 02:57:56 UTC] PHP   4. HomeController->cart() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[05-Aug-2016 02:57:56 UTC] PHP   5. car->showbill() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:60
+[05-Aug-2016 02:57:57 UTC] PHP Fatal error:  Call to a member function select() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/models/car.php on line 11
+[05-Aug-2016 02:57:57 UTC] PHP Stack trace:
+[05-Aug-2016 02:57:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[05-Aug-2016 02:57:57 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[05-Aug-2016 02:57:57 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[05-Aug-2016 02:57:57 UTC] PHP   4. HomeController->cart() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[05-Aug-2016 02:57:57 UTC] PHP   5. car->showbill() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/HomeController.php:60
+[05-Aug-2016 03:08:38 UTC] PHP Fatal error:  Call to undefined method SESSION::check_user_SESSION() in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 5
+[05-Aug-2016 03:08:38 UTC] PHP Stack trace:
+[05-Aug-2016 03:08:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[05-Aug-2016 03:08:38 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[05-Aug-2016 03:08:38 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[05-Aug-2016 03:08:38 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[05-Aug-2016 03:10:47 UTC] PHP Fatal error:  Call to undefined method SESSION::set_user_POST() in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 24
+[05-Aug-2016 03:10:47 UTC] PHP Stack trace:
+[05-Aug-2016 03:10:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[05-Aug-2016 03:10:47 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[05-Aug-2016 03:10:47 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[05-Aug-2016 03:10:47 UTC] PHP   4. BlogController->bloglogin() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[05-Aug-2016 03:16:21 UTC] PHP Fatal error:  Call to undefined method account::model() in /home/ubuntu/workspace/gitlab/challenge2/models/account.php on line 4
+[05-Aug-2016 03:16:21 UTC] PHP Stack trace:
+[05-Aug-2016 03:16:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 03:16:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 03:16:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 03:16:21 UTC] PHP   4. HomeController->login() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 03:16:21 UTC] PHP   5. account->login() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:15
+[05-Aug-2016 03:35:48 UTC] PHP Fatal error:  Call to undefined function get_user_SESSION_all_array() in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 6
+[05-Aug-2016 03:35:48 UTC] PHP Stack trace:
+[05-Aug-2016 03:35:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[05-Aug-2016 03:35:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[05-Aug-2016 03:35:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[05-Aug-2016 03:35:48 UTC] PHP   4. BlogController->index() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[05-Aug-2016 03:36:42 UTC] PHP Fatal error:  Call to undefined method SESSION::check_user_SESSION() in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 41
+[05-Aug-2016 03:36:42 UTC] PHP Stack trace:
+[05-Aug-2016 03:36:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[05-Aug-2016 03:36:42 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[05-Aug-2016 03:36:42 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[05-Aug-2016 03:36:42 UTC] PHP   4. BlogController->userpersonal() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[05-Aug-2016 03:38:10 UTC] PHP Fatal error:  Call to a member function checkadminlogin() on a non-object in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 42
+[05-Aug-2016 03:38:10 UTC] PHP Stack trace:
+[05-Aug-2016 03:38:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[05-Aug-2016 03:38:10 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[05-Aug-2016 03:38:10 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[05-Aug-2016 03:38:10 UTC] PHP   4. BlogController->userpersonal() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[05-Aug-2016 03:40:37 UTC] PHP Warning:  Missing argument 1 for pagetabsdata::indexpage(), called in /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php on line 74 and defined in /home/ubuntu/workspace/gitlab/EasyMVC/models/pagetabsdata.php on line 4
+[05-Aug-2016 03:40:37 UTC] PHP Stack trace:
+[05-Aug-2016 03:40:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:0
+[05-Aug-2016 03:40:37 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/EasyMVC/index.php:24
+[05-Aug-2016 03:40:37 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[05-Aug-2016 03:40:37 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
+[05-Aug-2016 03:40:37 UTC] PHP   5. pagetabsdata->indexpage() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:74

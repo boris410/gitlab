@@ -1,6 +1,5 @@
 <?php 
-    class door extends Controller{
-        
+    class account{
         function login(){
             $db = $this->model("database");
             $result = $db->select("SELECT account_account,account_pass FROM account WHERE account_account='$_POST[useraccount]' AND account_pass='$_POST[userpassword]'");
@@ -12,8 +11,6 @@
             }
         }
         
-        function logout(){
-        }
+       
     }
-
 ?>

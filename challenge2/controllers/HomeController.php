@@ -1,18 +1,17 @@
 <?php
 
-class HomeController extends Controller {
+class HomeController extends load {
         
         function index(){//首頁
-                $show_action  = $this->model("show_action");
+                $show_action  = $this->model("applyaction");
                 $result = $show_action->show_action();
-                
                 $this->view("head");
                 $this->view("index",$result);
                 $this->view("foot");
         }
         function login(){
                 if(isset($_POST[login])){
-                        $door = $this->model("door");
+                        $door = $this->model("account");
                          if($door->login()){
                                  
                          }
@@ -30,7 +29,7 @@ class HomeController extends Controller {
                 $this->view("foot");
         }
         function accending(){//報名
-                $show_action  = $this->model("show_action");
+                $show_action  = $this->model("applyaction");
                 $result = $show_action->show_accending();
                 $this->view("head");
                 $this->view("accending",$result);

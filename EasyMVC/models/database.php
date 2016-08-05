@@ -34,8 +34,6 @@ class database{
         $reuslt = $select->rowCount();
         if($reuslt>0){
          return true;
-        }else{
-         return false;
         }
        
     }
@@ -45,8 +43,6 @@ class database{
         $reuslt = $select->rowCount();
         if($reuslt>0){
          return true;
-        }else{
-         return false;
         }
     }
     

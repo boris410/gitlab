@@ -2,7 +2,7 @@
     class SESSION{
         function set_user_SESSION($txtUserEmail,$txtPassword){//登入確定後設定SESSION
             $_SESSION['username'] = $txtUserEmail;
-            $_SESSION['userpass']  = $txtPassword;
+            $_SESSION['userpass'] = $txtPassword;
         }
         
         function clear_all_user_SESSION(){//清除session
@@ -20,11 +20,6 @@
             return array('username' => $username,'userpass' => $userpass);
         }
         
-        function get_user_SESSION_account(){//取得session 使用者帳號/*****/可精簡
-            $userEmail = $_SESSION['username'];
-            return $userEmail;
-        }
-        
         function clear_car_SESSION($SESSION){//清除購物車的特定項session值
              unset($_SESSION[car][$SESSION]);
             if(!isset($_SESSION[car][$del])){
@@ -32,8 +27,6 @@
                     unset($_SESSION[car]);
              	}
              	return true;
-            }else{
-                return false;
             }
         }
         
@@ -46,8 +39,6 @@
                     $d3=$_SESSION[car][$SESSION][3];
                 }
             return array('gmemberid'=>$d0,'bgoodsid'=>$d1,'bgoodsprice'=>$d2,'bgoodsname'=>$d3);
-            }else{
-                return false;
             }
         }
         
@@ -55,17 +46,7 @@
             $_SESSION[car][$resultarray['addid']]=$resultarray['car'];
             $_SESSION['buytime']=$resultarray['buytime'];
         }
-        function get_SESSION2($str1,$value,$str2){//取得session陣列內 key為$session_key變數的session值/*****/可精簡
-            if($str2==""){
-                $_SESSION[$str1]=$value; 
-            }else{
-                $_SESSION[$str1]=array($str2 =>$value);
-            }
-            
-            return $result;
-            
-
-        }
+    
     }
     
 

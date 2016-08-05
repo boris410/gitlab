@@ -1,19 +1,24 @@
 <?php 
+  
     class car extends load{
+        private $db;
+        function __construct(){
+             $this->db = $this->model("database");
+        }
        
        function showbill($userEmail){//購物車內 個人帳號的所有歷史帳單
-            $db = $this->model("database");
-            $result = $db->select(" SELECT member.mId,bill.* 
-                                    FROM member 
-                                    JOIN bill 
-                                    ON  member.mEmail ='$userEmail' AND member.mId = bill.gmemberid");
-            $db=null;
+            //$db = $this->model("database");
+            $result = $this->db->select(" SELECT member.mId,bill.* 
+                                          FROM member 
+                                          JOIN bill 
+                                          ON  member.mEmail ='$userEmail' AND member.mId = bill.gmemberid");
+            
             return $result;
       }
       
         function addgoods($data,$userEmail,$buytime){//增加商品到購物車
-            $db = $this->model("database");
-            $result = $db->select("SELECT mId 
+            //$db = $this->model("database");
+            $result = $this->db->select("SELECT mId 
                                    FROM member 
                                    WHERE mEmail= '$userEmail' ");
             if(isset($buytime)){//設定購買變數為購買項目的根據 目的:刪除項目時用
@@ -39,8 +44,8 @@
       }
       
         function deal($SESSIONarray,$address,$paytype,$addressee){//交易單筆商品
-            $db=$this->model("database");
-            $db->insert("INSERT INTO bill(gmemberid,bgoodsid,bgoodsprice,bgoodsname,address,paytype,addressee,bbuydate) 
+           // $db=$this->model("database");
+            $this->db->insert("INSERT INTO bill(gmemberid,bgoodsid,bgoodsprice,bgoodsname,address,paytype,addressee,bbuydate) 
                          VALUE('$SESSIONarray[gmemberid]',
                          '$SESSIONarray[bgoodsid]',
                          '$SESSIONarray[bgoodsprice]',
