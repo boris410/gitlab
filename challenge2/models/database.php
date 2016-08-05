@@ -20,20 +20,32 @@ class database{
     }
     
     public function select($sql){
-      $action =  $this->connection->query($sql);
-      return  $action->fetchAll(PDO::FETCH_ASSOC); //取得所有陣列
+        $action =  $this->connection->query($sql);
+        return  $action->fetchAll(PDO::FETCH_ASSOC); //取得所有陣列
     }
     
     public function insert($sql){
      
        $action = $this->connection->query($sql);
-       var_dump($sql);
        return true;
     }
     
     public function delet($sql){
        $action = $this->connection->query($sql);
        return true;
+    }
+    public function update($sql){
+       $action = $this->connection->query($sql);
+       return true;
+    }
+    public function transaction(){
+       $this->connection->beginTransaction();
+    }
+    public function commit(){
+       $this->connection->commit();
+    }
+    public function rollback(){
+       $this->connection->rollBack();
     }
     
    

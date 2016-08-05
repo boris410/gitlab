@@ -6779,3 +6779,132 @@ Stack trace:
 [05-Aug-2016 03:40:37 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19}() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
 [05-Aug-2016 03:40:37 UTC] PHP   4. BlogController->addProduct() /home/ubuntu/workspace/gitlab/EasyMVC/core/App.php:19
 [05-Aug-2016 03:40:37 UTC] PHP   5. pagetabsdata->indexpage() /home/ubuntu/workspace/gitlab/EasyMVC/controllers/BlogController.php:74
+[05-Aug-2016 04:10:11 UTC] PHP Warning:  require_once(models/databse.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/challenge2/core/load.php on line 11
+[05-Aug-2016 04:10:11 UTC] PHP Stack trace:
+[05-Aug-2016 04:10:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 04:10:11 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 04:10:11 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 04:10:11 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 04:10:11 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:6
+[05-Aug-2016 04:10:11 UTC] PHP   6. applyaction->__construct() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:13
+[05-Aug-2016 04:10:11 UTC] PHP   7. load->model() /home/ubuntu/workspace/gitlab/challenge2/models/applyaction.php:5
+[05-Aug-2016 04:10:11 UTC] PHP Fatal error:  require_once(): Failed opening required 'models/databse.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/challenge2/core/load.php on line 11
+[05-Aug-2016 04:10:11 UTC] PHP Stack trace:
+[05-Aug-2016 04:10:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 04:10:11 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 04:10:11 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 04:10:11 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 04:10:11 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:6
+[05-Aug-2016 04:10:11 UTC] PHP   6. applyaction->__construct() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:13
+[05-Aug-2016 04:10:11 UTC] PHP   7. load->model() /home/ubuntu/workspace/gitlab/challenge2/models/applyaction.php:5
+[05-Aug-2016 05:45:35 UTC] PHP Fatal error:  Call to a member function select() on a non-object in /home/ubuntu/workspace/gitlab/challenge2/models/applyaction.php on line 16
+[05-Aug-2016 05:45:35 UTC] PHP Stack trace:
+[05-Aug-2016 05:45:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 05:45:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 05:45:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 05:45:35 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 05:45:35 UTC] PHP   5. applyaction->show_single_action() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:33
+[05-Aug-2016 05:45:46 UTC] PHP Fatal error:  Call to a member function select() on a non-object in /home/ubuntu/workspace/gitlab/challenge2/models/applyaction.php on line 16
+[05-Aug-2016 05:45:46 UTC] PHP Stack trace:
+[05-Aug-2016 05:45:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 05:45:46 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 05:45:46 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 05:45:46 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 05:45:46 UTC] PHP   5. applyaction->show_single_action() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:33
+[05-Aug-2016 07:26:38 UTC] PHP Warning:  require_once(models/check_account.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/challenge2/core/load.php on line 11
+[05-Aug-2016 07:26:38 UTC] PHP Stack trace:
+[05-Aug-2016 07:26:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 07:26:38 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 07:26:38 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 07:26:38 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 07:26:38 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:27
+[05-Aug-2016 07:26:38 UTC] PHP Fatal error:  require_once(): Failed opening required 'models/check_account.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/challenge2/core/load.php on line 11
+[05-Aug-2016 07:26:38 UTC] PHP Stack trace:
+[05-Aug-2016 07:26:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 07:26:38 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 07:26:38 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 07:26:38 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 07:26:38 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:27
+[05-Aug-2016 07:30:49 UTC] PHP Fatal error:  Call to undefined method account::model() in /home/ubuntu/workspace/gitlab/challenge2/models/account.php on line 5
+[05-Aug-2016 07:30:49 UTC] PHP Stack trace:
+[05-Aug-2016 07:30:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 07:30:49 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 07:30:49 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 07:30:49 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 07:30:49 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:27
+[05-Aug-2016 07:30:49 UTC] PHP   6. account->__construct() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:13
+[05-Aug-2016 07:32:10 UTC] PHP Fatal error:  Call to undefined method account::check_acount() in /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php on line 28
+[05-Aug-2016 07:32:10 UTC] PHP Stack trace:
+[05-Aug-2016 07:32:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 07:32:10 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 07:32:10 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 07:32:10 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 07:32:28 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/challenge2/models/database.php on line 24
+[05-Aug-2016 07:32:28 UTC] PHP Stack trace:
+[05-Aug-2016 07:32:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 07:32:28 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 07:32:28 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 07:32:28 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 07:32:28 UTC] PHP   5. account->check_account() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:28
+[05-Aug-2016 07:32:28 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/challenge2/models/account.php:9
+[05-Aug-2016 07:44:10 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/challenge2/models/database.php on line 24
+[05-Aug-2016 07:44:10 UTC] PHP Stack trace:
+[05-Aug-2016 07:44:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 07:44:10 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 07:44:10 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 07:44:10 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 07:44:10 UTC] PHP   5. account->check_account() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:28
+[05-Aug-2016 07:44:10 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/challenge2/models/account.php:10
+[05-Aug-2016 08:15:15 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/challenge2/models/database.php on line 24
+[05-Aug-2016 08:15:15 UTC] PHP Stack trace:
+[05-Aug-2016 08:15:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 08:15:15 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 08:15:15 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 08:15:15 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 08:15:15 UTC] PHP   5. applyaction->get_into_action() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:29
+[05-Aug-2016 08:15:15 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/challenge2/models/applyaction.php:26
+[05-Aug-2016 08:26:09 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home/ubuntu/workspace/gitlab/challenge2/models/applyaction.php on line 29
+[05-Aug-2016 08:26:09 UTC] PHP Stack trace:
+[05-Aug-2016 08:26:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 08:26:09 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 08:26:09 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 08:26:09 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 08:26:09 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:24
+[05-Aug-2016 08:26:11 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home/ubuntu/workspace/gitlab/challenge2/models/applyaction.php on line 29
+[05-Aug-2016 08:26:11 UTC] PHP Stack trace:
+[05-Aug-2016 08:26:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 08:26:11 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 08:26:11 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 08:26:11 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 08:26:11 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:6
+[05-Aug-2016 08:28:05 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php on line 30
+[05-Aug-2016 08:28:05 UTC] PHP Stack trace:
+[05-Aug-2016 08:28:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 08:28:05 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 08:36:45 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php on line 33
+[05-Aug-2016 08:36:45 UTC] PHP Stack trace:
+[05-Aug-2016 08:36:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 08:36:45 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 09:10:10 UTC] PHP Fatal error:  Call to undefined method database::beginTransaction() in /home/ubuntu/workspace/gitlab/challenge2/models/applyaction.php on line 26
+[05-Aug-2016 09:10:10 UTC] PHP Stack trace:
+[05-Aug-2016 09:10:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 09:10:10 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 09:10:10 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 09:10:10 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 09:10:10 UTC] PHP   5. applyaction->get_into_action() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:29
+[05-Aug-2016 09:13:35 UTC] PHP Fatal error:  Call to undefined method database::beginTransaction() in /home/ubuntu/workspace/gitlab/challenge2/models/applyaction.php on line 25
+[05-Aug-2016 09:13:35 UTC] PHP Stack trace:
+[05-Aug-2016 09:13:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 09:13:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 09:13:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 09:13:35 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 09:13:35 UTC] PHP   5. applyaction->get_into_action() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:29
+[05-Aug-2016 09:21:14 UTC] PHP Parse error:  syntax error, unexpected '{', expecting '(' in /home/ubuntu/workspace/gitlab/challenge2/models/database.php on line 41
+[05-Aug-2016 09:21:14 UTC] PHP Stack trace:
+[05-Aug-2016 09:21:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[05-Aug-2016 09:21:14 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[05-Aug-2016 09:21:14 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 09:21:14 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[05-Aug-2016 09:21:14 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:24
+[05-Aug-2016 09:21:14 UTC] PHP   6. applyaction->__construct() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:13
+[05-Aug-2016 09:21:14 UTC] PHP   7. load->model() /home/ubuntu/workspace/gitlab/challenge2/models/applyaction.php:5

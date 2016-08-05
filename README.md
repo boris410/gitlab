@@ -67,6 +67,8 @@
 
 8/5 MVC架構購物網站專案----程式重購--優化程式碼2.4版-改  model construct db 移除在每個model中多餘的 new db
 
+8/6 challenge 2 view前台完成 model部分剩餘 買票、ajax顯示人數、輸入攜帶人數未完成
+
 
 
 
