@@ -17,8 +17,10 @@
         }
         function account()//首頁
         {
+            $bank = $this->model("bank");
+            $result = $bank->account_inquire("$_SESSION[account]");
             $this->view("head");
-            $this->view("account");
+            $this->view("account",$result);
             $this->view("foot");
         }
     }
