@@ -11,5 +11,6 @@
             $result = $this->db->select("SELECT * FROM `applyaction` WHERE `action_partpeopletype`='$str' AND `action_id`='$action_id'");//檢查是否類型符合
             return $result;
         }
+        
     }
 ?>

@@ -6908,3 +6908,247 @@ Stack trace:
 [05-Aug-2016 09:21:14 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:24
 [05-Aug-2016 09:21:14 UTC] PHP   6. applyaction->__construct() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:13
 [05-Aug-2016 09:21:14 UTC] PHP   7. load->model() /home/ubuntu/workspace/gitlab/challenge2/models/applyaction.php:5
+[07-Aug-2016 04:18:36 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 28
+[07-Aug-2016 04:18:36 UTC] PHP Stack trace:
+[07-Aug-2016 04:18:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 04:18:36 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 04:18:36 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 04:18:36 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 04:18:36 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 04:18:36 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 04:21:07 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 29
+[07-Aug-2016 04:21:07 UTC] PHP Stack trace:
+[07-Aug-2016 04:21:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 04:21:07 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 04:21:07 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 04:21:07 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 04:21:07 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 04:21:07 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 04:22:13 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 29
+[07-Aug-2016 04:22:13 UTC] PHP Stack trace:
+[07-Aug-2016 04:22:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 04:22:13 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 04:22:13 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 04:22:13 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 04:22:13 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 04:22:13 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 04:24:16 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 29
+[07-Aug-2016 04:24:16 UTC] PHP Stack trace:
+[07-Aug-2016 04:24:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 04:24:16 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 04:24:16 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 04:24:16 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 04:24:16 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 04:24:16 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 04:24:50 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 28
+[07-Aug-2016 04:24:50 UTC] PHP Stack trace:
+[07-Aug-2016 04:24:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 04:24:50 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 04:24:50 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 04:24:50 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 04:24:50 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 04:24:50 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 04:26:15 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 29
+[07-Aug-2016 04:26:15 UTC] PHP Stack trace:
+[07-Aug-2016 04:26:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 04:26:15 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 04:26:15 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 04:26:15 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 04:26:15 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 04:26:15 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 04:30:02 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 29
+[07-Aug-2016 04:30:02 UTC] PHP Stack trace:
+[07-Aug-2016 04:30:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 04:30:02 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 04:30:02 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 04:30:02 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 04:30:02 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 04:30:02 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 04:30:29 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 29
+[07-Aug-2016 04:30:29 UTC] PHP Stack trace:
+[07-Aug-2016 04:30:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 04:30:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 04:30:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 04:30:29 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 04:30:29 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 04:30:29 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 04:31:18 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 29
+[07-Aug-2016 04:31:18 UTC] PHP Stack trace:
+[07-Aug-2016 04:31:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 04:31:18 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 04:31:18 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 04:31:18 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 04:31:18 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 04:31:18 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 06:38:01 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 30
+[07-Aug-2016 06:38:01 UTC] PHP Stack trace:
+[07-Aug-2016 06:38:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 06:38:01 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 06:38:01 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 06:38:01 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 06:38:01 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 06:38:01 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 06:38:25 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 30
+[07-Aug-2016 06:38:25 UTC] PHP Stack trace:
+[07-Aug-2016 06:38:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 06:38:25 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 06:38:25 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 06:38:25 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 06:38:25 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 06:38:25 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 06:38:34 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 30
+[07-Aug-2016 06:38:34 UTC] PHP Stack trace:
+[07-Aug-2016 06:38:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 06:38:34 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 06:38:34 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 06:38:34 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 06:38:34 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 06:38:34 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 06:50:16 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 30
+[07-Aug-2016 06:50:16 UTC] PHP Stack trace:
+[07-Aug-2016 06:50:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 06:50:16 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 06:50:16 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 06:50:16 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 06:50:16 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 06:50:16 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 06:50:48 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 30
+[07-Aug-2016 06:50:48 UTC] PHP Stack trace:
+[07-Aug-2016 06:50:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 06:50:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 06:50:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 06:50:48 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 06:50:48 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 06:50:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 06:52:42 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 30
+[07-Aug-2016 06:52:42 UTC] PHP Stack trace:
+[07-Aug-2016 06:52:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 06:52:42 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 06:52:42 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 06:52:42 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 06:52:42 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 06:52:42 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 06:58:46 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 30
+[07-Aug-2016 06:58:46 UTC] PHP Stack trace:
+[07-Aug-2016 06:58:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 06:58:46 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 06:58:46 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 06:58:46 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 06:58:46 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 06:58:46 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 07:03:30 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 30
+[07-Aug-2016 07:03:30 UTC] PHP Stack trace:
+[07-Aug-2016 07:03:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 07:03:30 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 07:03:30 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:03:30 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:03:30 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 07:03:30 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 07:03:52 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 30
+[07-Aug-2016 07:03:52 UTC] PHP Stack trace:
+[07-Aug-2016 07:03:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 07:03:52 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 07:03:52 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:03:52 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:03:52 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 07:03:52 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 07:04:28 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 30
+[07-Aug-2016 07:04:28 UTC] PHP Stack trace:
+[07-Aug-2016 07:04:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 07:04:28 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 07:04:28 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:04:28 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:04:28 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 07:04:28 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 07:04:43 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 30
+[07-Aug-2016 07:04:43 UTC] PHP Stack trace:
+[07-Aug-2016 07:04:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 07:04:43 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 07:04:43 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:04:43 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:04:43 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 07:04:43 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 07:05:11 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 29
+[07-Aug-2016 07:05:11 UTC] PHP Stack trace:
+[07-Aug-2016 07:05:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 07:05:11 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 07:05:11 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:05:11 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:05:11 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 07:05:11 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 07:05:21 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 29
+[07-Aug-2016 07:05:21 UTC] PHP Stack trace:
+[07-Aug-2016 07:05:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 07:05:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 07:05:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:05:21 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:05:21 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 07:05:21 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 07:05:35 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 30
+[07-Aug-2016 07:05:35 UTC] PHP Stack trace:
+[07-Aug-2016 07:05:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 07:05:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 07:05:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:05:35 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:05:35 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 07:05:35 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 07:05:48 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 30
+[07-Aug-2016 07:05:48 UTC] PHP Stack trace:
+[07-Aug-2016 07:05:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 07:05:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 07:05:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:05:48 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:05:48 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 07:05:48 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 07:06:53 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 29
+[07-Aug-2016 07:06:53 UTC] PHP Stack trace:
+[07-Aug-2016 07:06:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 07:06:53 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 07:06:53 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:06:53 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:06:53 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 07:06:53 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 07:08:34 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 29
+[07-Aug-2016 07:08:34 UTC] PHP Stack trace:
+[07-Aug-2016 07:08:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 07:08:34 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 07:08:34 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:08:34 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:08:34 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 07:08:34 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 07:09:05 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 28
+[07-Aug-2016 07:09:05 UTC] PHP Stack trace:
+[07-Aug-2016 07:09:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 07:09:05 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 07:09:05 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:09:05 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:09:05 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 07:09:05 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 07:09:16 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 28
+[07-Aug-2016 07:09:16 UTC] PHP Stack trace:
+[07-Aug-2016 07:09:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 07:09:16 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 07:09:16 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:09:16 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:09:16 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 07:09:16 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[07-Aug-2016 07:12:44 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/ubuntu/workspace/gitlab/challenge2/views/accending.php on line 29
+[07-Aug-2016 07:12:44 UTC] PHP Stack trace:
+[07-Aug-2016 07:12:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[07-Aug-2016 07:12:44 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[07-Aug-2016 07:12:44 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:12:44 UTC] PHP   4. HomeController->accending() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[07-Aug-2016 07:12:44 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php:37
+[07-Aug-2016 07:12:44 UTC] PHP   6. require_once() /home/ubuntu/workspace/gitlab/challenge2/core/load.php:17
+[08-Aug-2016 01:45:17 UTC] PHP Warning:  Missing argument 1 for HomeController::ajax() in /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php on line 41
+[08-Aug-2016 01:45:17 UTC] PHP Stack trace:
+[08-Aug-2016 01:45:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[08-Aug-2016 01:45:17 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[08-Aug-2016 01:45:17 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[08-Aug-2016 01:45:17 UTC] PHP   4. HomeController->ajax() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[08-Aug-2016 01:46:56 UTC] PHP Warning:  Missing argument 1 for HomeController::ajax() in /home/ubuntu/workspace/gitlab/challenge2/controllers/HomeController.php on line 41
+[08-Aug-2016 01:46:56 UTC] PHP Stack trace:
+[08-Aug-2016 01:46:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/challenge2/index.php:0
+[08-Aug-2016 01:46:56 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
+[08-Aug-2016 01:46:56 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[08-Aug-2016 01:46:56 UTC] PHP   4. HomeController->ajax() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19

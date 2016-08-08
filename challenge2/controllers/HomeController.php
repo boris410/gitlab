@@ -38,21 +38,22 @@ class HomeController extends load {
                 $this->view("foot");
         }
         
-        function ajax(){//報名
-                $applyaction  = $this->model("applyaction");
-                $result = $applyaction->show_single_action($_GET['ac']);
-                if($_POST['submit']){
-                        $account = $this->model("account");
-                        if($account->check_account($_POST['employ'],$_POST['action_id'])){//檢查員工參加類型
-                             if($applyaction->get_into_action($_POST['takepeople'],$_POST['action_id'])){
-                                    header("location: accending?ac=$_POST[action_id]");
-                             }
-                        }
-                }
-                $this->view("head");
-                $this->view("accending",$result);
-                $this->view("foot");
-        }
+        // function ajax(){//報名
+        //         $applyaction  = $this->model("applyaction");
+        //         $result = $applyaction->show_single_action($_GET['ac']);
+        //                 $account = $this->model("account");
+        //                 if($account->check_account($_POST['employ'],$_POST['action_id'])){//檢查員工參加類型
+        //                      if($applyaction->get_into_action($_POST['takepeople'],$_POST['action_id'])){
+        //                         $data = "ok";
+        //                         $this->view("head");
+        //                         $this->view("accending",$data);
+        //                         $this->view("foot");
+        //                      }
+        //                 }
+                
+               
+                
+        // }
      
         
 }

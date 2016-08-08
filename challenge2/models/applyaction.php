@@ -21,18 +21,18 @@
             return $reuslt;
         }
         function get_into_action($takepeople,$action_id){//參加成功後 對applyaction欄位 人數作刷新
-            // try{
-            //     $this->db->transaction();
-            //     $result = $this->db->select("SELECT `action_nowpeoples` FROM `applyaction` WHERE `action_id` = '$action_id' FOR UPDATE");
-            //     $action_nowpeoples = $result[0][action_nowpeoples];
-            //     $this->db->update("UPDATE `applyaction` SET `action_nowpeoples`=(`action_nowpeoples`-$takepeople) WHERE `action_id` = '$action_id'");
+            try{
+                $this->db->transaction();
+                $result = $this->db->select("SELECT `action_nowpeoples` FROM `applyaction` WHERE `action_id` = '$action_id' FOR UPDATE");
+                $action_nowpeoples = $result[0][action_nowpeoples];
+                $this->db->update("UPDATE `applyaction` SET `action_nowpeoples`=(`action_nowpeoples`-$takepeople) WHERE `action_id` = '$action_id'");
                 
-            //     $this->db->commit();
-            //      return true;
-            // }catch(Exception $e){
-            //     $this->db->rollBack();
-            //      return false;
-            // }
+                $this->db->commit();
+                 return true;
+            }catch(Exception $e){
+                $this->db->rollBack();
+                 return false;
+            }
                 
                 
         }

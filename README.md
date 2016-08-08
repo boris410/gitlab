@@ -69,6 +69,8 @@
 
 8/6 challenge 2 view前台完成 model部分剩餘 買票、ajax顯示人數、輸入攜帶人數未完成
 
+8/6 challenge 2 accending ajax 未完成
+
 
 
 
