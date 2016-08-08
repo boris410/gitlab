@@ -4,6 +4,15 @@
         {
            $_SESSION['account'] = $account;
         }
+        
+        function get_user_SESSION()//登入確定後設定SESSION
+        {
+           $result = $_SESSION['account'];
+           return $result;
+        }
+        
+        
+
     }
     
 
