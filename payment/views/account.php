@@ -1,1 +1,1 @@
-ACCOUNT_DETAIL
+<?php var_dump($data)?>

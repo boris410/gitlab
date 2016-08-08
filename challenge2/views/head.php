@@ -9,7 +9,7 @@
 		<meta charset="utf-8">
     </head>
 <body>
-	<div class="col-sm-9"  style="border:3px gray solid; margin:3px;padding:3px;">
+	 <div class="col-sm-9"  style="border:3px gray solid; margin:3px;padding:3px;">
 		<?php if(!isset($data[0][account_account])){?>
 		<a href="index">首頁</a>
 		<a href="build">申請活動</a>

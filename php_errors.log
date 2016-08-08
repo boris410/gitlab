@@ -7152,3 +7152,179 @@ Stack trace:
 [08-Aug-2016 01:46:56 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/challenge2/index.php:9
 [08-Aug-2016 01:46:56 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/challenge2/core/App.php:19}() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
 [08-Aug-2016 01:46:56 UTC] PHP   4. HomeController->ajax() /home/ubuntu/workspace/gitlab/challenge2/core/App.php:19
+[08-Aug-2016 07:49:37 UTC] PHP Warning:  require_once(views/head.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/payment/core/load.php on line 15
+[08-Aug-2016 07:49:37 UTC] PHP Stack trace:
+[08-Aug-2016 07:49:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 07:49:37 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 07:49:37 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 07:49:37 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 07:49:37 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:6
+[08-Aug-2016 07:49:37 UTC] PHP Fatal error:  require_once(): Failed opening required 'views/head.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/payment/core/load.php on line 15
+[08-Aug-2016 07:49:37 UTC] PHP Stack trace:
+[08-Aug-2016 07:49:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 07:49:37 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 07:49:37 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 07:49:37 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 07:49:37 UTC] PHP   5. load->view() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:6
+[08-Aug-2016 08:29:01 UTC] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/bank.php on line 15
+[08-Aug-2016 08:29:01 UTC] PHP Stack trace:
+[08-Aug-2016 08:29:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 08:29:01 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 08:29:01 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 08:29:01 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 08:29:01 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 08:29:52 UTC] PHP Fatal error:  Call to undefined method database::rowCount() in /home/ubuntu/workspace/gitlab/payment/models/bank.php on line 15
+[08-Aug-2016 08:29:52 UTC] PHP Stack trace:
+[08-Aug-2016 08:29:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 08:29:52 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 08:29:52 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 08:29:52 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 08:29:52 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 08:43:07 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 08:43:07 UTC] PHP Stack trace:
+[08-Aug-2016 08:43:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 08:43:07 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 08:43:07 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 08:43:07 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 08:43:07 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 08:43:07 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 08:43:26 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 08:43:26 UTC] PHP Stack trace:
+[08-Aug-2016 08:43:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 08:43:26 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 08:43:26 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 08:43:26 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 08:43:26 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 08:43:26 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 08:43:32 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 08:43:32 UTC] PHP Stack trace:
+[08-Aug-2016 08:43:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 08:43:32 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 08:43:32 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 08:43:32 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 08:43:32 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 08:43:32 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:09:04 UTC] PHP Warning:  require_once(models/SESSION.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/payment/core/load.php on line 10
+[08-Aug-2016 09:09:04 UTC] PHP Stack trace:
+[08-Aug-2016 09:09:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:09:04 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:09:04 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:09:04 UTC] PHP   4. HomeController->account() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:09:04 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:18
+[08-Aug-2016 09:09:04 UTC] PHP Fatal error:  require_once(): Failed opening required 'models/SESSION.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/payment/core/load.php on line 10
+[08-Aug-2016 09:09:04 UTC] PHP Stack trace:
+[08-Aug-2016 09:09:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:09:04 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:09:04 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:09:04 UTC] PHP   4. HomeController->account() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:09:04 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:18
+[08-Aug-2016 09:11:14 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:11:14 UTC] PHP Stack trace:
+[08-Aug-2016 09:11:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:11:14 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:11:14 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:11:14 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:11:14 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:11:14 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:12:28 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:12:28 UTC] PHP Stack trace:
+[08-Aug-2016 09:12:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:12:28 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:12:28 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:12:28 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:12:28 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:12:28 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:16:09 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:16:09 UTC] PHP Stack trace:
+[08-Aug-2016 09:16:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:16:09 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:16:09 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:16:09 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:16:09 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:16:09 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:16:14 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:16:14 UTC] PHP Stack trace:
+[08-Aug-2016 09:16:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:16:14 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:16:14 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:16:14 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:16:14 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:16:14 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:17:57 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:17:57 UTC] PHP Stack trace:
+[08-Aug-2016 09:17:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:17:57 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:17:57 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:17:57 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:17:57 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:17:57 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:20:12 UTC] PHP Warning:  require_once(models/SESSION.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/payment/core/load.php on line 10
+[08-Aug-2016 09:20:12 UTC] PHP Stack trace:
+[08-Aug-2016 09:20:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:20:12 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:20:12 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:20:12 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:20:12 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:10
+[08-Aug-2016 09:20:12 UTC] PHP Fatal error:  require_once(): Failed opening required 'models/SESSION.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/payment/core/load.php on line 10
+[08-Aug-2016 09:20:12 UTC] PHP Stack trace:
+[08-Aug-2016 09:20:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:20:12 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:20:12 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:20:12 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:20:12 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:10
+[08-Aug-2016 09:23:03 UTC] PHP Warning:  require_once(models/SESSION.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/payment/core/load.php on line 10
+[08-Aug-2016 09:23:03 UTC] PHP Stack trace:
+[08-Aug-2016 09:23:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:23:03 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:23:03 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:23:03 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:23:03 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:9
+[08-Aug-2016 09:23:03 UTC] PHP Fatal error:  require_once(): Failed opening required 'models/SESSION.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/payment/core/load.php on line 10
+[08-Aug-2016 09:23:03 UTC] PHP Stack trace:
+[08-Aug-2016 09:23:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:23:03 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:23:03 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:23:03 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:23:03 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:9
+[08-Aug-2016 09:24:02 UTC] PHP Warning:  require_once(models/SESSION.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/payment/core/load.php on line 10
+[08-Aug-2016 09:24:02 UTC] PHP Stack trace:
+[08-Aug-2016 09:24:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:24:02 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:24:02 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:24:02 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:24:02 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:24:02 UTC] PHP Fatal error:  require_once(): Failed opening required 'models/SESSION.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/payment/core/load.php on line 10
+[08-Aug-2016 09:24:02 UTC] PHP Stack trace:
+[08-Aug-2016 09:24:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:24:02 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:24:02 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:24:02 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:24:02 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:24:44 UTC] PHP Warning:  require_once(models/SESSION.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/payment/core/load.php on line 10
+[08-Aug-2016 09:24:44 UTC] PHP Stack trace:
+[08-Aug-2016 09:24:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:24:44 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:24:44 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:24:44 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:24:44 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:9
+[08-Aug-2016 09:24:44 UTC] PHP Fatal error:  require_once(): Failed opening required 'models/SESSION.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/payment/core/load.php on line 10
+[08-Aug-2016 09:24:44 UTC] PHP Stack trace:
+[08-Aug-2016 09:24:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:24:44 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:24:44 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:24:44 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:24:44 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:9
+[08-Aug-2016 09:25:33 UTC] PHP Warning:  require_once(models/SESSION.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/payment/core/load.php on line 10
+[08-Aug-2016 09:25:33 UTC] PHP Stack trace:
+[08-Aug-2016 09:25:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:25:33 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:25:33 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:25:33 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:25:33 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:9
+[08-Aug-2016 09:25:33 UTC] PHP Fatal error:  require_once(): Failed opening required 'models/SESSION.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/payment/core/load.php on line 10
+[08-Aug-2016 09:25:33 UTC] PHP Stack trace:
+[08-Aug-2016 09:25:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:25:33 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:25:33 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:25:33 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:25:33 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:9
