@@ -52,7 +52,7 @@ class HomeController extends load
     {
         $bank = $this->model("bank");
         $result = $bank->getAccounData("$_SESSION[account]");//透過session 取得帳號 pk
-        $result2 = $bank->account_record($result[0]['account_id']);//透過 pk account_id 取出明細   record表只對應account_id
+        $result2 = $bank->getAccounRecord($result[0]['account_id']);//透過 pk account_id 取出明細   record表只對應account_id
         $this->view("Head");
         $this->view("ShowAccountDetail", $result2);
         $this->view("Foot");
