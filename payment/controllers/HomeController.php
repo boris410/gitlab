@@ -7,8 +7,8 @@ class HomeController extends load
             $bank = $this->model("bank");
 
             if ($bank->account_inquire("$_POST[account]")) {//輸入帳號
-                $session = $this->model("SESSION");
-                $session->set_user_SESSION($_POST['account']);//設定session account
+                $session = $this->model("Session");
+                $session->setUserSession($_POST['account']);//設定session account
                 header("location: showAccount");
             }
 
@@ -98,8 +98,8 @@ class HomeController extends load
 
     function logout()//登出
     {
-        $SESSION = $this->model("SESSION");
-        $SESSION->clear_SESSION();//清除session
+        $SESSION = $this->model("Session");
+        $SESSION->clearSession();//清除session
         header("location: index");
     }
 }
