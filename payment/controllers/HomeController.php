@@ -30,21 +30,29 @@
             $this->view("account",$result);
             $this->view("foot");
         }
+        
         function inquire()//首頁
         {
             $bank = $this->model("bank");
             $result = $bank->account_inquire("$_SESSION[account]");
-            
             $result2 = $bank->account_record($result[0]['account_id']);
             $this->view("head");
             $this->view("inquire",$result2);
             $this->view("foot");
         }
+        
          function input()//首頁
         {
+            $bank = $this->model("bank");
+            $result = $bank->account_inquire("$_SESSION[account]");
+            if(isset($_POST['submitmoney'])){
+             $bank->account_input($result[0]['account_account'],$_POST['inputmoney']);
+             header("location: account");
+            }
             $this->view("head");
             $this->view("input");
             $this->view("foot");
+            
         }
          function output()//首頁
         {
