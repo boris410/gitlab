@@ -7,9 +7,9 @@ class HomeController extends load
         if(isset($_POST['submit'])){
             $bank = $this->model("bank");
 
-            if ($bank->account_inquire("$_POST[account]")) {
+            if ($bank->account_inquire("$_POST[account]")) {//輸入帳號
                 $session = $this->model("SESSION");
-                $session->set_user_SESSION($_POST['account']);
+                $session->set_user_SESSION($_POST['account']);//設定session account
                 header("location: account");
             }
 
@@ -19,20 +19,20 @@ class HomeController extends load
          $this->view("foot");
     }
 
-    function account()//首頁
+    function account()//操作頁面
     {
         $bank = $this->model("bank");
-        $result = $bank->account_inquire("$_SESSION[account]");
+        $result = $bank->account_inquire("$_SESSION[account]");//提取帳號資訊
 
-            if ($_POST['option']=="1") {
+            if ($_POST['option'] == "1") {//選擇操作 查詢金額
                  header("location:  inquire_money");
-            } elseif ($_POST['option']=="2") {
+            } elseif ($_POST['option'] == "2") {//存錢
                  header("location: input");
-            } elseif ($_POST['option']=="3") {
+            } elseif ($_POST['option'] == "3") {
                  header("location: output");
-            } elseif ($_POST['option']=="4") {
+            } elseif ($_POST['option'] == "4") {
                  header("location: inquire");
-            } elseif ($_POST['option']=="5") {
+            } elseif ($_POST['option'] == "5") {
                  header("location: logout");
             }
 
@@ -41,23 +41,23 @@ class HomeController extends load
          $this->view("foot");
     }
 
-    function inquire()//首頁
+    function inquire()//查詢明細
     {
         $bank = $this->model("bank");
-        $result = $bank->account_inquire("$_SESSION[account]");
-        $result2 = $bank->account_record($result[0]['account_id']);
+        $result = $bank->account_inquire("$_SESSION[account]");//透過session 取得帳號 pk
+        $result2 = $bank->account_record($result[0]['account_id']);//透過 pk account_id 取出明細   record表只對應account_id
         $this->view("head");
         $this->view("inquire",$result2);
         $this->view("foot");
     }
 
-    function input()//首頁
+    function input()//存入金額
     {
         $bank = $this->model("bank");
-        $result = $bank->account_inquire("$_SESSION[account]");
+        $result = $bank->account_inquire("$_SESSION[account]");//取得帳號資訊
 
         if (isset($_POST['submitmoney'])) {
-            $bank->account_input($result[0]['account_account'],$_POST['inputmoney']);
+            $bank->account_input($result[0]['account_account'],$_POST['inputmoney']);//帶入帳號及金額
             header("location: account");
         }
 
@@ -66,13 +66,13 @@ class HomeController extends load
         $this->view("foot");
     }
 
-    function output()//首頁
+    function output()//提取金額
     {
         $bank = $this->model("bank");
-        $result = $bank->account_inquire("$_SESSION[account]");
+        $result = $bank->account_inquire("$_SESSION[account]");//取得帳號資訊
 
         if (isset($_POST['submitmoney'])) {
-            if ($bank->account_output($result[0]['account_account'],$_POST['outputmoney'])) {
+            if ($bank->account_output($result[0]['account_account'],$_POST['outputmoney'])) {//帶入帳號及金額
                 header("location: account"); 
              }
         }
@@ -82,19 +82,19 @@ class HomeController extends load
         $this->view("foot");
     }
 
-    function inquire_money()//首頁
+    function inquire_money()//查詢餘額
     {
         $bank = $this->model("bank");
-        $result = $bank->account_inquire("$_SESSION[account]");
+        $result = $bank->account_inquire("$_SESSION[account]");//取得帳號資訊
         $this->view("head");
         $this->view("inquire_money",$result);
         $this->view("foot");
     }
 
-    function logout()//首頁
+    function logout()//登出
     {
         $SESSION = $this->model("SESSION");
-        $SESSION->clear_SESSION();
+        $SESSION->clear_SESSION();//清除session
         header("location: index");
     }
 }
