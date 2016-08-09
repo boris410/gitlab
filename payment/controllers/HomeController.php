@@ -13,9 +13,9 @@ class HomeController extends load
             }
 
          }
-         $this->view("head");
+         $this->view("Head");
          $this->view("index");
-         $this->view("foot");
+         $this->view("Foot");
     }
 
     function showAccount()//操作頁面
@@ -43,9 +43,9 @@ class HomeController extends load
              header("location: logout");
         }
 
-        $this->view("head");
+        $this->view("Head");
         $this->view("ShowAccount", $result);
-        $this->view("foot");
+        $this->view("Foot");
     }
 
     function showAccountDetail()//查詢明細
@@ -53,9 +53,9 @@ class HomeController extends load
         $bank = $this->model("bank");
         $result = $bank->account_inquire("$_SESSION[account]");//透過session 取得帳號 pk
         $result2 = $bank->account_record($result[0]['account_id']);//透過 pk account_id 取出明細   record表只對應account_id
-        $this->view("head");
+        $this->view("Head");
         $this->view("ShowAccountDetail", $result2);
-        $this->view("foot");
+        $this->view("Foot");
     }
 
     function inputMoney()//存入金額
@@ -67,9 +67,9 @@ class HomeController extends load
             $bank->account_input($result[0]['account_account'], $_POST['inputmoney']);//帶入帳號及金額
             header("location: showAccount");
         }
-        $this->view("head");
+        $this->view("Head");
         $this->view("InputMoney");
-        $this->view("foot");
+        $this->view("Foot");
     }
 
     function outputMoney()//提取金額
@@ -82,18 +82,18 @@ class HomeController extends load
                 header("location: showAccount");
              }
         }
-        $this->view("head");
+        $this->view("Head");
         $this->view("OutputMoney");
-        $this->view("foot");
+        $this->view("Foot");
     }
 
     function inquireMoney()//查詢餘額
     {
         $bank = $this->model("bank");
         $result = $bank->account_inquire("$_SESSION[account]");//取得帳號資訊
-        $this->view("head");
+        $this->view("Head");
         $this->view("InquireMoney", $result);
-        $this->view("foot");
+        $this->view("Foot");
     }
 
     function logout()//登出
