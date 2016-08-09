@@ -29,6 +29,8 @@
                 header("location: output");
             } else if ($_POST['option']=="4") {
                 header("location: inquire");
+            } else if ($_POST['option']=="5") {
+                header("location: logout");
             }
             $this->view("head");
             $this->view("account",$result);
@@ -79,6 +81,13 @@
             $this->view("head");
             $this->view("inquire_money",$result);
             $this->view("foot");
+        }
+        
+        function logout()//首頁
+        {
+            $SESSION = $this->model("SESSION");
+            $SESSION->clear_SESSION();
+            header("location: index");
         }
         
     }
