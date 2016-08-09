@@ -25,6 +25,11 @@
              $result = $this->db->insert("UPDATE `account_detail` SET `account_money`= `account_money`+ $inputmoney WHERE `account_account`=$account_account");
         }
         
+        function account_output($account_account,$inputmoney)
+        {
+             $result = $this->db->insert("UPDATE `account_detail` SET `account_money`= `account_money`- $inputmoney WHERE `account_account`=$account_account");
+        }
+        
         
     }
 ?>
