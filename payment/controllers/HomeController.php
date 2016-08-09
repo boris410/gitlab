@@ -36,7 +36,7 @@ class HomeController extends load
         }
 
         if ($_POST['option'] == "4") {
-             header("location: inquire");
+             header("location: showAccountDetail");
         }
 
         if ($_POST['option'] == "5") {
@@ -48,13 +48,13 @@ class HomeController extends load
         $this->view("foot");
     }
 
-    function inquire()//查詢明細
+    function showAccountDetail()//查詢明細
     {
         $bank = $this->model("bank");
         $result = $bank->account_inquire("$_SESSION[account]");//透過session 取得帳號 pk
         $result2 = $bank->account_record($result[0]['account_id']);//透過 pk account_id 取出明細   record表只對應account_id
         $this->view("head");
-        $this->view("inquire", $result2);
+        $this->view("ShowAccountDetail", $result2);
         $this->view("foot");
     }
 
