@@ -22,13 +22,13 @@
             $bank = $this->model("bank");
             $result = $bank->account_inquire("$_SESSION[account]");
             if ($_POST['option']=="1") {
-                header("location: inquire");
+                header("location:  inquire_money");
             } else if ($_POST['option']=="2") {
                 header("location: input");
             } else if ($_POST['option']=="3") {
                 header("location: output");
             } else if ($_POST['option']=="4") {
-                header("location:  inquire_money");
+                header("location: inquire");
             }
             $this->view("head");
             $this->view("account",$result);
@@ -75,7 +75,7 @@
         function inquire_money()//首頁
         {
             $bank = $this->model("bank");
-            $result = $bank->account_money("$_SESSION[account]");
+            $result = $bank->account_inquire("$_SESSION[account]");
             $this->view("head");
             $this->view("inquire_money",$result);
             $this->view("foot");
