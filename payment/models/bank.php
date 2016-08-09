@@ -6,7 +6,7 @@ class bank extends load
 
     function __construct()
     {
-        $this->db = $this->model("database");
+        $this->db = $this->model("DataBase");
     }
 
     function account_inquire($account)//查詢帳號對應的資訊
