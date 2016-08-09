@@ -14,7 +14,7 @@ class HomeController extends load
 
          }
          $this->view("Head");
-         $this->view("index");
+         $this->view("Index");
          $this->view("Foot");
     }
 
