@@ -32,7 +32,7 @@ class HomeController extends load
         }
 
         if ($_POST['option'] == "3") {
-             header("location: output");
+             header("location: outputMoney");
         }
 
         if ($_POST['option'] == "4") {
@@ -72,7 +72,7 @@ class HomeController extends load
         $this->view("foot");
     }
 
-    function output()//提取金額
+    function outputMoney()//提取金額
     {
         $bank = $this->model("bank");
         $result = $bank->account_inquire("$_SESSION[account]");//取得帳號資訊
@@ -83,7 +83,7 @@ class HomeController extends load
              }
         }
         $this->view("head");
-        $this->view("output");
+        $this->view("OutputMoney");
         $this->view("foot");
     }
 
