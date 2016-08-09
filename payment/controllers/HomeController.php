@@ -1,7 +1,7 @@
 <?php
     class HomeController extends load
     {
-     
+
         function index()//首頁
         {
             if(isset($_POST['submit'])){
@@ -16,7 +16,7 @@
             $this->view("index");
             $this->view("foot");
         }
-        
+
         function account()//首頁
         {
             $bank = $this->model("bank");
@@ -36,7 +36,7 @@
             $this->view("account",$result);
             $this->view("foot");
         }
-        
+
         function inquire()//首頁
         {
             $bank = $this->model("bank");
@@ -46,7 +46,7 @@
             $this->view("inquire",$result2);
             $this->view("foot");
         }
-        
+
         function input()//首頁
         {
             $bank = $this->model("bank");
@@ -58,9 +58,8 @@
             $this->view("head");
             $this->view("input");
             $this->view("foot");
-            
         }
-        
+
         function output()//首頁
         {
             $bank = $this->model("bank");
@@ -73,7 +72,7 @@
             $this->view("output");
             $this->view("foot");
         }
-        
+
         function inquire_money()//首頁
         {
             $bank = $this->model("bank");
@@ -82,14 +81,13 @@
             $this->view("inquire_money",$result);
             $this->view("foot");
         }
-        
+
         function logout()//首頁
         {
             $SESSION = $this->model("SESSION");
             $SESSION->clear_SESSION();
             header("location: index");
         }
-        
     }
 ?>
 
