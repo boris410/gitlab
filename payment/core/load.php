@@ -1,7 +1,7 @@
 <?php
+
 class load
 {
-
     public function __construct()
     {
         session_start();

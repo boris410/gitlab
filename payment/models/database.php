@@ -1,7 +1,7 @@
-<?php 
+<?php
+
 class database
 {
-
     const DATABASE_HOST = 'localhost';
     const DATABASE_NAME = 'payment';
     const DATABASE_USERNAME = 'root';
@@ -15,7 +15,7 @@ class database
             $this->connection = new PDO($dsn, static::DATABASE_USERNAME, static::DATABASE_PASSWORD);
             $this->connection->exec("set names utf8");
         } catch (PDOException $e) {
-            echo 'Connection failed: '.$e->getMessage();
+            echo 'Connection failed: ' . $e->getMessage();
         }
     }
 
@@ -25,4 +25,3 @@ class database
         return  $action->fetchAll(PDO::FETCH_ASSOC); //取得所有陣列
     }
 }
-?>

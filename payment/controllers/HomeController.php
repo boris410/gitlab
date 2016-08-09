@@ -1,7 +1,7 @@
 <?php
+
 class HomeController extends load
 {
-
     function index()//首頁
     {
         if(isset($_POST['submit'])){
@@ -24,21 +24,29 @@ class HomeController extends load
         $bank = $this->model("bank");
         $result = $bank->account_inquire("$_SESSION[account]");//提取帳號資訊
 
-            if ($_POST['option'] == "1") {//選擇操作 查詢金額
-                 header("location:  inquire_money");
-            } elseif ($_POST['option'] == "2") {//存錢
-                 header("location: input");
-            } elseif ($_POST['option'] == "3") {
-                 header("location: output");
-            } elseif ($_POST['option'] == "4") {
-                 header("location: inquire");
-            } elseif ($_POST['option'] == "5") {
-                 header("location: logout");
-            }
+        if ($_POST['option'] == "1") {//選擇操作 查詢金額
+             header("location:  inquire_money");
+        }
 
-         $this->view("head");
-         $this->view("account",$result);
-         $this->view("foot");
+        if ($_POST['option'] == "2") {//存錢
+             header("location: input");
+        }
+
+        if ($_POST['option'] == "3") {
+             header("location: output");
+        }
+
+        if ($_POST['option'] == "4") {
+             header("location: inquire");
+        }
+
+        if ($_POST['option'] == "5") {
+             header("location: logout");
+        }
+
+        $this->view("head");
+        $this->view("account", $result);
+        $this->view("foot");
     }
 
     function inquire()//查詢明細
@@ -47,7 +55,7 @@ class HomeController extends load
         $result = $bank->account_inquire("$_SESSION[account]");//透過session 取得帳號 pk
         $result2 = $bank->account_record($result[0]['account_id']);//透過 pk account_id 取出明細   record表只對應account_id
         $this->view("head");
-        $this->view("inquire",$result2);
+        $this->view("inquire", $result2);
         $this->view("foot");
     }
 
@@ -57,10 +65,9 @@ class HomeController extends load
         $result = $bank->account_inquire("$_SESSION[account]");//取得帳號資訊
 
         if (isset($_POST['submitmoney'])) {
-            $bank->account_input($result[0]['account_account'],$_POST['inputmoney']);//帶入帳號及金額
+            $bank->account_input($result[0]['account_account'], $_POST['inputmoney']);//帶入帳號及金額
             header("location: account");
         }
-
         $this->view("head");
         $this->view("input");
         $this->view("foot");
@@ -72,11 +79,10 @@ class HomeController extends load
         $result = $bank->account_inquire("$_SESSION[account]");//取得帳號資訊
 
         if (isset($_POST['submitmoney'])) {
-            if ($bank->account_output($result[0]['account_account'],$_POST['outputmoney'])) {//帶入帳號及金額
-                header("location: account"); 
+            if ($bank->account_output($result[0]['account_account'], $_POST['outputmoney'])) {//帶入帳號及金額
+                header("location: account");
              }
         }
-
         $this->view("head");
         $this->view("output");
         $this->view("foot");
@@ -87,7 +93,7 @@ class HomeController extends load
         $bank = $this->model("bank");
         $result = $bank->account_inquire("$_SESSION[account]");//取得帳號資訊
         $this->view("head");
-        $this->view("inquire_money",$result);
+        $this->view("inquire_money", $result);
         $this->view("foot");
     }
 
@@ -98,7 +104,7 @@ class HomeController extends load
         header("location: index");
     }
 }
-?>
+
 
 
 
