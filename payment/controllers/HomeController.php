@@ -19,10 +19,22 @@
         {
             $bank = $this->model("bank");
             $result = $bank->account_inquire("$_SESSION[account]");
+            switch ($_POST['option']){
+               case "1" :
+                         echo "1";
+                         break;
+               case "2" :
+                         echo "2";
+                         break;
+               case "3" :
+                         echo "3";
+                         break;
+            }
             $this->view("head");
             $this->view("account",$result);
             $this->view("foot");
         }
+        
     }
 ?>
 
