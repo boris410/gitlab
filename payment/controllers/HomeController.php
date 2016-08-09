@@ -19,7 +19,6 @@
         {
             $bank = $this->model("bank");
             $result = $bank->account_inquire("$_SESSION[account]");
-            var_dump($_POST['option']);
             if($_POST['option']=="1"){
              header("location: inquire");
             }elseif($_POST['option']=="2"){
@@ -35,8 +34,10 @@
         {
             $bank = $this->model("bank");
             $result = $bank->account_inquire("$_SESSION[account]");
+            
+            $result2 = $bank->account_record($result[0]['account_id']);
             $this->view("head");
-            $this->view("inquire",$result);
+            $this->view("inquire",$result2);
             $this->view("foot");
         }
          function input()//首頁

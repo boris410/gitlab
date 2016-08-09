@@ -13,6 +13,13 @@
              $result = $this->db->select("SELECT * FROM `account_detail` WHERE `account_account` = $account");
              return $result;
         }
+        function account_record($account_id)
+        {
+          
+             $result = $this->db->select("SELECT * FROM `account_record` WHERE `account_id` = $account_id ");
+             return $result;
+        }
+        
         
     }
 ?>

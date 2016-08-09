@@ -7328,3 +7328,302 @@ Stack trace:
 [08-Aug-2016 09:25:33 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
 [08-Aug-2016 09:25:33 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
 [08-Aug-2016 09:25:33 UTC] PHP   5. load->model() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:9
+[08-Aug-2016 09:31:25 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:31:25 UTC] PHP Stack trace:
+[08-Aug-2016 09:31:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:31:25 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:31:25 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:31:25 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:31:25 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:31:25 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:33:29 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:33:29 UTC] PHP Stack trace:
+[08-Aug-2016 09:33:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:33:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:33:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:33:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:33:29 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:33:29 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:33:37 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:33:37 UTC] PHP Stack trace:
+[08-Aug-2016 09:33:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:33:37 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:33:37 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:33:37 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:33:37 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:33:37 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:34:01 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:34:01 UTC] PHP Stack trace:
+[08-Aug-2016 09:34:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:34:01 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:34:01 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:34:01 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:34:01 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:34:01 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:34:31 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:34:31 UTC] PHP Stack trace:
+[08-Aug-2016 09:34:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:34:31 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:34:31 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:34:31 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:34:31 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:34:31 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:35:13 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:35:13 UTC] PHP Stack trace:
+[08-Aug-2016 09:35:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:35:13 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:35:13 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:35:13 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:35:13 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:35:13 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:35:29 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:35:29 UTC] PHP Stack trace:
+[08-Aug-2016 09:35:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:35:29 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:35:29 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:35:29 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:35:29 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:35:29 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:35:43 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:35:43 UTC] PHP Stack trace:
+[08-Aug-2016 09:35:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:35:43 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:35:43 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:35:43 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:35:43 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:35:43 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:35:48 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:35:48 UTC] PHP Stack trace:
+[08-Aug-2016 09:35:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:35:48 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:35:48 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:35:48 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:35:48 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:35:48 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:35:58 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:35:58 UTC] PHP Stack trace:
+[08-Aug-2016 09:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:35:58 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:35:58 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:35:58 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:35:58 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:35:58 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:36:26 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:36:26 UTC] PHP Stack trace:
+[08-Aug-2016 09:36:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:36:26 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:36:26 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:36:26 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:36:26 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:36:26 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:37:04 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:37:04 UTC] PHP Stack trace:
+[08-Aug-2016 09:37:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:37:04 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:37:04 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:37:04 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:37:04 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:37:04 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:37:28 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:37:28 UTC] PHP Stack trace:
+[08-Aug-2016 09:37:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:37:28 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:37:28 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:37:28 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:37:28 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:37:28 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:38:02 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:38:02 UTC] PHP Stack trace:
+[08-Aug-2016 09:38:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:38:02 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:38:02 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:38:02 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:38:02 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:38:02 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:38:35 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:38:35 UTC] PHP Stack trace:
+[08-Aug-2016 09:38:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:38:35 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:38:35 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:38:35 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:38:35 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:38:35 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:40:04 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:40:04 UTC] PHP Stack trace:
+[08-Aug-2016 09:40:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:40:04 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:40:04 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:40:04 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:40:04 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:40:04 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:13
+[08-Aug-2016 09:40:09 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:40:09 UTC] PHP Stack trace:
+[08-Aug-2016 09:40:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:40:09 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:40:09 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:40:09 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:40:09 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:40:09 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:13
+[08-Aug-2016 09:40:36 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:40:36 UTC] PHP Stack trace:
+[08-Aug-2016 09:40:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:40:36 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:40:36 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:40:36 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:40:36 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:7
+[08-Aug-2016 09:40:36 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:13
+[08-Aug-2016 09:47:39 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:47:39 UTC] PHP Stack trace:
+[08-Aug-2016 09:47:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:47:39 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:47:39 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:47:39 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:47:39 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:8
+[08-Aug-2016 09:47:39 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:13
+[08-Aug-2016 09:47:58 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:47:58 UTC] PHP Stack trace:
+[08-Aug-2016 09:47:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:47:58 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:47:58 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:47:58 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:47:58 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:8
+[08-Aug-2016 09:47:58 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:13
+[08-Aug-2016 09:48:34 UTC] PHP Fatal error:  Call to undefined function var_dup() in /home/ubuntu/workspace/gitlab/payment/models/bank.php on line 13
+[08-Aug-2016 09:48:34 UTC] PHP Stack trace:
+[08-Aug-2016 09:48:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:48:34 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:48:34 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:48:34 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:48:34 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:8
+[08-Aug-2016 09:50:52 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:50:52 UTC] PHP Stack trace:
+[08-Aug-2016 09:50:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:50:52 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:50:52 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:50:52 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:50:52 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:8
+[08-Aug-2016 09:50:52 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:51:49 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[08-Aug-2016 09:51:49 UTC] PHP Stack trace:
+[08-Aug-2016 09:51:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:51:49 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:51:49 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:51:49 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:51:49 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:8
+[08-Aug-2016 09:51:49 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:52:44 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 26
+[08-Aug-2016 09:52:44 UTC] PHP Stack trace:
+[08-Aug-2016 09:52:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:52:44 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:52:44 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:52:44 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:52:44 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:8
+[08-Aug-2016 09:52:44 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[08-Aug-2016 09:53:30 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 26
+[08-Aug-2016 09:53:30 UTC] PHP Stack trace:
+[08-Aug-2016 09:53:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[08-Aug-2016 09:53:30 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[08-Aug-2016 09:53:30 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:53:30 UTC] PHP   4. HomeController->index() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[08-Aug-2016 09:53:30 UTC] PHP   5. bank->account_inquire() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:8
+[08-Aug-2016 09:53:30 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:14
+[09-Aug-2016 02:18:21 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[09-Aug-2016 02:18:21 UTC] PHP Stack trace:
+[09-Aug-2016 02:18:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[09-Aug-2016 02:18:21 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[09-Aug-2016 02:18:21 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:18:21 UTC] PHP   4. HomeController->inquire() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:18:21 UTC] PHP   5. bank->account_record() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:37
+[09-Aug-2016 02:18:21 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:18
+[09-Aug-2016 02:19:59 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[09-Aug-2016 02:19:59 UTC] PHP Stack trace:
+[09-Aug-2016 02:19:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[09-Aug-2016 02:19:59 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[09-Aug-2016 02:19:59 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:19:59 UTC] PHP   4. HomeController->inquire() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:19:59 UTC] PHP   5. bank->account_record() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:38
+[09-Aug-2016 02:19:59 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:18
+[09-Aug-2016 02:20:11 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[09-Aug-2016 02:20:11 UTC] PHP Stack trace:
+[09-Aug-2016 02:20:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[09-Aug-2016 02:20:11 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[09-Aug-2016 02:20:11 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:20:11 UTC] PHP   4. HomeController->inquire() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:20:11 UTC] PHP   5. bank->account_record() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:38
+[09-Aug-2016 02:20:11 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:18
+[09-Aug-2016 02:20:24 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[09-Aug-2016 02:20:24 UTC] PHP Stack trace:
+[09-Aug-2016 02:20:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[09-Aug-2016 02:20:24 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[09-Aug-2016 02:20:24 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:20:24 UTC] PHP   4. HomeController->inquire() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:20:24 UTC] PHP   5. bank->account_record() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:38
+[09-Aug-2016 02:20:24 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:18
+[09-Aug-2016 02:20:59 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[09-Aug-2016 02:20:59 UTC] PHP Stack trace:
+[09-Aug-2016 02:20:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[09-Aug-2016 02:20:59 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[09-Aug-2016 02:20:59 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:20:59 UTC] PHP   4. HomeController->inquire() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:20:59 UTC] PHP   5. bank->account_record() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:38
+[09-Aug-2016 02:20:59 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:18
+[09-Aug-2016 02:21:16 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[09-Aug-2016 02:21:16 UTC] PHP Stack trace:
+[09-Aug-2016 02:21:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[09-Aug-2016 02:21:16 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[09-Aug-2016 02:21:16 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:21:16 UTC] PHP   4. HomeController->inquire() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:21:16 UTC] PHP   5. bank->account_record() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:38
+[09-Aug-2016 02:21:16 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:18
+[09-Aug-2016 02:22:37 UTC] PHP Warning:  Illegal string offset 'account_id' in /home/ubuntu/workspace/gitlab/payment/models/bank.php on line 18
+[09-Aug-2016 02:22:37 UTC] PHP Stack trace:
+[09-Aug-2016 02:22:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[09-Aug-2016 02:22:37 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[09-Aug-2016 02:22:37 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:22:37 UTC] PHP   4. HomeController->inquire() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:22:37 UTC] PHP   5. bank->account_record() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:38
+[09-Aug-2016 02:22:37 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[09-Aug-2016 02:22:37 UTC] PHP Stack trace:
+[09-Aug-2016 02:22:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[09-Aug-2016 02:22:37 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[09-Aug-2016 02:22:37 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:22:37 UTC] PHP   4. HomeController->inquire() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:22:37 UTC] PHP   5. bank->account_record() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:38
+[09-Aug-2016 02:22:37 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:18
+[09-Aug-2016 02:22:50 UTC] PHP Warning:  Illegal string offset 'account_id' in /home/ubuntu/workspace/gitlab/payment/models/bank.php on line 19
+[09-Aug-2016 02:22:50 UTC] PHP Stack trace:
+[09-Aug-2016 02:22:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[09-Aug-2016 02:22:50 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[09-Aug-2016 02:22:50 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:22:50 UTC] PHP   4. HomeController->inquire() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:22:50 UTC] PHP   5. bank->account_record() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:38
+[09-Aug-2016 02:22:50 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[09-Aug-2016 02:22:50 UTC] PHP Stack trace:
+[09-Aug-2016 02:22:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[09-Aug-2016 02:22:50 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[09-Aug-2016 02:22:50 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:22:50 UTC] PHP   4. HomeController->inquire() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:22:50 UTC] PHP   5. bank->account_record() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:38
+[09-Aug-2016 02:22:50 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:19
+[09-Aug-2016 02:22:58 UTC] PHP Warning:  Illegal string offset 'account_id' in /home/ubuntu/workspace/gitlab/payment/models/bank.php on line 19
+[09-Aug-2016 02:22:58 UTC] PHP Stack trace:
+[09-Aug-2016 02:22:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[09-Aug-2016 02:22:58 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[09-Aug-2016 02:22:58 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:22:58 UTC] PHP   4. HomeController->inquire() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:22:58 UTC] PHP   5. bank->account_record() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:38
+[09-Aug-2016 02:22:58 UTC] PHP Fatal error:  Call to a member function fetchAll() on a non-object in /home/ubuntu/workspace/gitlab/payment/models/database.php on line 25
+[09-Aug-2016 02:22:58 UTC] PHP Stack trace:
+[09-Aug-2016 02:22:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[09-Aug-2016 02:22:58 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[09-Aug-2016 02:22:58 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:22:58 UTC] PHP   4. HomeController->inquire() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:22:58 UTC] PHP   5. bank->account_record() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:38
+[09-Aug-2016 02:22:58 UTC] PHP   6. database->select() /home/ubuntu/workspace/gitlab/payment/models/bank.php:19
+[09-Aug-2016 02:25:25 UTC] PHP Warning:  Illegal string offset 'account_id' in /home/ubuntu/workspace/gitlab/payment/models/bank.php on line 18
+[09-Aug-2016 02:25:25 UTC] PHP Stack trace:
+[09-Aug-2016 02:25:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/payment/index.php:0
+[09-Aug-2016 02:25:25 UTC] PHP   2. App->__construct() /home/ubuntu/workspace/gitlab/payment/index.php:9
+[09-Aug-2016 02:25:25 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:18}() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:25:25 UTC] PHP   4. HomeController->inquire() /home/ubuntu/workspace/gitlab/payment/core/App.php:18
+[09-Aug-2016 02:25:25 UTC] PHP   5. bank->account_record() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:38
