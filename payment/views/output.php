@@ -4,5 +4,5 @@
     <input type="text" name="outputmoney">
     <button type="submit" name="submitmoney">取領</button>
     <br>
-    <a href="account">首頁</a>
+    <a href="showAccount">首頁</a>
 </form>

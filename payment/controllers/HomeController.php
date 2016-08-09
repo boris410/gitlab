@@ -1,5 +1,4 @@
 <?php
-
 class HomeController extends load
 {
     function index()//首頁
@@ -10,7 +9,7 @@ class HomeController extends load
             if ($bank->account_inquire("$_POST[account]")) {//輸入帳號
                 $session = $this->model("SESSION");
                 $session->set_user_SESSION($_POST['account']);//設定session account
-                header("location: account");
+                header("location: showAccount");
             }
 
          }
@@ -19,7 +18,7 @@ class HomeController extends load
          $this->view("foot");
     }
 
-    function account()//操作頁面
+    function showAccount()//操作頁面
     {
         $bank = $this->model("bank");
         $result = $bank->account_inquire("$_SESSION[account]");//提取帳號資訊
@@ -45,7 +44,7 @@ class HomeController extends load
         }
 
         $this->view("head");
-        $this->view("account", $result);
+        $this->view("showAccount", $result);
         $this->view("foot");
     }
 
@@ -66,7 +65,7 @@ class HomeController extends load
 
         if (isset($_POST['submitmoney'])) {
             $bank->account_input($result[0]['account_account'], $_POST['inputmoney']);//帶入帳號及金額
-            header("location: account");
+            header("location: showAccount");
         }
         $this->view("head");
         $this->view("input");
@@ -80,7 +79,7 @@ class HomeController extends load
 
         if (isset($_POST['submitmoney'])) {
             if ($bank->account_output($result[0]['account_account'], $_POST['outputmoney'])) {//帶入帳號及金額
-                header("location: account");
+                header("location: showAccount");
              }
         }
         $this->view("head");

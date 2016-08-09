@@ -3,6 +3,6 @@
     <h3>操作金額 :</h3>
     <input type="text" name="inputmoney">
     <button type="submit" name="submitmoney">存入</button>
-    <a href="account">首頁</a>
+    <a href="showAccount">首頁</a>
 </form>
 
