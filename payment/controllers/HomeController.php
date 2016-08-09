@@ -24,7 +24,7 @@ class HomeController extends load
         $result = $bank->account_inquire("$_SESSION[account]");//提取帳號資訊
 
         if ($_POST['option'] == "1") {//選擇操作 查詢金額
-             header("location:  inquire_money");
+             header("location:  inquireMoney");
         }
 
         if ($_POST['option'] == "2") {//存錢
@@ -87,12 +87,12 @@ class HomeController extends load
         $this->view("foot");
     }
 
-    function inquire_money()//查詢餘額
+    function inquireMoney()//查詢餘額
     {
         $bank = $this->model("bank");
         $result = $bank->account_inquire("$_SESSION[account]");//取得帳號資訊
         $this->view("head");
-        $this->view("inquire_money", $result);
+        $this->view("InquireMoney", $result);
         $this->view("foot");
     }
 
