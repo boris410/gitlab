@@ -44,7 +44,7 @@ class HomeController extends load
         }
 
         $this->view("head");
-        $this->view("showAccount", $result);
+        $this->view("ShowAccount", $result);
         $this->view("foot");
     }
 
