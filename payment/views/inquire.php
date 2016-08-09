@@ -4,6 +4,8 @@
     <h3>操作 : <?php echo $data[$key]['account_operation']?></h3>
     <h3>操作金額 : <?php echo $data[$key]['account_opertaion_money']?></h3>
     <h3>操作時間 : <?php echo $data[$key]['account_operation_time']?></h3>
+    <br>
     <?php }?>
+    <a href="account">首頁</a>
 </form>
 
