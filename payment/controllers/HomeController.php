@@ -6,11 +6,13 @@
         {
             if(isset($_POST['submit'])){
                 $bank = $this->model("bank");
+
                 if ($bank->account_inquire("$_POST[account]")) {
                     $session = $this->model("SESSION");
                     $session->set_user_SESSION($_POST['account']);
                     header("location: account");
                 }
+
             }
             $this->view("head");
             $this->view("index");
@@ -21,17 +23,19 @@
         {
             $bank = $this->model("bank");
             $result = $bank->account_inquire("$_SESSION[account]");
+
             if ($_POST['option']=="1") {
                 header("location:  inquire_money");
-            } else if ($_POST['option']=="2") {
+            } elseif ($_POST['option']=="2") {
                 header("location: input");
-            } else if ($_POST['option']=="3") {
+            } elseif ($_POST['option']=="3") {
                 header("location: output");
-            } else if ($_POST['option']=="4") {
+            } elseif ($_POST['option']=="4") {
                 header("location: inquire");
-            } else if ($_POST['option']=="5") {
+            } elseif ($_POST['option']=="5") {
                 header("location: logout");
             }
+
             $this->view("head");
             $this->view("account",$result);
             $this->view("foot");
@@ -51,10 +55,12 @@
         {
             $bank = $this->model("bank");
             $result = $bank->account_inquire("$_SESSION[account]");
+
             if (isset($_POST['submitmoney'])) {
                 $bank->account_input($result[0]['account_account'],$_POST['inputmoney']);
                 header("location: account");
             }
+
             $this->view("head");
             $this->view("input");
             $this->view("foot");
@@ -64,10 +70,13 @@
         {
             $bank = $this->model("bank");
             $result = $bank->account_inquire("$_SESSION[account]");
+
             if (isset($_POST['submitmoney'])) {
-                $bank->account_output($result[0]['account_account'],$_POST['outputmoney']);
-                header("location: account");
+                if ($bank->account_output($result[0]['account_account'],$_POST['outputmoney'])) {
+                    header("location: account"); 
+                }
             }
+
             $this->view("head");
             $this->view("output");
             $this->view("foot");

@@ -22,13 +22,24 @@
 
         function account_input($account_account,$inputmoney)
         {
-             $result = $this->db->insert("UPDATE `account_detail` SET `account_money`= `account_money`+ $inputmoney WHERE `account_account`=$account_account");
+              $this->db->select("UPDATE `account_detail` SET `account_money`= `account_money`+ $inputmoney WHERE `account_account`=$account_account");
         }
 
-        function account_output($account_account,$inputmoney)
+        function account_output($account_account,$outputmoney)
         {
-             $result = $this->db->insert("UPDATE `account_detail` SET `account_money`= `account_money`- $inputmoney WHERE `account_account`=$account_account");
+              $this->db->select("LOCK TABLES account_detail WRITE;");
+              $result = $this->db->select("SELECT `account_money` FROM `account_detail` WHERE `account_account`=$account_account AND (`account_money`-$outputmoney)>=0");
+              
+              if ($result) {
+                  $this->db->select("UPDATE `account_detail` SET `account_money`= `account_money`- $outputmoney WHERE `account_account`=$account_account");
+                  sleep(5);
+                  $this->db->select("UNLOCK TABLES;");
+                  return true;
+              } else {
+                sleep(5);
+                  $this->db->select("UNLOCK TABLES;");
+                  return false;
+              }
         }
-
     }
 ?>

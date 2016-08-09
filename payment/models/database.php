@@ -24,24 +24,8 @@ class database{
         $action =  $this->connection->query($sql);
         return  $action->fetchAll(PDO::FETCH_ASSOC); //取得所有陣列
     }
-    
-    public function insert($sql)
-    {
-       $action = $this->connection->query($sql);
-       return true;
-    }
-    
-    public function delet($sql)
-    {
-       $action = $this->connection->query($sql);
-       return true;
-    }
-    
-    public function update($sql)
-    {
-       $action = $this->connection->query($sql);
-       return true;
-    }
 
+
+    
 }
 ?>
