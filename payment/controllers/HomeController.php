@@ -6,7 +6,7 @@ class HomeController extends load
         if(isset($_POST['submit'])){
             $bank = $this->model("bank");
 
-            if ($bank->account_inquire("$_POST[account]")) {//輸入帳號
+            if ($bank->getAccounData("$_POST[account]")) {//輸入帳號
                 $session = $this->model("Session");
                 $session->setUserSession($_POST['account']);//設定session account
                 header("location: showAccount");
@@ -21,7 +21,7 @@ class HomeController extends load
     function showAccount()//操作頁面
     {
         $bank = $this->model("bank");
-        $result = $bank->account_inquire("$_SESSION[account]");//提取帳號資訊
+        $result = $bank->getAccounData("$_SESSION[account]");//提取帳號資訊
 
         if ($_POST['option'] == "1") {//選擇操作 查詢金額
              header("location:  inquireMoney");
@@ -51,7 +51,7 @@ class HomeController extends load
     function showAccountDetail()//查詢明細
     {
         $bank = $this->model("bank");
-        $result = $bank->account_inquire("$_SESSION[account]");//透過session 取得帳號 pk
+        $result = $bank->getAccounData("$_SESSION[account]");//透過session 取得帳號 pk
         $result2 = $bank->account_record($result[0]['account_id']);//透過 pk account_id 取出明細   record表只對應account_id
         $this->view("Head");
         $this->view("ShowAccountDetail", $result2);
@@ -61,7 +61,7 @@ class HomeController extends load
     function inputMoney()//存入金額
     {
         $bank = $this->model("bank");
-        $result = $bank->account_inquire("$_SESSION[account]");//取得帳號資訊
+        $result = $bank->getAccounData("$_SESSION[account]");//取得帳號資訊
 
         if (isset($_POST['submitmoney'])) {
             $bank->account_input($result[0]['account_account'], $_POST['inputmoney']);//帶入帳號及金額
@@ -75,7 +75,7 @@ class HomeController extends load
     function outputMoney()//提取金額
     {
         $bank = $this->model("bank");
-        $result = $bank->account_inquire("$_SESSION[account]");//取得帳號資訊
+        $result = $bank->getAccounData("$_SESSION[account]");//取得帳號資訊
 
         if (isset($_POST['submitmoney'])) {
             if ($bank->account_output($result[0]['account_account'], $_POST['outputmoney'])) {//帶入帳號及金額
@@ -90,7 +90,7 @@ class HomeController extends load
     function inquireMoney()//查詢餘額
     {
         $bank = $this->model("bank");
-        $result = $bank->account_inquire("$_SESSION[account]");//取得帳號資訊
+        $result = $bank->getAccounData("$_SESSION[account]");//取得帳號資訊
         $this->view("Head");
         $this->view("InquireMoney", $result);
         $this->view("Foot");
