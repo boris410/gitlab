@@ -8,6 +8,11 @@ class Session
         $_SESSION['session_Account'] = $account;
     }
 
+    function getUserSession()
+    {
+        return $_SESSION['session_Account'];
+    }
+
     function clearSession()
     {
         session_unset();

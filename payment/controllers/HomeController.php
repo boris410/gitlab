@@ -24,7 +24,8 @@ class HomeController extends Load
     {
         $DataBase = $this->model("DataBase");
         //取得帳號資訊
-        $result = $DataBase->getAccounData("$_SESSION[session_Account]");
+        $session = $this->model("Session");
+        $result = $DataBase->getAccounData($session->getUserSession());
 
         //選擇操作
         if ($_POST['option'] == "1") {
