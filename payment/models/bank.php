@@ -10,9 +10,9 @@ class bank extends load
     }
 
     //查詢帳號對應的資訊account_inquire
-    function getAccounData($account)
+    function getAccounData($getAccount)
     {
-        $result = $this->db->select("SELECT * FROM `account_detail` WHERE `account_account` = $account");
+        $result = $this->db->select("SELECT * FROM `account_detail` WHERE `account_account` = $getAccount");
         return $result;
     }
 
