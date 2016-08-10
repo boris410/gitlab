@@ -13,6 +13,7 @@ class HomeController extends load
                 header("location: showAccount");
             }
          }
+
          $this->view("Head");
          $this->view("Index");
          $this->view("Foot");
@@ -76,6 +77,7 @@ class HomeController extends load
             $DataBase->saveMoneyInto($result[0]['account_account'], $_POST['inputmoney']);
             header("location: showAccount");
         }
+
         $this->view("Head");
         $this->view("InputMoney");
         $this->view("Foot");
@@ -86,11 +88,13 @@ class HomeController extends load
     {
         $DataBase = $this->model("DataBase");
         $result = $DataBase->getAccounData("$_SESSION[account]");
+
         if (isset($_POST['submitmoney'])) {
             if ($DataBase->takeMoneyOut($result[0]['account_account'], $_POST['outputmoney'])) {
                 header("location: showAccount");
              }
         }
+
         $this->view("Head");
         $this->view("OutputMoney");
         $this->view("Foot");
