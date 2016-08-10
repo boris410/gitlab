@@ -55,14 +55,15 @@ class HomeController extends load
     //查詢明細
     function showAccountDetail()
     {
-        $bank = $this->model("bank");
+        $DataBase = $this->model("DataBase");
         //透過session 取得帳號 pk
-        $result = $bank->getAccounData("$_SESSION[account]");
+        $result = $DataBase->getAccounData("$_SESSION[account]");
         //透過 pk account_id 取出明細
-        $result2 = $bank->getAccounRecord($result[0]['account_id']);
+        $result2 = $DataBase->getAccounRecord($result[0]['account_id']);
         $this->view("Head");
         $this->view("ShowAccountDetail", $result2);
         $this->view("Foot");
+
     }
 
     //存入金額

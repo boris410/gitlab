@@ -33,4 +33,11 @@ class DataBase
         $result->execute();
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    //取得帳號id 查詢table record
+    function getAccounRecord($accountId)
+    {
+        $result = $this->select("SELECT * FROM `account_record` WHERE `account_id` = $accountId ");
+        return $result;
+    }
 }
