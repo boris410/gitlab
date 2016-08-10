@@ -40,24 +40,30 @@ class DataBase
     //取得帳號 金額 儲存金額
     function saveMoneyInto($getAccount, $inputMoney)
     {
+
         $this->connection->query("LOCK TABLES account_detail WRITE;");
-        $result = $this->connection->prepare("UPDATE `account_detail` SET `account_money` = `account_money`+ ? WHERE `account_account`= ?");
+        $q1Str1 = 'UPDATE `account_detail`';
+        $q1Str2 = '  SET `account_money` = `account_money`+ ?';
+        $q1Str3 = 'WHERE `account_account`= ?';
+        $result = $this->connection->prepare($q1Str1 . $q1Str2 . $q1Str3);
         $result->bindParam(1, $inputMoney);
         $result->bindParam(2, $getAccount);
         $result->execute();
         $this->connection->query("UNLOCK TABLES;");
-        $result2 = $this->connection->prepare("INSERT INTO `account_record`(`account_id`, `account_operation`, `account_opertaion_money`, `account_operation_time`) VALUES (?, 'Take Money', ?, now())");
+        $q2Str1 ='INSERT INTO `account_record`(`account_id`,';
+        $q2Str2 ='`account_operation`, `account_opertaion_money`,';
+        $q2Str3 ="`account_operation_time`) VALUES (?, 'Save Money', ?, now())" ;
+        $result2 = $this->connection->prepare($q2Str1 . $q2Str2 . $q2Str3);
         $result2->bindParam(1,$getAccount);
         $result2->bindParam(2,$inputMoney);
         $result2->execute();
-
     }
 
     //取得帳號 金額 提取金額
     function takeMoneyOut($getAccount, $outputMoney)
     {
         $this->connection->query("LOCK TABLES account_detail WRITE;");
-        $result = $this->connection->prepare("SELECT `account_money` FROM `account_detail` WHERE `account_account`= ? AND (`account_money`- ?) >= 0");
+        $rest = $this->connection->prepare("SELECT `account_money` FROM `account_detail` WHERE `account_account`= ? AND (`account_money`- ?) >= 0");
         $result->bindParam(1, $getAccount);
         $result->bindParam(2, $outputMoney);
         $result->execute();
@@ -68,6 +74,10 @@ class DataBase
             $result->bindParam(2, $getAccount);
             $result->execute();
             $this->connection->query("UNLOCK TABLES;");
+            $result2 = $this->connection->prepare("INSERT INTO `account_record`(`account_id`, `account_operation`, `account_opertaion_money`, `account_operation_time`) VALUES (?, 'Take Money', ?, now())");
+            $result2->bindParam(1,$getAccount);
+            $result2->bindParam(2,$inputMoney);
+            $result2->execute();
             return true;
         } else {
             $this->connection->query("UNLOCK TABLES;");
