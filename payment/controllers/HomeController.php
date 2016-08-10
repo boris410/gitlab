@@ -56,10 +56,8 @@ class HomeController extends Load
     function showAccountDetail()
     {
         $DataBase = $this->model("DataBase");
-        //透過session 取得帳號 pk
-        $result = $DataBase->getAccounData("$_SESSION[session_Account]");
-        //透過 pk account_id 取出明細
-        $result2 = $DataBase->getAccounRecord($result[0]['account_id']);
+        //透過session 取出明細
+        $result2 = $DataBase->getAccounRecord($_SESSION['session_Account']);
         $this->view("Head");
         $this->view("ShowAccountDetail", $result2);
         $this->view("Foot");

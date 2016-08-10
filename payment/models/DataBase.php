@@ -46,6 +46,11 @@ class DataBase
         $result->bindParam(2, $getAccount);
         $result->execute();
         $this->connection->query("UNLOCK TABLES;");
+        $result2 = $this->connection->prepare("INSERT INTO `account_record`(`account_id`, `account_operation`, `account_opertaion_money`, `account_operation_time`) VALUES (?, 'Take Money', ?, now())");
+        $result2->bindParam(1,$getAccount);
+        $result2->bindParam(2,$inputMoney);
+        $result2->execute();
+
     }
 
     //取得帳號 金額 提取金額
