@@ -57,8 +57,9 @@ class HomeController extends Load
     function showAccountDetail()
     {
         $DataBase = $this->model("DataBase");
+        $session = $this->model("Session");
         //透過session 取出明細
-        $result2 = $DataBase->getAccounRecord($_SESSION['session_Account']);
+        $result2 = $DataBase->getAccounRecord($session->getUserSession());
         $this->view("Head");
         $this->view("ShowAccountDetail", $result2);
         $this->view("Foot");
@@ -69,7 +70,8 @@ class HomeController extends Load
     function inputMoney()
     {
         $DataBase = $this->model("DataBase");
-        $result = $DataBase->getAccounData("$_SESSION[session_Account]");
+        $session = $this->model("Session");
+        $result = $DataBase->getAccounData($session->getUserSession());
 
         if (isset($_POST['post_SubmitMoney'])) {
             //帶入帳號及金額
@@ -86,7 +88,8 @@ class HomeController extends Load
     function outputMoney()
     {
         $DataBase = $this->model("DataBase");
-        $result = $DataBase->getAccounData("$_SESSION[session_Account]");
+        $session = $this->model("Session");
+        $result = $DataBase->getAccounData($session->getUserSession());
 
         if (isset($_POST['post_SubmitMoney'])) {
             if ($DataBase->takeMoneyOut($result[0]['account_account'], $_POST['post_OutputMoney'])) {
@@ -103,8 +106,9 @@ class HomeController extends Load
     function inquireMoney()
     {
         $DataBase = $this->model("DataBase");
+        $session = $this->model("Session");
         //取得帳號資訊
-        $result = $DataBase->getAccounData("$_SESSION[session_Account]");
+        $result = $DataBase->getAccounData($session->getUserSession());
         $this->view("Head");
         $this->view("InquireMoney", $result);
         $this->view("Foot");
