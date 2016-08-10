@@ -85,11 +85,11 @@ class HomeController extends load
     //提取金額
     function outputMoney()
     {
-        $bank = $this->model("bank");
-        $result = $bank->getAccounData("$_SESSION[account]");
+        $DataBase = $this->model("DataBase");
+        $result = $DataBase->getAccounData("$_SESSION[account]");
 
         if (isset($_POST['submitmoney'])) {
-            if ($bank->takeMoneyOut($result[0]['account_account'], $_POST['outputmoney'])) {
+            if ($DataBase->takeMoneyOut($result[0]['account_account'], $_POST['outputmoney'])) {
                 header("location: showAccount");
              }
         }
