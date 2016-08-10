@@ -59,7 +59,7 @@ class DataBase
         $this->select("LOCK TABLES account_detail WRITE;");
         $result = $this->select("SELECT `account_money` FROM `account_detail` WHERE `account_account`= $getAccount AND (`account_money`- $outputMoney) >= 0");
         if ($result) {
-            $a = $this->select("UPDATE `account_detail` SET `account_money` = `account_money`- $outputMoney WHERE `account_account` = $getAccount");
+            $this->select("UPDATE `account_detail` SET `account_money` = `account_money`- $outputMoney WHERE `account_account` = $getAccount");
             $this->connection->query("UNLOCK TABLES;");
             return true;
         } else {
