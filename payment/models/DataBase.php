@@ -41,7 +41,7 @@ class DataBase
         return $result;
     }
 
-    //取得帳號 金額    儲存金額
+    //取得帳號 金額 儲存金額
     function saveMoneyInto($getAccount, $inputMoney)
     {
         $this->select("UPDATE `account_detail` SET `account_money` = `account_money`+ $inputMoney WHERE `account_account`= $getAccount");
@@ -51,15 +51,14 @@ class DataBase
     function takeMoneyOut($getAccount, $outputMoney)
     {
         //鎖表 檢查金額扣到操作金額後不可以為負值
-        $this->db->select("LOCK TABLES account_detail WRITE;");
-        $result = $this->db->select("SELECT `account_money` FROM `account_detail` WHERE `account_account`= $getAccount AND (`account_money`- $outputMoney)> = 0");
-
+        $this->select("LOCK TABLES account_detail WRITE;");
+        $result = $this->select("SELECT `account_money` FROM `account_detail` WHERE `account_account`= $getAccount AND (`account_money`- $outputMoney) >= 0");
         if ($result) {
-            $this->db->select("UPDATE `account_detail` SET `account_money` = `account_money`- $outputMoney WHERE `account_account` = $getAccount");
-            $this->db->select("UNLOCK TABLES;");
+            $a = $this->select("UPDATE `account_detail` SET `account_money` = `account_money`- $outputMoney WHERE `account_account` = $getAccount");
+            $this->connection->query("UNLOCK TABLES;");
             return true;
         } else {
-            $this->db->select("UNLOCK TABLES;");
+            $this->connection->query("UNLOCK TABLES;");
             return false;
         }
     }
