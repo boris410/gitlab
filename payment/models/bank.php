@@ -17,9 +17,9 @@ class bank extends load
     }
 
     //取得帳號id 查詢table record
-    function getAccounRecord($account_id)
+    function getAccounRecord($accountId)
     {
-        $result = $this->db->select("SELECT * FROM `account_record` WHERE `account_id` = $account_id ");
+        $result = $this->db->select("SELECT * FROM `account_record` WHERE `account_id` = $accountId ");
         return $result;
     }
 
