@@ -1,6 +1,6 @@
 <?php
 
-class database
+class DataBase
 {
     const DATABASE_HOST = 'localhost';
     const DATABASE_NAME = 'payment';

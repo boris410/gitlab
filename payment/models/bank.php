@@ -21,7 +21,7 @@ class bank extends load
         return $result;
     }
 
-    function account_input($account_account, $inputmoney)//取得帳號 金額    儲存金額
+    function saveMoneyInto($account_account, $inputmoney)//取得帳號 金額    儲存金額------
     {
         $this->db->select("UPDATE `account_detail` SET `account_money`= `account_money`+ $inputmoney WHERE `account_account`=$account_account");
     }
