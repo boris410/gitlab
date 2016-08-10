@@ -1,5 +1,5 @@
 <?php
-class HomeController extends load
+class HomeController extends Load
 {
     //首頁
     function index()

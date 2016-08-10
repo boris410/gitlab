@@ -1,6 +1,6 @@
 <?php
 
-class load
+class Load
 {
     public function __construct()
     {
