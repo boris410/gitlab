@@ -19,12 +19,6 @@ class DataBase
         }
     }
 
-    public function select($sql)
-    {
-        $action =  $this->connection->query($sql);
-        return  $action->fetchAll(PDO::FETCH_ASSOC);
-    }
-
      //查詢帳號對應的資訊account_inquire
     function getAccounData($getAccount)
     {
@@ -46,16 +40,18 @@ class DataBase
     //取得帳號 金額 儲存金額
     function saveMoneyInto($getAccount, $inputMoney)
     {
+        $this->connection->query("LOCK TABLES account_detail WRITE;");
         $result = $this->connection->prepare("UPDATE `account_detail` SET `account_money` = `account_money`+ ? WHERE `account_account`= ?");
         $result->bindParam(1,$inputMoney);
         $result->bindParam(2,$getAccount);
         $result->execute();
+        $this->connection->query("UNLOCK TABLES;");
     }
 
     //取得帳號 金額 提取金額
     function takeMoneyOut($getAccount, $outputMoney)
     {
-        $this->select("LOCK TABLES account_detail WRITE;");
+        $this->connection->query("LOCK TABLES account_detail WRITE;");
         $result = $this->connection->prepare("SELECT `account_money` FROM `account_detail` WHERE `account_account`= ? AND (`account_money`- ?) >= 0");
         $result->bindParam(1,$getAccount);
         $result->bindParam(2,$outputMoney);
