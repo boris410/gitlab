@@ -101,9 +101,9 @@ class HomeController extends load
     //查詢餘額
     function inquireMoney()
     {
-        $bank = $this->model("bank");
+        $DataBase = $this->model("DataBase");
         //取得帳號資訊
-        $result = $bank->getAccounData("$_SESSION[account]");
+        $result = $DataBase->getAccounData("$_SESSION[account]");
         $this->view("Head");
         $this->view("InquireMoney", $result);
         $this->view("Foot");
