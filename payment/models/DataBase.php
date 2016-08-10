@@ -23,7 +23,7 @@ class DataBase
     function getAccounData($getAccount)
     {
         $result = $this->connection->prepare("SELECT * FROM `account_detail` WHERE `account_account` = ? ");
-        $result->bindParam(1,$getAccount);
+        $result->bindParam(1, $getAccount);
         $result->execute();
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -32,7 +32,7 @@ class DataBase
     function getAccounRecord($accountId)
     {
         $result = $this->connection->prepare("SELECT * FROM `account_record` WHERE `account_id` = ? ");
-        $result->bindParam(1,$accountId);
+        $result->bindParam(1, $accountId);
         $result->execute();
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -42,8 +42,8 @@ class DataBase
     {
         $this->connection->query("LOCK TABLES account_detail WRITE;");
         $result = $this->connection->prepare("UPDATE `account_detail` SET `account_money` = `account_money`+ ? WHERE `account_account`= ?");
-        $result->bindParam(1,$inputMoney);
-        $result->bindParam(2,$getAccount);
+        $result->bindParam(1, $inputMoney);
+        $result->bindParam(2, $getAccount);
         $result->execute();
         $this->connection->query("UNLOCK TABLES;");
     }
@@ -53,14 +53,14 @@ class DataBase
     {
         $this->connection->query("LOCK TABLES account_detail WRITE;");
         $result = $this->connection->prepare("SELECT `account_money` FROM `account_detail` WHERE `account_account`= ? AND (`account_money`- ?) >= 0");
-        $result->bindParam(1,$getAccount);
-        $result->bindParam(2,$outputMoney);
+        $result->bindParam(1, $getAccount);
+        $result->bindParam(2, $outputMoney);
         $result->execute();
 
         if ($result->fetchAll(PDO::FETCH_ASSOC)) {
             $result = $this->connection->prepare("UPDATE `account_detail` SET `account_money` = `account_money`- ? WHERE `account_account` = ? ");
-            $result->bindParam(1,$outputMoney);
-            $result->bindParam(2,$getAccount);
+            $result->bindParam(1, $outputMoney);
+            $result->bindParam(2, $getAccount);
             $result->execute();
             $this->connection->query("UNLOCK TABLES;");
             return true;
