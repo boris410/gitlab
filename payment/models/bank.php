@@ -24,21 +24,21 @@ class bank extends load
     }
 
     //取得帳號 金額    儲存金額
-    function saveMoneyInto($account_account, $inputmoney)
+    function saveMoneyInto($getAccount, $inputmoney)
     {
-        $this->db->select("UPDATE `account_detail` SET `account_money`= `account_money`+ $inputmoney WHERE `account_account`=$account_account");
+        $this->db->select("UPDATE `account_detail` SET `account_money`= `account_money`+ $inputmoney WHERE `account_account`=$getAccount");
     }
 
     //取得帳號 金額 提取金額
-    function takeMoneyOut($account_account, $outputmoney)
+    function takeMoneyOut($getAccount, $outputmoney)
     {
         //鎖表 檢查金額扣到操作金額後不可以為負值
         $this->db->select("LOCK TABLES account_detail WRITE;");
-        $result = $this->db->select("SELECT `account_money` FROM `account_detail` WHERE `account_account`=$account_account AND (`account_money`-$outputmoney)>=0");
+        $result = $this->db->select("SELECT `account_money` FROM `account_detail` WHERE `account_account`=$getAccount AND (`account_money`-$outputmoney)>=0");
 
         if ($result) {
             //儲存金額並解鎖table
-            $this->db->select("UPDATE `account_detail` SET `account_money`= `account_money`- $outputmoney WHERE `account_account`=$account_account");
+            $this->db->select("UPDATE `account_detail` SET `account_money`= `account_money`- $outputmoney WHERE `account_account`=$getAccount");
             $this->db->select("UNLOCK TABLES;");
             return true;
         } else {
