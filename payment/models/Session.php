@@ -5,7 +5,7 @@ class Session
     //登入確定後設定SESSION
     function setUserSession($account)
     {
-        $_SESSION['account'] = $account;
+        $_SESSION['session_Account'] = $account;
     }
 
     function clearSession()
