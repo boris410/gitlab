@@ -89,7 +89,7 @@ class HomeController extends Load
 
         if (isset($_POST['post_SubmitMoney'])) {
             if ($DataBase->takeMoneyOut($result[0]['account_account'], $_POST['post_OutputMoney'])) {
-                //header("location: showAccount");
+                header("location: showAccount");
              }
         }
 
