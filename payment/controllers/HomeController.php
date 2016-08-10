@@ -78,7 +78,7 @@ class HomeController extends load
         $result = $bank->getAccounData("$_SESSION[account]");//取得帳號資訊
 
         if (isset($_POST['submitmoney'])) {
-            if ($bank->account_output($result[0]['account_account'], $_POST['outputmoney'])) {//帶入帳號及金額
+            if ($bank->takeMoneyOut($result[0]['account_account'], $_POST['outputmoney'])) {//帶入帳號及金額
                 header("location: showAccount");
              }
         }
