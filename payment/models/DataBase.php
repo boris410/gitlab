@@ -22,6 +22,6 @@ class DataBase
     public function select($sql)
     {
         $action =  $this->connection->query($sql);
-        return  $action->fetchAll(PDO::FETCH_ASSOC); //取得所有陣列
+        return  $action->fetchAll(PDO::FETCH_ASSOC);
     }
 }

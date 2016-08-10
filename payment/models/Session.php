@@ -1,12 +1,14 @@
 <?PHP
 
-class Session{
-    function setUserSession($account)//登入確定後設定SESSION
+class Session
+{
+    //登入確定後設定SESSION
+    function setUserSession($account)
     {
         $_SESSION['account'] = $account;
     }
 
-    function clearSession()//登入確定後設定SESSION
+    function clearSession()
     {
         session_unset();
     }
