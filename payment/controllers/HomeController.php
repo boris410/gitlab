@@ -72,9 +72,9 @@ class HomeController extends Load
         $DataBase = $this->model("DataBase");
         $result = $DataBase->getAccounData("$_SESSION[account]");
 
-        if (isset($_POST['submitmoney'])) {
+        if (isset($_POST['post_SubmitMoney'])) {
             //帶入帳號及金額
-            $DataBase->saveMoneyInto($result[0]['account_account'], $_POST['inputmoney']);
+            $DataBase->saveMoneyInto($result[0]['account_account'], $_POST['post_InputMoney']);
             header("location: showAccount");
         }
 
