@@ -40,4 +40,10 @@ class DataBase
         $result = $this->select("SELECT * FROM `account_record` WHERE `account_id` = $accountId ");
         return $result;
     }
+
+    //取得帳號 金額    儲存金額
+    function saveMoneyInto($getAccount, $inputMoney)
+    {
+        $this->select("UPDATE `account_detail` SET `account_money` = `account_money`+ $inputMoney WHERE `account_account`= $getAccount");
+    }
 }

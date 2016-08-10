@@ -69,12 +69,12 @@ class HomeController extends load
     //存入金額
     function inputMoney()
     {
-        $bank = $this->model("bank");
-        $result = $bank->getAccounData("$_SESSION[account]");
+        $DataBase = $this->model("DataBase");
+        $result = $DataBase->getAccounData("$_SESSION[account]");
 
         if (isset($_POST['submitmoney'])) {
             //帶入帳號及金額
-            $bank->saveMoneyInto($result[0]['account_account'], $_POST['inputmoney']);
+            $DataBase->saveMoneyInto($result[0]['account_account'], $_POST['inputmoney']);
             header("location: showAccount");
         }
         $this->view("Head");
