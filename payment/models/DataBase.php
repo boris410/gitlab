@@ -37,8 +37,10 @@ class DataBase
     //取得帳號id 查詢table record
     function getAccounRecord($accountId)
     {
-        $result = $this->select("SELECT * FROM `account_record` WHERE `account_id` = $accountId ");
-        return $result;
+        $result = $this->connection->prepare("SELECT * FROM `account_record` WHERE `account_id` = ? ");
+        $result->bindParam(1,$accountId);
+        $result->execute();
+        return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
     //取得帳號 金額 儲存金額
