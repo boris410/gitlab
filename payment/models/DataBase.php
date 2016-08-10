@@ -50,9 +50,9 @@ class DataBase
         $result->bindParam(2, $getAccount);
         $result->execute();
         $this->connection->query("UNLOCK TABLES;");
-        $q2Str1 ='INSERT INTO `account_record`(`account_id`,';
-        $q2Str2 ='`account_operation`, `account_opertaion_money`,';
-        $q2Str3 ="`account_operation_time`) VALUES (?, 'Save Money', ?, now())" ;
+        $q2Str1 = 'INSERT INTO `account_record`(`account_id`,';
+        $q2Str2 = '`account_operation`, `account_opertaion_money`,';
+        $q2Str3 = "`account_operation_time`) VALUES (?, 'Save Money', ?, now())" ;
         $result2 = $this->connection->prepare($q2Str1 . $q2Str2 . $q2Str3);
         $result2->bindParam(1,$getAccount);
         $result2->bindParam(2,$inputMoney);
@@ -63,20 +63,29 @@ class DataBase
     function takeMoneyOut($getAccount, $outputMoney)
     {
         $this->connection->query("LOCK TABLES account_detail WRITE;");
-        $rest = $this->connection->prepare("SELECT `account_money` FROM `account_detail` WHERE `account_account`= ? AND (`account_money`- ?) >= 0");
+        $q1Str1 = "SELECT `account_money` FROM `account_detail`";
+        $q1Str2 = "WHERE `account_account`= ? ";
+        $q1Str3 = "AND (`account_money`- ?) >= 0";
+        $result = $this->connection->prepare($q1Str1 . $q1Str2 . $q1Str3);
         $result->bindParam(1, $getAccount);
         $result->bindParam(2, $outputMoney);
         $result->execute();
 
         if ($result->fetchAll(PDO::FETCH_ASSOC)) {
-            $result = $this->connection->prepare("UPDATE `account_detail` SET `account_money` = `account_money`- ? WHERE `account_account` = ? ");
+            $q2Str1 = "UPDATE `account_detail` SET `account_money` =";
+            $q2Str2 = "`account_money`- ? WHERE `account_account` = ? ";
+            $result = $this->connection->prepare($q2Str1 . $q2Str2);
             $result->bindParam(1, $outputMoney);
             $result->bindParam(2, $getAccount);
             $result->execute();
             $this->connection->query("UNLOCK TABLES;");
-            $result2 = $this->connection->prepare("INSERT INTO `account_record`(`account_id`, `account_operation`, `account_opertaion_money`, `account_operation_time`) VALUES (?, 'Take Money', ?, now())");
+            $q3Str1 = "INSERT INTO `account_record`";
+            $q3Str2 = "(`account_id`, `account_operation`,";
+            $q3Str3 = "`account_opertaion_money`, `account_operation_time`)";
+            $q3Str4 = "VALUES (?, 'Take Money', ?, now())";
+            $result2 = $this->connection->prepare($q3Str1 . $q3Str2 . $q3Str3 . $q3Str4);
             $result2->bindParam(1,$getAccount);
-            $result2->bindParam(2,$inputMoney);
+            $result2->bindParam(2,$outputMoney);
             $result2->execute();
             return true;
         } else {

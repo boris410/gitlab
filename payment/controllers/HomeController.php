@@ -73,7 +73,7 @@ class HomeController extends Load
         if (isset($_POST['post_SubmitMoney'])) {
             //帶入帳號及金額
             $DataBase->saveMoneyInto($result[0]['account_account'], $_POST['post_InputMoney']);
-            //header("location: showAccount");
+            header("location: showAccount");
         }
 
         $this->view("Head");
@@ -89,7 +89,7 @@ class HomeController extends Load
 
         if (isset($_POST['post_SubmitMoney'])) {
             if ($DataBase->takeMoneyOut($result[0]['account_account'], $_POST['post_OutputMoney'])) {
-                header("location: showAccount");
+                //header("location: showAccount");
              }
         }
 
