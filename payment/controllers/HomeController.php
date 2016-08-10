@@ -4,19 +4,19 @@ class HomeController extends Load
     //首頁
     function index()
     {
-        if(isset($_POST['submit'])){
+        if (isset($_POST['post_Submit'])) {
             $DataBase = $this->model("DataBase");
             //檢查輸入的帳號
-            if ($DataBase->getAccounData("$_POST[account]")) {
+            if ($DataBase->getAccounData($_POST['post_Account'])) {
                 $session = $this->model("Session");
-                $session->setUserSession($_POST['account']);
+                $session->setUserSession($_POST['post_Account']);
                 header("location: showAccount");
             }
-         }
+        }
 
-         $this->view("Head");
-         $this->view("Index");
-         $this->view("Foot");
+        $this->view("Head");
+        $this->view("Index");
+        $this->view("Foot");
     }
 
     //操作頁面
