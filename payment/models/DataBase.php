@@ -55,7 +55,6 @@ class DataBase
         $result = $this->db->select("SELECT `account_money` FROM `account_detail` WHERE `account_account`= $getAccount AND (`account_money`- $outputMoney)> = 0");
 
         if ($result) {
-            //儲存金額並解鎖table
             $this->db->select("UPDATE `account_detail` SET `account_money` = `account_money`- $outputMoney WHERE `account_account` = $getAccount");
             $this->db->select("UNLOCK TABLES;");
             return true;

@@ -10,20 +10,20 @@ class bank extends load
     }
 
     //查詢帳號對應的資訊account_inquire
-    function getAccounData($getAccount)/**/
+    function getAccounData($getAccount)
     {
         $result = $this->db->select("SELECT * FROM `account_detail` WHERE `account_account` = $getAccount");
         return $result;
     }
 
     //取得帳號id 查詢table record
-    function getAccounRecord($accountId)/**/
+    function getAccounRecord($accountId)
     {
         $result = $this->db->select("SELECT * FROM `account_record` WHERE `account_id` = $accountId ");
         return $result;
     }
 
-    //取得帳號 金額    儲存金額
+    //取得帳號 金額 儲存金額
     function saveMoneyInto($getAccount, $inputMoney)
     {
         $this->db->select("UPDATE `account_detail` SET `account_money` = `account_money`+ $inputMoney WHERE `account_account`= $getAccount");

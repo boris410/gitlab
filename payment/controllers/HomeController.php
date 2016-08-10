@@ -21,7 +21,6 @@ class HomeController extends load
     //操作頁面
     function showAccount()
     {
-        $bank = $this->model("bank");
         $DataBase = $this->model("DataBase");
         //取得帳號資訊
         $result = $DataBase->getAccounData("$_SESSION[account]");
@@ -113,7 +112,6 @@ class HomeController extends load
     function logout()
     {
         $SESSION = $this->model("Session");
-        //清除session
         $SESSION->clearSession();
         header("location: index");
     }
