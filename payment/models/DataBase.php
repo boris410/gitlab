@@ -55,11 +55,17 @@ class DataBase
     //取得帳號 金額 提取金額
     function takeMoneyOut($getAccount, $outputMoney)
     {
-        //鎖表 檢查金額扣到操作金額後不可以為負值
         $this->select("LOCK TABLES account_detail WRITE;");
-        $result = $this->select("SELECT `account_money` FROM `account_detail` WHERE `account_account`= $getAccount AND (`account_money`- $outputMoney) >= 0");
-        if ($result) {
-            $this->select("UPDATE `account_detail` SET `account_money` = `account_money`- $outputMoney WHERE `account_account` = $getAccount");
+        $result = $this->connection->prepare("SELECT `account_money` FROM `account_detail` WHERE `account_account`= ? AND (`account_money`- ?) >= 0");
+        $result->bindParam(1,$getAccount);
+        $result->bindParam(2,$outputMoney);
+        $result->execute();
+
+        if ($result->fetchAll(PDO::FETCH_ASSOC)) {
+            $result = $this->connection->prepare("UPDATE `account_detail` SET `account_money` = `account_money`- ? WHERE `account_account` = ? ");
+            $result->bindParam(1,$outputMoney);
+            $result->bindParam(2,$getAccount);
+            $result->execute();
             $this->connection->query("UNLOCK TABLES;");
             return true;
         } else {
