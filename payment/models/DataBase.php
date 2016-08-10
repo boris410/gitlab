@@ -24,4 +24,13 @@ class DataBase
         $action =  $this->connection->query($sql);
         return  $action->fetchAll(PDO::FETCH_ASSOC);
     }
+
+     //查詢帳號對應的資訊account_inquire
+    function getAccounData($getAccount)
+    {
+        $result = $this->connection->prepare("SELECT * FROM `account_detail` WHERE `account_account` = ? ");
+        $result->bindParam(1,$getAccount);
+        $result->execute();
+        return $result->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

@@ -5,14 +5,13 @@ class HomeController extends load
     function index()
     {
         if(isset($_POST['submit'])){
-            $bank = $this->model("bank");
+            $DataBase = $this->model("DataBase");
             //檢查輸入的帳號
-            if ($bank->getAccounData("$_POST[account]")) {
+            if ($DataBase->getAccounData("$_POST[account]")) {
                 $session = $this->model("Session");
                 $session->setUserSession($_POST['account']);
                 header("location: showAccount");
             }
-
          }
          $this->view("Head");
          $this->view("Index");
@@ -23,8 +22,9 @@ class HomeController extends load
     function showAccount()
     {
         $bank = $this->model("bank");
+        $DataBase = $this->model("DataBase");
         //取得帳號資訊
-        $result = $bank->getAccounData("$_SESSION[account]");
+        $result = $DataBase->getAccounData("$_SESSION[account]");
 
         //選擇操作
         if ($_POST['option'] == "1") {
