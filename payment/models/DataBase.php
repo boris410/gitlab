@@ -37,14 +37,19 @@ class DataBase
     //取得帳號id 查詢table record
     function getAccounRecord($accountId)
     {
-        $result = $this->select("SELECT * FROM `account_record` WHERE `account_id` = $accountId ");
-        return $result;
+        $result = $this->connection->prepare("SELECT * FROM `account_record` WHERE `account_id` = ? ");
+        $result->bindParam(1,$accountId);
+        $result->execute();
+        return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
     //取得帳號 金額 儲存金額
     function saveMoneyInto($getAccount, $inputMoney)
     {
-        $this->select("UPDATE `account_detail` SET `account_money` = `account_money`+ $inputMoney WHERE `account_account`= $getAccount");
+        $result = $this->connection->prepare("UPDATE `account_detail` SET `account_money` = `account_money`+ ? WHERE `account_account`= ?");
+        $result->bindParam(1,$inputMoney);
+        $result->bindParam(2,$getAccount);
+        $result->execute();
     }
 
     //取得帳號 金額 提取金額
