@@ -13,7 +13,11 @@ class App
 
         require_once "controllers/$controllerName.php";
         $controller = new $controllerName;
-        $methodName = isset($url[1]) ? $url[1] : "index";
+        $methodName = "index";
+
+        if (isset($url[1])) {
+            $methodName = $url[1];
+        }
 
         if (!method_exists($controller, $methodName)) {
             return;
@@ -21,7 +25,12 @@ class App
 
         unset($url[0]);
         unset($url[1]);
-        $params = $url ? array_values($url) : Array();
+        $params = [];
+
+        if ($url) {
+            $params = array_values($url);
+        }
+
         call_user_func_array(Array($controller, $methodName), $params);
     }
 
