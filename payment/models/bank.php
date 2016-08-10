@@ -24,9 +24,9 @@ class bank extends load
     }
 
     //取得帳號 金額    儲存金額
-    function saveMoneyInto($getAccount, $inputmoney)
+    function saveMoneyInto($getAccount, $inputMoney)
     {
-        $this->db->select("UPDATE `account_detail` SET `account_money`= `account_money`+ $inputmoney WHERE `account_account`=$getAccount");
+        $this->db->select("UPDATE `account_detail` SET `account_money`= `account_money`+ $inputMoney WHERE `account_account`=$getAccount");
     }
 
     //取得帳號 金額 提取金額
