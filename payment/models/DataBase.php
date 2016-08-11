@@ -22,7 +22,6 @@ class DataBase extends HomeController
      //查詢帳號對應的資訊account_inquire
     function getAccounData($account,$accountId="")
     {
-
         $result = $this->connection->prepare("SELECT * FROM `account_detail` WHERE `account_account` = ? ");
         $result->bindParam(1, $account['account_account']);
         $result->execute();
@@ -42,7 +41,6 @@ class DataBase extends HomeController
     //取得帳號, 金額, 儲存金額
     function saveMoneyInto($accountId, $money)
     {
-
         try {
             $this->connection->beginTransaction();
             $query1 = 'SELECT `account_money` FROM ';
@@ -50,6 +48,7 @@ class DataBase extends HomeController
             $result = $this->connection->prepare($query1);
             $result->execute();
             $oldMoney = $result->fetch(PDO::FETCH_ASSOC);
+            $oldMoney['account_money']+=$money;
 
             $query2 = 'UPDATE `account_detail` ';
             $query2 .= 'SET `account_money` = `account_money`+ ? ';
@@ -94,7 +93,6 @@ class DataBase extends HomeController
             $result->execute();
             $this->connection->commit();
 
-            return true;
         } catch(PDOException $e) {
                 $this->connection->rollBack();
         }
