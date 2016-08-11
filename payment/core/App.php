@@ -35,13 +35,15 @@ class App
     }
 
     public function parseUrl()
-    {//網址切割出自串
+    {
+        //網址切割出自串
         if (isset($_GET["url"])) {
             $url = rtrim($_GET["url"], "/");
             $url = explode("/", $url);
             return $url;
         } else {
-            header("location: Home/index");//如果網址列什麼都沒有就導向Home/index
+            //如果網址列什麼都沒有就導向Home/index
+            header("location: Home/index");
         }
     }
 }
