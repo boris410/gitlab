@@ -13,7 +13,6 @@ class HomeController extends Load
                 header("location: showAccount");
             }
         }
-
         $this->view("Head");
         $this->view("Index");
         $this->view("Foot");
@@ -63,7 +62,6 @@ class HomeController extends Load
         $this->view("Head");
         $this->view("ShowAccountDetail", $result);
         $this->view("Foot");
-
     }
 
     //存入金額
@@ -75,7 +73,7 @@ class HomeController extends Load
 
         if ($_POST['post_inputMoney']!="") {
             //帶入帳號及金額
-            $dataBase->saveMoneyInto($result[0]['account_account'], $_POST['post_inputMoney']);
+            $dataBase->saveMoneyInto($result[0]['account_id'], $_POST['post_inputMoney']);
             header("location: showAccount");
         }
 
@@ -92,8 +90,10 @@ class HomeController extends Load
         $result = $dataBase->getAccounData($session->getUserSession());
 
         if ($_POST['post_outputMoney']!="") {
-            if ($dataBase->takeMoneyOut($result[0]['account_account'], $_POST['post_outputMoney'])) {
-                header("location: showAccount");
+            $result2 = $dataBase->checkMoney($result[0]['account_id']);
+            if ($result2['account_money'] -= $_POST['post_outputMoney'] >= 0) {
+                 $dataBase->takeMoneyOut($result[0]['account_id'], $_POST['post_outputMoney']);
+                 header("location: showAccount");
              }
         }
 

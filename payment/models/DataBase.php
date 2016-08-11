@@ -42,20 +42,26 @@ class DataBase extends HomeController
     //取得帳號, 金額, 儲存金額
     function saveMoneyInto($getAccount, $inputMoney)
     {
+
         try {
             $this->connection->beginTransaction();
-            $query1 = 'UPDATE `account_detail`' ;
-            $query1 .= 'SET `account_money` = `account_money`+ ?';
-            $query1 .= 'WHERE `account_account`= ?';
+            $query1 = 'SELECT `account_money` FROM ';
+            $query1 .= '`account_detail` WHERE `account_id`= 1 FOR UPDATE';
             $result = $this->connection->prepare($query1);
+            $result->execute();
+
+            $query2 = 'UPDATE `account_detail` ';
+            $query2 .= 'SET `account_money` = `account_money`+ ? ';
+            $query2 .= 'WHERE `account_id`= ? ';
+            $result = $this->connection->prepare($query2);
             $result->bindParam(1, $inputMoney);
             $result->bindParam(2, $getAccount);
             $result->execute();
 
-            $query2 = 'INSERT INTO `account_record`(`account_id`, ';
-            $query2 .= '`account_operation`, `account_opertaion_money`, ';
-            $query2 .= "`account_operation_time`) VALUES (?, 'Save Money', ?, now())" ;
-            $result = $this->connection->prepare($query2);
+            $query3 = 'INSERT INTO `account_record`(`account_id`, ';
+            $query3 .= '`account_operation`, `account_opertaion_money`, ';
+            $query3 .= "`account_operation_time`) VALUES (?, 'Save Money', ?, now())" ;
+            $result = $this->connection->prepare($query3);
             $result->bindParam(1, $getAccount);
             $result->bindParam(2, $inputMoney);
             $result->execute();
@@ -69,23 +75,13 @@ class DataBase extends HomeController
     //取得帳號, 金額, 提取金額
     function takeMoneyOut($getAccount, $outputMoney)
     {
-        $this->connection->query("LOCK TABLES account_detail WRITE;");
-        $query1 = "SELECT `account_money` FROM `account_detail` ";
-        $query1 .= "WHERE `account_account`= ? ";
-        $query1 .= "AND (`account_money`- ?) >= 0";
-        $result = $this->connection->prepare($query1);
-        $result->bindParam(1, $getAccount);
-        $result->bindParam(2, $outputMoney);
-        $result->execute();
         try {
-            if ($result->fetchAll(PDO::FETCH_ASSOC)) {
             $query2 = "UPDATE `account_detail` SET `account_money` = ";
-            $query2 .= "`account_money`- ? WHERE `account_account` = ? ";
+            $query2 .= "`account_money`- ? WHERE `account_id` = ? ";
             $result = $this->connection->prepare($query2);
             $result->bindParam(1, $outputMoney);
             $result->bindParam(2, $getAccount);
             $result->execute();
-            $this->connection->query("UNLOCK TABLES;");
 
             $query3 = "INSERT INTO `account_record`";
             $query3 .= "(`account_id`, `account_operation`, ";
@@ -95,15 +91,23 @@ class DataBase extends HomeController
             $result->bindParam(1, $getAccount);
             $result->bindParam(2, $outputMoney);
             $result->execute();
+            $this->connection->commit();
 
             return true;
-            } else {
-                $this->connection->query("UNLOCK TABLES;");
-
-                return false;
-            }
         } catch(PDOException $e) {
                 $this->connection->rollBack();
         }
+    }
+
+    function checkMoney($getAccount)
+    {
+        $this->connection->beginTransaction();
+        $query1 = "SELECT `account_money` FROM `account_detail` ";
+        $query1 .= "WHERE `account_id` = ? FOR UPDATE";
+        $result = $this->connection->prepare($query1);
+        $result->bindParam(1, $getAccount);
+        $result->execute();
+
+        return $result->fetch(PDO::FETCH_ASSOC);
     }
 }
