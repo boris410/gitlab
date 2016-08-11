@@ -55,10 +55,10 @@ class DataBase extends HomeController
         $query2 = 'INSERT INTO `account_record`(`account_id`, ';
         $query2 .= '`account_operation`, `account_opertaion_money`, ';
         $query2 .= "`account_operation_time`) VALUES (?, 'Save Money', ?, now())" ;
-        $result2 = $this->connection->prepare($query2);
-        $result2->bindParam(1, $getAccount);
-        $result2->bindParam(2, $inputMoney);
-        $result2->execute();
+        $result = $this->connection->prepare($query2);
+        $result->bindParam(1, $getAccount);
+        $result->bindParam(2, $inputMoney);
+        $result->execute();
     }
 
     //取得帳號, 金額, 提取金額
@@ -76,19 +76,20 @@ class DataBase extends HomeController
         if ($result->fetchAll(PDO::FETCH_ASSOC)) {
             $query2 = "UPDATE `account_detail` SET `account_money` = ";
             $query2 .= "`account_money`- ? WHERE `account_account` = ? ";
-            $result2 = $this->connection->prepare($query2);
-            $result2->bindParam(1, $outputMoney);
-            $result2->bindParam(2, $getAccount);
-            $result2->execute();
+            $result = $this->connection->prepare($query2);
+            $result->bindParam(1, $outputMoney);
+            $result->bindParam(2, $getAccount);
+            $result->execute();
             $this->connection->query("UNLOCK TABLES;");
+
             $query3 = "INSERT INTO `account_record`";
             $query3 .= "(`account_id`, `account_operation`, ";
             $query3 .= "`account_opertaion_money`, `account_operation_time`)";
             $query3 .= "VALUES (?, 'Take Money', ?, now())";
-            $result3 = $this->connection->prepare($query3);
-            $result3->bindParam(1, $getAccount);
-            $result3->bindParam(2, $outputMoney);
-            $result3->execute();
+            $result = $this->connection->prepare($query3);
+            $result->bindParam(1, $getAccount);
+            $result->bindParam(2, $outputMoney);
+            $result->execute();
 
             return true;
         } else {
