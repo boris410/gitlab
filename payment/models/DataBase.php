@@ -40,7 +40,6 @@ class DataBase
     //取得帳號 金額 儲存金額
     function saveMoneyInto($getAccount, $inputMoney)
     {
-
         $this->connection->query("LOCK TABLES account_detail WRITE;");
         $q1Str1 = 'UPDATE `account_detail`';
         $q1Str2 = '  SET `account_money` = `account_money`+ ?';
