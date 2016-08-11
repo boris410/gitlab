@@ -29,23 +29,23 @@ class HomeController extends Load
 
         //選擇操作
         if ($_POST['inquireMoney']) {
-             header("location:  inquireMoney");
+            header("location:  inquireMoney");
         }
 
         if ($_POST['inputMoney']) {
-             header("location: inputMoney");
+            header("location: inputMoney");
         }
 
         if ($_POST['outputMoney']) {
-             header("location: outputMoney");
+            header("location: outputMoney");
         }
 
         if ($_POST['showAccountDetail']) {
-             header("location: showAccountDetail");
+            header("location: showAccountDetail");
         }
 
         if ($_POST['logout']) {
-             header("location: logout");
+            header("location: logout");
         }
 
         $this->view("Head");
