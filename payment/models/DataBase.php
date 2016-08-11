@@ -49,11 +49,13 @@ class DataBase extends HomeController
     //取得帳號, 金額, 儲存金額
     function saveMoneyInto($accountId, $money)
     {
+
         try {
             $this->connection->beginTransaction();
             $query1 = 'SELECT `account_money` FROM ';
-            $query1 .= '`account_detail` WHERE `account_id`= 1 FOR UPDATE';
+            $query1 .= '`account_detail` WHERE `account_id`= ? FOR UPDATE';
             $result = $this->connection->prepare($query1);
+            $result->bindParam(1, $accountId);
             $result->execute();
             $oldMoney = $result->fetch(PDO::FETCH_ASSOC);
             $oldMoney['account_money']+=$money;
@@ -84,6 +86,7 @@ class DataBase extends HomeController
     function takeMoneyOut($accountId, $money)
     {
         var_dump($money);
+        exit;
         try {
             $query2 = "UPDATE `account_detail` SET `account_money` = ";
             $query2 .= "`account_money`- ? WHERE `account_id` = ? ";

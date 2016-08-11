@@ -71,7 +71,7 @@ class HomeController extends Load
     {
         $dataBase = $this->model("DataBase");
         $session = $this->model("Session");
-        $result = $session->getUserSession();
+        $result = $dataBase->getAccounData($session->getUserSession());
 
         if ($_POST['post_inputmoney']!="") {
             if ($_POST['post_inputmoney'] >= 0) {
@@ -96,8 +96,9 @@ class HomeController extends Load
         if ($_POST['post_outputmoney']!="") {
             $result2 = $dataBase->checkMoney($result[0]['account_id']);
             if ($result2['account_money'] -= $_POST['post_outputmoney'] >= 0) {
-                $dataBase->takeMoneyOut($result['account_id'], $_POST['post_outputmoney']);
-                header("location: showAccount");
+                echo"yes";
+                // $dataBase->takeMoneyOut($result['account_id'], $_POST['post_outputmoney']);
+                // header("location: showAccount");
              }
         }
 
