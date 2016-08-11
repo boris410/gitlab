@@ -83,13 +83,11 @@ class DataBase extends HomeController
     }
 
     //取得帳號, 金額, 提取金額
-    function takeMoneyOut($accountId, $money)
+    function takeMoneyOut($accountId, $money, $operateMoney)
     {
-        var_dump($money);
-        exit;
         try {
             $query2 = "UPDATE `account_detail` SET `account_money` = ";
-            $query2 .= "`account_money`- ? WHERE `account_id` = ? ";
+            $query2 .= "? WHERE `account_id` = ? ";
             $result = $this->connection->prepare($query2);
             $result->bindParam(1, $money);
             $result->bindParam(2, $accountId);
@@ -98,10 +96,11 @@ class DataBase extends HomeController
             $query3 = "INSERT INTO `account_record` ";
             $query3 .= "(`account_id`, `account_operation`, ";
             $query3 .= "`account_opertaion_money`, `account_last_money`,`account_operation_time`) ";
-            $query3 .= "VALUES (?, 'Take Money', ?, now())";
+            $query3 .= "VALUES (?, 'Take Money', ?, ?, now())";
             $result = $this->connection->prepare($query3);
             $result->bindParam(1, $accountId);
-            $result->bindParam(2, $money);
+            $result->bindParam(2, $operateMoney);
+            $result->bindParam(3, $money);
             $result->execute();
             $this->connection->commit();
 
