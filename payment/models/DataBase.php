@@ -43,18 +43,19 @@ class DataBase extends HomeController
     function saveMoneyInto($getAccount, $inputMoney)
     {
         $this->connection->query("LOCK TABLES account_detail WRITE;");
-        $q1Str1 = 'UPDATE `account_detail`' ;
-        $q1Str2 = 'SET `account_money` = `account_money`+ ?';
-        $q1Str3 = 'WHERE `account_account`= ?';
-        $result = $this->connection->prepare($q1Str1 . $q1Str2 . $q1Str3);
+        $query1 = 'UPDATE `account_detail`' ;
+        $query1 .= 'SET `account_money` = `account_money`+ ?';
+        $query1 .= 'WHERE `account_account`= ?';
+        $result = $this->connection->prepare($query1);
         $result->bindParam(1, $inputMoney);
         $result->bindParam(2, $getAccount);
         $result->execute();
         $this->connection->query("UNLOCK TABLES;");
-        $q2Str1 = 'INSERT INTO `account_record`(`account_id`, ';
-        $q2Str2 = '`account_operation`, `account_opertaion_money`, ';
-        $q2Str3 = "`account_operation_time`) VALUES (?, 'Save Money', ?, now())" ;
-        $result2 = $this->connection->prepare($q2Str1 . $q2Str2 . $q2Str3);
+
+        $query2 = 'INSERT INTO `account_record`(`account_id`, ';
+        $query2 .= '`account_operation`, `account_opertaion_money`, ';
+        $query2 .= "`account_operation_time`) VALUES (?, 'Save Money', ?, now())" ;
+        $result2 = $this->connection->prepare($query2);
         $result2->bindParam(1, $getAccount);
         $result2->bindParam(2, $inputMoney);
         $result2->execute();
@@ -64,30 +65,30 @@ class DataBase extends HomeController
     function takeMoneyOut($getAccount, $outputMoney)
     {
         $this->connection->query("LOCK TABLES account_detail WRITE;");
-        $q1Str1 = "SELECT `account_money` FROM `account_detail` ";
-        $q1Str2 = "WHERE `account_account`= ? ";
-        $q1Str3 = "AND (`account_money`- ?) >= 0";
-        $result = $this->connection->prepare($q1Str1 . $q1Str2 . $q1Str3);
+        $query1 = "SELECT `account_money` FROM `account_detail` ";
+        $query1 .= "WHERE `account_account`= ? ";
+        $query1 .= "AND (`account_money`- ?) >= 0";
+        $result = $this->connection->prepare($query1);
         $result->bindParam(1, $getAccount);
         $result->bindParam(2, $outputMoney);
         $result->execute();
 
         if ($result->fetchAll(PDO::FETCH_ASSOC)) {
-            $q2Str1 = "UPDATE `account_detail` SET `account_money` = ";
-            $q2Str2 = "`account_money`- ? WHERE `account_account` = ? ";
-            $result = $this->connection->prepare($q2Str1 . $q2Str2);
-            $result->bindParam(1, $outputMoney);
-            $result->bindParam(2, $getAccount);
-            $result->execute();
-            $this->connection->query("UNLOCK TABLES;");
-            $q3Str1 = "INSERT INTO `account_record`";
-            $q3Str2 = "(`account_id`, `account_operation`, ";
-            $q3Str3 = "`account_opertaion_money`, `account_operation_time`)";
-            $q3Str4 = "VALUES (?, 'Take Money', ?, now())";
-            $result2 = $this->connection->prepare($q3Str1 . $q3Str2 . $q3Str3 . $q3Str4);
-            $result2->bindParam(1, $getAccount);
-            $result2->bindParam(2, $outputMoney);
+            $query2 = "UPDATE `account_detail` SET `account_money` = ";
+            $query2 .= "`account_money`- ? WHERE `account_account` = ? ";
+            $result2 = $this->connection->prepare($query2);
+            $result2->bindParam(1, $outputMoney);
+            $result2->bindParam(2, $getAccount);
             $result2->execute();
+            $this->connection->query("UNLOCK TABLES;");
+            $query3 = "INSERT INTO `account_record`";
+            $query3 .= "(`account_id`, `account_operation`, ";
+            $query3 .= "`account_opertaion_money`, `account_operation_time`)";
+            $query3 .= "VALUES (?, 'Take Money', ?, now())";
+            $result3 = $this->connection->prepare($query3);
+            $result3->bindParam(1, $getAccount);
+            $result3->bindParam(2, $outputMoney);
+            $result3->execute();
 
             return true;
         } else {
