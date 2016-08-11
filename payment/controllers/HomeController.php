@@ -28,23 +28,23 @@ class HomeController extends Load
         $result = $dataBase->getAccounData($session->getUserSession());
 
         //選擇操作
-        if ($_POST['option'] == "1") {
+        if ($_POST['inquireMoney']) {
              header("location:  inquireMoney");
         }
 
-        if ($_POST['option'] == "2") {
+        if ($_POST['inputMoney']) {
              header("location: inputMoney");
         }
 
-        if ($_POST['option'] == "3") {
+        if ($_POST['outputMoney']) {
              header("location: outputMoney");
         }
 
-        if ($_POST['option'] == "4") {
+        if ($_POST['showAccountDetail']) {
              header("location: showAccountDetail");
         }
 
-        if ($_POST['option'] == "5") {
+        if ($_POST['logout']) {
              header("location: logout");
         }
 
