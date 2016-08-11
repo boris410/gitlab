@@ -20,20 +20,27 @@ class DataBase extends HomeController
     }
 
      //查詢帳號對應的資訊account_inquire
-    function getAccounData($account,$accountId="")
+    function getAccounData($account)
     {
-        var_dump($account,$accountId="");
         $result = $this->connection->prepare("SELECT * FROM `account_detail` WHERE `account_account` = ? ");
-        $result->bindParam(1, $account['account_account']);
+        $result->bindParam(1, $account);
         $result->execute();
         return $result->fetch(PDO::FETCH_ASSOC);
+    }
+
+    function checkAccount($account)
+    {
+        $result = $this->connection->prepare("SELECT * FROM `account_detail` WHERE `account_account` = ? ");
+        $result->bindParam(1, $account);
+        $result->execute();
+        return $result->rowCount();
     }
 
     //取得帳號id, 查詢table record
     function getAccounRecord($accountId)
     {
         $result = $this->connection->prepare("SELECT * FROM `account_record` WHERE `account_id` = ? ");
-        $result->bindParam(1, $accountId['account_id']);
+        $result->bindParam(1, $accountId);
         $result->execute();
 
         return $result->fetchAll(PDO::FETCH_ASSOC);

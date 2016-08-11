@@ -7,10 +7,9 @@ class HomeController extends Load
         if ($_POST['post_account']!="") {
             $dataBase = $this->model("DataBase");
             //檢查輸入的帳號
-            if ($dataBase->getAccounData($_POST['post_account'])) {
-                $result = $dataBase->getAccounData($_POST['post_account']);
+            if ($dataBase->checkAccount($_POST['post_account']) > 0) {
                 $session = $this->model("Session");
-                $session->setUserSession($_POST['post_account'],$result['account_id']);
+                $session->setUserSession($_POST['post_account']);
                 header("location: showAccount");
             }
         }
@@ -22,6 +21,7 @@ class HomeController extends Load
     //操作頁面
     function showAccount()
     {
+
         $dataBase = $this->model("DataBase");
         //取得帳號資訊
         $session = $this->model("Session");
@@ -59,9 +59,10 @@ class HomeController extends Load
         $dataBase = $this->model("DataBase");
         $session = $this->model("Session");
         //透過session 取出明細
-        $result = $dataBase->getAccounRecord($session->getUserSession());
+        $result = $dataBase->getAccounData($session->getUserSession());
+        $result2 = $dataBase->getAccounRecord($result['account_id']);
         $this->view("Head");
-        $this->view("ShowAccountDetail", $result);
+        $this->view("ShowAccountDetail", $result2);
         $this->view("Foot");
     }
 
@@ -93,10 +94,10 @@ class HomeController extends Load
         $result = $session->getUserSession();
 
         if ($_POST['post_outputmoney']!="") {
-            $result2 = $dataBase->checkMoney($result['account_id']);
+            $result2 = $dataBase->checkMoney($result[0]['account_id']);
             if ($result2['account_money'] -= $_POST['post_outputmoney'] >= 0) {
-                $dataBase->takeMoneyOut($result['account_id'], ($result2['account_money']-$_POST['post_outputmoney']));
-               // header("location: showAccount");
+                $dataBase->takeMoneyOut($result['account_id'], $_POST['post_outputmoney']);
+                header("location: showAccount");
              }
         }
 
@@ -112,6 +113,7 @@ class HomeController extends Load
         $session = $this->model("Session");
         //取得帳號資訊
         $result = $dataBase->getAccounData($session->getUserSession());
+
         $this->view("Head");
         $this->view("InquireMoney", $result);
         $this->view("Foot");
