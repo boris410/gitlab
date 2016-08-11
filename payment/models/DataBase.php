@@ -54,8 +54,8 @@ class DataBase
         $q2Str2 = '`account_operation`, `account_opertaion_money`,';
         $q2Str3 = "`account_operation_time`) VALUES (?, 'Save Money', ?, now())" ;
         $result2 = $this->connection->prepare($q2Str1 . $q2Str2 . $q2Str3);
-        $result2->bindParam(1,$getAccount);
-        $result2->bindParam(2,$inputMoney);
+        $result2->bindParam(1, $getAccount);
+        $result2->bindParam(2, $inputMoney);
         $result2->execute();
     }
 
@@ -84,8 +84,8 @@ class DataBase
             $q3Str3 = "`account_opertaion_money`, `account_operation_time`)";
             $q3Str4 = "VALUES (?, 'Take Money', ?, now())";
             $result2 = $this->connection->prepare($q3Str1 . $q3Str2 . $q3Str3 . $q3Str4);
-            $result2->bindParam(1,$getAccount);
-            $result2->bindParam(2,$outputMoney);
+            $result2->bindParam(1, $getAccount);
+            $result2->bindParam(2, $outputMoney);
             $result2->execute();
             return true;
         } else {
