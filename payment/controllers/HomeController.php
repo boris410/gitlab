@@ -71,10 +71,12 @@ class HomeController extends Load
         $session = $this->model("Session");
         $result = $dataBase->getAccounData($session->getUserSession());
 
-        if ($_POST['post_inputMoney']!="") {
+        if ($_POST['post_inputmoney']!="") {
+            if ($_POST['post_inputmoney'] >= 0) {
             //帶入帳號及金額
-            $dataBase->saveMoneyInto($result[0]['account_id'], $_POST['post_inputMoney']);
+            $dataBase->saveMoneyInto($result[0]['account_id'], $_POST['post_inputmoney']);
             header("location: showAccount");
+            }
         }
 
         $this->view("Head");
@@ -89,10 +91,10 @@ class HomeController extends Load
         $session = $this->model("Session");
         $result = $dataBase->getAccounData($session->getUserSession());
 
-        if ($_POST['post_outputMoney']!="") {
+        if ($_POST['post_outputmoney']!="") {
             $result2 = $dataBase->checkMoney($result[0]['account_id']);
-            if ($result2['account_money'] -= $_POST['post_outputMoney'] >= 0) {
-                $dataBase->takeMoneyOut($result[0]['account_id'], $_POST['post_outputMoney']);
+            if ($result2['account_money'] -= $_POST['post_outputmoney'] >= 0) {
+                $dataBase->takeMoneyOut($result[0]['account_id'], $_POST['post_outputmoney']);
                 header("location: showAccount");
              }
         }

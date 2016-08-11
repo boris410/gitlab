@@ -58,9 +58,9 @@ class DataBase extends HomeController
             $result->bindParam(2, $accountId);
             $result->execute();
 
-            $query3 = 'INSERT INTO `account_record`(`account_id`, ';
-            $query3 .= '`account_operation`, `account_opertaion_money`, ';
-            $query3 .= "`account_operation_time`) VALUES (?, 'Save Money', ?, now())" ;
+            $query3 = 'INSERT INTO `account_record`(`account_id`, `account_operation`, ';
+            $query3 .= '`account_opertaion_money`, `account_last_money`, `account_operation_time`) ';
+            $query3 .= "VALUES (?, 'Save Money', ?, ?, now())" ;
             $result = $this->connection->prepare($query3);
             $result->bindParam(1, $accountId);
             $result->bindParam(2, $money);
