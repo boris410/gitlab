@@ -92,8 +92,8 @@ class HomeController extends Load
         if ($_POST['post_outputMoney']!="") {
             $result2 = $dataBase->checkMoney($result[0]['account_id']);
             if ($result2['account_money'] -= $_POST['post_outputMoney'] >= 0) {
-                 $dataBase->takeMoneyOut($result[0]['account_id'], $_POST['post_outputMoney']);
-                 header("location: showAccount");
+                $dataBase->takeMoneyOut($result[0]['account_id'], $_POST['post_outputMoney']);
+                header("location: showAccount");
              }
         }
 
