@@ -61,7 +61,7 @@ class DataBase extends HomeController
             $result->execute();
             $this->connection->commit();
         } catch(PDOException $e) {
-             $this->connection->rollBack();
+            $this->connection->rollBack();
         }
 
     }
@@ -77,8 +77,8 @@ class DataBase extends HomeController
         $result->bindParam(1, $getAccount);
         $result->bindParam(2, $outputMoney);
         $result->execute();
-
-        if ($result->fetchAll(PDO::FETCH_ASSOC)) {
+        try {
+            if ($result->fetchAll(PDO::FETCH_ASSOC)) {
             $query2 = "UPDATE `account_detail` SET `account_money` = ";
             $query2 .= "`account_money`- ? WHERE `account_account` = ? ";
             $result = $this->connection->prepare($query2);
@@ -97,10 +97,13 @@ class DataBase extends HomeController
             $result->execute();
 
             return true;
-        } else {
-            $this->connection->query("UNLOCK TABLES;");
+            } else {
+                $this->connection->query("UNLOCK TABLES;");
 
-            return false;
+                return false;
+            }
+        } catch(PDOException $e) {
+                $this->connection->rollBack();
         }
     }
 }
