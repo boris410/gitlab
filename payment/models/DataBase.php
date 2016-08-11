@@ -1,6 +1,6 @@
 <?php
 
-class DataBase
+class DataBase extends HomeController
 {
     const DATABASE_HOST = 'localhost';
     const DATABASE_NAME = 'payment';
@@ -25,6 +25,7 @@ class DataBase
         $result = $this->connection->prepare("SELECT * FROM `account_detail` WHERE `account_account` = ? ");
         $result->bindParam(1, $getAccount);
         $result->execute();
+
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
@@ -34,6 +35,7 @@ class DataBase
         $result = $this->connection->prepare("SELECT * FROM `account_record` WHERE `account_id` = ? ");
         $result->bindParam(1, $accountId);
         $result->execute();
+
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
@@ -48,6 +50,7 @@ class DataBase
         $result->bindParam(1, $inputMoney);
         $result->bindParam(2, $getAccount);
         $result->execute();
+        sleep(5);
         $this->connection->query("UNLOCK TABLES;");
         $q2Str1 = 'INSERT INTO `account_record`(`account_id`,';
         $q2Str2 = '`account_operation`, `account_opertaion_money`,';
@@ -86,9 +89,11 @@ class DataBase
             $result2->bindParam(1, $getAccount);
             $result2->bindParam(2, $outputMoney);
             $result2->execute();
+
             return true;
         } else {
             $this->connection->query("UNLOCK TABLES;");
+
             return false;
         }
     }
