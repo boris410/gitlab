@@ -1,4 +1,4 @@
-<H3>帳號 : <?php print_r($data[0]['account_account'])?><H3>
+<H3>帳號 : <?php print_r($data['account_account'])?><H3>
 <form action="" method="POST" >
     <button type="submit" value="1" name="inquireMoney" >查詢餘額</button>
     <button type="submit" value="2" name="inputMoney" >存款</button>

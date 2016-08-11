@@ -20,20 +20,20 @@ class DataBase extends HomeController
     }
 
      //查詢帳號對應的資訊account_inquire
-    function getAccounData($account)
+    function getAccounData($account,$accountId="")
     {
-        $result = $this->connection->prepare("SELECT * FROM `account_detail` WHERE `account_account` = ? ");
-        $result->bindParam(1, $account);
-        $result->execute();
 
-        return $result->fetchAll(PDO::FETCH_ASSOC);
+        $result = $this->connection->prepare("SELECT * FROM `account_detail` WHERE `account_account` = ? ");
+        $result->bindParam(1, $account['account_account']);
+        $result->execute();
+        return $result->fetch(PDO::FETCH_ASSOC);
     }
 
     //取得帳號id, 查詢table record
     function getAccounRecord($accountId)
     {
         $result = $this->connection->prepare("SELECT * FROM `account_record` WHERE `account_id` = ? ");
-        $result->bindParam(1, $accountId);
+        $result->bindParam(1, $accountId['account_id']);
         $result->execute();
 
         return $result->fetchAll(PDO::FETCH_ASSOC);
@@ -49,6 +49,7 @@ class DataBase extends HomeController
             $query1 .= '`account_detail` WHERE `account_id`= 1 FOR UPDATE';
             $result = $this->connection->prepare($query1);
             $result->execute();
+            $oldMoney = $result->fetch(PDO::FETCH_ASSOC);
 
             $query2 = 'UPDATE `account_detail` ';
             $query2 .= 'SET `account_money` = `account_money`+ ? ';
@@ -64,6 +65,7 @@ class DataBase extends HomeController
             $result = $this->connection->prepare($query3);
             $result->bindParam(1, $accountId);
             $result->bindParam(2, $money);
+            $result->bindParam(3, $oldMoney['account_money']);
             $result->execute();
             $this->connection->commit();
         } catch(PDOException $e) {

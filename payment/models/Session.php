@@ -3,14 +3,15 @@
 class Session
 {
     //登入確定後設定SESSION
-    function setUserSession($account)
+    function setUserSession($account,$accountId)
     {
-        $_SESSION['session_Account'] = $account;
+        $_SESSION['session_account'] = $account;
+        $_SESSION['session_accountid'] = $accountId;
     }
 
     function getUserSession()
     {
-        return $_SESSION['session_Account'];
+        return array('account_account'=>$_SESSION['session_account'],'account_id'=>$_SESSION['session_accountid']);
     }
 
     function clearSession()
