@@ -22,6 +22,7 @@ class DataBase extends HomeController
      //查詢帳號對應的資訊account_inquire
     function getAccounData($account,$accountId="")
     {
+        var_dump($account,$accountId="");
         $result = $this->connection->prepare("SELECT * FROM `account_detail` WHERE `account_account` = ? ");
         $result->bindParam(1, $account['account_account']);
         $result->execute();
@@ -75,6 +76,7 @@ class DataBase extends HomeController
     //取得帳號, 金額, 提取金額
     function takeMoneyOut($accountId, $money)
     {
+        var_dump($money);
         try {
             $query2 = "UPDATE `account_detail` SET `account_money` = ";
             $query2 .= "`account_money`- ? WHERE `account_id` = ? ";
@@ -85,7 +87,7 @@ class DataBase extends HomeController
 
             $query3 = "INSERT INTO `account_record` ";
             $query3 .= "(`account_id`, `account_operation`, ";
-            $query3 .= "`account_opertaion_money`, `account_operation_time`) ";
+            $query3 .= "`account_opertaion_money`, `account_last_money`,`account_operation_time`) ";
             $query3 .= "VALUES (?, 'Take Money', ?, now())";
             $result = $this->connection->prepare($query3);
             $result->bindParam(1, $accountId);
