@@ -79,8 +79,10 @@ class HomeController extends Load
                 if ($_POST['saveMoney'] >= 0) {
 
                     //帶入帳號及金額
-                    $dataBase->saveMoneyInto($accountId['id'], $_POST['saveMoney']);
-                    header("location: showAccount");
+                    if ($dataBase->saveMoneyInto($accountId['id'], $_POST['saveMoney'])) {
+                        header("location: showAccount");
+                    }
+
                 }
             }
 

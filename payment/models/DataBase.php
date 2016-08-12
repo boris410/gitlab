@@ -80,8 +80,12 @@ class DataBase extends HomeController
             $result->bindParam(3, $oldMoney['money']);
             $result->execute();
             $this->connection->commit();
+
+            return true;
         } catch(PDOException $e) {
             $this->connection->rollBack();
+
+            return false;
         }
     }
 
@@ -108,8 +112,11 @@ class DataBase extends HomeController
             $result->execute();
             $this->connection->commit();
 
+            return true;
         } catch(PDOException $e) {
                 $this->connection->rollBack();
+
+                return false;
         }
     }
 
