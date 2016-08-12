@@ -72,7 +72,7 @@ class DataBase extends HomeController
             $result->execute();
 
             $query3 = "INSERT INTO `record`(`account_id`, `operation`, ";
-            $query3 .= "`money`, `resultMoney`, `time`) ";
+            $query3 .= "`money`, `result_money`, `time`) ";
             $query3 .= "VALUES (?, 'Save Money', ?, ?, now())" ;
             $result = $this->connection->prepare($query3);
             $result->bindParam(1, $accountId);
@@ -85,7 +85,7 @@ class DataBase extends HomeController
         } catch(PDOException $e) {
             $this->connection->rollBack();
 
-            return $e->getMessage();
+            return false;
         }
     }
 
@@ -103,7 +103,7 @@ class DataBase extends HomeController
 
             $query3 = "INSERT INTO `record` ";
             $query3 .= "(`account_id`, `operation`, ";
-            $query3 .= "`money`, `resultMoney`, `time`) ";
+            $query3 .= "`money`, `result_money`, `time`) ";
             $query3 .= "VALUES (?, 'Take Money', ?, ?, now())";
             $result = $this->connection->prepare($query3);
             $result->bindParam(1, $accountId);

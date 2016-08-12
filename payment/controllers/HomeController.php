@@ -102,10 +102,9 @@ class HomeController extends Load
         $session = $this->model("Session");
         $getSession = $session->getUserSession();
         $accountId = $dataBase->getAccounData($getSession);
+        $money = $dataBase->checkMoney($accountId['id']);
 
         if (is_numeric($_POST['takeMoney']) && ($money['money'] >= $_POST['takeMoney']) ) {
-            $money = $dataBase->checkMoney($accountId['id']);
-
             if($dataBase->takeMoneyOut($accountId['id'], $money['money'], $_POST['takeMoney'])){
                 header("location: showAccount");
             }
