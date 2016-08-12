@@ -28,20 +28,20 @@ class HomeController extends Load
         $getSession = $session->getUserSession();
 
         //選擇操作
-        if ($_POST['inquireMoney']) {
-            header("location:  inquireMoney");
+        if ($_POST['lastMoney']) {
+            header("location:  lastMoney");
         }
 
-        if ($_POST['inputMoney']) {
-            header("location: inputMoney");
+        if ($_POST['saveMoney']) {
+            header("location: saveMoney");
         }
 
-        if ($_POST['outputMoney']) {
-            header("location: outputMoney");
+        if ($_POST['takeMoney']) {
+            header("location: takeMoney");
         }
 
-        if ($_POST['showAccountDetail']) {
-            header("location: showAccountRecord");
+        if ($_POST['showRecord']) {
+            header("location: showRecord");
         }
 
         if ($_POST['logout']) {
@@ -54,7 +54,7 @@ class HomeController extends Load
     }
 
     //查詢明細
-    function showAccountRecord()
+    function showRecord()
     {
         $dataBase = $this->model("DataBase");
         $session = $this->model("Session");
@@ -62,12 +62,12 @@ class HomeController extends Load
         $accountId = $dataBase->getAccounData($getSession);
         $record = $dataBase->getAccounRecord($accountId['account_id']);
         $this->view("Head");
-        $this->view("ShowAccountRecord", $record);
+        $this->view("ShowRecord", $record);
         $this->view("Foot");
     }
 
     //存入金額
-    function inputMoney()
+    function saveMoney()
     {
         $dataBase = $this->model("DataBase");
         $session = $this->model("Session");
@@ -84,12 +84,12 @@ class HomeController extends Load
         }
 
         $this->view("Head");
-        $this->view("InputMoney");
+        $this->view("SaveMoney");
         $this->view("Foot");
     }
 
     //提取金額
-    function outputMoney()
+    function takeMoney()
     {
         $dataBase = $this->model("DataBase");
         $session = $this->model("Session");
@@ -106,12 +106,12 @@ class HomeController extends Load
         }
 
         $this->view("Head");
-        $this->view("OutputMoney");
+        $this->view("TakeMoney");
         $this->view("Foot");
     }
 
     //查詢餘額
-    function inquireMoney()
+    function lastMoney()
     {
         $dataBase = $this->model("DataBase");
         $session = $this->model("Session");
@@ -120,7 +120,7 @@ class HomeController extends Load
         $getSession = $session->getUserSession();
         $record = $dataBase->getAccounData($getSession);
         $this->view("Head");
-        $this->view("InquireMoney", $record);
+        $this->view("LastMoney", $record);
         $this->view("Foot");
     }
 
