@@ -25,6 +25,7 @@ class DataBase extends HomeController
         $result = $this->connection->prepare("SELECT * FROM `account_detail` WHERE `account_account` = ? ");
         $result->bindParam(1, $account);
         $result->execute();
+
         return $result->fetch(PDO::FETCH_ASSOC);
     }
 
@@ -33,6 +34,7 @@ class DataBase extends HomeController
         $result = $this->connection->prepare("SELECT * FROM `account_detail` WHERE `account_account` = ? ");
         $result->bindParam(1, $account);
         $result->execute();
+
         return $result->rowCount();
     }
 
@@ -79,6 +81,7 @@ class DataBase extends HomeController
             $this->connection->commit();
         } catch(PDOException $e) {
             $this->connection->rollBack();
+            throw new MyDatabaseException( $Exception->getMessage( ));
         }
     }
 
@@ -95,7 +98,7 @@ class DataBase extends HomeController
 
             $query3 = "INSERT INTO `account_record` ";
             $query3 .= "(`account_id`, `account_operation`, ";
-            $query3 .= "`account_opertaion_money`, `account_last_money`,`account_operation_time`) ";
+            $query3 .= "`account_opertaion_money`, `account_last_money`, `account_operation_time`) ";
             $query3 .= "VALUES (?, 'Take Money', ?, ?, now())";
             $result = $this->connection->prepare($query3);
             $result->bindParam(1, $accountId);
@@ -106,6 +109,7 @@ class DataBase extends HomeController
 
         } catch(PDOException $e) {
                 $this->connection->rollBack();
+                throw new MyDatabaseException( $Exception->getMessage( ));
         }
     }
 

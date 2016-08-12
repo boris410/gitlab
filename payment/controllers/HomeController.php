@@ -41,7 +41,7 @@ class HomeController extends Load
         }
 
         if ($_POST['showAccountDetail']) {
-            header("location: showAccountDetail");
+            header("location: showAccountRecord");
         }
 
         if ($_POST['logout']) {
@@ -54,7 +54,7 @@ class HomeController extends Load
     }
 
     //查詢明細
-    function showAccountDetail()
+    function showAccountRecord()
     {
         $dataBase = $this->model("DataBase");
         $session = $this->model("Session");
@@ -62,7 +62,7 @@ class HomeController extends Load
         $result = $dataBase->getAccounData($session->getUserSession());
         $result2 = $dataBase->getAccounRecord($result['account_id']);
         $this->view("Head");
-        $this->view("ShowAccountDetail", $result2);
+        $this->view("ShowAccountRecord", $result2);
         $this->view("Foot");
     }
 
@@ -75,9 +75,9 @@ class HomeController extends Load
 
         if ($_POST['post_inputmoney']!="") {
             if ($_POST['post_inputmoney'] >= 0) {
-            //帶入帳號及金額
-            $dataBase->saveMoneyInto($result['account_id'], $_POST['post_inputmoney']);
-            header("location: showAccount");
+                //帶入帳號及金額
+                $dataBase->saveMoneyInto($result['account_id'], $_POST['post_inputmoney']);
+                header("location: showAccount");
             }
         }
 
@@ -114,7 +114,6 @@ class HomeController extends Load
         $session = $this->model("Session");
         //取得帳號資訊
         $result = $dataBase->getAccounData($session->getUserSession());
-
         $this->view("Head");
         $this->view("InquireMoney", $result);
         $this->view("Foot");
