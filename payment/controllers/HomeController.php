@@ -24,12 +24,8 @@ class HomeController extends Load
     //操作頁面
     function showAccount()
     {
-
-        $dataBase = $this->model("DataBase");
-
-        //取得帳號資訊
         $session = $this->model("Session");
-        $result = $dataBase->getAccounData($session->getUserSession());
+        $getSession = $session->getUserSession();
 
         //選擇操作
         if ($_POST['inquireMoney']) {
@@ -53,7 +49,7 @@ class HomeController extends Load
         }
 
         $this->view("Head");
-        $this->view("ShowAccount", $result);
+        $this->view("ShowAccount", $getSession);
         $this->view("Foot");
     }
 
