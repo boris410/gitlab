@@ -51,7 +51,6 @@ class DataBase extends HomeController
     //取得帳號, 操作金額
     function saveMoneyInto($accountId, $money)
     {
-
         try {
             $this->connection->beginTransaction();
             $query1 = "SELECT `money` FROM ";
@@ -83,7 +82,6 @@ class DataBase extends HomeController
             $this->connection->commit();
         } catch(PDOException $e) {
             $this->connection->rollBack();
-            throw new MyDatabaseException( $Exception->getMessage( ));
         }
     }
 
@@ -92,11 +90,12 @@ class DataBase extends HomeController
     {
         try {
             $query2 = "UPDATE `account` SET `money` = ";
-            $query2 .= "? WHERE `id` = ? ";
+            $query2 .= "`money`- ? WHERE `id` = ? ";
             $result = $this->connection->prepare($query2);
-            $result->bindParam(1, $money);
+            $result->bindParam(1, $operateMoney);
             $result->bindParam(2, $accountId);
             $result->execute();
+            $money -= $operateMoney;
 
             $query3 = "INSERT INTO `record` ";
             $query3 .= "(`account_id`, `operation`, ";
@@ -111,7 +110,6 @@ class DataBase extends HomeController
 
         } catch(PDOException $e) {
                 $this->connection->rollBack();
-                throw new MyDatabaseException( $Exception->getMessage( ));
         }
     }
 
