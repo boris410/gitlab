@@ -1,4 +1,5 @@
 <?php
+
 class HomeController extends Load
 {
     //首頁
@@ -13,6 +14,7 @@ class HomeController extends Load
                 header("location: showAccount");
             }
         }
+
         $this->view("Head");
         $this->view("Index");
         $this->view("Foot");
