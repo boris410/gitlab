@@ -2,17 +2,17 @@
 
 class DataBase extends HomeController
 {
-    const DATABASE_HOST = 'localhost';
-    const DATABASE_NAME = 'payment';
-    const DATABASE_USERNAME = 'root';
-    const DATABASE_PASSWORD = '';
+    private $hostName = 'localhost';
+    private $dabaBaseNaem = 'payment';
+    private $userName = 'root';
+    private $passWord = '';
     private $connection = null;
 
     public function __construct()
     {
-        $dsn = sprintf('mysql:dbname=%s;host=%s', static::DATABASE_NAME, static::DATABASE_HOST);
+        $dsn = sprintf('mysql:dbname=%s;host=%s', $this->dabaBaseNaem, $this->hostName);
         try {
-            $this->connection = new PDO($dsn, static::DATABASE_USERNAME, static::DATABASE_PASSWORD);
+            $this->connection = new PDO($dsn, $this->userName, $this->passWord);
             $this->connection->exec("set names utf8");
         } catch (PDOException $e) {
             echo 'Connection failed: ' . $e->getMessage();
