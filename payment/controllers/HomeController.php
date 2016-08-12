@@ -83,10 +83,11 @@ class HomeController extends Load
                         header("location: showAccount");
                     }
 
+                    $error = "資料庫連線錯誤 Try Again";
                 }
             }
 
-            $error = "請輸入正確數字";
+            $error = "請輸入數字";
         }
 
         $this->view("Head");
@@ -107,8 +108,11 @@ class HomeController extends Load
                 $money = $dataBase->checkMoney($accountId['id']);
 
                 if (($money['money'] >= $_POST['takeMoney'])) {
-                    $dataBase->takeMoneyOut($accountId['id'], $money['money'], $_POST['takeMoney']);
-                    header("location: showAccount");
+                    if($dataBase->takeMoneyOut($accountId['id'], $money['money'], $_POST['takeMoney'])){
+                          header("location: showAccount");
+                    }
+
+                    $error = "資料庫連線錯誤 Try Again";
                 }
 
                 if (($money['money'] < $_POST['takeMoney'])) {
