@@ -42,6 +42,7 @@ class App
             $url = explode("/", $url);
             return $url;
         } else {
+
             //如果網址列什麼都沒有就導向Home/index
             header("location: Home/index");
         }

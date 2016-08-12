@@ -59,9 +59,10 @@ class DataBase extends HomeController
             $result = $this->connection->prepare($query1);
             $result->bindParam(1, $accountId);
             $result->execute();
+
             //取得操作前的金額並加上操作金額
             $oldMoney = $result->fetch(PDO::FETCH_ASSOC);
-            $oldMoney['account_money']+=$money;
+            $oldMoney['account_money'] += $money;
 
             $query2 = 'UPDATE `account_detail` ';
             $query2 .= 'SET `account_money` = `account_money`+ ? ';

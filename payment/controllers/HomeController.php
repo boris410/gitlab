@@ -7,6 +7,7 @@ class HomeController extends Load
     {
         if ($_POST['post_account'] != "") {
             $dataBase = $this->model("DataBase");
+
             //檢查輸入的帳號
             if ($dataBase->checkAccount($_POST['post_account']) > 0) {
                 $session = $this->model("Session");
@@ -25,6 +26,7 @@ class HomeController extends Load
     {
 
         $dataBase = $this->model("DataBase");
+
         //取得帳號資訊
         $session = $this->model("Session");
         $result = $dataBase->getAccounData($session->getUserSession());
@@ -60,6 +62,7 @@ class HomeController extends Load
     {
         $dataBase = $this->model("DataBase");
         $session = $this->model("Session");
+
         //透過session 取出明細
         $result = $dataBase->getAccounData($session->getUserSession());
         $result2 = $dataBase->getAccounRecord($result['account_id']);
@@ -77,6 +80,7 @@ class HomeController extends Load
 
         if ($_POST['post_inputmoney'] != "") {
             if ($_POST['post_inputmoney'] >= 0) {
+
                 //帶入帳號及金額
                 $dataBase->saveMoneyInto($result['account_id'], $_POST['post_inputmoney']);
                 header("location: showAccount");
@@ -114,6 +118,7 @@ class HomeController extends Load
     {
         $dataBase = $this->model("DataBase");
         $session = $this->model("Session");
+
         //取得帳號資訊
         $result = $dataBase->getAccounData($session->getUserSession());
         $this->view("Head");
