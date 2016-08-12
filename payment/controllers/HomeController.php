@@ -74,20 +74,17 @@ class HomeController extends Load
         $getSession = $session->getUserSession();
         $accountId = $dataBase->getAccounData($getSession);
 
-        if (is_numeric($_POST['saveMoney']) && $_POST['saveMoney'] >= 0 ) {
+        if($_POST['saveMoney']){
+            $result = $dataBase->saveMoneyInto($accountId['id'], $_POST['saveMoney']);
 
             //帶入帳號及金額
-            if ($dataBase->saveMoneyInto($accountId['id'], $_POST['saveMoney'])) {
+            if ($result == "ok") {
                 header("location: showAccount");
             }
-
-            $error = "資料庫連線錯誤 Try Again";
         }
 
-        if ($_POST['saveMoney']) {
-            if (!(is_numeric($_POST['saveMoney']) && $_POST['saveMoney'] >= 0)) {
-                $error = "請輸入正確數字";
-            }
+        if (!($result) && $_POST['saveMoney']) {
+            $error = $result;
         }
 
         $this->view("Head");
@@ -102,20 +99,22 @@ class HomeController extends Load
         $session = $this->model("Session");
         $getSession = $session->getUserSession();
         $accountId = $dataBase->getAccounData($getSession);
-        $money = $dataBase->checkMoney($accountId['id']);
 
-        if (is_numeric($_POST['takeMoney']) && ($money['money'] >= $_POST['takeMoney']) ) {
-            if($dataBase->takeMoneyOut($accountId['id'], $money['money'], $_POST['takeMoney'])){
-                header("location: showAccount");
+        //檢查金錢額度
+        $money = $dataBase->checkMoney($accountId['id'],$_POST['takeMoney']);
+
+        if ($money) {
+            $result= $dataBase->takeMoneyOut($accountId['id'], $money['money'], $_POST['takeMoney']);
+
+            if ($result !="ok") {
+                $error =  $result ;
             }
 
-            $error = "資料庫連線錯誤 Try Again";
+            header("location: ShowAccount");
         }
 
-        if ($_POST['takeMoney']) {
-            if (($money['money'] < $_POST['takeMoney'])) {
-                $error = "請輸入正確數字";;
-            }
+        if (!($money) && $_POST['takeMoney']) {
+            $error = "金額不足";
         }
 
         $this->view("Head");

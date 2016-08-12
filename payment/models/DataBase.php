@@ -66,9 +66,10 @@ class DataBase extends HomeController
             $query2 = "UPDATE `account` ";
             $query2 .= "SET `money` = `money`+ ? ";
             $query2 .= "WHERE `id`= ? ";
+
             $result = $this->connection->prepare($query2);
             $result->bindParam(1, $money);
-            $result->bindParam(2, $accountId);
+            $result->bindParam(2,$accountId);
             $result->execute();
 
             $query3 = "INSERT INTO `record`(`account_id`, `operation`, ";
@@ -81,11 +82,11 @@ class DataBase extends HomeController
             $result->execute();
             $this->connection->commit();
 
-            return true;
+            return "ok";
         } catch(PDOException $e) {
             $this->connection->rollBack();
 
-            return false;
+            return $e->getMessage();
         }
     }
 
@@ -112,22 +113,23 @@ class DataBase extends HomeController
             $result->execute();
             $this->connection->commit();
 
-            return true;
+            return "ok";
         } catch(PDOException $e) {
             $this->connection->rollBack();
 
-            return false;
+            return $e->getMessage();
         }
     }
 
     //檢查金額
-    function checkMoney($accountId)
+    function checkMoney($accountId,$takeMoney)
     {
         $this->connection->beginTransaction();
         $query1 = "SELECT `money` FROM `account` ";
-        $query1 .= "WHERE `id` = ? FOR UPDATE";
+        $query1 .= "WHERE `money`- ? >= 0 AND `id` = ? FOR UPDATE";
         $result = $this->connection->prepare($query1);
-        $result->bindParam(1, $accountId);
+        $result->bindParam(1, $takeMoney);
+        $result->bindParam(2, $accountId);
         $result->execute();
 
         return $result->fetch(PDO::FETCH_ASSOC);
