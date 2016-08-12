@@ -4,7 +4,7 @@ class HomeController extends Load
     //首頁
     function index()
     {
-        if ($_POST['post_account']!="") {
+        if ($_POST['post_account'] != "") {
             $dataBase = $this->model("DataBase");
             //檢查輸入的帳號
             if ($dataBase->checkAccount($_POST['post_account']) > 0) {
@@ -73,7 +73,7 @@ class HomeController extends Load
         $session = $this->model("Session");
         $result = $dataBase->getAccounData($session->getUserSession());
 
-        if ($_POST['post_inputmoney']!="") {
+        if ($_POST['post_inputmoney'] != "") {
             if ($_POST['post_inputmoney'] >= 0) {
                 //帶入帳號及金額
                 $dataBase->saveMoneyInto($result['account_id'], $_POST['post_inputmoney']);
@@ -93,7 +93,7 @@ class HomeController extends Load
         $session = $this->model("Session");
         $result = $dataBase->getAccounData($session->getUserSession());
 
-        if ($_POST['post_outputmoney']!="") {
+        if ($_POST['post_outputmoney'] != "") {
             $result2 = $dataBase->checkMoney($result['account_id']);
 
             if (($result['account_money'] -= $_POST['post_outputmoney']) >= 0) {
