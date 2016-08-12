@@ -22,7 +22,7 @@ class DataBase extends HomeController
      //查詢帳號對應的資訊account_inquire
     function getAccounData($account)
     {
-        $result = $this->connection->prepare("SELECT * FROM `account_detail` WHERE `account` = ? ");
+        $result = $this->connection->prepare("SELECT * FROM `account` WHERE `account` = ? ");
         $result->bindParam(1, $account);
         $result->execute();
 
@@ -31,7 +31,7 @@ class DataBase extends HomeController
 
     function checkAccount($account)
     {
-        $result = $this->connection->prepare("SELECT * FROM `account_detail` WHERE `account` = ? ");
+        $result = $this->connection->prepare("SELECT * FROM `account` WHERE `account` = ? ");
         $result->bindParam(1, $account);
         $result->execute();
 
@@ -41,7 +41,7 @@ class DataBase extends HomeController
     //取得帳號id, 查詢table record
     function getAccounRecord($accountId)
     {
-        $result = $this->connection->prepare("SELECT * FROM `account_record` WHERE `account_id` = ? ");
+        $result = $this->connection->prepare("SELECT * FROM `record` WHERE `account_id` = ? ");
         $result->bindParam(1, $accountId);
         $result->execute();
 
@@ -55,7 +55,7 @@ class DataBase extends HomeController
         try {
             $this->connection->beginTransaction();
             $query1 = "SELECT `money` FROM ";
-            $query1 .= "`account_detail` WHERE `id`= ? FOR UPDATE";
+            $query1 .= "`account` WHERE `id`= ? FOR UPDATE";
             $result = $this->connection->prepare($query1);
             $result->bindParam(1, $accountId);
             $result->execute();
@@ -64,7 +64,7 @@ class DataBase extends HomeController
             $oldMoney = $result->fetch(PDO::FETCH_ASSOC);
             $oldMoney['money'] += $money;
 
-            $query2 = "UPDATE `account_detail` ";
+            $query2 = "UPDATE `account` ";
             $query2 .= "SET `money` = `money`+ ? ";
             $query2 .= "WHERE `id`= ? ";
             $result = $this->connection->prepare($query2);
@@ -72,7 +72,7 @@ class DataBase extends HomeController
             $result->bindParam(2, $accountId);
             $result->execute();
 
-            $query3 = "INSERT INTO `account_record`(`account_id`, `operation`, ";
+            $query3 = "INSERT INTO `record`(`account_id`, `operation`, ";
             $query3 .= "`money`, `resultMoney`, `time`) ";
             $query3 .= "VALUES (?, 'Save Money', ?, ?, now())" ;
             $result = $this->connection->prepare($query3);
@@ -91,14 +91,14 @@ class DataBase extends HomeController
     function takeMoneyOut($accountId, $money, $operateMoney)
     {
         try {
-            $query2 = "UPDATE `account_detail` SET `money` = ";
+            $query2 = "UPDATE `account` SET `money` = ";
             $query2 .= "? WHERE `id` = ? ";
             $result = $this->connection->prepare($query2);
             $result->bindParam(1, $money);
             $result->bindParam(2, $accountId);
             $result->execute();
 
-            $query3 = "INSERT INTO `account_record` ";
+            $query3 = "INSERT INTO `record` ";
             $query3 .= "(`account_id`, `operation`, ";
             $query3 .= "`money`, `resultMoney`, `time`) ";
             $query3 .= "VALUES (?, 'Take Money', ?, ?, now())";
@@ -119,7 +119,7 @@ class DataBase extends HomeController
     function checkMoney($accountId)
     {
         $this->connection->beginTransaction();
-        $query1 = "SELECT `money` FROM `account_detail` ";
+        $query1 = "SELECT `money` FROM `account` ";
         $query1 .= "WHERE `id` = ? FOR UPDATE";
         $result = $this->connection->prepare($query1);
         $result->bindParam(1, $accountId);
