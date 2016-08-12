@@ -114,9 +114,9 @@ class DataBase extends HomeController
 
             return true;
         } catch(PDOException $e) {
-                $this->connection->rollBack();
+            $this->connection->rollBack();
 
-                return false;
+            return false;
         }
     }
 
