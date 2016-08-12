@@ -54,8 +54,8 @@ class DataBase extends HomeController
 
         try {
             $this->connection->beginTransaction();
-            $query1 = 'SELECT `account_money` FROM ';
-            $query1 .= '`account_detail` WHERE `account_id`= ? FOR UPDATE';
+            $query1 = "SELECT `account_money` FROM ";
+            $query1 .= "`account_detail` WHERE `account_id`= ? FOR UPDATE";
             $result = $this->connection->prepare($query1);
             $result->bindParam(1, $accountId);
             $result->execute();
@@ -64,16 +64,16 @@ class DataBase extends HomeController
             $oldMoney = $result->fetch(PDO::FETCH_ASSOC);
             $oldMoney['account_money'] += $money;
 
-            $query2 = 'UPDATE `account_detail` ';
-            $query2 .= 'SET `account_money` = `account_money`+ ? ';
-            $query2 .= 'WHERE `account_id`= ? ';
+            $query2 = "UPDATE `account_detail` ";
+            $query2 .= "SET `account_money` = `account_money`+ ? ";
+            $query2 .= "WHERE `account_id`= ? ";
             $result = $this->connection->prepare($query2);
             $result->bindParam(1, $money);
             $result->bindParam(2, $accountId);
             $result->execute();
 
-            $query3 = 'INSERT INTO `account_record`(`account_id`, `account_operation`, ';
-            $query3 .= '`account_opertaion_money`, `account_last_money`, `account_operation_time`) ';
+            $query3 = "INSERT INTO `account_record`(`account_id`, `account_operation`, ";
+            $query3 .= "`account_opertaion_money`, `account_last_money`, `account_operation_time`) ";
             $query3 .= "VALUES (?, 'Save Money', ?, ?, now())" ;
             $result = $this->connection->prepare($query3);
             $result->bindParam(1, $accountId);
