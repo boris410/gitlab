@@ -74,17 +74,21 @@ class HomeController extends Load
         $getSession = $session->getUserSession();
         $accountId = $dataBase->getAccounData($getSession);
 
-        if ($_POST['saveMoney']) {
-            if ($_POST['saveMoney'] >= 0) {
+        if (($_POST['saveMoney'])) {
+            if (is_numeric($_POST['saveMoney'])) {
+                if ($_POST['saveMoney'] >= 0) {
 
-                //帶入帳號及金額
-                $dataBase->saveMoneyInto($accountId['id'], $_POST['saveMoney']);
-                header("location: showAccount");
+                    //帶入帳號及金額
+                    $dataBase->saveMoneyInto($accountId['id'], $_POST['saveMoney']);
+                    header("location: showAccount");
+                }
             }
+
+            $error = "請輸入正確數字";
         }
 
         $this->view("Head");
-        $this->view("SaveMoney");
+        $this->view("SaveMoney", $error);
         $this->view("Foot");
     }
 
@@ -97,16 +101,24 @@ class HomeController extends Load
         $accountId = $dataBase->getAccounData($getSession);
 
         if ($_POST['takeMoney']) {
-            $money = $dataBase->checkMoney($accountId['id']);
+            if (is_numeric($_POST['takeMoney'])) {
+                $money = $dataBase->checkMoney($accountId['id']);
 
-            if (($money['money'] -= $_POST['takeMoney']) >= 0) {
-                $dataBase->takeMoneyOut($accountId['id'], $money['money'], $_POST['takeMoney']);
-                header("location: showAccount");
-             }
+                if (($money['money'] >= $_POST['takeMoney'])) {
+                    $dataBase->takeMoneyOut($accountId['id'], $money['money'], $_POST['takeMoney']);
+                    header("location: showAccount");
+                }
+
+                if (($money['money'] < $_POST['takeMoney'])) {
+                    $error = "金額不足 ";
+                }
+            }
+
+            $error .= "請輸入正確數字";
         }
 
         $this->view("Head");
-        $this->view("TakeMoney");
+        $this->view("TakeMoney", $error);
         $this->view("Foot");
     }
 

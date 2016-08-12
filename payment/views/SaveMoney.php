@@ -3,6 +3,8 @@
     <h3>操作金額 :</h3>
     <input type="text" name="saveMoney">
     <button type="submit" name="submitmoney">存入</button>
+    <br>
+    <?php echo "$data<br>";?>
     <a href="showAccount">首頁</a>
 </form>
 

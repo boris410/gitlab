@@ -4,5 +4,6 @@
     <input type="text" name="takeMoney">
     <button type="submit" name="submitMoney">取領</button>
     <br>
+    <?php echo "$data<br>";?>
     <a href="showAccount">首頁</a>
 </form>
