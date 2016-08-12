@@ -48,7 +48,7 @@ class DataBase extends HomeController
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    //取得帳號, 金額, 儲存金額
+    //取得帳號, 操作金額
     function saveMoneyInto($accountId, $money)
     {
 
