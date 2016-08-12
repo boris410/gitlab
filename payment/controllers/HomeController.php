@@ -74,20 +74,20 @@ class HomeController extends Load
         $getSession = $session->getUserSession();
         $accountId = $dataBase->getAccounData($getSession);
 
-        if (($_POST['saveMoney'])) {
-            if (is_numeric($_POST['saveMoney'])) {
-                if ($_POST['saveMoney'] >= 0) {
+        if (is_numeric($_POST['saveMoney']) && $_POST['saveMoney'] >= 0 ) {
 
-                    //帶入帳號及金額
-                    if ($dataBase->saveMoneyInto($accountId['id'], $_POST['saveMoney'])) {
-                        header("location: showAccount");
-                    }
-
-                    $error = "資料庫連線錯誤 Try Again";
-                }
+            //帶入帳號及金額
+            if ($dataBase->saveMoneyInto($accountId['id'], $_POST['saveMoney'])) {
+                header("location: showAccount");
             }
 
-            $error = "請輸入數字";
+            $error = "資料庫連線錯誤 Try Again";
+        }
+
+        if ($_POST['saveMoney']) {
+            if (!(is_numeric($_POST['saveMoney']) && $_POST['saveMoney'] >= 0)) {
+                $error = "請輸入正確數字";
+            }
         }
 
         $this->view("Head");
@@ -103,24 +103,20 @@ class HomeController extends Load
         $getSession = $session->getUserSession();
         $accountId = $dataBase->getAccounData($getSession);
 
-        if ($_POST['takeMoney']) {
-            if (is_numeric($_POST['takeMoney'])) {
-                $money = $dataBase->checkMoney($accountId['id']);
+        if (is_numeric($_POST['takeMoney']) && ($money['money'] >= $_POST['takeMoney']) ) {
+            $money = $dataBase->checkMoney($accountId['id']);
 
-                if (($money['money'] >= $_POST['takeMoney'])) {
-                    if($dataBase->takeMoneyOut($accountId['id'], $money['money'], $_POST['takeMoney'])){
-                          header("location: showAccount");
-                    }
-
-                    $error = "資料庫連線錯誤 Try Again";
-                }
-
-                if (($money['money'] < $_POST['takeMoney'])) {
-                    $error = "金額不足 ";
-                }
+            if($dataBase->takeMoneyOut($accountId['id'], $money['money'], $_POST['takeMoney'])){
+                header("location: showAccount");
             }
 
-            $error .= "請輸入正確數字";
+            $error = "資料庫連線錯誤 Try Again";
+        }
+
+        if ($_POST['takeMoney']) {
+            if (($money['money'] < $_POST['takeMoney'])) {
+                $error = "請輸入正確數字";;
+            }
         }
 
         $this->view("Head");
