@@ -59,6 +59,7 @@ class DataBase extends HomeController
             $result = $this->connection->prepare($query1);
             $result->bindParam(1, $accountId);
             $result->execute();
+            //取得操作前的金額並加上操作金額
             $oldMoney = $result->fetch(PDO::FETCH_ASSOC);
             $oldMoney['account_money']+=$money;
 
@@ -85,7 +86,7 @@ class DataBase extends HomeController
         }
     }
 
-    //取得帳號, 金額, 提取金額
+    //傳入帳號id, 操作後金額, 操作金額
     function takeMoneyOut($accountId, $money, $operateMoney)
     {
         try {
@@ -113,6 +114,7 @@ class DataBase extends HomeController
         }
     }
 
+    //檢查金額
     function checkMoney($accountId)
     {
         $this->connection->beginTransaction();
