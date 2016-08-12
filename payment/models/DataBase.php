@@ -72,8 +72,8 @@ class DataBase extends HomeController
             $result->bindParam(2, $accountId);
             $result->execute();
 
-            $query3 = "INSERT INTO `account_record`(`account_id`, `account_operation`, ";
-            $query3 .= "`account_opertaion_money`, `account_last_money`, `account_operation_time`) ";
+            $query3 = "INSERT INTO `account_record`(`account_id`, `operation`, ";
+            $query3 .= "`money`, `resultMoney`, `time`) ";
             $query3 .= "VALUES (?, 'Save Money', ?, ?, now())" ;
             $result = $this->connection->prepare($query3);
             $result->bindParam(1, $accountId);
@@ -99,8 +99,8 @@ class DataBase extends HomeController
             $result->execute();
 
             $query3 = "INSERT INTO `account_record` ";
-            $query3 .= "(`account_id`, `account_operation`, ";
-            $query3 .= "`account_opertaion_money`, `account_last_money`, `account_operation_time`) ";
+            $query3 .= "(`account_id`, `operation`, ";
+            $query3 .= "`money`, `resultMoney`, `time`) ";
             $query3 .= "VALUES (?, 'Take Money', ?, ?, now())";
             $result = $this->connection->prepare($query3);
             $result->bindParam(1, $accountId);
