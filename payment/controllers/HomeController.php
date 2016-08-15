@@ -5,13 +5,13 @@ class HomeController extends Load
     //首頁
     function index()
     {
-        if ($_POST['post_account']) {
+        if ($_POST['account']) {
             $dataBase = $this->model("DataBase");
 
             //檢查輸入的帳號
-            if ($dataBase->checkAccount($_POST['post_account']) > 0) {
+            if ($dataBase->checkAccount($_POST['account']) > 0) {
                 $session = $this->model("Session");
-                $session->setUserSession($_POST['post_account']);
+                $session->setUserSession($_POST['account']);
                 header("location: showAccount");
             }
         }
