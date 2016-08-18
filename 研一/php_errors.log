@@ -1,0 +1,60 @@
+[15-Aug-2016 07:51:47 UTC] PHP Warning:  file(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 13
+[15-Aug-2016 07:51:47 UTC] PHP Stack trace:
+[15-Aug-2016 07:51:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:0
+[15-Aug-2016 07:51:47 UTC] PHP   2. file() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:13
+[15-Aug-2016 07:51:47 UTC] PHP Warning:  file(http://www.yahoo.com.twt): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 13
+[15-Aug-2016 07:51:47 UTC] PHP Stack trace:
+[15-Aug-2016 07:51:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:0
+[15-Aug-2016 07:51:47 UTC] PHP   2. file() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:13
+[15-Aug-2016 07:54:08 UTC] PHP Warning:  file_get_contents(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 13
+[15-Aug-2016 07:54:08 UTC] PHP Stack trace:
+[15-Aug-2016 07:54:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:0
+[15-Aug-2016 07:54:08 UTC] PHP   2. file_get_contents() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:13
+[15-Aug-2016 07:54:08 UTC] PHP Warning:  file_get_contents(http://tw.yahoo.com.tw/): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 13
+[15-Aug-2016 07:54:08 UTC] PHP Stack trace:
+[15-Aug-2016 07:54:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:0
+[15-Aug-2016 07:54:08 UTC] PHP   2. file_get_contents() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:13
+[15-Aug-2016 07:54:23 UTC] PHP Warning:  file_get_contents(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 13
+[15-Aug-2016 07:54:23 UTC] PHP Stack trace:
+[15-Aug-2016 07:54:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:0
+[15-Aug-2016 07:54:23 UTC] PHP   2. file_get_contents() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:13
+[15-Aug-2016 07:54:23 UTC] PHP Warning:  file_get_contents(http://www..yahoo.com.tw): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 13
+[15-Aug-2016 07:54:23 UTC] PHP Stack trace:
+[15-Aug-2016 07:54:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:0
+[15-Aug-2016 07:54:23 UTC] PHP   2. file_get_contents() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:13
+[16-Aug-2016 01:53:38 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 18
+[16-Aug-2016 04:25:38 UTC] PHP Parse error:  syntax error, unexpected '.23' (T_DNUMBER) in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 18
+[16-Aug-2016 04:28:31 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 29
+[16-Aug-2016 05:42:51 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting function (T_FUNCTION) in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 17
+[16-Aug-2016 05:44:23 UTC] PHP Catchable fatal error:  Object of class test could not be converted to string in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 23
+[16-Aug-2016 05:44:23 UTC] PHP Stack trace:
+[16-Aug-2016 05:44:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:0
+[16-Aug-2016 05:48:19 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 22
+[16-Aug-2016 05:48:51 UTC] PHP Catchable fatal error:  Argument 1 passed to test2() must be an instance of string, string given, called in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 27 and defined in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 22
+[16-Aug-2016 05:48:51 UTC] PHP Stack trace:
+[16-Aug-2016 05:48:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:0
+[16-Aug-2016 05:48:51 UTC] PHP   2. test2() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:27
+[16-Aug-2016 05:50:16 UTC] PHP Catchable fatal error:  Argument 1 passed to test2() must be an instance of string, string given, called in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 27 and defined in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 22
+[16-Aug-2016 05:50:16 UTC] PHP Stack trace:
+[16-Aug-2016 05:50:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:0
+[16-Aug-2016 05:50:16 UTC] PHP   2. test2() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:27
+[16-Aug-2016 05:50:30 UTC] PHP Catchable fatal error:  Argument 1 passed to test2() must be an instance of string, string given, called in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 27 and defined in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 22
+[16-Aug-2016 05:50:30 UTC] PHP Stack trace:
+[16-Aug-2016 05:50:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:0
+[16-Aug-2016 05:50:30 UTC] PHP   2. test2() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:27
+[16-Aug-2016 05:51:06 UTC] PHP Catchable fatal error:  Argument 1 passed to test2() must be an instance of string, string given, called in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 27 and defined in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 22
+[16-Aug-2016 05:51:06 UTC] PHP Stack trace:
+[16-Aug-2016 05:51:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:0
+[16-Aug-2016 05:51:06 UTC] PHP   2. test2() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:27
+[16-Aug-2016 05:51:30 UTC] PHP Catchable fatal error:  Argument 1 passed to test2() must be an instance of string, string given, called in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 27 and defined in /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php on line 22
+[16-Aug-2016 05:51:30 UTC] PHP Stack trace:
+[16-Aug-2016 05:51:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:0
+[16-Aug-2016 05:51:30 UTC] PHP   2. test2() /home/ubuntu/workspace/gitlab/研一/作業二/Homework.php:27
+[16-Aug-2016 06:55:30 UTC] PHP Warning:  fwrite() expects parameter 1 to be resource, string given in /home/ubuntu/workspace/gitlab/研一/作業二/open.php on line 172
+[16-Aug-2016 06:55:30 UTC] PHP Stack trace:
+[16-Aug-2016 06:55:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/open.php:0
+[16-Aug-2016 06:55:30 UTC] PHP   2. fwrite() /home/ubuntu/workspace/gitlab/研一/作業二/open.php:172
+[16-Aug-2016 07:00:28 UTC] PHP Warning:  fwrite() expects parameter 1 to be resource, string given in /home/ubuntu/workspace/gitlab/研一/作業二/open.php on line 159
+[16-Aug-2016 07:00:28 UTC] PHP Stack trace:
+[16-Aug-2016 07:00:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/open.php:0
+[16-Aug-2016 07:00:28 UTC] PHP   2. fwrite() /home/ubuntu/workspace/gitlab/研一/作業二/open.php:159

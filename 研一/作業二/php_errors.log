@@ -1,0 +1,130 @@
+[16-Aug-2016 13:44:13 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '請輸入任意資料' in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php(5): Check->__construct('')
+#1 {main}
+  thrown in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php on line 8
+[16-Aug-2016 13:46:08 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '請輸入任意資料' in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php:9
+Stack trace:
+#0 /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php(6): Check->__construct('')
+#1 {main}
+  thrown in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php on line 9
+[16-Aug-2016 13:47:07 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '請輸入任意資料' in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php:9
+Stack trace:
+#0 /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php(6): Check->__construct('')
+#1 {main}
+  thrown in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php on line 9
+[16-Aug-2016 13:47:15 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message '請輸入任意資料' in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php:9
+Stack trace:
+#0 /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php(6): Check->__construct('')
+#1 {main}
+  thrown in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php on line 9
+[16-Aug-2016 13:47:47 UTC] PHP Fatal error:  Can only throw objects in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php on line 9
+[16-Aug-2016 13:47:47 UTC] PHP Stack trace:
+[16-Aug-2016 13:47:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php:0
+[16-Aug-2016 13:47:47 UTC] PHP   2. Check->__construct() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php:6
+[16-Aug-2016 14:24:55 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Argument 3 should be Traversable.' in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php(6): Check->__construct('1', '2', '3')
+#1 {main}
+  thrown in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php on line 20
+[16-Aug-2016 14:25:30 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Argument 3 should be Traversable.' in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php:22
+Stack trace:
+#0 /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php(6): Check->__construct('1', '2', '3')
+#1 {main}
+  thrown in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php on line 22
+[16-Aug-2016 14:28:56 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Argument 3 should be Traversable.' in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php:22
+Stack trace:
+#0 /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php(6): Check->__construct('1', '2', '3')
+#1 {main}
+  thrown in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php on line 22
+[16-Aug-2016 14:29:39 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Argument 3 should be Traversable.' in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php:22
+Stack trace:
+#0 /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php(6): Check->__construct('1', '2', '3')
+#1 {main}
+  thrown in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php on line 22
+[17-Aug-2016 03:04:54 UTC] PHP Warning:  preg_match(): No ending delimiter '^' found in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php on line 8
+[17-Aug-2016 03:04:54 UTC] PHP Stack trace:
+[17-Aug-2016 03:04:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php:0
+[17-Aug-2016 03:04:54 UTC] PHP   2. preg_match() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php:8
+[17-Aug-2016 05:39:43 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Argument 1 should be numeric' in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php(6): Check->__construct('123123', 'asdasd')
+#1 {main}
+  thrown in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php on line 15
+[17-Aug-2016 06:06:41 UTC] PHP Fatal error:  Class 'Database' not found in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php on line 2
+[17-Aug-2016 06:06:41 UTC] PHP Stack trace:
+[17-Aug-2016 06:06:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php:0
+[17-Aug-2016 06:06:41 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php:4
+[17-Aug-2016 06:06:53 UTC] PHP Fatal error:  Class 'DataBase' not found in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php on line 2
+[17-Aug-2016 06:06:53 UTC] PHP Stack trace:
+[17-Aug-2016 06:06:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php:0
+[17-Aug-2016 06:06:53 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php:4
+[17-Aug-2016 06:09:25 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/DataBase.php on line 142
+[17-Aug-2016 06:09:25 UTC] PHP Stack trace:
+[17-Aug-2016 06:09:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php:0
+[17-Aug-2016 06:09:25 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php:4
+[17-Aug-2016 06:16:22 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/DataBase.php on line 139
+[17-Aug-2016 06:16:22 UTC] PHP Stack trace:
+[17-Aug-2016 06:16:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php:0
+[17-Aug-2016 06:16:22 UTC] PHP   2. Check->__construct() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php:6
+[17-Aug-2016 06:16:22 UTC] PHP   3. DataBase->getConecction() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php:9
+[17-Aug-2016 06:17:04 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/DataBase.php on line 139
+[17-Aug-2016 06:17:04 UTC] PHP Stack trace:
+[17-Aug-2016 06:17:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php:0
+[17-Aug-2016 06:17:04 UTC] PHP   2. Check->__construct() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php:6
+[17-Aug-2016 06:17:04 UTC] PHP   3. DataBase->getConecction() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php:9
+[17-Aug-2016 06:35:58 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/DataBase.php on line 139
+[17-Aug-2016 06:35:58 UTC] PHP Stack trace:
+[17-Aug-2016 06:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php:0
+[17-Aug-2016 06:35:58 UTC] PHP   2. Check->__construct() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php:6
+[17-Aug-2016 06:35:58 UTC] PHP   3. DataBase->getConecction() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php:9
+[17-Aug-2016 06:36:21 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/DataBase.php on line 139
+[17-Aug-2016 06:36:21 UTC] PHP Stack trace:
+[17-Aug-2016 06:36:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php:0
+[17-Aug-2016 06:36:21 UTC] PHP   2. Check->__construct() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Defensive.php:6
+[17-Aug-2016 06:36:21 UTC] PHP   3. DataBase->getConecction() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/Check.php:8
+[18-Aug-2016 03:56:44 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 3
+[18-Aug-2016 03:56:44 UTC] PHP Stack trace:
+[18-Aug-2016 03:56:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php:0
+[18-Aug-2016 03:59:24 UTC] PHP Fatal error:  Cannot use [] for reading in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 3
+[18-Aug-2016 04:00:04 UTC] PHP Fatal error:  Cannot use [] for reading in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 3
+[18-Aug-2016 04:00:12 UTC] PHP Fatal error:  Cannot use [] for reading in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 3
+[18-Aug-2016 04:00:23 UTC] PHP Fatal error:  Cannot use [] for reading in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 3
+[18-Aug-2016 04:00:52 UTC] PHP Fatal error:  Cannot use [] for reading in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 3
+[18-Aug-2016 04:01:16 UTC] PHP Fatal error:  Cannot use [] for reading in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 3
+[18-Aug-2016 04:09:58 UTC] PHP Fatal error:  Class 'add' not found in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 24
+[18-Aug-2016 04:09:58 UTC] PHP Stack trace:
+[18-Aug-2016 04:09:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php:0
+[18-Aug-2016 04:10:46 UTC] PHP Warning:  Missing argument 2 for addc(), called in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 24 and defined in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 18
+[18-Aug-2016 04:10:46 UTC] PHP Stack trace:
+[18-Aug-2016 04:10:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php:0
+[18-Aug-2016 04:10:46 UTC] PHP   2. addc() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php:24
+[18-Aug-2016 04:14:32 UTC] PHP Warning:  Missing argument 2 for addc(), called in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 24 and defined in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 18
+[18-Aug-2016 04:14:32 UTC] PHP Stack trace:
+[18-Aug-2016 04:14:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php:0
+[18-Aug-2016 04:14:32 UTC] PHP   2. addc() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php:24
+[18-Aug-2016 04:14:36 UTC] PHP Warning:  Missing argument 2 for addc(), called in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 24 and defined in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 18
+[18-Aug-2016 04:14:36 UTC] PHP Stack trace:
+[18-Aug-2016 04:14:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php:0
+[18-Aug-2016 04:14:36 UTC] PHP   2. addc() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php:24
+[18-Aug-2016 04:14:55 UTC] PHP Warning:  Missing argument 2 for addc(), called in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 24 and defined in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 18
+[18-Aug-2016 04:14:55 UTC] PHP Stack trace:
+[18-Aug-2016 04:14:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php:0
+[18-Aug-2016 04:14:55 UTC] PHP   2. addc() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php:24
+[18-Aug-2016 04:15:19 UTC] PHP Catchable fatal error:  Argument 1 passed to xc() must be of the type array, integer given, called in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 33 and defined in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 30
+[18-Aug-2016 04:15:19 UTC] PHP Stack trace:
+[18-Aug-2016 04:15:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php:0
+[18-Aug-2016 04:15:19 UTC] PHP   2. xc() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php:33
+[18-Aug-2016 04:15:22 UTC] PHP Catchable fatal error:  Argument 1 passed to xc() must be of the type array, integer given, called in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 33 and defined in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 30
+[18-Aug-2016 04:15:22 UTC] PHP Stack trace:
+[18-Aug-2016 04:15:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php:0
+[18-Aug-2016 04:15:22 UTC] PHP   2. xc() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php:33
+[18-Aug-2016 04:15:40 UTC] PHP Catchable fatal error:  Argument 1 passed to xc() must be of the type array, integer given, called in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 33 and defined in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 30
+[18-Aug-2016 04:15:40 UTC] PHP Stack trace:
+[18-Aug-2016 04:15:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php:0
+[18-Aug-2016 04:15:40 UTC] PHP   2. xc() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php:33
+[18-Aug-2016 05:48:58 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 6
+[18-Aug-2016 05:49:03 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 6
+[18-Aug-2016 05:54:13 UTC] PHP Fatal error:  Call to undefined function Exception() in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 7
+[18-Aug-2016 05:54:13 UTC] PHP Stack trace:
+[18-Aug-2016 05:54:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php:0
