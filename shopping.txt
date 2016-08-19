@@ -1,7 +1,0 @@
-# Shpping List
-
-- milk
-- eggs
-- port
--mushroom   
--corn

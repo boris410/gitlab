@@ -29,9 +29,9 @@ class HomeController extends Load
         //取得session內使用者的資料檢查登入狀態
         $getSession = $session->getUserSession();//
 
-        if (!$getSession) {
-            header("location: index");
-        }
+            if (!$getSession) {
+                header("location: index");
+            }
 
             //選擇操作
             if ($_POST['lastMoney']) {
