@@ -124,9 +124,15 @@ class DataBase extends HomeController
     //檢查金額
     function checkMoney($accountId,$takeMoney)
     {
+        try {
+        if (!$takeMoney) {
+            throw new Exception("The number can't be empty");
+        }
+
         if (!is_numeric($takeMoney)) {
             $takeMoney = (integer)$takeMoney;
         }
+
         $this->connection->beginTransaction();
         $query1 = "SELECT `money` FROM `account` ";
         $query1 .= "WHERE `money`- ? >= 0 AND `id` = ? FOR UPDATE";
@@ -134,6 +140,9 @@ class DataBase extends HomeController
         $result->bindParam(1, $takeMoney);
         $result->bindParam(2, $accountId);
         $result->execute();
+        } catch(Exception $e){
+            echo $e->getMessage();
+        }
 
         return $result->fetch(PDO::FETCH_ASSOC);
 

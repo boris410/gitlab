@@ -1,46 +1,13 @@
 <?php
-/**
- * A PHP daemon demo file.
- *
- * @author     Asika
- * @email      asika@asikart.com
- * @date       2013-10-12
- *
- * @copyright  Copyright (C) 2013 - Asika.
- * @license    GNU General Public License version 2 or later; see LICENSE
- */
 
-/**
- * Daemon Application.
- */
 class DaemonSignalListener
 {
-    /**
-     * Store process id for close self.
-     *
-     * @var int
-     */
     protected $processId;
 
-    /**
-     * File path to save pid.
-     *
-     * @var string
-     */
     protected $pidFile = 'daemon.pid';
 
-    /**
-     * Daemon log file.
-     *
-     * @var string
-     */
     protected $logFile = 'daemon.log';
 
-    /**
-     * Create a daemon process.
-     *
-     * @return  DaemonHttpApplication  Return self to support chaining.
-     */
     public function execute()
     {
         // Create first child.
@@ -48,6 +15,7 @@ class DaemonSignalListener
         {
             // I'm the parent
             // Protect against Zombie children
+            //直形成process
             pcntl_wait($status);
             exit;
         }
@@ -66,6 +34,7 @@ class DaemonSignalListener
             exit;
         }
 
+        //將字串寫入
         $this->addLog('Daemonized');
 
         fwrite(STDOUT, "Daemon Start\n-----------------------------------------\n");
@@ -84,22 +53,11 @@ class DaemonSignalListener
         return $this;
     }
 
-    /**
-     * Method to run the application routines.
-     * Most likely you will want to fetch a queue to do something.
-     *
-     * @return  void
-     */
     protected function doExecute()
     {
-        // Do some stuff you want.
+
     }
 
-    /**
-     * Method to attach signal handler to the known signals.
-     *
-     * @return  void
-     */
     protected function registerSignalHandler()
     {
         $this->addLog('registerHendler');
@@ -111,11 +69,6 @@ class DaemonSignalListener
         pcntl_signal(SIGUSR1, array($this, 'customSignal'));
     }
 
-    /**
-     * Store the pid to file.
-     *
-     * @return  DaemonSignalListener  Return self to support chaining.
-     */
     protected function storeProcessId()
     {
         $file = $this->pidFile;
@@ -133,11 +86,6 @@ class DaemonSignalListener
         return $this;
     }
 
-    /**
-     * Shut down our daemon.
-     *
-     * @param   integer  $signal  The received POSIX signal.
-     */
     public function shutdown($signal)
     {
         $this->addLog('Shutdown by signal: ' . $signal);
@@ -151,28 +99,18 @@ class DaemonSignalListener
         exit;
     }
 
-    /**
-     * Hendle the SIGUSR1 signal.
-     *
-     * @param   integer  $signal  The received POSIX signal.
-     */
     public function customSignal($signal)
     {
         $this->addLog('Execute custom signal: ' . $signal);
     }
 
-    /**
-     * Add a log to log file.
-     *
-     * @param   string  $text  Log string.
-     */
     protected function addLog($text)
     {
         $file = $this->logFile;
 
         $time = new Datetime();
 
-        $text = sprintf("%s - %s\n", $text, $time->format('Y-m-d H:i:s'));
+        $text = sprintf("%s - %s\n", $text, $time->format('Y-m-d H:i:s'));//輸入到文件
 
         $fp = fopen($file, 'a+');
         fwrite($fp,$text);

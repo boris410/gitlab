@@ -128,3 +128,10 @@ Stack trace:
 [18-Aug-2016 05:54:13 UTC] PHP Fatal error:  Call to undefined function Exception() in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php on line 7
 [18-Aug-2016 05:54:13 UTC] PHP Stack trace:
 [18-Aug-2016 05:54:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/trycatch.php:0
+[19-Aug-2016 03:21:18 UTC] PHP Fatal error:  Can only throw objects in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/test.php on line 4
+[19-Aug-2016 03:21:18 UTC] PHP Stack trace:
+[19-Aug-2016 03:21:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研一/作業二/defensive/test.php:0
+[19-Aug-2016 03:22:32 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'The number can't be empty' in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/test.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/gitlab/研一/作業二/defensive/test.php on line 4
