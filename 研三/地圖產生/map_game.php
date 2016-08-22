@@ -14,53 +14,89 @@ while($num < 40){
     }
 }
 
+echo <<< html
+<script type="text/javascript" src="jquery-3.1.0.js"></script>
+<body>
+<form >
+<table border=1>
+html;
+
+        for ($x=0;$x<=9;$x++) {
+            echo "<tr>";
+            for ($y=0;$y<=9;$y++) {
+                echo "<td>";
+                //echo "<button type=button id=$x style=width:120px;height:40px;font-size:20px; value=$x onclick=click(this)></button>";
+                print_r($map[$x][$y]);
+                echo "</td>";
+                $num2++;
+            }
+            echo "</tr>";
+        }
+echo <<< scri
+    <br>
+    </table>
+    </form>
+        <script type=text/javascript>
+            $(document).ready(function(){
+                function click(myobj){
+                    alert("123");
+            }});
+        </script>
+</body>
+</html>
+scri;
+
+
+echo $num;
+
 //計算周圍
 for ($x=0;$x<=9;$x++) {
     for ($y=0;$y<=9;$y++) {
-        if(!$map[$x][$y]) {
+        $mnum = 0;
+        if($map[$x][$y]!="M") {
 
             // ↖
-            if ($map[$x-1][$y-1]=="M") {
+            if ((string)$map[$x-1][$y-1]=="M") {
                 $mnum++;
             }
 
             // ↑
-            if ($map[$x-1][$y]=="M") {
+            if ((string)$map[$x-1][$y]=="M") {
                 $mnum++;
             }
 
             // ↗
-            if ($map[$x-1][$y+1]=="M") {
+            if ((string)$map[$x-1][$y+1]=="M") {
                 $mnum++;
             }
 
             // ←
-            if ($map[$x][$y-1]=="M") {
+            if ((string)$map[$x][$y-1]=="M") {
                 $mnum++;
             }
 
             // →
-            if ($map[$x][$y+1]=="M") {
+            if ((string)$map[$x][$y+1]=="M") {
                 $mnum++;
             }
 
             // ↙
-            if ($map[$x+1][$y-1]=="M") {
+            if ((string)$map[$x+1][$y-1]=="M") {
                 $mnum++;
             }
 
             // ↓
-            if ($map[$x+1][$y]=="M") {
+            if ((string)$map[$x+1][$y]=="M") {
                 $mnum++;
             }
 
             // ↘
-            if ($map[$x+1][$y+1]=="M") {
+            if ((string)$map[$x+1][$y+1]=="M") {
                 $mnum++;
             }
 
-            $map[$x][$y] =$mnum;
-            $mnum = 0;
+            $map[$x][$y] = $mnum;
+
         }
     }
 }
@@ -77,8 +113,8 @@ html;
             echo "<tr>";
             for ($y=0;$y<=9;$y++) {
                 echo "<td>";
-                echo "<button type=button id=$x style=width:120px;height:40px;font-size:20px; value=$x onclick=click(this)></button>";
-                //print_r($map[$x][$y]);
+                //echo "<button type=button id=$x style=width:120px;height:40px;font-size:20px; value=$x onclick=click(this)></button>";
+                print_r($map[$x][$y]);
                 echo "</td>";
             }
             echo "</tr>";

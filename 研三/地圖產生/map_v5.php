@@ -17,50 +17,50 @@ while($num < 40){
 //計算周圍
 for ($x=0;$x<=9;$x++) {
     for ($y=0;$y<=9;$y++) {
-        if(!$map[$x][$y]) {
+        if($map[$x][$y]!="M") {
+            $mnum = 0;
 
             // ↖
-            if ($map[$x-1][$y-1]=="M") {
+            if ((string)$map[$x-1][$y-1]=="M") {
                 $mnum++;
             }
 
             // ↑
-            if ($map[$x-1][$y]=="M") {
+            if ((string)$map[$x-1][$y]=="M") {
                 $mnum++;
             }
 
             // ↗
-            if ($map[$x-1][$y+1]=="M") {
+            if ((string)$map[$x-1][$y+1]=="M") {
                 $mnum++;
             }
 
             // ←
-            if ($map[$x][$y-1]=="M") {
+            if ((string)$map[$x][$y-1]=="M") {
                 $mnum++;
             }
 
             // →
-            if ($map[$x][$y+1]=="M") {
+            if ((string)$map[$x][$y+1]=="M") {
                 $mnum++;
             }
 
             // ↙
-            if ($map[$x+1][$y-1]=="M") {
+            if ((string)$map[$x+1][$y-1]=="M") {
                 $mnum++;
             }
 
             // ↓
-            if ($map[$x+1][$y]=="M") {
+            if ((string)$map[$x+1][$y]=="M") {
                 $mnum++;
             }
 
             // ↘
-            if ($map[$x+1][$y+1]=="M") {
+            if ((string)$map[$x+1][$y+1]=="M") {
                 $mnum++;
             }
 
             $map[$x][$y] = $mnum;
-            $mnum = 0;
         }
     }
 }
