@@ -96,9 +96,9 @@ echo $iTime2-$iTime1;
     <tr>
         <?php  for ($y=0;$y<=9;$y++) { ?>
             <td>
-                <input class="clickcl" type="button" style="width:120px;height:40px;font-size:20px;"  value="2" onclick="cl()">
+                <!--<input class="clickcl" type="button" style="width:120px;height:40px;font-size:20px;"  value="2" onclick="cl()">-->
 
-                <?php   //print_r($map[$x][$y]);?>
+                <?php   print_r($map[$x][$y]);?>
             </td>
          <?php  } ?>
     </tr>
