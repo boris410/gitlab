@@ -77,8 +77,8 @@ html;
             echo "<tr>";
             for ($y=0;$y<=9;$y++) {
                 echo "<td>";
-               // echo "<button type=button id=$x style=width:120px;height:40px;font-size:20px; value=$x onclick=click(this)></button>";
-                print_r($map[$x][$y]);
+                echo "<button type=button id=$x style=width:120px;height:40px;font-size:20px; value=$x onclick=click(this)></button>";
+                //print_r($map[$x][$y]);
                 echo "</td>";
             }
             echo "</tr>";
@@ -89,18 +89,10 @@ echo <<< scri
     </form>
         <script type=text/javascript>
             $(document).ready(function(){
-
-            function click(myobj){
-                alert("123");
-            }
-
-
-
-
-            });
+                function click(myobj){
+                    alert("123");
+            }});
         </script>
-
-
 </body>
 </html>
 scri;
