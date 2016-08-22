@@ -1,0 +1,9 @@
+[22-Aug-2016 03:44:44 UTC] PHP Fatal error:  Maximum execution time of 300 seconds exceeded in /home/ubuntu/workspace/gitlab/研三/地圖產生/map.php on line 7
+[22-Aug-2016 03:44:44 UTC] PHP Stack trace:
+[22-Aug-2016 03:44:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/地圖產生/map.php:0
+[22-Aug-2016 03:44:53 UTC] PHP Fatal error:  Maximum execution time of 300 seconds exceeded in /home/ubuntu/workspace/gitlab/研三/地圖產生/map.php on line 8
+[22-Aug-2016 03:44:54 UTC] PHP Stack trace:
+[22-Aug-2016 03:44:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/地圖產生/map.php:0
+[22-Aug-2016 03:46:44 UTC] PHP Fatal error:  Maximum execution time of 300 seconds exceeded in /home/ubuntu/workspace/gitlab/研三/地圖產生/map.php on line 7
+[22-Aug-2016 03:46:44 UTC] PHP Stack trace:
+[22-Aug-2016 03:46:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/地圖產生/map.php:0
