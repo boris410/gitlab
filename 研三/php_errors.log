@@ -28,3 +28,4 @@
 [22-Aug-2016 08:57:12 UTC] PHP Fatal error:  Maximum execution time of 300 seconds exceeded in /home/ubuntu/workspace/gitlab/研三/地圖產生/map_v5.php on line 9
 [22-Aug-2016 08:57:12 UTC] PHP Stack trace:
 [22-Aug-2016 08:57:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/地圖產生/map_v5.php:0
+[22-Aug-2016 10:02:23 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/ubuntu/workspace/gitlab/研三/地圖產生/map_time_V2.php on line 75

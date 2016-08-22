@@ -96,7 +96,7 @@ echo $iTime2-$iTime1;
     <tr>
         <?php  for ($y=0;$y<=9;$y++) { ?>
             <td>
-                <input type="button" style="width:120px;height:40px;font-size:20px;"  value="qwe"onclick="cl(this)">
+                <input class="clickcl" type="button" style="width:120px;height:40px;font-size:20px;"  value="2" onclick="cl()">
 
                 <?php   //print_r($map[$x][$y]);?>
             </td>
@@ -108,10 +108,15 @@ echo $iTime2-$iTime1;
     </table>
 </form>
         <script type=text/javascript>;
-            function cl(){
-               var a = $(document).click().value;
-                alert(a);
-            }
+        $(document).ready(function() {
+        function cl(){
+            $('.clickcl').click(function() {
+                alert($(this).attr("value"));
+            });
+        }
+
+    });
+
         </script>
 </body>
 </html>
