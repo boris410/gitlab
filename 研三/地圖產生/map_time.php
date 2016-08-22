@@ -1,5 +1,4 @@
 <?php
-$iTime1 = microtime(true);
 $map[60][50];
 $number=0;
 $num = 0;
@@ -7,9 +6,9 @@ $num = 0;
 //產生40個不重覆亂數
 while($num < 1200){
     //0~9的固定亂數
-    $col = rand(0,49);
     $row = rand(0,59);
-    if (!$map[$row][$col]) {
+    $col = rand(0,49);
+    if ($map[$row][$col]!="M") {
         $map[$row][$col] = "M";
         $num++;
     }
@@ -71,12 +70,14 @@ for ($x=0;$x<=59;$x++) {
 //印出字串
 for ($x=0;$x<=59;$x++) {
     for ($y=0;$y<=49;$y++) {
-        print_r($map[$x][$y]);
+         if (isset($map[$x][$y])) {
+            $str .= $map[$x][$y];
+        } else {
+            $str .="N";
+        }
     }
-    if ($x<49) {
-        echo "N";
-    }
-}
 
+}
+echo $str;
 
 ?>
