@@ -66,7 +66,7 @@ for ($x=0;$x<=9;$x++) {
 }
 
 
-//印出結果\
+//印出結果到格子內
 // echo "<html>";
 // echo "<body>";
 //     echo "<table border=1>";
