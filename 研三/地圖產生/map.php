@@ -20,42 +20,42 @@ for ($x=0;$x<=9;$x++) {
         if(!$map[$x][$y]) {
 
             // ↖
-            if ($map[$x-1][$y-1]=="M") {
+            if ($map[$x-1][$y-1] == "M") {
                 $mnum++;
             }
 
             // ↑
-            if ($map[$x-1][$y]=="M") {
+            if ($map[$x-1][$y] == "M") {
                 $mnum++;
             }
 
             // ↗
-            if ($map[$x-1][$y+1]=="M") {
+            if ($map[$x-1][$y+1] == "M") {
                 $mnum++;
             }
 
             // ←
-            if ($map[$x][$y-1]=="M") {
+            if ($map[$x][$y-1] == "M") {
                 $mnum++;
             }
 
             // →
-            if ($map[$x][$y+1]=="M") {
+            if ($map[$x][$y+1] == "M") {
                 $mnum++;
             }
 
             // ↙
-            if ($map[$x+1][$y-1]=="M") {
+            if ($map[$x+1][$y-1] == "M") {
                 $mnum++;
             }
 
             // ↓
-            if ($map[$x+1][$y]=="M") {
+            if ($map[$x+1][$y] == "M") {
                 $mnum++;
             }
 
             // ↘
-            if ($map[$x+1][$y+1]=="M") {
+            if ($map[$x+1][$y+1] == "M") {
                 $mnum++;
             }
 

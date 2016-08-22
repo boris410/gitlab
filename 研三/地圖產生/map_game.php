@@ -65,17 +65,53 @@ for ($x=0;$x<=9;$x++) {
     }
 }
 
-//印出字串
-$str="";
-for ($x=0;$x<=9;$x++) {
-    for ($y=0;$y<=9;$y++) {
-        if (isset($map[$x][$y])) {
-            $str .= $map[$x][$y];
+//印出結果到格子內
+echo <<< html
+<script type="text/javascript" src="jquery-3.1.0.js"></script>
+<body>
+<form >
+<table border=1>
+html;
+
+        for ($x=0;$x<=9;$x++) {
+            echo "<tr>";
+            for ($y=0;$y<=9;$y++) {
+                echo "<td>";
+               // echo "<button type=button id=$x style=width:120px;height:40px;font-size:20px; value=$x onclick=click(this)></button>";
+                print_r($map[$x][$y]);
+                echo "</td>";
+            }
+            echo "</tr>";
         }
-    }
-    if ($x<9) {
-        $str .="n";
-    }
-}
-echo $str;
+echo <<< scri
+    <br>
+    </table>
+    </form>
+        <script type=text/javascript>
+            $(document).ready(function(){
+
+            function click(myobj){
+                alert("123");
+            }
+
+
+
+
+            });
+        </script>
+
+
+</body>
+</html>
+scri;
+
+// //印出字串
+// for ($x=0;$x<=9;$x++) {
+//     for ($y=0;$y<=9;$y++) {
+//         print_r($map[$x][$y]);
+//     }
+//     if ($x<9) {
+//         echo "n";
+//     }
+// }
 ?>
