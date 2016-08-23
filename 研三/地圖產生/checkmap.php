@@ -3,16 +3,6 @@ $getstr = $_GET['map'];
 $showstr = $_GET['map'];
 $strlen = strlen($getstr);
 
-// if ($strlen>109) {
-//     echo "不符合，因為長度太長";
-//     exit;
-// }
-
-// if ($strlen<109) {
-//     echo "不符合，因為長度太短";
-//     exit;
-// }
-
 $y=0;$x=0;//索引值
 $checkmap = [10][10];//檢查的陣列
 $checkmapnumber = [10][10];
