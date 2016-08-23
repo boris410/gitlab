@@ -30,3 +30,11 @@
 [22-Aug-2016 08:57:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/地圖產生/map_v5.php:0
 [22-Aug-2016 10:02:23 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/ubuntu/workspace/gitlab/研三/地圖產生/map_time_V2.php on line 75
 [22-Aug-2016 11:32:47 UTC] PHP Fatal error:  Cannot use [] for reading in /home/ubuntu/workspace/gitlab/研三/地圖產生/map_time_V3.php on line 3
+[23-Aug-2016 02:18:35 UTC] PHP Warning:  explode(): Empty delimiter in /home/ubuntu/workspace/gitlab/研三/地圖產生/checkmap.php on line 10
+[23-Aug-2016 02:18:35 UTC] PHP Stack trace:
+[23-Aug-2016 02:18:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/地圖產生/checkmap.php:0
+[23-Aug-2016 02:18:35 UTC] PHP   2. explode() /home/ubuntu/workspace/gitlab/研三/地圖產生/checkmap.php:10
+[23-Aug-2016 03:02:12 UTC] PHP Fatal error:  Maximum execution time of 300 seconds exceeded in /home/ubuntu/workspace/gitlab/研三/地圖產生/checkmap.php on line 18
+[23-Aug-2016 03:02:12 UTC] PHP Stack trace:
+[23-Aug-2016 03:02:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/地圖產生/checkmap.php:0
+[23-Aug-2016 03:26:51 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/ubuntu/workspace/gitlab/研三/地圖產生/checkmap.php on line 108
