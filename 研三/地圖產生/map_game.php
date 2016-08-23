@@ -69,11 +69,6 @@ for ($x=0;$x<=9;$x++) {
     }
 }
 
-function getClick(){
-    echo json_encode($_POST['a']);
-    echo "123";
-
-}
 
 
 for ($x=0;$x<=9;$x++) {
@@ -91,7 +86,7 @@ echo "<br>";
 echo $iTime2-$iTime1;
 
 ?>
-//印出結果到格子內
+<!--//印出結果到格子內-->
 <html>
     <meta chartset="UTF-8">
 <script type="text/javascript" src="jquery-3.1.0.js"></script>
@@ -105,7 +100,7 @@ echo $iTime2-$iTime1;
         <?php  for ($y=0;$y<=9;$y++) { ?>
             <td>
                 <!--<input class="clickcl" type="button" style="width:40px;height:40px;font-size:20px;"  value=<?php print_r($map[$x][$y]);?> onclick="cl()">-->
-                <input class="clickcl" type="button" style="width:40px;height:40px;font-size:20px;"  name="location" value=<?php print_r("$x$y");?> onclick="cl()">
+                <input class="clickcl" type="button" style="width:40px;height:40px;font-size:20px;"  name="location" value=<?php print_r("$x,$y");?>>
 
             </td>
          <?php  } ?>
@@ -118,20 +113,18 @@ echo $iTime2-$iTime1;
         <script type=text/javascript>;
         $(document).ready(function() {
         $("input").click(function() {
-            alert($(this).val());
-          var a = $(this).val();
 
+          var j = $(this).val();
+          alert(j);
            $.ajax({
-                url: "getClick()",
-                data: JSON.stringify(a),
+                url: "getclick()",
                 type:"POST",
-                dataType:"JSON",
-
+               // dataType:"JSON",
+                data:  { 'location':j },
                 success: function(change){
                     alert(change);
                 },
-
-                 error:function(xhr, ajaxOptions, thrownError){
+                 error:function(change){
                     alert("error");
                  }
             });
@@ -143,5 +136,13 @@ echo $iTime2-$iTime1;
         </script>
 </body>
 </html>
+
+
+<?php
+function getclick(){
+    echo 123;
+
+}
+
 
 
