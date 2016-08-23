@@ -1,97 +1,118 @@
 <?php
-$iTime1 = microtime(true);
-$map[10][10];
-$number=0;
-$num = 0;
+$getstr = $_GET['map'];
+$strlen = strlen($getstr);
 
-//產生40個不重覆亂數
-while($num < 40){
-    //0~9的固定亂數
-    $col = rand(0,9);
-    $row = rand(0,9);
-    if (!$map[$row][$col]) {
-        $map[$row][$col] = "M";
-        $num++;
+if($strlen!=3049){
+    echo "不符合，因為長度太大或太小";
+    exit;
+}
+$y=0;$x=0;//索引值
+$checkmap = [60][50];//檢查的陣列
+$checkmapnumber = [60][50];
+$start = 0;//字串起始點
+$nnum =0;//計算行數
+
+$l2 = "&,',\",<,>,!,%,#,$,@,=,?,/,(,),[,],{,},.,+,*,_,-";//檢查特殊符號
+$sim = explode(',', $l2);
+
+
+while($strlen>=0){
+    $strcut = substr($getstr,$start,1);//從start 位置取字串一次取一個
+    //檢查特殊符號包含負數符號-
+    for($i=0;$i<=23;$i++){
+        if($strcut==$sim[$i]){
+            echo "不符合，因為有特殊符號$sim[$i]";
+            exit;
+        }
     }
+
+        if($strcut === "N"){
+            $x++;
+            $y=0;
+        }
+
+        if($strcut !== "N"){
+            $checkmap[$x][$y] = $strcut;
+            //echo $checkmap[$x][$y];
+            $y++;
+        }
+
+        $strlen--;//字串長度
+        $start++;//取字串位置
 }
 
+// echo "<br>";
+// echo $start;
+// echo "<br>";
+// echo "n=$nnum";
+// echo "<br>";
 
 
-//計算周圍
-for ($x=0;$x<=9;$x++) {
-    for ($y=0;$y<=9;$y++) {
-        $mnum = 0;
-        if($map[$x][$y]!="M") {
+for ($x=0;$x<=49;$x++) {
+    for ($y=0;$y<=59;$y++) {
+        if($checkmap[$x][$y]!= "M") {
+            $mnum = 0;
 
             // ↖
-            if ((string)$map[$x-1][$y-1]=="M") {
+            if ((string)$checkmap[$x-1][$y-1]=="M") {
                 $mnum++;
             }
 
             // ↑
-            if ((string)$map[$x-1][$y]=="M") {
+            if ((string)$checkmap[$x-1][$y]=="M") {
                 $mnum++;
             }
 
             // ↗
-            if ((string)$map[$x-1][$y+1]=="M") {
+            if ((string)$checkmap[$x-1][$y+1]=="M") {
                 $mnum++;
             }
 
             // ←
-            if ((string)$map[$x][$y-1]=="M") {
+            if ((string)$checkmap[$x][$y-1]=="M") {
                 $mnum++;
             }
 
             // →
-            if ((string)$map[$x][$y+1]=="M") {
+            if ((string)$checkmap[$x][$y+1]=="M") {
                 $mnum++;
             }
 
             // ↙
-            if ((string)$map[$x+1][$y-1]=="M") {
+            if ((string)$checkmap[$x+1][$y-1]=="M") {
                 $mnum++;
             }
 
             // ↓
-            if ((string)$map[$x+1][$y]=="M") {
+            if ((string)$checkmap[$x+1][$y]=="M") {
                 $mnum++;
             }
 
             // ↘
-            if ((string)$map[$x+1][$y+1]=="M") {
+            if ((string)$checkmap[$x+1][$y+1]=="M") {
                 $mnum++;
             }
 
-            $map[$x][$y] = $mnum;
+            //產生另一個陣列檢查正確的數字
+            $checkmapnumber[$x][$y] = $mnum;
 
+            //比對陣列數字
+            if($checkmap[$x][$y] != $checkmapnumber[$x][$y]){
+                    if($checkmap[$x][$y] === "m" || $checkmap[$x][$y] === "n"){
+                        echo "不符合，因為有寫小m 或 n 在[$x][$y]";
+                        exit;
+                    }
+                    echo "不符合，因為在第[$x][$y]數字錯誤 OR 字元";
+                    exit;
+            }
         }
     }
 }
-
-function getClick(){
-    $change = $_POST[a];
-    echo "123";
-    echo json_encode($change);
-}
+echo "符合。";
 
 
-for ($x=0;$x<=9;$x++) {
-    for ($y=0;$y<=9;$y++) {
-        print_r($map[$x][$y]);
-    }
-    if ($x<9) {
-        echo "N";
-    }
-}
-echo "<br>";
-$iTime2 = microtime(true);
-echo "m=$num";
-echo "<br>";
-echo $iTime2-$iTime1;
 
 ?>
-//印出結果到格子內
 <html>
     <meta chartset="UTF-8">
 <script type="text/javascript" src="jquery-3.1.0.js"></script>
@@ -100,12 +121,11 @@ echo $iTime2-$iTime1;
 <form >
 <table border=1>
 
-    <?php for ($x=0;$x<=9;$x++) { ?>
+    <?php for ($x=0;$x<=49;$x++) { ?>
     <tr>
-        <?php  for ($y=0;$y<=9;$y++) { ?>
+        <?php  for ($y=0;$y<=59;$y++) { ?>
             <td>
-                <!--<input class="clickcl" type="button" style="width:40px;height:40px;font-size:20px;"  value=<?php print_r($map[$x][$y]);?> onclick="cl()">-->
-                <input class="clickcl" type="button" style="width:40px;height:40px;font-size:20px;"  name="location" value=<?php print_r("$x$y");?> onclick="cl()">
+                <input class="clickcl" type="button" style="width:40px;height:40px;font-size:20px;"  value=<?php print_r($checkmap[$x][$y]);print_r($checkmapnumber[$x][$y]); ?>>
 
             </td>
          <?php  } ?>
@@ -115,32 +135,9 @@ echo $iTime2-$iTime1;
     <br>
     </table>
 </form>
-        <script type=text/javascript>;
-        $(document).ready(function() {
-        $("input").click(function() {
-          var a = JSON.stringify((this).val());
-
-           $.ajax({
-                url: "map_game.php/getClick()",
-                data: a,
-                type:"POST",
-                dataType:"html",
-
-                success: function(change){
-                    alert(change);
-                },
-
-                 error:function(xhr, ajaxOptions, thrownError){
-                    alert("error");
-                 }
-            });
-
-
-        });
-
-    });
-        </script>
 </body>
 </html>
+
+
 
 

@@ -1,5 +1,9 @@
 <?php
 $getstr = $_GET['map'];
+if(!isset($_GET['map'])){
+    echo "不符合，因為GET關鍵字不是map";
+    exit;
+}
 $strlen = strlen($getstr);
 
 if($strlen!=109){
@@ -105,8 +109,4 @@ for ($x=0;$x<=9;$x++) {
 }
 echo "符合。";
 
-
-
 ?>
-
-
