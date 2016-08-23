@@ -70,9 +70,9 @@ for ($x=0;$x<=9;$x++) {
 }
 
 function getClick(){
-    $change = $_POST[a];
+    echo json_encode($_POST['a']);
     echo "123";
-    echo json_encode($change);
+
 }
 
 
@@ -118,13 +118,14 @@ echo $iTime2-$iTime1;
         <script type=text/javascript>;
         $(document).ready(function() {
         $("input").click(function() {
-          var a = JSON.stringify((this).val());
+            alert($(this).val());
+          var a = $(this).val();
 
            $.ajax({
-                url: "map_game.php/getClick()",
-                data: a,
+                url: "getClick()",
+                data: JSON.stringify(a),
                 type:"POST",
-                dataType:"html",
+                dataType:"JSON",
 
                 success: function(change){
                     alert(change);

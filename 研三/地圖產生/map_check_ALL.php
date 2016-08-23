@@ -46,11 +46,11 @@ while($strlen>=0){
 // echo "<br>";
 // echo "n=$nnum";
 // echo "<br>";
-
+$boomnumber = 0;
 
 for ($x=0;$x<=49;$x++) {
     for ($y=0;$y<=59;$y++) {
-        if($checkmap[$x][$y]!= "M") {
+        if((string)$checkmap[$x][$y]!= "M") {
             $mnum = 0;
 
             // ↖
@@ -106,7 +106,14 @@ for ($x=0;$x<=49;$x++) {
                     exit;
             }
         }
+
+        if((string)$checkmap[$x][$y] == "M"){
+            $boomnumber++;
+        }
     }
+}
+if($boomnumber!=40){
+    echo "不符合，因為炸彈數不對";
 }
 echo "符合。";
 
