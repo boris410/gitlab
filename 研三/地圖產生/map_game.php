@@ -100,7 +100,7 @@ echo $iTime2-$iTime1;
         <?php  for ($y=0;$y<=9;$y++) { ?>
             <td>
                 <!--<input class="clickcl" type="button" style="width:40px;height:40px;font-size:20px;"  value=<?php print_r($map[$x][$y]);?> onclick="cl()">-->
-                <input class="clickcl" type="button" style="width:40px;height:40px;font-size:20px;"  name="location" value=<?php print_r("$x,$y");?>>
+                <input class="clickcl" type="button" style="width:40px;height:40px;font-size:20px;"  name="location" value="<?php print_r("$x,$y"); ?>" onclick="getval()" >
 
             </td>
          <?php  } ?>
@@ -111,38 +111,35 @@ echo $iTime2-$iTime1;
     </table>
 </form>
         <script type=text/javascript>;
-        $(document).ready(function() {
-        $("input").click(function() {
-
-          var j = $(this).val();
-          alert(j);
-           $.ajax({
-                url: "getclick()",
-                type:"POST",
-               // dataType:"JSON",
-                data:  { 'location':j },
-                success: function(change){
-                    alert(change);
-                },
-                 error:function(change){
-                    alert("error");
-                 }
-            });
-
-
+        function getval(){
+            $("input").click(function() {
+            var j = $(this).val();
+            alert(j);
+            }
         });
 
-    });
+           //     $(document).ready(function() {
+    //     $("input").click(function() {
+
+    //       var j = $(this).val();
+    //       alert(j);
+    //       $.ajax({
+    //             url: "Getclick.php",
+    //             type:"POST",
+    //             dataType:"JSON",
+    //             data:  { 'location':j },
+    //             success: function(change){
+    //                 alert(change);
+    //             },
+    //              error:function(change){
+    //                 alert("error");
+    //              }
+    //         });
+    //     });
+    // });
         </script>
 </body>
 </html>
-
-
-<?php
-function getclick(){
-    echo 123;
-
-}
 
 
 
