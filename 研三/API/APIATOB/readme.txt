@@ -1,3 +1,6 @@
+
+API使用說明
+
 創立帳號
     api名稱 createCount
     參數    userName
