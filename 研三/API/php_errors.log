@@ -1,0 +1,58 @@
+[25-Aug-2016 06:00:46 UTC] PHP Warning:  explode() expects at least 2 parameters, 1 given in /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php on line 7
+[25-Aug-2016 06:00:46 UTC] PHP Stack trace:
+[25-Aug-2016 06:00:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:0
+[25-Aug-2016 06:00:46 UTC] PHP   2. explode() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:7
+[25-Aug-2016 06:12:03 UTC] PHP Fatal error:  Class 'HomeController' not found in /home/ubuntu/workspace/gitlab/研三/API/APIATOB/DataBase.php on line 4
+[25-Aug-2016 06:12:03 UTC] PHP Stack trace:
+[25-Aug-2016 06:12:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:0
+[25-Aug-2016 06:12:03 UTC] PHP   2. require_once() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:2
+[25-Aug-2016 06:22:42 UTC] PHP Fatal error:  Call to undefined method DataBase::test() in /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php on line 18
+[25-Aug-2016 06:22:42 UTC] PHP Stack trace:
+[25-Aug-2016 06:22:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:0
+[25-Aug-2016 06:39:15 UTC] PHP Catchable fatal error:  Object of class PDOStatement could not be converted to string in /home/ubuntu/workspace/gitlab/研三/API/APIATOB/DataBase.php on line 39
+[25-Aug-2016 06:39:15 UTC] PHP Stack trace:
+[25-Aug-2016 06:39:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:0
+[25-Aug-2016 06:39:15 UTC] PHP   2. DataBase->getBalance() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:29
+[25-Aug-2016 07:05:42 UTC] PHP Fatal error:  Call to a member function bindParam() on a non-object in /home/ubuntu/workspace/gitlab/研三/API/APIATOB/DataBase.php on line 37
+[25-Aug-2016 07:05:42 UTC] PHP Stack trace:
+[25-Aug-2016 07:05:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:0
+[25-Aug-2016 07:05:42 UTC] PHP   2. DataBase->getBalance() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:28
+[25-Aug-2016 07:05:54 UTC] PHP Fatal error:  Call to a member function bindParam() on a non-object in /home/ubuntu/workspace/gitlab/研三/API/APIATOB/DataBase.php on line 37
+[25-Aug-2016 07:05:54 UTC] PHP Stack trace:
+[25-Aug-2016 07:05:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:0
+[25-Aug-2016 07:05:54 UTC] PHP   2. DataBase->getBalance() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:28
+[25-Aug-2016 07:06:10 UTC] PHP Fatal error:  Call to a member function bindParam() on a non-object in /home/ubuntu/workspace/gitlab/研三/API/APIATOB/DataBase.php on line 37
+[25-Aug-2016 07:06:10 UTC] PHP Stack trace:
+[25-Aug-2016 07:06:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:0
+[25-Aug-2016 07:06:10 UTC] PHP   2. DataBase->getBalance() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:28
+[25-Aug-2016 07:21:42 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/gitlab/研三/API/APIATOB/DataBase.php on line 48
+[25-Aug-2016 07:21:42 UTC] PHP Stack trace:
+[25-Aug-2016 07:21:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:0
+[25-Aug-2016 07:21:42 UTC] PHP   2. DataBase->transfer() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:40
+[25-Aug-2016 07:21:42 UTC] PHP   3. PDOStatement->execute() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/DataBase.php:48
+[25-Aug-2016 07:31:39 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php on line 63
+[25-Aug-2016 07:59:20 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/gitlab/研三/API/APIATOB/DataBase.php on line 49
+[25-Aug-2016 07:59:20 UTC] PHP Stack trace:
+[25-Aug-2016 07:59:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:0
+[25-Aug-2016 07:59:20 UTC] PHP   2. DataBase->transferIn() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:42
+[25-Aug-2016 07:59:20 UTC] PHP   3. PDOStatement->execute() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/DataBase.php:49
+[25-Aug-2016 07:59:20 UTC] PHP Fatal error:  Cannot pass parameter 2 by reference in /home/ubuntu/workspace/gitlab/研三/API/APIATOB/DataBase.php on line 60
+[25-Aug-2016 07:59:20 UTC] PHP Stack trace:
+[25-Aug-2016 07:59:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:0
+[25-Aug-2016 07:59:20 UTC] PHP   2. DataBase->transferIn() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:42
+[25-Aug-2016 08:00:30 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/ubuntu/workspace/gitlab/研三/API/APIATOB/DataBase.php on line 49
+[25-Aug-2016 08:00:30 UTC] PHP Stack trace:
+[25-Aug-2016 08:00:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:0
+[25-Aug-2016 08:00:30 UTC] PHP   2. DataBase->transferIn() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:42
+[25-Aug-2016 08:00:30 UTC] PHP   3. PDOStatement->execute() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/DataBase.php:49
+[25-Aug-2016 08:00:30 UTC] PHP Fatal error:  Cannot pass parameter 2 by reference in /home/ubuntu/workspace/gitlab/研三/API/APIATOB/DataBase.php on line 60
+[25-Aug-2016 08:00:30 UTC] PHP Stack trace:
+[25-Aug-2016 08:00:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:0
+[25-Aug-2016 08:00:30 UTC] PHP   2. DataBase->transferIn() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:42
+[25-Aug-2016 08:01:02 UTC] PHP Fatal error:  Cannot pass parameter 2 by reference in /home/ubuntu/workspace/gitlab/研三/API/APIATOB/DataBase.php on line 59
+[25-Aug-2016 08:01:02 UTC] PHP Stack trace:
+[25-Aug-2016 08:01:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:0
+[25-Aug-2016 08:01:02 UTC] PHP   2. DataBase->transferIn() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:42
+[25-Aug-2016 08:25:08 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/gitlab/研三/API/APIATOB/DataBase.php on line 107
+[25-Aug-2016 08:25:08 UTC] PHP Stack trace:
+[25-Aug-2016 08:25:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/研三/API/APIATOB/API.php:0

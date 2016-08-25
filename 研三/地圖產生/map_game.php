@@ -89,6 +89,7 @@ echo $iTime2-$iTime1;
 <!--//印出結果到格子內-->
 <html>
     <meta chartset="UTF-8">
+<script type="text/javascript" src="jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="jquery-3.1.0.js"></script>
 <script type="text/javascript" src="megamenu.js"></script>
 <body>
@@ -100,7 +101,7 @@ echo $iTime2-$iTime1;
         <?php  for ($y=0;$y<=9;$y++) { ?>
             <td>
                 <!--<input class="clickcl" type="button" style="width:40px;height:40px;font-size:20px;"  value=<?php print_r($map[$x][$y]);?> onclick="cl()">-->
-                <input class="clickcl" type="button" style="width:40px;height:40px;font-size:20px;"  name="location" value="<?php print_r("$x,$y"); ?>" onclick="getval()" >
+                <input class="clickcl" type="button" style="width:40px;height:40px;font-size:20px;"  id="location" value="<?php print_r("$x,$y"); ?>"  >
 
             </td>
          <?php  } ?>
@@ -110,33 +111,20 @@ echo $iTime2-$iTime1;
     <br>
     </table>
 </form>
-        <script type=text/javascript>;
-        function getval(){
-            $("input").click(function() {
-            var j = $(this).val();
-            alert(j);
-            }
-        });
+        <script type=text/javascript>
 
-           //     $(document).ready(function() {
-    //     $("input").click(function() {
 
-    //       var j = $(this).val();
-    //       alert(j);
-    //       $.ajax({
-    //             url: "Getclick.php",
-    //             type:"POST",
-    //             dataType:"JSON",
-    //             data:  { 'location':j },
-    //             success: function(change){
-    //                 alert(change);
-    //             },
-    //              error:function(change){
-    //                 alert("error");
-    //              }
-    //         });
-    //     });
-    // });
+            $("input").on("click", function(){
+            var a = $(this).val();
+            var ar = a.split(",");
+            var x = ar[0];
+            var y = ar[1];
+            var local = "<?php  echo($map[x][y]); ?>"
+            alert("<?php  echo($map[x][y]); ?>");
+             //alert($(this).val("<?php  print_r($map[x][y]); ?>"));
+            // alert(ar[0]);
+            })
+
         </script>
 </body>
 </html>
