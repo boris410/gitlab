@@ -116,7 +116,7 @@ class DataBase
         return $result->fetchAll();
     }
 
-    function checkMoney($userName, $money){
+    function checkMoney($userName){
         $query1 = "SELECT `money` FROM `account` WHERE `userName` = ? ";
         $result = $this->connection->prepare($query1);
         $result->bindParam(1, $userName);

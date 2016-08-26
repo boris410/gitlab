@@ -119,10 +119,26 @@ echo $iTime2-$iTime1;
             var ar = a.split(",");
             var x = ar[0];
             var y = ar[1];
-            var local = "<?php  echo($map[x][y]); ?>"
-            alert("<?php  echo($map[x][y]); ?>");
-             //alert($(this).val("<?php  print_r($map[x][y]); ?>"));
-            // alert(ar[0]);
+            alert(x + y);
+            //var text =1;
+           var text = {"x":x,"y":y};
+            alert(text);
+                $.ajax({
+                    url: "Getclick.php",
+                    data: {text},
+                    type:"POST",
+                    //dataType:'json',
+                    success: function(change){
+                        alert(change);
+                    },
+
+                     error:function(xhr, ajaxOptions, thrownError){
+                        alert("error");
+                        alert(xhr.status);
+                        alert(thrownError);
+
+                     }
+                });
             })
 
         </script>

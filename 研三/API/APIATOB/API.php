@@ -48,10 +48,19 @@ if ($str[0] == "getBalance") {
 
 //轉帳
 if ($str[0] == "transfer") {
-     if (!$userName || !$money || !$type || !$transId) {
+
+    //判斷有攜帶正確參數
+    if (!$userName || !$money || !$type || !$transId) {
         echo "參數帶錯";
         exit;
     }
+
+    //判斷序號及金額一定要是數字
+    if (!is_numeric($transId) || !is_numeric($money)) {
+        echo "參數帶錯";
+        exit;
+    }
+
 
     if (!$db->checkAccount($userName)) {
         echo "帳號不存在";
@@ -59,8 +68,12 @@ if ($str[0] == "transfer") {
     }
 
     //先取得餘額來檢查
-    $getBalance = $db->checkMoney($userName, $money);
+    $getBalance = $db->checkMoney($userName);
     $checkMoney = $getBalance[money];
+    if ($money <= 0) {
+        echo "輸入金額小於0";
+        exit;
+        }
 
     if ($db->checkTransId($transId)) {
         echo "轉帳序號重複";
@@ -69,11 +82,6 @@ if ($str[0] == "transfer") {
 
 
     if ($type == "IN") {
-        if($money <= 0) {
-            echo"輸入金額小於0";
-            exit;
-        }
-
         if ($db->transferIn($userName, $money, $transId, $type)) {
         echo "存入成功";
         exit;

@@ -1,7 +1,9 @@
 <?php
-     $change = $_POST['location'];
-     $strcut = explode(",",$change);
+     $change = $_POST['text'];
+     var_dump($change);
+    //  echo $change;
     //var_dump($_POST['map']);
-     echo json_encode($change);
+    //echo $change;
+    //echo json_decode($change);
 
 ?>
