@@ -1,150 +1,109 @@
 <?php
-$iTime1 = microtime(true);
-$map[10][10];
-$number=0;
-$num = 0;
+session_start();
+$map = $_SESSION['map'];
+$zero;
+$x = $_POST['xi'];
+$y = $_POST['yi'];
 
-//產生40個不重覆亂數
-while($num < 40){
-    //0~9的固定亂數
-    $col = rand(0,9);
-    $row = rand(0,9);
-    if (!$map[$row][$col]) {
-        $map[$row][$col] = "M";
-        $num++;
-    }
+if ((string)$map[$x][$y] == "M") {
+    exit;
+}
+
+if (!(string)$map[$x][$y] == "0" ) {
+    $str =  $map[$x][$y];
+    echo $str;
+}
+
+if ((string)$map[$x][$y] == "0") {
+    $zero[]="$x $y";
+    $map[$x][$y] = null;
+    checkPoint($x,$y);
+    echo json_encode($zero);
+
 }
 
 
 
-//計算周圍
-for ($x=0;$x<=9;$x++) {
-    for ($y=0;$y<=9;$y++) {
-        $mnum = 0;
-        if($map[$x][$y]!="M") {
-
-            // ↖
-            if ((string)$map[$x-1][$y-1]=="M") {
-                $mnum++;
-            }
-
-            // ↑
-            if ((string)$map[$x-1][$y]=="M") {
-                $mnum++;
-            }
-
-            // ↗
-            if ((string)$map[$x-1][$y+1]=="M") {
-                $mnum++;
-            }
-
-            // ←
-            if ((string)$map[$x][$y-1]=="M") {
-                $mnum++;
-            }
-
-            // →
-            if ((string)$map[$x][$y+1]=="M") {
-                $mnum++;
-            }
-
-            // ↙
-            if ((string)$map[$x+1][$y-1]=="M") {
-                $mnum++;
-            }
-
-            // ↓
-            if ((string)$map[$x+1][$y]=="M") {
-                $mnum++;
-            }
-
-            // ↘
-            if ((string)$map[$x+1][$y+1]=="M") {
-                $mnum++;
-            }
-
-            $map[$x][$y] = $mnum;
-
-        }
+function checkPoint($x,$y){
+    global $map;
+    global $zero;
+    if ((string)$map[$x-1][$y] == "0" && isset($map[$x-1][$y])) {
+        $map[$x-1][$y]=null;
+        $zero[]=(string)($x-1) . " " . $y;
+        checkPoint($x-1,$y);
     }
+
+    if ((string)$map[$x+1][$y] == "0" && isset($map[$x+1][$y])) {
+        $map[$x+1][$y]=null;
+        $zero[]=(string)($x+1) . " " . $y;
+        checkPoint($x+1,$y);
+    }
+
+    if ((string)$map[$x][$y-1] == "0" && isset($map[$x][$y-1])) {
+        $map[$x][$y-1]=null;
+        $zero[]=$x . " " . (string)($y-1);
+        checkPoint($x,$y-1);
+    }
+
+     if ((string)$map[$x][$y+1] == "0" && isset($map[$x][$y+1])) {
+        $map[$x][$y+1]=null;
+        $zero[]=$x . " " . (string)($y+1);
+        checkPoint($x,$y+1);
+    }
+
+
 }
+//     if ((string)$map[$x-1][$y-1] == "0") {
 
-
-
-// for ($x=0;$x<=9;$x++) {
-//     for ($y=0;$y<=9;$y++) {
-//         print_r($map[$x][$y]);
 //     }
-//     if ($x<9) {
-//         echo "N";
+
+//     // ↑
+//     if ((string)$map[$x-1][$y] == "0") {
+
+//     }
+
+//     // ↗
+//     if ((string)$map[$x-1][$y+1] == "0") {
+
+//     }
+
+//     // ←
+//     if ((string)$map[$x][$y-1] == "0") {
+
+//     }
+
+//     // →
+//     if ((string)$map[$x][$y+1] == "0") {
+
+//     }
+
+//     // ↙
+//     if ((string)$map[$x+1][$y-1] == "0") {
+
+//     }
+
+//     // ↓
+//     if ((string)$map[$x+1][$y] == "0") {
+
+//     }
+
+//     // ↘
+//     if ((string)$map[$x+1][$y+1] == "0") {
+
 //     }
 // }
-// echo "<br>";
-// $iTime2 = microtime(true);
-// echo "m=$num";
-// echo "<br>";
-// echo $iTime2-$iTime1;
-
-if ($_POST['text']) {
-    echo "123";
-}
 
 
+// if ($_POST['text']) {
+//     $click = $_POST['text'];
+//     $row = $click['x'];
+//     $col = $click['y'];
+//     $change = $map[$row][$col];
+//     echo $change;
+// }
 
 ?>
-<!--//印出結果到格子內-->
-<html>
-    <meta chartset="UTF-8">
-<script type="text/javascript" src="jquery-3.1.0.min.js"></script>
-<script type="text/javascript" src="jquery-3.1.0.js"></script>
-<script type="text/javascript" src="megamenu.js"></script>
-<body>
-<form >
-<table border=1>
 
-    <?php for ($x=0;$x<=9;$x++) { ?>
-    <tr>
-        <?php  for ($y=0;$y<=9;$y++) { ?>
-            <td>
-                <!--<input class="clickcl" type="button" style="width:40px;height:40px;font-size:20px;"  value=<?php print_r($map[$x][$y]);?> onclick="cl()">-->
-                <input class="clickcl" type="button" style="width:40px;height:40px;font-size:20px;"  id="location" value="<?php print_r("$x,$y"); ?>"  >
-
-            </td>
-         <?php  } ?>
-    </tr>
-    <?php } ?>
-
-    <br>
-    </table>
-</form>
-        <script type=text/javascript>
-
-
-            $("input").on("click", function(){
-            var a = $(this).val();
-            var ar = a.split(",");
-            var x = ar[0];
-            var y = ar[1];
-            alert(x + y);
-            var text = {"x":x,"y":y};
-                $.ajax({
-                    url: "map_game.php",
-                    data: {text},
-                    type:"POST",
-                    //dataType:'json',
-                    success: function(change){
-                        alert(change);
-                    },
-
-                     error:function(xhr, ajaxOptions, thrownError){
-                        alert("error");
-                     }
-                });
-            })
-
-        </script>
-</body>
-</html>
 
 
 
