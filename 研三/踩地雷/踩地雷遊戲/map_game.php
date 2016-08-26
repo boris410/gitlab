@@ -71,19 +71,25 @@ for ($x=0;$x<=9;$x++) {
 
 
 
-for ($x=0;$x<=9;$x++) {
-    for ($y=0;$y<=9;$y++) {
-        print_r($map[$x][$y]);
-    }
-    if ($x<9) {
-        echo "N";
-    }
+// for ($x=0;$x<=9;$x++) {
+//     for ($y=0;$y<=9;$y++) {
+//         print_r($map[$x][$y]);
+//     }
+//     if ($x<9) {
+//         echo "N";
+//     }
+// }
+// echo "<br>";
+// $iTime2 = microtime(true);
+// echo "m=$num";
+// echo "<br>";
+// echo $iTime2-$iTime1;
+
+if ($_POST['text']) {
+    echo "123";
 }
-echo "<br>";
-$iTime2 = microtime(true);
-echo "m=$num";
-echo "<br>";
-echo $iTime2-$iTime1;
+
+
 
 ?>
 <!--//印出結果到格子內-->
@@ -120,11 +126,9 @@ echo $iTime2-$iTime1;
             var x = ar[0];
             var y = ar[1];
             alert(x + y);
-            //var text =1;
-           var text = {"x":x,"y":y};
-            alert(text);
+            var text = {"x":x,"y":y};
                 $.ajax({
-                    url: "Getclick.php",
+                    url: "map_game.php",
                     data: {text},
                     type:"POST",
                     //dataType:'json',
@@ -134,9 +138,6 @@ echo $iTime2-$iTime1;
 
                      error:function(xhr, ajaxOptions, thrownError){
                         alert("error");
-                        alert(xhr.status);
-                        alert(thrownError);
-
                      }
                 });
             })
