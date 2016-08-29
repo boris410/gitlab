@@ -31,6 +31,11 @@ function checkPoint($x,$y){
         $map[$x-1][$y]=null;
         $zero[]=(string)($x-1) . " " . $y;
         checkPoint($x-1,$y);
+
+        if ((string)$map[$x-1][$y] != "0" && isset($map[$x-1][$y])) {
+             $map[$x-1][$y]=null;
+            $zero[]=(string)($x-1) . " " . $y;
+        }
     }
 
     if ((string)$map[$x+1][$y] == "0" && isset($map[$x+1][$y])) {
@@ -45,7 +50,7 @@ function checkPoint($x,$y){
         checkPoint($x,$y-1);
     }
 
-     if ((string)$map[$x][$y+1] == "0" && isset($map[$x][$y+1])) {
+    if ((string)$map[$x][$y+1] == "0" && isset($map[$x][$y+1])) {
         $map[$x][$y+1]=null;
         $zero[]=$x . " " . (string)($y+1);
         checkPoint($x,$y+1);
