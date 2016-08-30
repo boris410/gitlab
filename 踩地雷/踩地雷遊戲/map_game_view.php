@@ -37,32 +37,35 @@ require_once("createBoom.php");
                         var first = JSON.parse(data);
                         $.each(first, function(index, value){
                             var zero = value.split(" ");
-                            $("#"+zero[0]+zero[1]).text("0");
+                            $("#"+zero[0]+zero[1]).text("<?php ?>");
                         });
-
                 }
-
                 if(data.length <= 5) {
                      $("#"+x+y).text(data);
                 }
-
-
-
             });
 
-            //var text = {"x":x,"y":y};
-                // $.ajax({
-                //     url: "map_game.php",
-                //     data: {text},
-                //     type:"POST",
-                //     //dataType:'json',
-                //     success: function(change){
-                //
-                //     },
-                //      error:function(xhr, ajaxOptions, thrownError){
-                //         alert("error");
-                //      }
-                // });
+            // var text = {"xi":x,"yi":y};
+            //     $.ajax({
+            //         url: "map_game.php",
+            //         data: {text},
+            //         type:"POST",
+            //         //dataType:'json',
+            //         success: function(change){
+            //             if(change == "M") {
+            //                 alert(change);
+            //             }
+
+            //               if(change == "0") {
+            //                 alert(change);
+            //             }
+
+
+            //         },
+            //          error:function(xhr, ajaxOptions, thrownError){
+            //             alert("error");
+            //          }
+            //     });
             })
 
         </script>

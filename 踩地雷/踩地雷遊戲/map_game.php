@@ -4,7 +4,9 @@ $map = $_SESSION['map'];
 $zero;
 $x = $_POST['xi'];
 $y = $_POST['yi'];
-
+// $data = $_POST['text'];
+// $x = $data['xi'];
+// $y = $data['yi'];
 if ((string)$map[$x][$y] == "M") {
     exit;
 }
@@ -31,11 +33,11 @@ function checkPoint($x,$y){
         $map[$x-1][$y]=null;
         $zero[]=(string)($x-1) . " " . $y;
         checkPoint($x-1,$y);
+    }
 
-        if ((string)$map[$x-1][$y] != "0" && isset($map[$x-1][$y])) {
-             $map[$x-1][$y]=null;
-            $zero[]=(string)($x-1) . " " . $y;
-        }
+    if ((string)$map[$x-1][$y] != "0" && isset($map[$x-1][$y])) {
+        $map[$x-1][$y]=null;
+        $zero[]=(string)($x-1) . " " . $y;
     }
 
     if ((string)$map[$x+1][$y] == "0" && isset($map[$x+1][$y])) {
