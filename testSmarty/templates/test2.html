@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>測試重覆區塊</title>
+</head>
+<body>
+<pre>
+
+利用 foreach 來呈現 array1
+<{foreach item=item1 from=$array1}>
+<input type="text" value="<{$item1}>">
+<{/foreach}>
+
+利用 section 來呈現 array1
+<{section name=sec1 loop=$array1}>
+<{$array1[sec1]}>
+<{/section}>
+
+利用 foreach 來呈現 array2
+<{foreach item=index2 from=$array2}>
+<{foreach key=key2 item=item2 from=$index2}>
+<{$key2}>: <{$item2}>
+<{/foreach}>
+<{/foreach}>
+
+利用 section 來呈現 array1
+<{section name=sec2 loop=$array2}>
+index1: <{$array2[sec2].index1}>
+index2: <{$array2[sec2].index2}>
+index3: <{$array2[sec2].index3}>
+<{/section}>
+</pre>
+</body>
+</html>
