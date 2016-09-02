@@ -33503,3 +33503,120 @@ Stack trace:
 [12-Aug-2016 12:09:14 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/gitlab/payment/core/App.php:34}() /home/ubuntu/workspace/gitlab/payment/core/App.php:34
 [12-Aug-2016 12:09:14 UTC] PHP   4. HomeController->saveMoney() /home/ubuntu/workspace/gitlab/payment/core/App.php:34
 [12-Aug-2016 12:09:14 UTC] PHP   5. Load->model() /home/ubuntu/workspace/gitlab/payment/controllers/HomeController.php:72
+[01-Sep-2016 09:49:03 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.htm&quot; in /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php on line 1100
+[01-Sep-2016 09:49:03 UTC] PHP Stack trace:
+[01-Sep-2016 09:49:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/demo/test.php:0
+[01-Sep-2016 09:49:03 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/demo/test.php:10
+[01-Sep-2016 09:49:03 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1113
+[01-Sep-2016 09:49:03 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1261
+[01-Sep-2016 09:49:03 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1422
+[01-Sep-2016 09:49:03 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1596
+[01-Sep-2016 09:49:03 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1100
+[01-Sep-2016 09:49:12 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.htm&quot; in /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php on line 1100
+[01-Sep-2016 09:49:12 UTC] PHP Stack trace:
+[01-Sep-2016 09:49:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/demo/test.php:0
+[01-Sep-2016 09:49:12 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/demo/test.php:10
+[01-Sep-2016 09:49:12 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1113
+[01-Sep-2016 09:49:12 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1261
+[01-Sep-2016 09:49:12 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1422
+[01-Sep-2016 09:49:12 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1596
+[01-Sep-2016 09:49:12 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1100
+[01-Sep-2016 09:51:48 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.htm&quot; in /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php on line 1100
+[01-Sep-2016 09:51:48 UTC] PHP Stack trace:
+[01-Sep-2016 09:51:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/demo/test.php:0
+[01-Sep-2016 09:51:48 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/demo/test.php:10
+[01-Sep-2016 09:51:48 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1113
+[01-Sep-2016 09:51:48 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1261
+[01-Sep-2016 09:51:48 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1422
+[01-Sep-2016 09:51:48 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1596
+[01-Sep-2016 09:51:48 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1100
+[01-Sep-2016 09:51:57 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.htm&quot; in /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php on line 1100
+[01-Sep-2016 09:51:57 UTC] PHP Stack trace:
+[01-Sep-2016 09:51:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/demo/test.php:0
+[01-Sep-2016 09:51:57 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/demo/test.php:10
+[01-Sep-2016 09:51:57 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1113
+[01-Sep-2016 09:51:57 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1261
+[01-Sep-2016 09:51:57 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1422
+[01-Sep-2016 09:51:57 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1596
+[01-Sep-2016 09:51:57 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1100
+[01-Sep-2016 09:55:46 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.html&quot; in /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php on line 1100
+[01-Sep-2016 09:55:46 UTC] PHP Stack trace:
+[01-Sep-2016 09:55:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/demo/test.php:0
+[01-Sep-2016 09:55:46 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/demo/test.php:10
+[01-Sep-2016 09:55:46 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1113
+[01-Sep-2016 09:55:46 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1261
+[01-Sep-2016 09:55:46 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1422
+[01-Sep-2016 09:55:46 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1596
+[01-Sep-2016 09:55:46 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1100
+[01-Sep-2016 09:55:57 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.htm&quot; in /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php on line 1100
+[01-Sep-2016 09:55:57 UTC] PHP Stack trace:
+[01-Sep-2016 09:55:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/demo/test.php:0
+[01-Sep-2016 09:55:57 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/demo/test.php:10
+[01-Sep-2016 09:55:57 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1113
+[01-Sep-2016 09:55:57 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1261
+[01-Sep-2016 09:55:57 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1422
+[01-Sep-2016 09:55:57 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1596
+[01-Sep-2016 09:55:57 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1100
+[01-Sep-2016 09:56:10 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.html&quot; in /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php on line 1100
+[01-Sep-2016 09:56:10 UTC] PHP Stack trace:
+[01-Sep-2016 09:56:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/demo/test.php:0
+[01-Sep-2016 09:56:10 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/demo/test.php:10
+[01-Sep-2016 09:56:10 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1113
+[01-Sep-2016 09:56:10 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1261
+[01-Sep-2016 09:56:10 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1422
+[01-Sep-2016 09:56:10 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1596
+[01-Sep-2016 09:56:10 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1100
+[01-Sep-2016 10:03:28 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.html&quot; in /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php on line 1100
+[01-Sep-2016 10:03:28 UTC] PHP Stack trace:
+[01-Sep-2016 10:03:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/demo/test.php:0
+[01-Sep-2016 10:03:28 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/demo/test.php:10
+[01-Sep-2016 10:03:28 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1113
+[01-Sep-2016 10:03:28 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1261
+[01-Sep-2016 10:03:28 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1422
+[01-Sep-2016 10:03:28 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1596
+[01-Sep-2016 10:03:28 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1100
+[01-Sep-2016 10:04:21 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.html&quot; in /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php on line 1100
+[01-Sep-2016 10:04:21 UTC] PHP Stack trace:
+[01-Sep-2016 10:04:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/demo/test.php:0
+[01-Sep-2016 10:04:21 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/demo/test.php:10
+[01-Sep-2016 10:04:21 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1113
+[01-Sep-2016 10:04:21 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1261
+[01-Sep-2016 10:04:21 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1422
+[01-Sep-2016 10:04:21 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1596
+[01-Sep-2016 10:04:21 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1100
+[01-Sep-2016 10:05:45 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.html&quot; in /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php on line 1100
+[01-Sep-2016 10:05:45 UTC] PHP Stack trace:
+[01-Sep-2016 10:05:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/demo/test.php:0
+[01-Sep-2016 10:05:45 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/demo/test.php:10
+[01-Sep-2016 10:05:45 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1113
+[01-Sep-2016 10:05:45 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1261
+[01-Sep-2016 10:05:45 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1422
+[01-Sep-2016 10:05:45 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1596
+[01-Sep-2016 10:05:45 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1100
+[01-Sep-2016 10:06:43 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.html&quot; in /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php on line 1100
+[01-Sep-2016 10:06:43 UTC] PHP Stack trace:
+[01-Sep-2016 10:06:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/demo/test.php:0
+[01-Sep-2016 10:06:43 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/demo/test.php:10
+[01-Sep-2016 10:06:43 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1113
+[01-Sep-2016 10:06:43 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1261
+[01-Sep-2016 10:06:43 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1422
+[01-Sep-2016 10:06:43 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1596
+[01-Sep-2016 10:06:43 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1100
+[01-Sep-2016 10:07:00 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.html&quot; in /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php on line 1100
+[01-Sep-2016 10:07:00 UTC] PHP Stack trace:
+[01-Sep-2016 10:07:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/demo/test.php:0
+[01-Sep-2016 10:07:00 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/demo/test.php:10
+[01-Sep-2016 10:07:00 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1113
+[01-Sep-2016 10:07:00 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1261
+[01-Sep-2016 10:07:00 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1422
+[01-Sep-2016 10:07:00 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1596
+[01-Sep-2016 10:07:00 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1100
+[01-Sep-2016 10:07:22 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.html&quot; in /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php on line 1100
+[01-Sep-2016 10:07:22 UTC] PHP Stack trace:
+[01-Sep-2016 10:07:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/demo/test.php:0
+[01-Sep-2016 10:07:22 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/demo/test.php:10
+[01-Sep-2016 10:07:22 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1113
+[01-Sep-2016 10:07:22 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1261
+[01-Sep-2016 10:07:22 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1422
+[01-Sep-2016 10:07:22 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1596
+[01-Sep-2016 10:07:22 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/demo/class/Smarty.class.php:1100

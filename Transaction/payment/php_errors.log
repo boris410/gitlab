@@ -1,0 +1,108 @@
+[01-Sep-2016 09:21:52 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.htm&quot; in /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php on line 1100
+[01-Sep-2016 09:21:52 UTC] PHP Stack trace:
+[01-Sep-2016 09:21:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:0
+[01-Sep-2016 09:21:52 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:10
+[01-Sep-2016 09:21:52 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1113
+[01-Sep-2016 09:21:52 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1261
+[01-Sep-2016 09:21:52 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1422
+[01-Sep-2016 09:21:52 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1596
+[01-Sep-2016 09:21:52 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1100
+[01-Sep-2016 09:23:36 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.html&quot; in /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php on line 1100
+[01-Sep-2016 09:23:36 UTC] PHP Stack trace:
+[01-Sep-2016 09:23:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:0
+[01-Sep-2016 09:23:36 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:10
+[01-Sep-2016 09:23:36 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1113
+[01-Sep-2016 09:23:36 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1261
+[01-Sep-2016 09:23:36 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1422
+[01-Sep-2016 09:23:36 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1596
+[01-Sep-2016 09:23:36 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1100
+[01-Sep-2016 09:24:32 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.htm&quot; in /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php on line 1100
+[01-Sep-2016 09:24:32 UTC] PHP Stack trace:
+[01-Sep-2016 09:24:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:0
+[01-Sep-2016 09:24:32 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:10
+[01-Sep-2016 09:24:32 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1113
+[01-Sep-2016 09:24:32 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1261
+[01-Sep-2016 09:24:32 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1422
+[01-Sep-2016 09:24:32 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1596
+[01-Sep-2016 09:24:32 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1100
+[01-Sep-2016 09:25:38 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.htm&quot; in /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php on line 1100
+[01-Sep-2016 09:25:38 UTC] PHP Stack trace:
+[01-Sep-2016 09:25:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:0
+[01-Sep-2016 09:25:38 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:10
+[01-Sep-2016 09:25:38 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1113
+[01-Sep-2016 09:25:38 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1261
+[01-Sep-2016 09:25:38 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1422
+[01-Sep-2016 09:25:38 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1596
+[01-Sep-2016 09:25:38 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1100
+[01-Sep-2016 09:27:02 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.htm&quot; in /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php on line 1100
+[01-Sep-2016 09:27:02 UTC] PHP Stack trace:
+[01-Sep-2016 09:27:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:0
+[01-Sep-2016 09:27:02 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:10
+[01-Sep-2016 09:27:02 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1113
+[01-Sep-2016 09:27:02 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1261
+[01-Sep-2016 09:27:02 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1422
+[01-Sep-2016 09:27:02 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1596
+[01-Sep-2016 09:27:02 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1100
+[01-Sep-2016 09:29:29 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.htm&quot; in /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php on line 1100
+[01-Sep-2016 09:29:29 UTC] PHP Stack trace:
+[01-Sep-2016 09:29:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:0
+[01-Sep-2016 09:29:29 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:10
+[01-Sep-2016 09:29:29 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1113
+[01-Sep-2016 09:29:29 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1261
+[01-Sep-2016 09:29:29 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1422
+[01-Sep-2016 09:29:29 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1596
+[01-Sep-2016 09:29:29 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1100
+[01-Sep-2016 09:30:42 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.htm&quot; in /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php on line 1100
+[01-Sep-2016 09:30:42 UTC] PHP Stack trace:
+[01-Sep-2016 09:30:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:0
+[01-Sep-2016 09:30:42 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:10
+[01-Sep-2016 09:30:42 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1113
+[01-Sep-2016 09:30:42 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1261
+[01-Sep-2016 09:30:42 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1422
+[01-Sep-2016 09:30:42 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1596
+[01-Sep-2016 09:30:42 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1100
+[01-Sep-2016 09:31:03 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.htm&quot; in /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php on line 1100
+[01-Sep-2016 09:31:03 UTC] PHP Stack trace:
+[01-Sep-2016 09:31:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:0
+[01-Sep-2016 09:31:03 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:10
+[01-Sep-2016 09:31:03 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1113
+[01-Sep-2016 09:31:03 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1261
+[01-Sep-2016 09:31:03 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1422
+[01-Sep-2016 09:31:03 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1596
+[01-Sep-2016 09:31:03 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1100
+[01-Sep-2016 09:35:47 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.htm&quot; in /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php on line 1100
+[01-Sep-2016 09:35:47 UTC] PHP Stack trace:
+[01-Sep-2016 09:35:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:0
+[01-Sep-2016 09:35:47 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:10
+[01-Sep-2016 09:35:47 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1113
+[01-Sep-2016 09:35:47 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1261
+[01-Sep-2016 09:35:47 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1422
+[01-Sep-2016 09:35:47 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1596
+[01-Sep-2016 09:35:47 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1100
+[01-Sep-2016 09:38:05 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.htm&quot; in /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php on line 1100
+[01-Sep-2016 09:38:05 UTC] PHP Stack trace:
+[01-Sep-2016 09:38:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:0
+[01-Sep-2016 09:38:05 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:10
+[01-Sep-2016 09:38:05 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1113
+[01-Sep-2016 09:38:05 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1261
+[01-Sep-2016 09:38:05 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1422
+[01-Sep-2016 09:38:05 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1596
+[01-Sep-2016 09:38:05 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1100
+[01-Sep-2016 09:40:15 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.htm&quot; in /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php on line 1100
+[01-Sep-2016 09:40:15 UTC] PHP Stack trace:
+[01-Sep-2016 09:40:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:0
+[01-Sep-2016 09:40:15 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:10
+[01-Sep-2016 09:40:15 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1113
+[01-Sep-2016 09:40:15 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1261
+[01-Sep-2016 09:40:15 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1422
+[01-Sep-2016 09:40:15 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1596
+[01-Sep-2016 09:40:15 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1100
+[01-Sep-2016 09:41:28 UTC] PHP Warning:  Smarty error: unable to read resource: &quot;test.htm&quot; in /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php on line 1100
+[01-Sep-2016 09:41:28 UTC] PHP Stack trace:
+[01-Sep-2016 09:41:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:0
+[01-Sep-2016 09:41:28 UTC] PHP   2. Smarty->display() /home/ubuntu/workspace/gitlab/Transaction/payment/test.php:10
+[01-Sep-2016 09:41:28 UTC] PHP   3. Smarty->fetch() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1113
+[01-Sep-2016 09:41:28 UTC] PHP   4. Smarty->_compile_resource() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1261
+[01-Sep-2016 09:41:28 UTC] PHP   5. Smarty->_fetch_resource_info() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1422
+[01-Sep-2016 09:41:28 UTC] PHP   6. Smarty->trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1596
+[01-Sep-2016 09:41:28 UTC] PHP   7. trigger_error() /home/ubuntu/workspace/gitlab/Transaction/payment/class/Smarty.class.php:1100
