@@ -16,3 +16,5 @@
         管理帳號
         新增商品
         查看帳單
+
+執行網址 https://yanlearn-boris-yan.c9users.io/gitlab/EasyMVC/Home/index
