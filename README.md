@@ -31,7 +31,7 @@
 
 7/21 MVC架構購物網站專案----debug 後臺帳單頁面顯示錯誤修正
 
-7/22 MVC架構購物網站專案----新增index分頁及上下頁 、session_start放到 controller __construct 
+7/22 MVC架構購物網站專案----新增index分頁及上下頁 、session_start放到 controller __construct
 
 7/24 MVC架構購物網站專案----完整版
 
@@ -70,6 +70,8 @@
 8/6 challenge 2 view前台完成 model部分剩餘 買票、ajax顯示人數、輸入攜帶人數未完成
 
 8/6 challenge 2 accending ajax 未完成
+
+9/10 修改EazyMVC pagetabes.php bug
 
 
 
